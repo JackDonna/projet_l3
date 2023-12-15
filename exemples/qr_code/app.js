@@ -22,18 +22,15 @@ app.get("/index", (req, res) => {
     res.sendFile(__dirname + "/index.html");
 })
 
-app.post("/download", async (req, res) => {
-    let url = req.body.url.replace("https", "http");
-    if(url.startsWith(process.env.URL_PATERN))
-    {
-        axios.get(url, {responseType: 'blob'}).then( (response) => {
-            res.send(utils.parseICSURL(response.data, ical)) ;
-        })
-    }
-    else
-    {
-        res.send(0)
-    }
+app.post("/download", (req, res) => {
+    let url = req.body.url;
+    axios.get(url, {responseType: 'blob'}).then( (response) => {
+        res.send({"code": 1, "data" : utils.parseICSURL(response.data, ical)}) ;
+    })
+})
+
+app.get("/test", (req, res) => {
+    res.send("ok");
 })
 
 /**

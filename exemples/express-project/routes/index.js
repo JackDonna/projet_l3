@@ -39,10 +39,16 @@ router.post('/login', express.urlencoded({ extended: false }), function (req, re
     // load does not happen before session is saved
     req.session.save(function (err) {
       if (err) return next(err)
-      res.redirect('/')
+      res.redirect('/calendar')
     })
   })
 })
+
+router.get("/calendar", (req, res) => {
+  res.render("calendar");
+})
+
+
 
 
 router.get('/logout', function (req, res, next) {

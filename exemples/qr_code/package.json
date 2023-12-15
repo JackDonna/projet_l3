@@ -20,5 +20,9 @@
     "ical2json": "^3.2.0",
     "path": "^0.12.7",
     "xhr2": "^0.2.1"
+  },
+  "devDependencies": {
+    "@event-calendar/core": "^2.5.0",
+    "@event-calendar/time-grid": "^2.5.0"
   }
 }
