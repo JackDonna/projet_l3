@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var escapeHtml = require('escape-html')
-var session = require('express-session')
 
 function isAuthenticated (req, res, next) {
   if (req.session.user) next()
