@@ -1,38 +1,51 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- PWA -->
+    <link rel="manifest" href="javascripts/pwa.webmanifest" />
+    <link rel="apple-touch-icon" href="/assets/icons/icon-96x96.png" />
+    <meta name="apple-mobile-web-app-status-bar" content="white" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="white" />
+
     <title>Test QR Code</title>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@event-calendar/build@2.5.0/event-calendar.min.css">
+    <script
+      src="https://unpkg.com/html5-qrcode"
+      type="text/javascript"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@event-calendar/build@2.5.0/event-calendar.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@event-calendar/build@2.5.0/event-calendar.min.js"></script>
-</head>
-<body>
+  </head>
 
+  <body>
     <style>
-        main {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        #reader {
-            width: 600px;
-        }
-        #result {
-            text-align: center;
-            font-size: 1.5rem;
-        }
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #reader {
+        width: 600px;
+      }
+      #result {
+        text-align: center;
+        font-size: 1.5rem;
+      }
     </style>
 
     <main>
-        <div id="reader"></div>
-        <div id="result"></div>
+      <div id="reader"></div>
+      <div id="result"></div>
     </main>
 
-    <div id='calendar'> En attente d'un QR code</div>
+    <div id="calendar">En attente d'un QR code</div>
     <script src="javascripts/calendar.js" type="module"></script>
-</body>
+  </body>
 </html>
