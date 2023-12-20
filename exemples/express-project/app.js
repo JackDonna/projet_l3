@@ -6,6 +6,9 @@ const logger = require('morgan');
 const session = require('express-session');
 const indexRouter = require('./routes/index');
 const apiRouter = require('./routes/api');
+const sqlRouter = require('./routes/sql');
+const neoRouter = require('./routes/neo');
+const nodeRouter = require('./routes/node');
 
 const app = express();
 app.use(session({
@@ -26,6 +29,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/api', apiRouter);
+app.use('/sql', sqlRouter);
+app.use('/neo', neoRouter);
+app.use('/node', nodeRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
