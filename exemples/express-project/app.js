@@ -8,6 +8,7 @@ const indexRouter = require('./routes/index');
 const apiRouter = require('./routes/api');
 
 const app = express();
+
 app.use(session({
   secret: 'keyboard cat',
   resave: false,

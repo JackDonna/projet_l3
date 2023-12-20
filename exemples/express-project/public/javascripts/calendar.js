@@ -26,17 +26,15 @@ let ec = new EventCalendar(calendar_element, {
     locale: "fr",
     firstDay: 1,
     slotMinTime: "06:00:00",
-    slotMaxTime: "21:00:00"
+    slotMaxTime: "21:00:00",
 });
 
 window.addEventListener('resize', () => {
-    console.log(window.innerWidth)
     if (window.innerWidth < 700) {
         ec.setOption("view", "timeGridDay");
     }
     else {
         ec.setOption("view", "timeGridWeek");
-        ec.setOption("slotHeight", "200px");
     }
 });
 
@@ -46,7 +44,7 @@ const scanner = new Html5QrcodeScanner('reader', {
         width: 250,
         height: 250,
     },  // Sets dimensions of scanning box (set relative to reader element width)
-    fps: 20, // Frames per second to attempt a scan
+    fps: 60, // Frames per second to attempt a scan
 });
 
 

@@ -4,16 +4,8 @@ var escapeHtml = require('escape-html')
 
 function isAuthenticated (req, res, next) {
   if (req.session.user) next()
-  else next('route')
+  else res.redirect("/")
 }
-
-
-
-router.get('/', isAuthenticated, function (req, res) {
-  // this is only called when there is an authentication user due to isAuthenticated
-  res.send('hello, ' + escapeHtml(req.session.user) + '!' +
-      ' <a href="/logout">Logout</a>')
-})
 
 router.get('/', function (req, res) {
   res.send('<form action="/login" method="post">' +
@@ -43,12 +35,11 @@ router.post('/login', express.urlencoded({ extended: false }), function (req, re
   })
 })
 
-router.get("/calendar", (req, res) => {
+router.get("/calendar", isAuthenticated, (req, res) => {
+  console.log(req.session.user)
+  res.locals.user = req.session.user;
   res.render("calendar");
 })
-
-
-
 
 router.get('/logout', function (req, res, next) {
   // logout logic

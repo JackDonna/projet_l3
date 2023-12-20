@@ -27,7 +27,6 @@ function parseICSURL (URLdata, ical)
                     "date": ev.start.getDate() + "/" + months[ev.start.getMonth()] + "/" + ev.start.getFullYear(),
                     "start" : new Date(ev.start.getFullYear(), ev.start.getMonth(), ev.start.getDate(), ev.start.getHours(), ev.start.getMinutes()),
                     "end" : new Date(ev.end.getFullYear(), ev.end.getMonth(), ev.end.getDate(), ev.end.getHours(), ev.end.getMinutes())
-
                 }
                 if(event.title.toLowerCase().includes("cours annul"))
                 {
@@ -38,16 +37,12 @@ function parseICSURL (URLdata, ical)
                 {
                     for(let color of colors)
                     {
-
-                        console.log(event.title.toLowerCase() + " compare to " + color.name);
                         if(event.title.toLowerCase().includes(color.name))
                         {
-                            console.log("ok")
                             event.backgroundColor = color.color;
                         }
                     }
                 }
-
                 obj.push(event);
             }
         }
