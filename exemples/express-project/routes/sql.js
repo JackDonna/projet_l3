@@ -5,6 +5,7 @@ var router = express.Router();
 // controllers
 const user_controller = require("../controllers/userController");
 const event_controller = require("../controllers/eventController");
+const etab_controller = require("../controllers/etabController");
 
 
 
@@ -64,14 +65,13 @@ router.get("/event/:id", event_controller.event_detail);
 
 
 
+// --- ETABLISSEMENT CONTROLLERS --- //
 
+// request for list of etablissement
+router.get("/etabs", etab_controller.etab_list);
 
-
-// test
-router.get("/test/:id", (req, res) => {
-    // test
-    res.json({ message : "l'id est", id:req.params.id});
-})
+// request for one etablissement
+router.get("/etab/:id/detail", etab_controller.etab_detail);
 
 
 module.exports = router;
