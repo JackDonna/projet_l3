@@ -1,3 +1,16 @@
+const mysql = require('mysql')
+const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'test_api'
+  })
+  
+  connection.connect(function (err) {
+      if (err) throw err;
+      console.log('connection')
+  })
+
 const asyncHandler = require("express-async-handler");
 
 // liste tout les évenements

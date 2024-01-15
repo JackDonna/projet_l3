@@ -1,18 +1,5 @@
 var express = require('express');
 var router = express.Router();
-const mysql = require('mysql')
-
-
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'test_api'
-})
-
-connection.connect(function (err) {
-    if (err) throw err;
-})
 
 // controllers
 const user_controller = require("../controllers/userController");
