@@ -16,7 +16,7 @@ const etab_controller = require("../controllers/etabController");
 router.get("/users", user_controller.user_list);
 
 // request for creating user
-router.get("/user/:nom/:prenom/create", user_controller.user_create);
+router.get("/user/:mail/:numen/:nom/:prenom/create", user_controller.user_create);
 
 // request for delete user
 router.get("/user/:id/delete", user_controller.user_delete);
