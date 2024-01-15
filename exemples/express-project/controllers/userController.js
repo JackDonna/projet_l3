@@ -1,14 +1,4 @@
-const mysql = require('mysql')
 
-
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'test_api'
-})
-
-connection.connect()
 const asyncHandler = require("express-async-handler");
 
 // liste tout les utilisateurs
