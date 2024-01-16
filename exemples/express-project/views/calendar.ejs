@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- PWA -->
+    <link rel="manifest" href="javascripts/pwa.webmanifest" />
+    <link rel="apple-touch-icon" href="/assets/icons/icon-96x96.png" />
+    <meta name="apple-mobile-web-app-status-bar" content="white" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="white" />
+
     <title>Test QR Code</title>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+    <script
+      src="https://unpkg.com/html5-qrcode"
+      type="text/javascript"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/@event-calendar/build@2.5.0/event-calendar.min.js"></script>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@event-calendar/build@2.5.0/event-calendar.min.css">
-    <link rel="stylesheet" href="stylesheets/calendar.css">
-</head>
-<body >
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@event-calendar/build@2.5.0/event-calendar.min.css"
+    />
+    <link rel="stylesheet" href="stylesheets/calendar.css" />
+  </head>
+  <body>
     Bonjour <%= user %>
     <main>
-        <div id="scan_code" class="hide">
-            <span id="close_scanner">X</span>
-            <div id="reader">
-                <span id="close_scanner">x</span>
-            </div>
+      <div id="scan_code" class="hide">
+        <span id="close_scanner">X</span>
+        <div id="reader">
+          <span id="close_scanner">x</span>
         </div>
+      </div>
 
-        <div id="result"></div>
+      <div id="result"></div>
     </main>
 
-    <div id='calendar'></div>
+    <div id="calendar"></div>
     <button id="scan_qr_code"><p>+</p></button>
 
     <script src="javascripts/calendar.js" type="module"></script>
-</body>
+  </body>
 </html>
