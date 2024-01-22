@@ -20,11 +20,14 @@ function parseICSURL (URLdata, ical)
             let ev = data[k];
             if (ev.type === 'VEVENT') {
                 let title;
+                let description;
                 ev.summary.val === undefined ? title = ev.summary : title = ev.summary.val.split("-")[0];
+                ev.description === undefined ? description = undefined : description = ev.description;
                 let event = {
                     "title": title,
                     "location": ev.location,
-                    "date": ev.start.getDate() + "/" + months[ev.start.getMonth()] + "/" + ev.start.getFullYear(),
+                    "description" : description,
+                    "date": new Date(ev.start.getDate() + "/" + months[ev.start.getMonth()] + "/" + ev.start.getFullYear()),
                     "start" : new Date(ev.start.getFullYear(), ev.start.getMonth(), ev.start.getDate(), ev.start.getHours(), ev.start.getMinutes()),
                     "end" : new Date(ev.end.getFullYear(), ev.end.getMonth(), ev.end.getDate(), ev.end.getHours(), ev.end.getMinutes())
                 }
