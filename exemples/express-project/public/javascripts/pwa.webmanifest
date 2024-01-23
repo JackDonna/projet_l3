@@ -8,12 +8,12 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "../assets/icons/logo_RPA_144x144.png",
+      "src": "../assets/icons/RPA_logo_144x144.png",
       "type": "image/png",
       "sizes": "144x144"
     },
     {
-      "src": "../assets/icons/logo_RPA_512x512_test.png",
+      "src": "../assets/icons/RPA_logo_512x512.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "maskable"
