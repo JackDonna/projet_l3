@@ -42,13 +42,14 @@ router.get("/getetab", (req,res)=>{
             // Loop through results and do something with them
             console.log('>> Results')
             var result = {};
+            let tabres = []
             for(record of records) {
                 console.log(record.get('E'))
-                result = result + record.get('E')
-
+                tabres.push(record.get('E').properties.nom)
+                result = result + record.get('E').properties.nom;
             }
-
-            res.send(result)
+            console.log(tabres)
+            res.send(tabres)
 
             // ------------------------------------ End request ---------------------------------------
 
