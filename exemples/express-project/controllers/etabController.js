@@ -1,32 +1,23 @@
 const mysql = require('mysql')
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'rpa'
-  })
-  
-  connection.connect(function (err) {
-      if (err) throw err;
-      console.log('connection')
-  })
+const db = require("./db")
 
 const asyncHandler = require("express-async-handler");
 
-// liste tout les utilisateurs
+// liste des établissements
 exports.etab_list = asyncHandler(async (req, res, next) => {
-    connection.query('SELECT * FROM `etab_sco_savoie`', (err, rows, fields) => {
+    db.query('SELECT * FROM `etablissement`', (err, rows, fields) => {
         if (err) throw err
         let obj = []
         for(i in rows){
             obj.push({
-                'id' : rows[i].id, 
+                'id_etab' : rows[i].id_etab,
+                'code_etab' : rows[i].code_etab,
                 'nom' : rows[i].nom, 
-                'cp': rows[i].cp,
-                'commune': rows[i].commune,
-                'lat': rows[i].lat,
-                'lon': rows[i].lon,
-                'nature': rows[i].nature
+                'type' : rows[i].type,
+                'code_postal' : rows[i].code_postal,
+                'nom_commune' : rows[i].nom_commune,
+                'lattitude': rows[i].lattitude,
+                'longitude': rows[i].longitude
         })
         }
         res.send(obj);
@@ -34,19 +25,20 @@ exports.etab_list = asyncHandler(async (req, res, next) => {
     
 });
 
-// information pour un utilisateur
+// information pour un établissement
 exports.etab_detail = asyncHandler(async (req, res, next) => {
-    connection.query('SELECT * FROM `etab_sco_savoie` WHERE `id`= ?',[req.params.id], (err, rows, fields) => {
+    db.query('SELECT * FROM `etablissement` WHERE `id_etab`= ?',[req.params.id], (err, rows, fields) => {
         if (err) throw err
 
         res.send({
-            'id' : rows[0].id, 
+            'id_etab' : rows[0].id_etab,
+            'code_etab' : rows[0].code_etab,
             'nom' : rows[0].nom, 
-            'cp': rows[0].cp,
-            'commune': rows[0].commune,
-            'lat': rows[0].lat,
-            'lon': rows[0].lon,
-            'nature': rows[0].nature
+            'type' : rows[0].type,
+            'code_postal' : rows[0].code_postal,
+            'nom_commune' : rows[0].nom_commune,
+            'lattitude': rows[0].lattitude,
+            'longitude': rows[0].longitude
     });
-      })
+})
 })

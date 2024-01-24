@@ -40,20 +40,11 @@ router.get("/user/:id/detail", user_controller.user_detail);
 // GET request for list of event
 router.get("/events", event_controller.event_list);
 
-// POST request for creating event
-router.post("/event/create", event_controller.event_create_post);
-
 // GET request for creating event
 router.get("/event/create", event_controller.event_create_get);
 
-// POST request for delete event
-router.post("/event/:id/delete", event_controller.event_delete_post);
-
 // GET request for delete event
 router.get("/event/:id/delete", event_controller.event_delete_get);
-
-// POST request for update event
-router.post("/event/:id/update", event_controller.event_update_post);
 
 // GET request for update event
 router.get("/event/:id/update", event_controller.event_update_get);
