@@ -1,10 +1,11 @@
 const mysql = require('mysql');
 
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'rpa'
+    host: 'rdp.dptinfo-usmb.fr',
+    port: 3306,
+    user: 'app',
+    password: 'POecfwI((xAEmA!T',
+    database: 'RPA'
 });
 
 connection.connect(function (err) {
