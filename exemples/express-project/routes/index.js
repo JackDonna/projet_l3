@@ -16,9 +16,10 @@ function isValide (req, res, next) {
 }
 
 function is_valide_and_authenticated(req, res, next) {
-  if(!isAuthenticated(req,res,next)) res.redirect("/sign_in");
-  if(!isValide(req,res,next)) {
-    console.log(req.session)
+  if(!isAuthenticated(req,res,next)) {
+    res.redirect("/sign_in")
+  }
+  else if(!isValide(req,res,next)) {
     res.redirect("/valide_account");
   }
   else
@@ -38,7 +39,6 @@ router.get("/sign_up", function(req, res) {
   res.render("sign_up");
 })
 router.get("/calendar", is_valide_and_authenticated, (req, res) => {
-  console.log(req.session.user)
   res.locals.nom = req.session.nom;
   res.render("calendar");
 })
