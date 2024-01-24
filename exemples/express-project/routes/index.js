@@ -3,31 +3,41 @@ var router = express.Router();
 var escapeHtml = require('escape-html')
 
 function isAuthenticated (req, res, next) {
-  if (req.session.user) next()
-  else res.redirect("/sign_in")
+  return !!req.session.nom
 }
 
-router.get('/sign_up', function (req, res) {
-  res.send('<form action="/login" method="post">' +
-      'Username: <input name="user"><br>' +
-      'Password: <input name="pass" type="password"><br>' +
-      '<input type="submit" text="Login"></form>')
-})
+function isOnlyAuthenticated(req,res,next) {
+  if(req.session.nom) next();
+  else res.redirect("/sign_in");
+}
 
+function isValide (req, res, next) {
+  return !!req.session.valide;
+}
+
+function is_valide_and_authenticated(req, res, next) {
+  if(!isAuthenticated(req,res,next)) res.redirect("/sign_in");
+  if(!isValide(req,res,next)) {
+    console.log(req.session)
+    res.redirect("/valide_account");
+  }
+  else
+  {
+    next();
+  }
+}
+
+router.get("/", (req, res, next) => {
+  res.redirect("/calendar");
+})
 router.get("/sign_in", function(req, res) {
   res.render("sign_in");
 })
 
-router.post('/login', express.urlencoded({ extended: false }), function (req, res) {
-  // login logic to validate req.body.user and req.body.pass
-  // would be implemented here. for this example any combo works
-
-  // regenerate the session, which is good practice to help
-  // guard against forms of session fixation
-
+router.get("/sign_up", function(req, res) {
+  res.render("sign_up");
 })
-
-router.get("/calendar", isAuthenticated, (req, res) => {
+router.get("/calendar", is_valide_and_authenticated, (req, res) => {
   console.log(req.session.user)
   res.locals.nom = req.session.nom;
   res.render("calendar");
@@ -50,5 +60,10 @@ router.get('/logout', function (req, res, next) {
       res.redirect('/')
     })
   })
+})
+
+router.get("/valide_account", (req, res) => {
+  res.locals.mail = req.session.mail
+  res.render("valide_account");
 })
 module.exports = router;

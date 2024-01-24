@@ -7,6 +7,6 @@ form.addEventListener("submit", (e) => {
 
     axios.get("/sql/user/sign_in/" + mail + "/" + password).then((response) => {
         console.log(response.data)
-        window.location.replace("/calendar")
+        if(response.data) window.location.replace("/calendar");
     })
 })

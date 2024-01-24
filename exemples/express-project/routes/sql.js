@@ -27,11 +27,11 @@ router.get("/user/:id/:nom/:prenom/update", user_controller.user_update);
 // request for one user
 router.get("/user/:id/detail", user_controller.user_detail);
 
-router.get("/user/sign_in/:mail/:password", user_controller.user_sign_in)
+router.get("/user/sign_in/:mail/:password", user_controller.user_sign_in);
 
+router.post("/user/sign_up", user_controller.user_create);
 
-
-
+router.get("/user/verifie_user/:number", user_controller.user_verify);
 
 
 
