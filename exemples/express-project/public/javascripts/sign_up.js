@@ -1,4 +1,5 @@
 let form = document.querySelector("#form");
+let error = document.querySelector(".error")
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -15,6 +16,12 @@ form.addEventListener("submit", (e) => {
     }
     console.log("oui")
     axios.post("/sql/user/sign_up", obj).then((response) => {
-        if(response.data) window.location.replace("/calendar");
+        if(response.data) {
+            window.location.replace("/calendar");
+        }
+        else
+        {
+            error.innerText = "Erreur l'adresse mail est déjà utiliser ou les champs sont vide ou contiennent des caractères incorectes"
+        }
     })
 })
