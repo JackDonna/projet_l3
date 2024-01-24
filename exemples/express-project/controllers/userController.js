@@ -2,6 +2,15 @@ const mysql = require('mysql')
 const asyncHandler = require("express-async-handler");
 const db = require("./db")
 
+function user_existe_deja(nom, prenom, mail){
+    sql=`SELECT EXISTS (SELECT * FROM Enseignant WHERE 'mail'= '${mail}' AND 'nom'= '${nom}' AND 'prenom'= '${prenom}' ) AS result`
+    db.query(sql, (err, rows, fields) => {
+        if (err) throw err
+
+        return rows[0].result
+    })
+}
+
 // liste tout les utilisateurs
 exports.user_list = asyncHandler(async (req, res, next) => {
     db.query('SELECT * FROM `Enseignant`', (err, rows, fields) => {
@@ -17,6 +26,7 @@ exports.user_list = asyncHandler(async (req, res, next) => {
 
 // information pour un utilisateur
 exports.user_detail = asyncHandler(async (req, res, next) => {
+
     db.query('SELECT * FROM `Enseignant` WHERE `id_ens`= ?',[req.params.id], (err, rows, fields) => {
         if (err) throw err
 
@@ -30,8 +40,9 @@ exports.user_create = asyncHandler(async (req, res, next) => {
     [req.params.mail,req.params.numen, req.params.nom, req.params.prenom],
     (err, rows, fields) => {
         if (err) throw err
+
         res.send(`user create OK`);
-      })
+    })
       
 });
 
