@@ -1,0 +1,96 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#reader {
+  width: 600px;
+}
+#result {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#html5-qrcode-button-camera-permission {
+  background-color: cornflowerblue;
+  padding: 1em;
+  border: none;
+  border-radius: 10px;
+}
+#html5-qrcode-button-camera-start {
+  background-color: cornflowerblue;
+  padding: 1em;
+  border: none;
+  border-radius: 10px;
+}
+
+
+#html5-qrcode-anchor-scan-type-change {
+  text-decoration: none !important;
+}
+
+#scan_qr_code {
+  z-index: 1;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  padding: 1em 2em;
+  background-color: cornflowerblue;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+#scan_qr_code:hover{
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+#scan_qr_code p {
+  padding: 0;
+  margin: 0;
+  font-size: 50px;
+}
+
+.hide {
+  display: none;
+
+}
+
+#reader{
+
+}
+
+#scan_code {
+  padding: 2em;
+  position: fixed !important;
+  top: 25%;
+  background-color: whitesmoke;
+  opacity: 100%;
+  z-index: 1;
+}
+
+#close_scanner {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  #scan_qr_code {
+    padding: 1em;
+
+    height: 50px;
+    width: 50px;
+  }
+}

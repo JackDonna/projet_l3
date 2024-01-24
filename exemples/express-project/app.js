@@ -3,14 +3,18 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const session = require('express-session');
+  const session = require('express-session');
 const indexRouter = require('./routes/index');
 const apiRouter = require('./routes/api');
 const sqlRouter = require('./routes/sql');
-const neoRouter = require('./routes/neo');
+const neo4jRouter = require('./routes/neo4j');
 const nodeRouter = require('./routes/node');
+const connectRouter = require('./routes/connexion');
+const mailRouter = require('./routes/mail');
+
 
 const app = express();
+
 app.use(session({
   secret: 'keyboard cat',
   resave: false,
@@ -30,8 +34,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/api', apiRouter);
 app.use('/sql', sqlRouter);
-app.use('/neo', neoRouter);
+app.use('/neo4j', neo4jRouter);
 app.use('/node', nodeRouter);
+app.use('/connexion', connectRouter);
+app.use('/mail', mailRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

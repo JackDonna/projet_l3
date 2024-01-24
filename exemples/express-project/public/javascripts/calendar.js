@@ -11,6 +11,9 @@
 /** All method use by import ----------------------------------------
  * @method EventCalendar.addEvent add event to the calendar, take an object
  */
+/**
+ * @method EventCalendar.setOption set option after declaration of calendar
+ */
 
 // DOM element to display result of qr code
 let result_element = document.querySelector("#result");
@@ -21,16 +24,27 @@ let ec = new EventCalendar(calendar_element, {
     view: 'timeGridWeek',
     events: [],
     locale: "fr",
-    firstDay: 1
+    firstDay: 1,
+    slotMinTime: "06:00:00",
+    slotMaxTime: "21:00:00",
+});
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth < 700) {
+        ec.setOption("view", "timeGridDay");
+    }
+    else {
+        ec.setOption("view", "timeGridWeek");
+    }
 });
 
 const scanner = new Html5QrcodeScanner('reader', {
     // Scanner will be initialized in DOM inside element with id of 'reader'
     qrbox: {
-        width: 250,
-        height: 250,
+        width: 300,
+        height: 300,
     },  // Sets dimensions of scanning box (set relative to reader element width)
-    fps: 20, // Frames per second to attempt a scan
+    fps: 60, // Frames per second to attempt a scan
 });
 
 
@@ -72,3 +86,15 @@ function error(err) {
     //console.error(err);
     // Prints any errors to the console
 }
+
+let reader = document.getElementById("scan_code");
+let scan_button = document.getElementById("scan_qr_code");
+let close_scanner = document.getElementById("close_scanner");
+let render_region = document.getElementById("reader__scan_region");
+scan_button.addEventListener("click", () => {
+    reader.classList.remove("hide");
+})
+close_scanner.addEventListener("click", () => {
+    reader.classList.add("hide");
+})
+

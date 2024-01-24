@@ -1,76 +1,69 @@
-var express = require("express");
+var express = require('express');
 var router = express.Router();
-var escapeHtml = require("escape-html");
+var escapeHtml = require('escape-html')
 
-function isAuthenticated(req, res, next) {
-  if (req.session.user) next();
-  else next("route");
+function isAuthenticated (req, res, next) {
+  return !!req.session.nom
 }
 
-router.get("/", isAuthenticated, function (req, res) {
-  // this is only called when there is an authentication user due to isAuthenticated
-  res.send(
-    "hello, " +
-      escapeHtml(req.session.user) +
-      "!" +
-      ' <a href="/logout">Logout</a>'
-  );
-});
+function isOnlyAuthenticated(req,res,next) {
+  if(req.session.nom) next();
+  else res.redirect("/sign_in");
+}
 
-router.get("/", function (req, res) {
-  res.send(
-    '<form action="/login" method="post">' +
-      'Username: <input name="user"><br>' +
-      'Password: <input name="pass" type="password"><br>' +
-      '<input type="submit" text="Login"></form>'
-  );
-});
+function isValide (req, res, next) {
+  return !!req.session.valide;
+}
 
-router.post(
-  "/login",
-  express.urlencoded({ extended: false }),
-  function (req, res) {
-    // login logic to validate req.body.user and req.body.pass
-    // would be implemented here. for this example any combo works
-
-    // regenerate the session, which is good practice to help
-    // guard against forms of session fixation
-    req.session.regenerate(function (err) {
-      if (err) next(err);
-
-      // store user information in session, typically a user id
-      req.session.user = req.body.user;
-
-      // save the session before redirection to ensure page
-      // load does not happen before session is saved
-      req.session.save(function (err) {
-        if (err) return next(err);
-        res.redirect("/calendar");
-      });
-    });
+function is_valide_and_authenticated(req, res, next) {
+  if(!isAuthenticated(req,res,next)) res.redirect("/sign_in");
+  if(!isValide(req,res,next)) {
+    console.log(req.session)
+    res.redirect("/valide_account");
   }
-);
+  else
+  {
+    next();
+  }
+}
 
-router.get("/calendar", (req, res) => {
+router.get("/", (req, res, next) => {
+  res.redirect("/calendar");
+})
+router.get("/sign_in", function(req, res) {
+  res.render("sign_in");
+})
+
+router.get("/sign_up", function(req, res) {
+  res.render("sign_up");
+})
+router.get("/calendar", is_valide_and_authenticated, (req, res) => {
+  console.log(req.session.user)
+  res.locals.nom = req.session.nom;
   res.render("calendar");
-});
+})
 
-router.get("/logout", function (req, res, next) {
+router.get('/logout', function (req, res, next) {
   // logout logic
 
   // clear the user from the session object and save.
   // this will ensure that re-using the old session id
   // does not have a logged in user
-  req.session.user = null;
+  req.session.user = null
   req.session.save(function (err) {
-    if (err) next(err);
+    if (err) next(err)
 
     // regenerate the session, which is good practice to help
     // guard against forms of session fixation
     req.session.regenerate(function (err) {
-      if (err) next(err);
-      res.redirect("/");
-    });
-  });
-});
+      if (err) next(err)
+      res.redirect('/')
+    })
+  })
+})
+
+router.get("/valide_account", (req, res) => {
+  res.locals.mail = req.session.mail
+  res.render("valide_account");
+})
 module.exports = router;
