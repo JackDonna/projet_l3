@@ -16,8 +16,10 @@ function isValide (req, res, next) {
 }
 
 function is_valide_and_authenticated(req, res, next) {
-  if(!isAuthenticated(req,res,next)) res.redirect("/sign_in");
-  if(!isValide(req,res,next)) {
+  if(!isAuthenticated(req,res,next)) {
+    res.redirect("/sign_in");
+  }
+  else if(!isValide(req,res,next)) {
     console.log(req.session)
     res.redirect("/valide_account");
   }
