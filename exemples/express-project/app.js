@@ -37,7 +37,7 @@ app.use('/sql', sqlRouter);
 app.use('/neo4j', neo4jRouter);
 app.use('/node', nodeRouter);
 app.use('/connexion', connectRouter);
-app.use('./mail', mailRouter);
+app.use('/mail', mailRouter);
 
 
 // catch 404 and forward to error handler
