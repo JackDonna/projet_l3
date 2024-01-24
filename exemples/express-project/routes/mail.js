@@ -8,7 +8,7 @@ router.get("/test", (req, res) => {
     res.send("test du mail");
 })
 
-router.get("/sendmail", (req,res)=>{
+router.get("/sendmail/:mail", (req,res)=>{
 
     /*######################################################
     Import & Constantes
@@ -55,7 +55,7 @@ router.get("/sendmail", (req,res)=>{
     }
 
 
-    send("cyril.pitar@etu.univ-smb.fr",'test','test')
+    send(req.params.mail, "Inscription RDP",'Vous êtes inscrit votre code d\'inscription est 5f6Xc');
 
 
 

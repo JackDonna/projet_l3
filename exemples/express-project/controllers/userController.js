@@ -1,22 +1,38 @@
 const mysql = require('mysql')
 const asyncHandler = require("express-async-handler");
 const db = require("./db")
+const axios = require("axios")
 
-function user_existe_deja(nom, prenom, mail){
-    sql=`SELECT EXISTS (SELECT * FROM Enseignant WHERE 'mail'= '${mail}' AND 'nom'= '${nom}' AND 'prenom'= '${prenom}' ) AS result`
+
+exports.user_sign_in = asyncHandler( async  (req, res) => {
+    let mail = req.params.mail;
+    let password = req.params.password;
+    let sql = "SELECT * FROM Enseignant WHERE mail = '" + mail + "' AND password = '" + password + "'";
     db.query(sql, (err, rows, fields) => {
-        if (err) throw err
+        req.session.regenerate(function (err) {
+            if (err) next(err)
 
-        return rows[0].result
+            // store user information in session, typically a user id
+            req.session.user = rows[0].prenom;
+            req.session.mail = rows[0].mail;
+
+            // save the session before redirection to ensure page
+            // load does not happen before session is saved
+            req.session.save(function (err) {
+                if (err) return next(err)
+                axios.get("/mail/sendmail/" + mail);
+            })
+        })
     })
-}
+});
+
 
 // liste tout les utilisateurs
 exports.user_list = asyncHandler(async (req, res, next) => {
     db.query('SELECT * FROM `Enseignant`', (err, rows, fields) => {
         if (err) throw err
         let obj = []
-        for(i in rows){
+        for(let i in rows){
             obj.push({'id_ens' : rows[i].id_ens,'mail' : rows[i].mail, 'numen' : rows[i].numen, 'nom': rows[i].nom, 'prenom': rows[i].prenom})
         }
         res.send(obj);
