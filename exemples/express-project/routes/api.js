@@ -11,10 +11,11 @@ router.post("/download", (req, res) => {
   axios.get(url, {responseType: 'blob'}).then( (response) => {
     data = utils.parseICSURL(response.data, ical);
     var connection = mysql.createConnection({
-      host     : 'localhost',
-      user     : 'root',
-      password : '',
-      database : 'rpa'
+      host     : 'rdp.dptinfo-usmb.fr',
+      port     : 3306,
+      user     : 'app',
+      password : 'POecfwI((xAEmA!T',
+      database : 'RPA'
     });
     connection.connect(function(err) {
       if (err) {
@@ -22,8 +23,9 @@ router.post("/download", (req, res) => {
         return;
       }
     });
+
     for (let event of data) {
-    // Récupérer les données du fichier JSON (data)
+      // Récupérer les données du fichier JSON (data)
       let eventName = event.title;
 
       let startDateObject = new Date(event.start);
@@ -31,15 +33,6 @@ router.post("/download", (req, res) => {
       
       // Extraire la date au format 'YYYY-MM-DD'
       let formattedDate = startDateObject.toISOString().split('T')[0];
-
-      // Extraire le professeur
-      let prof;
-      try {
-        profChamp = event.description.val.split('Professeur : ')[1];
-        prof = profChamp.split('\n')[0];
-      } catch (error) {
-        prof = null;
-      }
       
 
       // Extraire la salle
@@ -61,28 +54,49 @@ router.post("/download", (req, res) => {
         classe = null;
       }
 
+      // Extraire la classe
+      let niveau;
+      try {
+        niveauChamp = event.description.val.split('Classe : ')[1];
+        niveau = classeChamp.split(' ')[0];
+      } catch (error) {
+        niveau = null;
+      }
+
 
       // Préparer la requête SQL d'insertion
-      let insertionQueryFirst = `INSERT INTO ref_discipline (discipline) VALUES (?)`;
-      let insertionQuery = `INSERT INTO evenement (classe, salle, date, heure_debut, heure_fin) VALUES (?, ?, ?, ?, ?)`;
-      
-      // Exécuter la requête SQL d'insertion FIRST
-      connection.query(insertionQueryFirst, [eventName], (err) => {
+      let insertionQuerydiscipline = `INSERT INTO Ref_Discipline (discipline) VALUES (?)`;
+      let insertionQuery = `INSERT INTO Evenement (discipline, niveau, classe, salle, date, heure_debut, heure_fin) VALUES (?, ?, ?, ?, ?, ?, ?)`;
+      let researchName = 'SELECT `id_disc` FROM `Ref_Discipline` WHERE `discipline` = ?'
+
+
+      // Exécuter la requête SQL d'insertion Discipline
+      connection.query(insertionQuerydiscipline, [eventName], (err) => {
         if (err) {
-          console.error('Erreur lors de l\'insertion des données :', err);
+          //console.error('Erreur lors de l\'insertion des données :', err);
         } else {
           console.log('Données insérées avec succès !');
         }     
       });
 
-      // Exécuter la requête SQL d'insertion
-      connection.query(insertionQuery, [classe,salle,formattedDate,startDateObject,endDateObject], (err) => {
+      // Exécuter la requête SQL d'insertion ReserachName
+      connection.query(researchName, [eventName], (err, rows) => {
         if (err) {
-          console.error('Erreur lors de l\'insertion des données :', err);
+          //console.error('Erreur lors de l\'insertion des données :', err);
         } else {
-          console.log('Données insérées avec succès !');
-        }     
+          Myid  = rows[0].id_disc;
+          // Exécuter la requête SQL d'insertion
+          connection.query(insertionQuery, [Myid,niveau,classe,salle,formattedDate,startDateObject,endDateObject], (err) => {
+            if (err) {
+              //console.error('Erreur lors de l\'insertion des données :', err);
+            } else {
+              //console.log('Données insérées avec succès !');
+            }     
+          });  
+          }     
       });
+
+
     }
       
 
