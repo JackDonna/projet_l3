@@ -4,7 +4,7 @@ const db = require("./db")
 
 // liste tout les utilisateurs
 exports.user_list = asyncHandler(async (req, res, next) => {
-    db.query('SELECT * FROM `enseignant`', (err, rows, fields) => {
+    db.query('SELECT * FROM `Enseignant`', (err, rows, fields) => {
         if (err) throw err
         let obj = []
         for(i in rows){
@@ -17,7 +17,7 @@ exports.user_list = asyncHandler(async (req, res, next) => {
 
 // information pour un utilisateur
 exports.user_detail = asyncHandler(async (req, res, next) => {
-    db.query('SELECT * FROM `enseignant` WHERE `id_ens`= ?',[req.params.id], (err, rows, fields) => {
+    db.query('SELECT * FROM `Enseignant` WHERE `id_ens`= ?',[req.params.id], (err, rows, fields) => {
         if (err) throw err
 
         res.send({'id_ens' : rows[0].id_ens,'mail' : rows[0].mail, 'numen' : rows[0].numen, 'nom': rows[0].nom, 'prenom': rows[0].prenom});
@@ -26,7 +26,7 @@ exports.user_detail = asyncHandler(async (req, res, next) => {
 
 // Créer un user
 exports.user_create = asyncHandler(async (req, res, next) => {
-    db.query("INSERT INTO `enseignant`(`mail`, `numen`, `nom`, `prenom`) VALUES (?,?,?,?)", 
+    db.query("INSERT INTO `Enseignant`(`mail`, `numen`, `nom`, `prenom`) VALUES (?,?,?,?)", 
     [req.params.mail,req.params.numen, req.params.nom, req.params.prenom],
     (err, rows, fields) => {
         if (err) throw err
@@ -37,7 +37,7 @@ exports.user_create = asyncHandler(async (req, res, next) => {
 
 // Supprime un user
 exports.user_delete = asyncHandler(async (req, res, next) => {
-    db.query("DELETE FROM `enseignant` WHERE `id_ens`=?", [req.params.id] ,(err, rows, fields) => {
+    db.query("DELETE FROM `Enseignant` WHERE `id_ens`=?", [req.params.id] ,(err, rows, fields) => {
         if (err) throw err
         res.send(`user delete OK`);
       })
@@ -45,7 +45,7 @@ exports.user_delete = asyncHandler(async (req, res, next) => {
 
 // Modifie un user
 exports.user_update = asyncHandler(async (req, res, next) => {
-    db.query("UPDATE `enseignant` SET `nom`=?,`prenom`=? WHERE `id_ens`=?", [req.params.nom,req.params.prenom, req.params.id] ,(err, rows, fields) => {
+    db.query("UPDATE `Enseignant` SET `nom`=?,`prenom`=? WHERE `id_ens`=?", [req.params.nom,req.params.prenom, req.params.id] ,(err, rows, fields) => {
         if (err) throw err
         res.send(`user update OK`);
       })

@@ -5,7 +5,7 @@ const asyncHandler = require("express-async-handler");
 
 // liste des établissements
 exports.etab_list = asyncHandler(async (req, res, next) => {
-    db.query('SELECT * FROM `etablissement`', (err, rows, fields) => {
+    db.query('SELECT * FROM `Etablissement`', (err, rows, fields) => {
         if (err) throw err
         let obj = []
         for(i in rows){
@@ -27,7 +27,7 @@ exports.etab_list = asyncHandler(async (req, res, next) => {
 
 // information pour un établissement
 exports.etab_detail = asyncHandler(async (req, res, next) => {
-    db.query('SELECT * FROM `etablissement` WHERE `id_etab`= ?',[req.params.id], (err, rows, fields) => {
+    db.query('SELECT * FROM `Etablissement` WHERE `id_etab`= ?',[req.params.id], (err, rows, fields) => {
         if (err) throw err
 
         res.send({
