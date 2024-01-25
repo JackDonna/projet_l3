@@ -66,7 +66,7 @@ router.post("/download", (req, res) => {
 
       // Préparer la requête SQL d'insertion
       let insertionQuerydiscipline = `INSERT INTO Ref_Discipline (discipline) VALUES (?)`;
-      let insertionQuery = `INSERT INTO Evenement (discipline, niveau, classe, salle, date, heure_debut, heure_fin) VALUES (?, ?, ?, ?, ?, ?, ?)`;
+      let insertionQuery = `INSERT INTO Evenement (discipline, niveau, classe, salle, date, heure_debut, heure_fin, enseignant) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`;
       let researchName = 'SELECT `id_disc` FROM `Ref_Discipline` WHERE `discipline` = ?'
 
 
@@ -84,9 +84,9 @@ router.post("/download", (req, res) => {
         if (err) {
           //console.error('Erreur lors de l\'insertion des données :', err);
         } else {
-          Myid  = rows[0].id_disc;
+          let Myid  = rows[0].id_disc;
           // Exécuter la requête SQL d'insertion
-          connection.query(insertionQuery, [Myid,niveau,classe,salle,formattedDate,startDateObject,endDateObject], (err) => {
+          connection.query(insertionQuery, [Myid,niveau,classe,salle,formattedDate,startDateObject,endDateObject, req.session.id], (err) => {
             if (err) {
               //console.error('Erreur lors de l\'insertion des données :', err);
             } else {
