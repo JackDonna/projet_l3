@@ -4,6 +4,7 @@ const nodemailer = require('nodemailer');
 const neo4j = require("neo4j-driver");
 let mdp = 'azertgbn_';
 let mail = 'rdp@dptinfo-usmb.fr';
+require('dotenv').config();
 const transporter = nodemailer.createTransport({
     // host: 'mail.partage.univ-smb.fr',
     host: 'ssl0.ovh.net',
@@ -15,7 +16,6 @@ const transporter = nodemailer.createTransport({
         pass: mdp
     }
 });
-
 function mailSend(mailOptions){
     transporter.sendMail(mailOptions, function(error, info){
         if (error) {
@@ -36,30 +36,14 @@ function send(to,objet,msg) {
 
 }
 
-require('dotenv').config();
-
 /* GET users listing. */
 router.get("/test", (req, res) => {
     res.send("test du mail");
 })
 
 router.get("/send_verif_mail/:mail/:number", (req,res)=>{
-
-    /*######################################################
-    Import & Constantes
-    ######################################################*/
-
-
-
-
-    /*######################################################
-    Fonction
-    ######################################################*/
-
-    send(req.params.mail, "Inscription RDP",'Un compte à votre nom à été créer sur RDP, veuillez valider avec le code suivant : ' + req.params.number);
-
-
-
+    send(req.params.mail, "Inscription RDP","Bonjour, un compte sur l'application RDP à été enregistrer avec votre mail : " + req.params+mail + "" +
+        "<br>Si vous n'êtes pas l'auteur de cet enregistrement veuillez ne pas prendre en compte ce mail, sinon vous pouvez valider votre compte grâce au code suivant : <strong>" + req.params.number + "</strong>");
 })
 
 

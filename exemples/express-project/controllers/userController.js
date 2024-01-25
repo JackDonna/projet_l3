@@ -69,13 +69,11 @@ exports.user_create = asyncHandler(async (req, res, next) => {
 
     let sql = "SELECT * FROM Enseignant WHERE mail = '" + req.body.mail + "'";
     db.query(sql, (err, rows) => {
-
-            if(rows[0] === undefined)
+        console.log(rows[0])
+            if(rows[0] == undefined)
             {
                 let nb_rnd = Math.round(rnd(195631, 965239));
-                // store user information in session, typically a user id
-                // save the session before redirection to ensure page
-                // load does not happen before session is saved
+
                 db.query("INSERT INTO `Enseignant`(`mail`, `password`, `nom`, `prenom`, `random_number`, `valide`) VALUES (?,?,?,?,?,?)",
                     [req.body.mail,req.body.password, req.body.nom, req.body.prenom, nb_rnd.toString(), false],
                     (err) => {
@@ -90,10 +88,7 @@ exports.user_create = asyncHandler(async (req, res, next) => {
                             axios.get("/mail/send_verif_mail/" + req.body.mail + "/" + nb_rnd);
                             res.send(true);
                         })
-
-
                 })
-
             }
             else
             {
@@ -119,7 +114,6 @@ exports.user_update = asyncHandler(async (req, res, next) => {
 });
 
 exports.user_verify = asyncHandler(async (req, res, next) => {
-    console.log("recu");
     db.query("SELECT * FROM Enseignant WHERE mail = '" + req.session.mail + "'",(err, rows, fields) => {
         if(rows[0] !== undefined)
         {
@@ -130,7 +124,6 @@ exports.user_verify = asyncHandler(async (req, res, next) => {
                     req.session.valide = 1;
                     res.send(true);
                 })
-
             }
             else
             {

@@ -11,9 +11,7 @@ main {
   justify-content: center;
   align-items: center;
 }
-#reader {
-  width: 600px;
-}
+
 #result {
   text-align: center;
   font-size: 1.5rem;
@@ -80,6 +78,8 @@ main {
   background-color: whitesmoke;
   opacity: 100%;
   z-index: 1;
+  width: 700px;
+  height: 500px;
 }
 
 #close_scanner {
@@ -92,5 +92,10 @@ main {
 
     height: 50px;
     width: 50px;
+  }
+
+  #scan_code {
+    height: 300px;
+    width: 300px;
   }
 }

@@ -37,13 +37,18 @@ window.addEventListener('resize', () => {
         ec.setOption("view", "timeGridWeek");
     }
 });
-
+let qrboxFunction = function(viewfinderWidth, viewfinderHeight) {
+    let minEdgePercentage = 0.7; // 70%
+    let minEdgeSize = Math.min(viewfinderWidth, viewfinderHeight);
+    let qrboxSize = Math.floor(minEdgeSize * minEdgePercentage);
+    return {
+        width: qrboxSize,
+        height: qrboxSize
+    };
+}
 const scanner = new Html5QrcodeScanner('reader', {
     // Scanner will be initialized in DOM inside element with id of 'reader'
-    qrbox: {
-        width: 300,
-        height: 300,
-    },  // Sets dimensions of scanning box (set relative to reader element width)
+    qrbox : qrboxFunction, // Sets dimensions of scanning box (set relative to reader element width)
     fps: 60, // Frames per second to attempt a scan
 });
 

@@ -64,7 +64,7 @@ router.get('/logout', function (req, res, next) {
   })
 })
 
-router.get("/valide_account", (req, res) => {
+router.get("/valide_account", isOnlyAuthenticated, (req, res) => {
   res.locals.mail = req.session.mail
   res.render("valide_account");
 })

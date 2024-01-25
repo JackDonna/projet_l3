@@ -52,7 +52,7 @@ input::placeholder {
   color: white;
 }
 
-.inscription {
+.connexion, .inscription {
   margin-top: 20px;
   color: #004160;
   display: flex;

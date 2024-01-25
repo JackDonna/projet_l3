@@ -11,18 +11,22 @@
 <body>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-Validation pour le compte : <%= mail %>
+
 <div class="container" >
+    <p>Validation pour le compte : <br> <%= mail %></p>
     <form action="" id="form">
         <h1>Validation</h1>
         <input type="text" placeholder="Code de validation" id="form_code"/>
         <input class="button" type="submit" value="Inscription" />
     </form>
+    <div class="inscription">
+        <a href="/logout">Se deconnecter ou utiliser un autre compte</a>
+    </div>
     <div>
         <p class="error"></p>
     </div>
 </div>
-<a href="/logout">Se deconnecter ou utiliser un autre compte</a>
+
 
 <script src="javascripts/valide.js"></script>
 </body>
