@@ -40,7 +40,7 @@ router.get("/sign_up", function(req, res) {
   res.render("sign_up");
 })
 router.get("/calendar", is_valide_and_authenticated, (req, res) => {
-  res.locals.id = req.session.id;
+  res.locals.id_ens = req.session.id_ens;
   res.render("calendar");
 })
 
