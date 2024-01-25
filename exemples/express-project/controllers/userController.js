@@ -23,7 +23,7 @@ exports.user_sign_in = asyncHandler( async  (req, res) => {
                 req.session.prenom = rows[0].prenom;
                 req.session.mail = rows[0].mail;
                 req.session.valide = rows[0].valide;
-
+                req.session.id = rows[0].id_ens;
                 // save the session before redirection to ensure page
                 // load does not happen before session is saved
                 req.session.save(function (err) {
@@ -122,6 +122,7 @@ exports.user_verify = asyncHandler(async (req, res, next) => {
                 db.query("update `Enseignant` set `valide` = 1 where mail = '" + req.session.mail + "'" , (err) => {
                     if (err) throw err
                     req.session.valide = 1;
+                    req.session.id = rows[0].id_ens;
                     res.send(true);
                 })
             }
