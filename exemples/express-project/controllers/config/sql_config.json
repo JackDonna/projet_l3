@@ -1,0 +1,16 @@
+{
+  "sql":
+  {
+    "select":
+    {
+      "discipine_by_id": "SELECT * FROM Ref_Discipline WHERE id_disc = ?",
+      "discipline_by_name": "SELECT * FROM Ref_Discipline WHERE discipline = ?",
+      "event_by_enseignant_id": "SELECT * FROM Evenement inner join Ref_Discipline ON Evenement.id_discipline = Ref_Discipline.id_disc Where Evenement.enseignant = ?"
+    },
+    "insert":
+    {
+      "evenement": "INSERT INTO Evenement (id_discipline, niveau, classe, salle, date, heure_debut, heure_fin, enseignant) VALUES (?,?,?,?,?,?,?,?)",
+      "discipline": "INSERT IGNORE INTO Ref_Discipline (discipline) VALUES (?)"
+    }
+  }
+}

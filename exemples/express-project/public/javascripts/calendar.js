@@ -28,9 +28,27 @@ let ec = new EventCalendar(calendar_element, {
     slotMinTime: "06:00:00",
     slotMaxTime: "21:00:00",
 });
+let s = new Date();
+let c = new Date();
+
+s.setHours(16);
+c.setHours(17);
+
+ec.addEvent({
+    title: "test",
+    date: new Date(),
+    start: new Date(s.getFullYear(), s.getMonth(), s.getDate(), s.getHours(), s.getMinutes()),
+    end: new Date(c.getFullYear(), c.getMonth(), c.getDate(), c.getHours(), c.getMinutes())
+})
+console.log({
+    title: "test",
+    date: new Date(),
+    start: new Date(s.getFullYear(), s.getMonth(), s.getDate(), s.getHours(), s.getMinutes()),
+    end: new Date(c.getFullYear(), c.getMonth(), c.getDate(), c.getHours(), c.getMinutes())
+})
 
 window.addEventListener('resize', () => {
-    if (window.innerWidth < 700) {
+    if (window.innerWidth < 800) {
         ec.setOption("view", "timeGridDay");
     }
     else {
@@ -60,10 +78,16 @@ function success(result) {
     let obj = {
         "url": result
     }
+    scanner.clear();
+    reader.classList.add("hide");
+    // Clears scanning instance
+
+    document.getElementById('reader').remove();
 
     // Fetching potential icals data from qr code to API
-    axios.post("/api/download", obj).then(function(response)
+    axios.post("/sql/event/insert_edt", obj).then(function(response)
     {
+        console.log(response.data);
         // Fail code = 0
         if(response.data.code === 0)
         {
@@ -80,10 +104,7 @@ function success(result) {
         }
     })
     // Prints result as a link inside result element
-    scanner.clear();
-    // Clears scanning instance
 
-    document.getElementById('reader').remove();
     // Removes reader element from DOM since no longer needed
 
 }
@@ -101,5 +122,14 @@ scan_button.addEventListener("click", () => {
 })
 close_scanner.addEventListener("click", () => {
     reader.classList.add("hide");
+})
+
+axios.get("/sql/event/get_edt").then((response) => {
+    console.log(response.data);
+    for(let event of response.data)
+    {
+        console.log(event)
+        ec.addEvent(event);
+    }
 })
 

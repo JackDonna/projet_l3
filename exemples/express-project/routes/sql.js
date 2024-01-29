@@ -2,9 +2,9 @@ var express = require('express');
 var router = express.Router();
 
 // controllers
-const user_controller = require("../controllers/userController");
-const event_controller = require("../controllers/eventController");
-const etab_controller = require("../controllers/etabController");
+const user_controller = require("../controllers/UserController");
+const event_controller = require("../controllers/EventController");
+const etab_controller = require("../controllers/EstablishmentController");
 
 
 
@@ -50,9 +50,12 @@ router.get("/event/:id/delete", event_controller.event_delete_get);
 router.get("/event/:id/update", event_controller.event_update_get);
 
 // GET request for one event
-router.get("/event/:id", event_controller.event_detail);
+router.get("/event/detail/:id", event_controller.event_detail);
 
+// POST request for insert an edt
+router.post("/event/insert_edt", event_controller.insert_edt);
 
+router.get("/event/get_edt", event_controller.get_edt);
 
 
 // --- ETABLISSEMENT CONTROLLERS --- //

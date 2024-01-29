@@ -16,9 +16,10 @@ const mailRouter = require('./routes/mail');
 const app = express();
 
 app.use(session({
-  secret: 'keyboard cat',
+  secret: 'maxi tosma',
   resave: false,
-  saveUninitialized: true
+  saveUninitialized: true,
+  expires: 600000
 }))
 
 // view engine setup
