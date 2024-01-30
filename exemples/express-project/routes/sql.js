@@ -5,6 +5,7 @@ var router = express.Router();
 const user_controller = require("../controllers/UserController");
 const event_controller = require("../controllers/EventController");
 const etab_controller = require("../controllers/EstablishmentController");
+const absence_controller = require("../controllers/AbsenceController");
 
 
 
@@ -65,6 +66,11 @@ router.get("/etabs", etab_controller.etab_list);
 
 // request for one etablissement
 router.get("/etab/:id/detail", etab_controller.etab_detail);
+
+// --- ABSENCES CONTROLLERS --- //
+
+// récupérer la liste des absences disponible entre une heure et une autre
+router.get("abs/list/:debut/:fin", absence_controller.list_absence);
 
 
 module.exports = router;
