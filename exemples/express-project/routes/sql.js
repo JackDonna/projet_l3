@@ -69,8 +69,10 @@ router.get("/etab/:id/detail", etab_controller.etab_detail);
 
 // --- ABSENCES CONTROLLERS --- //
 
-// récupérer la liste des absences disponible entre une heure et une autre
+// récupère la liste des absences disponible entre une heure et une autre
 router.get("abs/list/:debut/:fin", absence_controller.list_absence);
 
+// ajoute une absence sur un créneau, une salle et pour une classe
+router.get("abs/ajout/:debut/:fin/:classe/:salle/:motif", absence_controller.ajout_absence);
 
 module.exports = router;
