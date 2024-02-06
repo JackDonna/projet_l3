@@ -1,7 +1,7 @@
 const mysql = require('mysql')
 const asyncHandler = require("express-async-handler");
-const pool = require("./db")
-const axios = require("axios")
+const pool = require("./db.js");
+const axios = require("axios");
 
 function rnd(min, max) {
     return Math.random() * (max - min) + min;
@@ -11,6 +11,7 @@ function check_user_account(mail, password, callback)
 {
     pool.getConnection((err, db) =>
     {
+        if(err) throw err;
         db.query(
             {
                 sql: "SELECT * FROM Enseignant WHERE mail = ? AND PASSWORD = ?",
