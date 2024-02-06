@@ -48,15 +48,17 @@ function create_user(mail, password, nom, prenom, callback)
 {
     check_user(mail, function(err, result)
     {
-        if(result !== undefined)
+        console.log(result);
+        if(result === undefined)
         {
+            let number = Math.round(rnd(190556, 999999))
             pool.getConnection((err, db) =>
             {
                 db.query(
                     {
                         sql: "INSERT INTO `Enseignant` (mail, password, nom, prenom, random_number, valide) VALUES (?,?,?,?,?,?)",
                         timeout: 10000,
-                        values: [mail, password, nom, prenom, Math.round(rnd(190556, 999999)), false]
+                        values: [mail, password, nom, prenom, number, false]
                     },
                     (err, rows, flield) => {
                         if(err) throw err;
@@ -65,7 +67,8 @@ function create_user(mail, password, nom, prenom, callback)
                                 nom: nom,
                                 prenom: prenom,
                                 mail: mail,
-                                valide: false
+                                valide: false,
+                                number: number
                             });
                     }
                 )
@@ -139,15 +142,17 @@ exports.user_create = asyncHandler(async (req, res, next) => {
 
     create_user(req.body.mail, req.body.password, req.body.nom, req.body.prenom, function(err, result) {
         if(err) throw err;
+        console.log(result)
+        console.log("finito")
         req.session.regenerate(function (err) {
             if (err) next(err)
             req.session.nom = result.nom;
             req.session.prenom = result.prenom;
             req.session.mail = result.mail;
             req.session.valide = false;
-            axios.get("/mail/send_verif_mail/" + req.body.mail + "/" + nb_rnd);
             res.send(true);
         })
+        axios.get("/mail/send_verif_mail/" + req.body.mail + "/" + result.number);
     })
 });
 

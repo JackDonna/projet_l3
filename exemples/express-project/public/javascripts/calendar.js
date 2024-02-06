@@ -30,23 +30,6 @@ let ec = new EventCalendar(calendar_element, {
 });
 let s = new Date();
 let c = new Date();
-
-s.setHours(16);
-c.setHours(17);
-
-ec.addEvent({
-    title: "test",
-    date: new Date(),
-    start: new Date(s.getFullYear(), s.getMonth(), s.getDate(), s.getHours(), s.getMinutes()),
-    end: new Date(c.getFullYear(), c.getMonth(), c.getDate(), c.getHours(), c.getMinutes())
-})
-console.log({
-    title: "test",
-    date: new Date(),
-    start: new Date(s.getFullYear(), s.getMonth(), s.getDate(), s.getHours(), s.getMinutes()),
-    end: new Date(c.getFullYear(), c.getMonth(), c.getDate(), c.getHours(), c.getMinutes())
-})
-
 window.addEventListener('resize', () => {
     if (window.innerWidth < 800) {
         ec.setOption("view", "timeGridDay");
