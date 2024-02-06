@@ -1,6 +1,6 @@
 const mysql = require('mysql')
 const asyncHandler = require("express-async-handler");
-const pool = require("./db.js");
+const pool = require("./db");
 const axios = require("axios");
 
 function rnd(min, max) {

@@ -11,7 +11,7 @@ let sql_config = fs.readFileSync("controllers/config/sql_config.json", "utf-8");
 sql_config = JSON.parse(sql_config);
 const SQL = sql_config.sql;
 
-exports.build_event = (title, start, end, location, id) =>
+let build_event = (title, start, end, location, id) =>
 {
     let event =
         {
@@ -21,10 +21,14 @@ exports.build_event = (title, start, end, location, id) =>
             location: location,
             id: id
         }
-    for(let color of colors)
+    event.backgroundColor = "#08CFFB"
+    for (let color of colors)
     {
-        event.title.toLowerCase().includes(color.name) ? event.backgroundColor = color.color : event.backgroundColor = "#08CFFB"
+        if(title.toLowerCase().includes(color.name.toLowerCase()) || color.name.toLowerCase().includes(title.toLowerCase())) {
+            event.backgroundColor = color.color
+        }
     }
+    return event;
 }
 
 exports.insert_discipline = (discipline, callback) =>

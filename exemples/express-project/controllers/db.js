@@ -6,20 +6,9 @@ const pool = mysql.createPool({
     user: 'app',
     password: 'POecfwI((xAEmA!T',
     database: 'test_RPA',
-    connectionLimit : 10,
-});
-
-const connection = mysql.createConnection({
-    host: 'rdp.dptinfo-usmb.fr',
-    port: 3306,
-    user: 'app',
-    password: 'POecfwI((xAEmA!T',
-    database: 'test_RPA',
-});
-
-connection.connect((err) => {
-    if(err) throw err;
-    console.log("connected")
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0,
 });
 
 
