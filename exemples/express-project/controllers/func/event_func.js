@@ -11,49 +11,74 @@ let sql_config = fs.readFileSync("controllers/config/sql_config.json", "utf-8");
 sql_config = JSON.parse(sql_config);
 const SQL = sql_config.sql;
 
+exports.build_event = (title, start, end, location, id) =>
+{
+    let event =
+        {
+            title: title,
+            start: start,
+            end: end,
+            location: location,
+            id: id
+        }
+    for(let color of colors)
+    {
+        event.title.toLowerCase().includes(color.name) ? event.backgroundColor = color.color : event.backgroundColor = "#08CFFB"
+    }
+}
+
 exports.insert_discipline = (discipline, callback) =>
 {
-    db.query(
-        {
-            sql: SQL.insert.discipline,
-            timeout: 10000,
-            values: [discipline]
-        },
-        (err, rows, fields) => {
-            if(err) callback(err, null);
-            callback(null, true);
-        }
-    )
+    pool.getConnection((err, db) =>
+    {
+        db.query(
+            {
+                sql: SQL.insert.discipline,
+                timeout: 10000,
+                values: [discipline]
+            },
+            (err, rows, fields) => {
+                if(err) callback(err, null);
+                callback(null, true);
+            }
+        )
+    })
 }
 
 exports.select_discipline_by_name = (discipline, callback) =>
 {
-    db.query(
-        {
-            sql: SQL.select.discipline_by_name,
-            timeout: 10000,
-            values: [discipline]
-        },
-        (err, rows, fields) => {
-            if(err) callback(err, null);
-            callback(null, rows[0]);
-        }
-    )
+    pool.getConnection((err, db) =>
+    {
+        db.query(
+            {
+                sql: SQL.select.discipline_by_name,
+                timeout: 10000,
+                values: [discipline]
+            },
+            (err, rows, fields) => {
+                if(err) callback(err, null);
+                callback(null, rows[0]);
+            }
+        )
+    })
 }
 
 exports.select_discipline_by_id = (id_discipline, callback) =>
 {
-    db.query(
-        {
-            sql: SQL.select.discipline_by_name,
-            timeout: 10000,
-            values: [id_discipline]
-        },
-        (err, rows, fields) => {
-            if(err) callback(err, null);
-            callback(null, rows[0]);
-        }
-    )
+    pool.getConnection((err, db) =>
+    {
+        db.query(
+            {
+                sql: SQL.select.discipline_by_name,
+                timeout: 10000,
+                values: [id_discipline]
+            },
+            (err, rows, fields) => {
+                if(err) callback(err, null);
+                callback(null, rows[0]);
+            }
+        )
+    })
 }
 
 exports.insert_event = (discipline, niveau, classe, salle, date, heure_debut, heure_fin, enseignant, callback) =>
@@ -64,6 +89,10 @@ exports.insert_event = (discipline, niveau, classe, salle, date, heure_debut, he
         select_discipline_by_name(discipline, function(err, result)
         {
             if(err) callback(err, null);
+            pool.getConnection((err, db) =>
+            {
+
+            })
             db.query(
                 {
                     sql: SQL.insert.evenement,
@@ -134,42 +163,23 @@ exports.insert_all_events = (events, id, callback) =>
 }
 
 exports.get_events_by_enseignant_id = (id, callback) => {
-    db.query(
-        {
-            sql: SQL.select.event_by_enseignant_id,
-            timeout: 30000,
-            values: [id]
-        },
-        (err, rows, fields) => {
-            if(err) throw err;
-            let obj = [];
-            for (let event of rows)
+    pool.getConnection((err, db) =>
+    {
+        db.query(
             {
+                sql: SQL.select.event_by_enseignant_id,
+                timeout: 30000,
+                values: [id]
+            },
+            (err, rows, fields) => {
                 if(err) throw err;
-                let x = {
-                    title: event.discipline,
-                    start: event.heure_debut,
-                    end:  event.heure_fin,
-                    location: event.salle,
-                }
-                if(x.title.toLowerCase().includes("cours annul"))
+                let obj = [];
+                for (let row of rows)
                 {
-                    x.backgroundColor = "rgb(200,50,50)";
-                    x.event_type = "CANCELED";
+                    obj.push(build_event(row.discipline, row.heure_debut, row.heure_fin, row.salle, row.id));
                 }
-                else
-                {
-                    for(let color of colors)
-                    {
-                        if(x.title.toLowerCase().includes(color.name))
-                        {
-                            x.backgroundColor = color.color;
-                        }
-                    }
-                }
-                obj.push(x);
+                callback(null, obj);
             }
-            callback(null, obj);
-        }
-    )
+        )
+    })
 }

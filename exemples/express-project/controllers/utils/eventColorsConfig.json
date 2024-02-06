@@ -1,6 +1,10 @@
 {
   "colors": [
     {
+      "name": "cours annul",
+      "color": "#FB1008"
+    },
+    {
       "name": "mercatique",
       "color": "#e62eca"
     },

@@ -9,32 +9,38 @@ function rnd(min, max) {
 
 function check_user_account(mail, password, callback)
 {
-    db.query(
-        {
-            sql: "SELECT * FROM Enseignant WHERE mail = ? AND PASSWORD = ?",
-            timeout: 10000,
-            values: [mail, password]
-        },
-        (err, rows, fields) => {
-            if(err) callback(err, null, null);
-            callback(null, rows[0]);
-        }
-    )
+    pool.getConnection((err, db) =>
+    {
+        db.query(
+            {
+                sql: "SELECT * FROM Enseignant WHERE mail = ? AND PASSWORD = ?",
+                timeout: 10000,
+                values: [mail, password]
+            },
+            (err, rows, fields) => {
+                if(err) callback(err, null, null);
+                callback(null, rows[0]);
+            }
+        )
+    })
 }
 
 function check_user(mail, callback)
 {
-    db.query(
-        {
-            sql: "SELECT * FROM Enseignant WHERE mail = ?",
-            timeout: 10000,
-            values: [mail]
-        },
-        (err, rows, fields) => {
-            if(err) callback(err, null, null);
-            callback(null, rows[0]);
-        }
-    )
+    pool.getConnection((err, db) =>
+    {
+        db.query(
+            {
+                sql: "SELECT * FROM Enseignant WHERE mail = ?",
+                timeout: 10000,
+                values: [mail]
+            },
+            (err, rows, fields) => {
+                if(err) callback(err, null, null);
+                callback(null, rows[0]);
+            }
+        )
+    })
 }
 
 function create_user(mail, password, nom, prenom, callback)
@@ -43,23 +49,26 @@ function create_user(mail, password, nom, prenom, callback)
     {
         if(result !== undefined)
         {
-            db.query(
-                {
-                    sql: "INSERT INTO `Enseignant` (mail, password, nom, prenom, random_number, valide) VALUES (?,?,?,?,?,?)",
-                    timeout: 10000,
-                    values: [mail, password, nom, prenom, Math.round(rnd(190556, 999999)), false]
-                },
-                (err, rows, flield) => {
-                    if(err) throw err;
-                    callback(null,
-                        {
-                            nom: nom,
-                            prenom: prenom,
-                            mail: mail,
-                            valide: false
-                        });
-                }
-            )
+            pool.getConnection((err, db) =>
+            {
+                db.query(
+                    {
+                        sql: "INSERT INTO `Enseignant` (mail, password, nom, prenom, random_number, valide) VALUES (?,?,?,?,?,?)",
+                        timeout: 10000,
+                        values: [mail, password, nom, prenom, Math.round(rnd(190556, 999999)), false]
+                    },
+                    (err, rows, flield) => {
+                        if(err) throw err;
+                        callback(null,
+                            {
+                                nom: nom,
+                                prenom: prenom,
+                                mail: mail,
+                                valide: false
+                            });
+                    }
+                )
+            })
         }
     })
 }
@@ -98,25 +107,31 @@ exports.user_sign_in = asyncHandler( async  (req, res) => {
 
 // liste tout les utilisateurs
 exports.user_list = asyncHandler(async (req, res, next) => {
-    db.query('SELECT * FROM `Enseignant`', (err, rows, fields) => {
-        if (err) throw err
-        let obj = []
-        for(let i in rows){
-            obj.push({'id_ens' : rows[i].id_ens,'mail' : rows[i].mail, 'numen' : rows[i].numen, 'nom': rows[i].nom, 'prenom': rows[i].prenom})
-        }
-        res.send(obj);
-      })
+    pool.getConnection((err, db) =>
+    {
+        db.query('SELECT * FROM `Enseignant`', (err, rows, fields) => {
+            if (err) throw err
+            let obj = []
+            for(let i in rows){
+                obj.push({'id_ens' : rows[i].id_ens,'mail' : rows[i].mail, 'numen' : rows[i].numen, 'nom': rows[i].nom, 'prenom': rows[i].prenom})
+            }
+            res.send(obj);
+        })
+    })
+
     
 });
 
 // information pour un utilisateur
 exports.user_detail = asyncHandler(async (req, res, next) => {
+    pool.getConnection((err, db) =>
+    {
+        db.query('SELECT * FROM `Enseignant` WHERE `id_ens`= ?',[req.params.id], (err, rows, fields) => {
+            if (err) throw err
 
-    db.query('SELECT * FROM `Enseignant` WHERE `id_ens`= ?',[req.params.id], (err, rows, fields) => {
-        if (err) throw err
-
-        res.send({'id_ens' : rows[0].id_ens,'mail' : rows[0].mail, 'numen' : rows[0].numen, 'nom': rows[0].nom, 'prenom': rows[0].prenom});
-      })
+            res.send({'id_ens' : rows[0].id_ens,'mail' : rows[0].mail, 'numen' : rows[0].numen, 'nom': rows[0].nom, 'prenom': rows[0].prenom});
+        })
+    })
 });
 
 exports.user_create = asyncHandler(async (req, res, next) => {
@@ -137,41 +152,50 @@ exports.user_create = asyncHandler(async (req, res, next) => {
 
 // Supprime un user
 exports.user_delete = asyncHandler(async (req, res, next) => {
-    db.query("DELETE FROM `Enseignant` WHERE `id_ens`=?", [req.params.id] ,(err, rows, fields) => {
-        if (err) throw err
-        res.send(`user delete OK`);
-      })
+    pool.getConnection((err, db) =>
+    {
+        db.query("DELETE FROM `Enseignant` WHERE `id_ens`=?", [req.params.id] ,(err, rows, fields) => {
+            if (err) throw err
+            res.send(`user delete OK`);
+        })
+    })
 });
 
 // Modifie un user
 exports.user_update = asyncHandler(async (req, res, next) => {
-    db.query("UPDATE `Enseignant` SET `nom`=?,`prenom`=? WHERE `id_ens`=?", [req.params.nom,req.params.prenom, req.params.id] ,(err, rows, fields) => {
-        if (err) throw err
-        res.send(`user update OK`);
-      })
+    pool.getConnection((err, db) =>
+    {
+        db.query("UPDATE `Enseignant` SET `nom`=?,`prenom`=? WHERE `id_ens`=?", [req.params.nom,req.params.prenom, req.params.id] ,(err, rows, fields) => {
+            if (err) throw err
+            res.send(`user update OK`);
+        })
+    })
 });
 
 exports.user_verify = asyncHandler(async (req, res, next) => {
-    db.query("SELECT * FROM Enseignant WHERE mail = '" + req.session.mail + "'",(err, rows, fields) => {
-        if(rows[0] !== undefined)
-        {
-            if(rows[0].random_number == req.params.number)
+    pool.getConnection((err, db) =>
+    {
+        db.query("SELECT * FROM Enseignant WHERE mail = '" + req.session.mail + "'",(err, rows, fields) => {
+            if(rows[0] !== undefined)
             {
-                db.query("update `Enseignant` set `valide` = 1 where mail = '" + req.session.mail + "'" , (err) => {
-                    if (err) throw err
-                    req.session.valide = 1;
-                    req.session.id_ens = rows[0].id_ens;
-                    res.send(true);
-                })
+                if(rows[0].random_number == req.params.number)
+                {
+                    db.query("update `Enseignant` set `valide` = 1 where mail = '" + req.session.mail + "'" , (err) => {
+                        if (err) throw err
+                        req.session.valide = 1;
+                        req.session.id_ens = rows[0].id_ens;
+                        res.send(true);
+                    })
+                }
+                else
+                {
+                    res.send(false);
+                }
             }
             else
             {
                 res.send(false);
             }
-        }
-        else
-        {
-            res.send(false);
-        }
+        })
     })
 })
