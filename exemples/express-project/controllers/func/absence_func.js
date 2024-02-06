@@ -64,13 +64,13 @@ exports.get_event_by_date_and_classroom = (heure_debut, heure_fin, classe, salle
         }) 
 }
 
-exports.insert_absence = (motif, event, callback) =>
+exports.insert_absence = (motif, id_event, callback) =>
 {
     db.query(
         {
-            sql: SQL.sql.insert.absence,
+            sql: SQL.insert.absence,
             timeout: 10000,
-            values: [motif, event]
+            values: [motif, id_event]
         },
         (err, rows, fields) => {
             if (err) throw err

@@ -11,7 +11,7 @@ let sql_config = fs.readFileSync("controllers/config/sql_config.json", "utf-8");
 sql_config = JSON.parse(sql_config);
 const SQL = sql_config.sql;
 
-let build_event = (title, start, end, location, id) =>
+let build_event = (title, start, end, location, id, classe, salle) =>
 {
     let event =
         {
@@ -19,7 +19,9 @@ let build_event = (title, start, end, location, id) =>
             start: start,
             end: end,
             location: location,
-            id: id
+            id: id,
+            classe: classe,
+            salle: salle
         }
     event.backgroundColor = "#08CFFB"
     for (let color of colors)
@@ -180,7 +182,8 @@ exports.get_events_by_enseignant_id = (id, callback) => {
                 let obj = [];
                 for (let row of rows)
                 {
-                    obj.push(build_event(row.discipline, row.heure_debut, row.heure_fin, row.salle, row.id));
+                    console.log(row)
+                    obj.push(build_event(row.discipline, row.heure_debut, row.heure_fin, row.salle, row.id_ev, row.classe, row.salle));
                 }
                 callback(null, obj);
             }

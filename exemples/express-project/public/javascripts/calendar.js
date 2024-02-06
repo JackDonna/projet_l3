@@ -19,6 +19,14 @@
 let result_element = document.querySelector("#result");
 // Dom element to display calendar
 let calendar_element = document.getElementById('calendar');
+let absence_form = document.getElementById('add_absence');
+let start_absence = absence_form.querySelector(".start_absence");
+let end_absence = absence_form.querySelector(".end_absence");
+let reason = absence_form.querySelector(".reason");
+let submit = absence_form.querySelector(".submit_form");
+let close_form = absence_form.querySelector("#close_form");
+
+let global_event = {};
 // Object calendar
 let ec = new EventCalendar(calendar_element, {
     view: 'timeGridWeek',
@@ -27,9 +35,27 @@ let ec = new EventCalendar(calendar_element, {
     firstDay: 1,
     slotMinTime: "06:00:00",
     slotMaxTime: "21:00:00",
+    eventClick: function(info)
+    {
+        console.log(info)
+        absence_form.classList.remove("hide");
+        start_absence.value = format_time(info.event.start);
+        end_absence.value = format_time(info.event.end);
+        global_event = info.event;
+    }
 });
-let s = new Date();
-let c = new Date();
+
+function format_time(time)
+{
+    console.log(time);
+    let hour = time.getHours();
+    hour < 10 ? hour = "0" + hour : null;
+
+    let minute = time.getMinutes();
+    minute < 10 ? minute = "0" + minute : null;
+    return hour + ":" + minute;
+}
+
 window.addEventListener('resize', () => {
     if (window.innerWidth < 800) {
         ec.setOption("view", "timeGridDay");
@@ -107,12 +133,26 @@ close_scanner.addEventListener("click", () => {
     reader.classList.add("hide");
 })
 
+
+
 axios.get("/sql/event/get_edt").then((response) => {
-    console.log(response.data);
     for(let event of response.data)
     {
-        console.log(event)
         ec.addEvent(event);
     }
+})
+
+submit.addEventListener("click", function ()
+{
+    console.log(global_event)
+    axios.get("sql/abs/ajout/" + global_event.id + "/" + reason.value).then((response) =>
+    {
+        console.log(response.data);
+    })
+})
+
+close_form.addEventListener("click", () =>
+{
+    absence_form.classList.add("hide");
 })
 
