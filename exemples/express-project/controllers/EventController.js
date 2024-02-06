@@ -1,5 +1,5 @@
 const mysql = require('mysql')
-const db = require("./db")
+const pool = require("./db")
 const asyncHandler = require("express-async-handler");
 const axios = require("axios");
 const utils = require("./utils/ics_utils");

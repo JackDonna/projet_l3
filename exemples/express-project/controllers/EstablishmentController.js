@@ -8,7 +8,7 @@ exports.etab_list = asyncHandler(async (req, res, next) => {
     db.query('SELECT * FROM `Etablissement`', (err, rows, fields) => {
         if (err) throw err
         let obj = []
-        for(i in rows){
+        for(let i in rows){
             obj.push({
                 'id_etab' : rows[i].id_etab,
                 'code_etab' : rows[i].code_etab,
