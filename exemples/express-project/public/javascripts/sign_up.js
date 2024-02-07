@@ -14,7 +14,7 @@ form.addEventListener("submit", (e) => {
         "mail": mail,
         "password": password
     }
-    axios.post("/sql/user/sign_up", obj).then((response) => {
+    axios.post("/sql/teacher/sign_up", obj).then((response) => {
         console.log(response.data)
         if(response.data) {
             window.location.replace("/calendar");

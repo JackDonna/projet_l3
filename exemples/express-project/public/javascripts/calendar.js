@@ -135,7 +135,7 @@ close_scanner.addEventListener("click", () => {
 
 
 
-axios.get("/sql/event/get_edt").then((response) => {
+axios.get("/sql/event/get_timetable").then((response) => {
     for(let event of response.data)
     {
         ec.addEvent(event);
@@ -145,7 +145,7 @@ axios.get("/sql/event/get_edt").then((response) => {
 submit.addEventListener("click", function ()
 {
     console.log(global_event)
-    axios.get("sql/abs/ajout/" + global_event.id + "/" + reason.value).then((response) =>
+    axios.post("sql/absence/insert/", {id_event: global_event.id, motif: reason.value}).then((response) =>
     {
         console.log(response.data);
     })

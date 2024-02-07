@@ -1,0 +1,12 @@
+{
+  "transporter_config":
+  {
+    "host": "ssl0.ovh.net",
+    "port": 465,
+    "secure": true,
+    "auth": {
+      "user": "azertgbn_",
+      "pass": "rdp@dptinfo-usmb.fr"
+    }
+  }
+}

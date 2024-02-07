@@ -6,7 +6,7 @@ form.addEventListener("submit", (e) => {
     let mail = document.querySelector("#form_mail").value;
     let password = document.querySelector("#form_password").value;
 
-    axios.get("/sql/user/sign_in/" + mail + "/" + password).then((response) => {
+    axios.get("/sql/teacher/sign_in/" + mail + "/" + password).then((response) => {
         console.log(response.data)
         if(response.data) {
             window.location.replace("/calendar");

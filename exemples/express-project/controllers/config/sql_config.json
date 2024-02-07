@@ -7,13 +7,21 @@
       "discipline_by_name": "SELECT * FROM Ref_Discipline WHERE discipline = ?",
       "event_by_enseignant_id": "SELECT * FROM Evenement inner join Ref_Discipline ON Evenement.id_discipline = Ref_Discipline.id_disc Where Evenement.enseignant = ?",
       "all_absence_beetween_two_dates": "SELECT * FROM Absence INNER JOIN Evenement ON Evenement.heure_debut > ? AND Evenement.heure_fin < ? AND Absence.evenement = Evenement.id_ev",
-      "event_by_date_and_classroom": "SELECT * FROM `Evenement` WHERE `heure_debut`=? AND `heure_fin`=? AND `classe`=? AND `salle`=?"
+      "event_by_date_and_classroom": "SELECT * FROM `Evenement` WHERE `heure_debut`=? AND `heure_fin`=? AND `classe`=? AND `salle`=?",
+      "teacher_by_mail_password": "SELECT * FROM Enseignant WHERE mail = ? AND PASSWORD = ?",
+      "teacher_by_mail": "SELECT * FROM Enseignant WHERE mail = ?",
+      "teacher_random_number": "SELECT random_number FROM Enseignant WHERE mail = ?"
     },
     "insert":
     {
       "evenement": "INSERT INTO Evenement (id_discipline, niveau, classe, salle, date, heure_debut, heure_fin, enseignant) VALUES (?,?,?,?,?,?,?,?)",
       "discipline": "INSERT IGNORE INTO Ref_Discipline (discipline) VALUES (?)",
-      "absence": "INSERT INTO `Absence`(`motif`, `evenement`) VALUES (?, ?)"
+      "absence": "INSERT INTO `Absence`(`motif`, `evenement`) VALUES (?, ?)",
+      "teacher": "INSERT INTO `Enseignant` (mail, password, nom, prenom, random_number, valide) VALUES (?,?,?,?,?,?)"
+    },
+    "update":
+    {
+      "teacher_validation": "UPDATE Enseignant SET valide = 1 WHERE mail = ?"
     }
   }
 }

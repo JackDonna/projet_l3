@@ -1,78 +1,36 @@
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
 
-// controllers
-const user_controller = require("../controllers/UserController");
-const event_controller = require("../controllers/EventController");
-const etab_controller = require("../controllers/EstablishmentController");
-const absence_controller = require("../controllers/AbsenceController");
+// ------------------------------------------- IMPORT CONTROLLERS ----------------------------------------- //
+const teacher_controller = require("../controllers/teacher_controller");
+const event_controller = require("../controllers/event_controller");
+const etab_controller = require("../controllers/etablishment_controller");
+const absence_controller = require("../controllers/absence_controller");
 
+// ------------------------------------------- TEACHER CONTROLLERS ---------------------------------------- //
+// router.get("/teacher", teacher_controller.user_list);
+// router.get("/teacher/:id/:nom/:prenom/update", teacher_controller.user_update);
+// router.get("/teacher/detail:id", teacher_controller.user_detail);
+router.get("/teacher/sign_in/:mail/:password", teacher_controller.sign_in);
+router.post("/teacher/validate", teacher_controller.teacher_validation);
+router.post("/teacher/sign_up", teacher_controller.sign_up);
+// router.delete("/teacher/delete/:id", teacher_controller.user_delete);
 
-
-
-
-// --- USERS CONTROLLERS --- //
-
-// request for list of user
-router.get("/users", user_controller.user_list);
-
-// request for creating user
-router.get("/user/:mail/:numen/:nom/:prenom/create", user_controller.user_create);
-
-// request for delete user
-router.get("/user/:id/delete", user_controller.user_delete);
-
-// request for update user
-router.get("/user/:id/:nom/:prenom/update", user_controller.user_update);
-
-// request for one user
-router.get("/user/:id/detail", user_controller.user_detail);
-
-router.get("/user/sign_in/:mail/:password", user_controller.user_sign_in);
-
-router.post("/user/sign_up", user_controller.user_create);
-
-router.get("/user/verifie_user/:number", user_controller.user_verify);
-
-
-
-// --- EVENT CONTROLLERS --- //
-
-// GET request for list of event
+// ------------------------------------------- EVENT CONTROLLERS ----------------------------------------- //
 router.get("/events", event_controller.event_list);
-
-// GET request for creating event
 router.get("/event/create", event_controller.event_create_get);
-
-// GET request for delete event
-router.get("/event/:id/delete", event_controller.event_delete_get);
-
-// GET request for update event
-router.get("/event/:id/update", event_controller.event_update_get);
-
-// GET request for one event
 router.get("/event/detail/:id", event_controller.event_detail);
+router.get("/event/get_timetable", event_controller.get_timetable);
+router.post("/event/insert_timetable", event_controller.insert_timetable);
+router.post("/event/update/:id", event_controller.event_update_get);
+router.delete("/event/delete/:id", event_controller.event_delete_get);
 
-// POST request for insert an edt
-router.post("/event/insert_edt", event_controller.insert_edt);
+// ---------------------------------------- ETABLISSEMENT CONTROLLERS ------------------------------------ //
+// router.get("/etabs", etab_controller.etab_list);
+// router.get("/etab/:id/detail", etab_controller.etab_detail);
 
-router.get("/event/get_edt", event_controller.get_edt);
-
-
-// --- ETABLISSEMENT CONTROLLERS --- //
-
-// request for list of etablissement
-router.get("/etabs", etab_controller.etab_list);
-
-// request for one etablissement
-router.get("/etab/:id/detail", etab_controller.etab_detail);
-
-// --- ABSENCES CONTROLLERS --- //
-
-// récupère la liste des absences disponible entre une heure et une autre
-router.get("/abs/list/:debut/:fin", absence_controller.list_absence);
-
-// ajoute une absence sur un créneau, une salle et pour une classe
-router.get("/abs/ajout/:id_event/:motif", absence_controller.ajout_absence);
+// ------------------------------------------ ABSENCES CONTROLLERS --------------------------------------- //
+// router.get("/abs/list/:debut/:fin", absence_controller.list_absence);
+router.post("/absence/insert", absence_controller.insert_absence);
 
 module.exports = router;
