@@ -27,6 +27,29 @@ function insert_absence(motif, id_event, callback)
     })
 }
 
+/**
+ * function get list of teacher in sql database
+ * @param debut {datetime} begining of the event
+ * @param fin {datetime} end of the event
+ * @param callback {function} callback function (err, result)
+ */
+function prof_dispo(debut, fin, callback)
+{
+    pool.getConnection((err, db) =>
+    {
+        db.query(
+            {
+                sql: SQL.select.available_teacher,
+                timeout: 10000,
+                values: [debut, fin, debut, fin]
+            },
+            (err, rows, fields) => {
+                if (err) throw err
+                callback(null, rows)
+            })
+    })
+}
+
 // --------------------------------------- NOT IMPLEMENTED YET ----------------------------------------- //
 /**
  * function insert a new absence with the router parameters
@@ -43,8 +66,23 @@ function insert_new_absence(req, res, callback)
     })
 }
 
+/**
+ * function get the list of teacher with router parameters
+ * @param req router parameters
+ * @param res router parameters
+ * @param callback {function} callback function (err, result)
+ */
+function get_available_teacher(req, res, callback)
+{
+    prof_dispo(req.params.debut, req.params.fin, (err, result) =>
+    {
+        if(err) callback(err, null);
+        callback(null, result);
+    })
+}
+
 // --------------------------------------------------- EXPORTS ------------------------------------------------------ //
-module.exports = {insert_new_absence}
+module.exports = {insert_new_absence, get_available_teacher}
 
 // exports.select_all_absence_beewtween_two_dates = (d_debut, d_fin, callback) =>
 // {

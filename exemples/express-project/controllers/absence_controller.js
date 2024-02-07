@@ -1,7 +1,8 @@
 const asyncHandler = require("express-async-handler");
 const
     {
-        insert_new_absence
+        insert_new_absence,
+        get_available_teacher
     } = require(__dirname + "/cruds/crud_absence.js");
 
 // ----------------------------------- EXPORTS FUNCTIONS CRUDS RESULT -------------------------------- //
@@ -14,6 +15,18 @@ exports.insert_absence = asyncHandler( (req, res) => {
     {
         if(err) {console.error(err); res.sendStatus(500)};
         res.sendStatus(200);
+    });
+})
+
+/**
+ * @function available_teacher get request to get the teachers available in the sql database
+ * @type {*|express.RequestHandler<core.ParamsDictionary, any, any, core.Query>}
+ */
+exports.available_teacher = asyncHandler( (req, res) => {
+    get_available_teacher(req, res, (err, result) =>
+    {
+        if(err) {console.error(err); res.sendStatus(500)};
+        res.send(result);
     });
 })
 
