@@ -1,6 +1,6 @@
-var express = require('express');
-var router = express.Router();
-
+const express = require('express');
+const router = express.Router();
+const neo4j = require('neo4j-driver');
 
 /* GET users listing. */
 router.get("/test", (req, res) => {
@@ -10,7 +10,7 @@ router.get("/test", (req, res) => {
 
 router.get("/getetab", (req,res)=>{
 
-    var neo4j = require('neo4j-driver');
+
     (async () => {
         // URI examples: 'neo4j://localhost', 'neo4j+s://xxx.databases.neo4j.io'
         const URI = 'neo4j://localhost'

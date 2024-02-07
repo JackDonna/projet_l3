@@ -30,7 +30,7 @@ function is_valide_and_authenticated(req, res, next) {
 }
 
 router.get("/", (req, res, next) => {
-  res.redirect("/calendar");
+  res.render("index");
 })
 router.get("/sign_in", function(req, res) {
   res.render("sign_in");
