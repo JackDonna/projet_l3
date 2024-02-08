@@ -29,7 +29,7 @@ function is_valide_and_authenticated(req, res, next) {
   }
 }
 
-router.get("/", (req, res, next) => {
+router.get("/", is_valide_and_authenticated, (req, res, next) => {
   res.render("index");
 })
 router.get("/sign_in", function(req, res) {
