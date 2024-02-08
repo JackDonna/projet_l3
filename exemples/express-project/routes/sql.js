@@ -21,7 +21,7 @@ router.get("/events", event_controller.event_list);
 router.get("/event/create", event_controller.event_create_get);
 router.get("/event/detail/:id", event_controller.event_detail);
 router.get("/event/get_timetable", event_controller.get_timetable);
-router.post("/event/insert_timetable", event_controller.insert_timetable);
+router.post("/event/insert_timetable", event_controller.insert_teacher_timetable);
 router.post("/event/update/:id", event_controller.event_update_get);
 router.delete("/event/delete/:id", event_controller.event_delete_get);
 
