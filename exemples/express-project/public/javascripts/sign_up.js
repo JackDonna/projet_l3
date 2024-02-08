@@ -17,7 +17,7 @@ form.addEventListener("submit", (e) => {
     axios.post("/sql/teacher/sign_up", obj).then((response) => {
         console.log(response.data)
         if(response.data) {
-            window.location.replace("/calendar");
+            window.location.replace("/");
         }
         else
         {

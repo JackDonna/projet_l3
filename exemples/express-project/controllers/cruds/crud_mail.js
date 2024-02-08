@@ -1,4 +1,3 @@
-const express = require('express');
 const nodemailer = require('nodemailer');
 const fs = require("fs");
 const conf_file = JSON.parse(fs.readFileSync("controllers/config/mail_config.json", "utf-8"));

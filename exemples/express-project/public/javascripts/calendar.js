@@ -56,6 +56,12 @@ function format_time(time)
     return hour + ":" + minute;
 }
 
+if (window.innerWidth < 800) {
+    ec.setOption("view", "timeGridDay");
+}
+else {
+    ec.setOption("view", "timeGridWeek");
+}
 window.addEventListener('resize', () => {
     if (window.innerWidth < 800) {
         ec.setOption("view", "timeGridDay");

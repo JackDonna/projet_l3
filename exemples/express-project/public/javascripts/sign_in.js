@@ -9,7 +9,7 @@ form.addEventListener("submit", (e) => {
     axios.get("/sql/teacher/sign_in/" + mail + "/" + password).then((response) => {
         console.log(response.data)
         if(response.data) {
-            window.location.replace("/calendar");
+            window.location.replace("/");
         }
         else
         {
