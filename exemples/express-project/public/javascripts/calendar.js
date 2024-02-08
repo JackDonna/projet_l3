@@ -100,7 +100,7 @@ function success(result) {
     document.getElementById('reader').remove();
 
     // Fetching potential icals data from qr code to API
-    axios.post("/sql/event/insert_edt", obj).then(function(response)
+    axios.post("/sql/event/insert_timetable", obj).then(function(response)
     {
         console.log(response.data);
         // Fail code = 0

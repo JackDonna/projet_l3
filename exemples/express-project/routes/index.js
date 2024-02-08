@@ -1,6 +1,5 @@
-var express = require('express');
-var router = express.Router();
-var escapeHtml = require('escape-html')
+let express = require('express');
+let router = express.Router();
 
 function isAuthenticated (req, res, next) {
   return !!req.session.nom
