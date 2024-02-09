@@ -45,48 +45,42 @@ function build_event(title, start, end, location, id, classe, salle)
 
 /**
  * function send a query to the database to insert discipline entities in herself
+ * @param db
  * @param discipline {string} discipline name
  * @param callback {function} callback function (err, result)
  */
-function insert_discipline(discipline, callback)
+function insert_discipline(db, discipline, callback)
 {
-    pool.getConnection((err, db) =>
-    {
-        db.query(
-            {
-                sql: SQL.insert.discipline,
-                timeout: 10000,
-                values: [discipline]
-            },
-            (err, rows, fields) => {
-                if(err) callback(err, null);
-                callback(null, true);
-            }
-        )
-    })
+    db.query(
+        {
+            sql: SQL.insert.discipline,
+            timeout: 10000,
+            values: [discipline]
+        },
+        (err, rows, fields) => {
+            if(err) callback(err, null);
+            callback(null, true);
+        })
 }
 
 /**
  * function select discipline entitie by query the database with her name in parameters
+ * @param db
  * @param discipline {string} discipline name
  * @param callback {function} callback function (err, result)
  */
-function select_discipline_by_name(discipline, callback)
+function select_discipline_by_name(db, discipline, callback)
 {
-    pool.getConnection((err, db) =>
-    {
-        db.query(
-            {
-                sql: SQL.select.discipline_by_name,
-                timeout: 10000,
-                values: [discipline]
-            },
-            (err, rows, fields) => {
-                if(err) callback(err, null);
-                callback(null, rows[0]);
-            }
-        )
-    })
+    db.query(
+        {
+            sql: SQL.select.discipline_by_name,
+            timeout: 10000,
+            values: [discipline]
+        },
+        (err, rows, fields) => {
+            if(err) callback(err, null);
+            callback(null, rows[0]);
+        })
 }
 
 /**
@@ -98,6 +92,7 @@ function select_discipline_by_id(id_discipline, callback)
 {
     pool.getConnection((err, db) =>
     {
+        if(err) callback(err, null)
         db.query(
             {
 
@@ -115,6 +110,7 @@ function select_discipline_by_id(id_discipline, callback)
 
 /**
  * function insert an event in the database with all required parameters
+ * @param db db pool connection
  * @param discipline {string} discipline name
  * @param niveau {string} level of the classroom
  * @param classe {string} name of the classroom
@@ -125,18 +121,17 @@ function select_discipline_by_id(id_discipline, callback)
  * @param enseignant {int} id of the teacher (user) who own this event
  * @param callback {function} callback function (err, result)
  */
-function insert_event(discipline, niveau, classe, salle, date, start, end, enseignant, callback)
+function insert_event(db, discipline, niveau, classe, salle, date, start, end, enseignant, callback)
 {
-    insert_discipline(discipline, function(err, result)
+    console.log("insertion d'un event, recherche de la discipline ! " + discipline + "\n");
+    console.log([niveau, classe, salle, date, start, end, enseignant])
+    insert_discipline(db, discipline, (err, result) =>
     {
         if(err) callback(err,null)
-        select_discipline_by_name(discipline, function(err, result)
+        select_discipline_by_name(db, discipline, function(err, result)
         {
+            console.log(result.id_disc + " l'id de la discipline")
             if(err) callback(err, null);
-            pool.getConnection((err, db) =>
-            {
-
-            })
             db.query(
                 {
                     sql: SQL.insert.evenement,
@@ -146,8 +141,7 @@ function insert_event(discipline, niveau, classe, salle, date, start, end, ensei
                 (err, rows, fields) => {
                     if(err) callback(err, null);
                     callback(null, true);
-                }
-            )
+                })
         })
     })
 }
@@ -176,30 +170,41 @@ function parse_edt(link, callback)
  */
 function insert_all_events(events, id, callback)
 {
-    for (let event of events)
-    {
-        let start_houre = new Date(event.start);
-        let end_houre = new Date(event.end);
-        let formatted_date = new Date(event.start).toISOString().split('T')[0];
-        let salle = "none";
-        let classe = "none";
-        let niveau = "none";
-
-        if(event.description.val)
-        {
-            salle = event.description.val.split('Salle : ')[1];
-            salle = salle.split('\n')[0];
-            classe = event.description.val.split('Classe : ')[1];
-            classe = classe.split('\n')[0];
-            niveau = event.description.val.split('Classe : ')[1];
-            niveau = niveau.split(' ')[0];
+    pool.getConnection((err, db) => {
+        for (let event of events) {
+            let start_houre = new Date(event.start);
+            start_houre.setHours(start_houre.getHours() + 1);
+            end_houre.setHours(end_houre.getHours() + 1);
+            let end_houre = new Date(event.end);
+            let formatted_date = new Date(event.start).toISOString().split('T')[0];
+            start_houre = (start_houre.toISOString().split('T')[0] + " " + start_houre.toISOString().split('T')[1]).split("Z")[0];
+            end_houre = (end_houre.toISOString().split('T')[0] + " " + end_houre.toISOString().split('T')[1]).split("Z")[0];
+            let salle = "none";
+            let classe = "none";
+            let niveau = "none";
+            try {
+                salle = event.description.val.split('Salle : ')[1];
+                salle = salle.split('\n')[0];
+            } catch {
+                null
+            }
+            try {
+                classe = event.description.val.split('Classe : ')[1];
+                classe = classe.split('\n')[0];
+            } catch {
+                null
+            }
+            try {
+                niveau = event.description.val.split('Classe : ')[1];
+                niveau = niveau.split(' ')[0];
+            } catch {
+                null
+            }
+            insert_event(db, event.title, niveau, classe, salle, formatted_date, start_houre, end_houre, id, function (err, result) {
+                if (err) callback(err, null);
+            })
         }
-
-        insert_event(event.title, niveau, classe, salle, formatted_date, start_houre, end_houre, id, function(err, result)
-        {
-            if(err) callback(err, null);
-        })
-    }
+    })
     callback(null, true);
 }
 
@@ -212,9 +217,10 @@ function get_events_by_teacher_id(id, callback)
 {
     pool.getConnection((err, db) =>
     {
+        if(err) callbakc(err, null);
         db.query(
             {
-                sql: SQL.select.event_by_enseignant_id,
+                sql: SQL.select.event_by_teacher_id,
                 timeout: 30000,
                 values: [id]
             },
@@ -225,6 +231,7 @@ function get_events_by_teacher_id(id, callback)
                 {
                     obj.push(build_event(row.discipline, row.heure_debut, row.heure_fin, row.salle, row.id_ev, row.classe, row.salle));
                 }
+                console.log(obj);
                 callback(null, obj);
             }
         )
@@ -241,8 +248,10 @@ function get_events_by_teacher_id(id, callback)
  */
 function insert_timetable(req, res, callback)
 {
+    console.log("parsing calendrier")
     parse_edt(req.body.url, (err, result) =>
     {
+        console.log("insertion des evenement")
         let data = [...result];
         insert_all_events(result, req.session.id_ens, (err, result) =>
         {
@@ -262,6 +271,7 @@ function get_timetable(req, res, callback)
 {
     get_events_by_teacher_id(req.session.id_ens, (err, result) =>
     {
+        console.log(result);
         if(err) callback(err, null);
         callback(null, result)
     })

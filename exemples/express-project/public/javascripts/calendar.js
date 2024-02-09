@@ -142,6 +142,7 @@ close_scanner.addEventListener("click", () => {
 
 
 axios.get("/sql/event/get_timetable").then((response) => {
+    console.log(response.data)
     for(let event of response.data)
     {
         ec.addEvent(event);

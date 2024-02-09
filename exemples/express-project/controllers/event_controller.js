@@ -17,7 +17,7 @@ exports.insert_teacher_timetable = asyncHandler((req, res) =>
     insert_timetable(req, res, (err, result) =>
     {
         if(err) {console.error(err); res.sendStatus(500)};
-        res.sendStatus(200);
+        res.send(result);
     })
 })
 

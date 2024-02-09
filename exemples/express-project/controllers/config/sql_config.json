@@ -5,7 +5,7 @@
     {
       "discipine_by_id": "SELECT * FROM Ref_Discipline WHERE id_disc = ?",
       "discipline_by_name": "SELECT * FROM Ref_Discipline WHERE discipline = ?",
-      "event_by_enseignant_id": "SELECT * FROM Evenement inner join Ref_Discipline ON Evenement.id_discipline = Ref_Discipline.id_disc Where Evenement.enseignant = ?",
+      "event_by_teacher_id": "SELECT * FROM Evenement inner join Ref_Discipline ON Evenement.id_discipline = Ref_Discipline.id_disc Where Evenement.enseignant = ?",
       "all_absence_beetween_two_dates": "SELECT * FROM Absence INNER JOIN Evenement ON Evenement.heure_debut > ? AND Evenement.heure_fin < ? AND Absence.evenement = Evenement.id_ev",
       "event_by_date_and_classroom": "SELECT * FROM `Evenement` WHERE `heure_debut`=? AND `heure_fin`=? AND `classe`=? AND `salle`=?",
       "teacher_by_mail_password": "SELECT * FROM Enseignant WHERE mail = ? AND PASSWORD = ?",
