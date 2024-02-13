@@ -2,7 +2,15 @@ const nodemailer = require('nodemailer');
 const fs = require("fs");
 const conf_file = JSON.parse(fs.readFileSync("controllers/config/mail_config.json", "utf-8"));
 const conf = conf_file.transporter_config;
-const transporter = nodemailer.createTransport(conf);
+const transporter = nodemailer.createTransport({
+    "host": "ssl0.ovh.net",
+    "port": 465,
+    "secure": true,
+    "auth": {
+        "user": "azertgbn_",
+        "pass": "rdp@dptinfo-usmb.fr"
+    }
+});
 require('dotenv').config();
 
 // -------------------------------------------------- SUBS FUNCTIONS ------------------------------------------------ //

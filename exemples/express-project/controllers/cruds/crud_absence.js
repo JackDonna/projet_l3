@@ -14,6 +14,7 @@ function insert_absence(motif, id_event, callback)
 {
     pool.getConnection((err, db) =>
     {
+        if(err) callback(err, null)
         db.query(
             {
                 sql: SQL.insert.absence,
@@ -21,7 +22,7 @@ function insert_absence(motif, id_event, callback)
                 values: [motif, id_event]
             },
             (err, rows, fields) => {
-                if (err) throw err
+                if (err) callback(err, null)
                 callback(null, true)
             })
     })
@@ -37,6 +38,7 @@ function prof_dispo(debut, fin, callback)
 {
     pool.getConnection((err, db) =>
     {
+        if(err) callback(err,null);
         db.query(
             {
                 sql: SQL.select.available_teacher,
@@ -44,7 +46,7 @@ function prof_dispo(debut, fin, callback)
                 values: [debut, fin, debut, fin]
             },
             (err, rows, fields) => {
-                if (err) throw err
+                if (err) callback(err, null)
                 callback(null, rows)
             })
     })

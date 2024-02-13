@@ -32,6 +32,6 @@ router.delete("/event/delete/:id", event_controller.event_delete_get);
 // ------------------------------------------ ABSENCES CONTROLLERS --------------------------------------- //
 // router.get("/abs/list/:debut/:fin", absence_controller.list_absence);
 router.post("/absence/insert", absence_controller.insert_absence);
-router.get("/abs/prof_dispo/:debut/:fin", absence_controller.available_teacher);
+router.get("/absence/prof_dispo/:debut/:fin", absence_controller.available_teacher);
 
 module.exports = router;

@@ -11,7 +11,7 @@
       "teacher_by_mail_password": "SELECT * FROM Enseignant WHERE mail = ? AND PASSWORD = ?",
       "teacher_by_mail": "SELECT * FROM Enseignant WHERE mail = ?",
       "teacher_random_number": "SELECT random_number FROM Enseignant WHERE mail = ?",
-      "available_teacher": "SELECT * FROM enseignant WHERE NOT EXISTS( SELECT 1 FROM evenement WHERE evenement.enseignant = enseignant.id_ens AND( ( evenement.heure_debut > ? AND evenement.heure_debut < ? ) OR( evenement.heure_fin > ? AND evenement.heure_fin < ? ) ))"
+      "available_teacher": "SELECT * FROM Enseignant WHERE NOT EXISTS( SELECT 1 FROM Evenement WHERE Evenement.enseignant = Enseignant.id_ens AND( ( Evenement.heure_debut > ? AND Evenement.heure_debut < ? ) OR( Evenement.heure_fin > ? AND Evenement.heure_fin < ? ) ))"
     },
     "insert":
     {

@@ -123,14 +123,11 @@ function select_discipline_by_id(id_discipline, callback)
  */
 function insert_event(db, discipline, niveau, classe, salle, date, start, end, enseignant, callback)
 {
-    console.log("insertion d'un event, recherche de la discipline ! " + discipline + "\n");
-    console.log([niveau, classe, salle, date, start, end, enseignant])
     insert_discipline(db, discipline, (err, result) =>
     {
         if(err) callback(err,null)
         select_discipline_by_name(db, discipline, function(err, result)
         {
-            console.log(result.id_disc + " l'id de la discipline")
             if(err) callback(err, null);
             db.query(
                 {
@@ -231,7 +228,6 @@ function get_events_by_teacher_id(id, callback)
                 {
                     obj.push(build_event(row.discipline, row.heure_debut, row.heure_fin, row.salle, row.id_ev, row.classe, row.salle));
                 }
-                console.log(obj);
                 callback(null, obj);
             }
         )
@@ -248,10 +244,8 @@ function get_events_by_teacher_id(id, callback)
  */
 function insert_timetable(req, res, callback)
 {
-    console.log("parsing calendrier")
     parse_edt(req.body.url, (err, result) =>
     {
-        console.log("insertion des evenement")
         let data = [...result];
         insert_all_events(result, req.session.id_ens, (err, result) =>
         {
@@ -271,7 +265,6 @@ function get_timetable(req, res, callback)
 {
     get_events_by_teacher_id(req.session.id_ens, (err, result) =>
     {
-        console.log(result);
         if(err) callback(err, null);
         callback(null, result)
     })
