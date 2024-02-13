@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- PWA -->
     <link rel="manifest" href="javascripts/pwa.webmanifest" />
     <link rel="apple-touch-icon" href="/assets/icons/icon-96x96.png" />
     <meta name="apple-mobile-web-app-status-bar" content="white" />
@@ -28,7 +27,7 @@
     <link rel="stylesheet" href="stylesheets/index.css" />
   </head>
   <body>
-    Bonjour Mr. <%= nom %>
+    Bonjour M. <%= nom %>
     <main>
       <div id="scan_code" class="hide">
         <span id="close_scanner">X</span>
@@ -45,13 +44,13 @@
 
     <a href="/logout">Se deconnecter</a>
 
-      <div id="add_absence" class="hide">
-        <p id="close_form">X</p>
-        <input class="start_absence" type="time">
-        <input class="end_absence" type="time">
-        <textarea class="reason" type="text"></textarea>
-        <button class="submit_form">Envoyer</button>
-      </div>
+    <div id="add_absence" class="hide">
+      <p id="close_form">X</p>
+      <input class="start_absence" type="time" />
+      <input class="end_absence" type="time" />
+      <textarea class="reason" type="text"></textarea>
+      <button class="submit_form">Envoyer</button>
+    </div>
 
     <script src="javascripts/calendar.js" type="module"></script>
 
