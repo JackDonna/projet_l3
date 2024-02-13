@@ -5,7 +5,7 @@ let json = [{
    "heure_fin": "2022-10-31T10:00:00.594Z",
    },
    {
-      "salle": "302",
+      "salle": "302",   
       "date" : "2022-10-31",
       "heure_debut": "2022-12-31T11:00:00.594Z",
       "heure_fin": "2022-12-31T12:00:00.594Z",
@@ -36,7 +36,7 @@ function ajouterDansBoite() {
 
       // Affecter la valeur de chaque clé à chaque paragraphe
       p.innerHTML = `
-         Salle : ${evenement.salle}<br>
+         Motif : ${evenement.motif}<br>
          Date : ${evenement.date}<br>
          Heure du début :${debutFormat}<br>
          Heure de fin : ${finFormat}<br>
@@ -51,3 +51,4 @@ function ajouterDansBoite() {
 }
 
 setInterval(ajouterDansBoite, 1000);
+    
