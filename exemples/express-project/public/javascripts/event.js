@@ -39,7 +39,7 @@ function ajouterDansBoite() {
          Salle : ${evenement.salle}<br>
          Date : ${evenement.date}<br>
          Heure du début :${debutFormat}<br>
-         Heure de fin :${finFormat}<br>
+         Heure de fin : ${finFormat}<br>
       `;
 
       // Ajouter le paragraphe à la boite
@@ -50,6 +50,4 @@ function ajouterDansBoite() {
    }
 }
 
-function start() {
-   setInterval(ajouterDansBoite, 1000);
-}
+setInterval(ajouterDansBoite, 1000);
