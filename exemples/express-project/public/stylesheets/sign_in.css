@@ -22,17 +22,24 @@ body {
   flex-direction: column;
 }
 
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 h1 {
   margin-bottom: 50px;
   color: #004160;
   font-weight: 600;
-  font-size: 55px;
+  font-size: 50px;
 }
 
 input {
   width: 250px;
   height: 50px;
-  margin: 15px;
+  margin: 10px;
   display: flex;
   justify-content: center;
   padding-left: 10px;
@@ -52,7 +59,8 @@ input::placeholder {
   color: white;
 }
 
-.connexion, .inscription {
+.connexion,
+.inscription {
   margin-top: 20px;
   color: #004160;
   display: flex;
