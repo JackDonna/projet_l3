@@ -184,9 +184,9 @@ function select_teacher_random_number(mail, callback)
  * @param number {int} number send by the user who want to be connected as a teacher
  * @param callback {function} callback function (err, result)
  */
-function validate_teacher_by_mail(mail, number, callback)
+function validate_teacher_by_mail(id_ens, number, callback)
 {
-    select_teacher_random_number(mail, (err, result) =>
+    select_teacher_random_number(id_ens, (err, result) =>
     {
         if(err) callback(err, null);
         if(result == number)
@@ -196,7 +196,7 @@ function validate_teacher_by_mail(mail, number, callback)
                 db.query(
                     {
                         sql: SQL.update.teacher_validation,
-                        values: [mail],
+                        values: [id_ens],
                         timeout: 10000
                     },
                     (err, rows, fields) => {
@@ -208,6 +208,97 @@ function validate_teacher_by_mail(mail, number, callback)
     })
 }
 
+function check_identification(id_ens, password, callback)
+{
+    pool.getConnection((err, database) =>
+    {
+        if(err) callback(err, null);
+        database.query(
+            {
+                sql: SQL.select.identification_by_teacher_id_password,
+                values: [id_ens, password]
+            },
+            (err, rows, fields) =>
+            {
+                if(err) callback(err, null);
+                callback(null, rows[0]);
+            }
+        )
+    })
+}
+
+
+
+function create_profil(id_ens, callback)
+{  
+    pool.getConnection((err, database) =>
+    {
+        if(err) callback(err, null);
+        database.query(
+            {
+                sql: SQL.insert.profil,
+                values: [id_ens],
+                timeout: 10000
+            },
+            (err, rows, fields) => 
+            {
+                if(err) callback(err, null);
+                callback(null, true);
+            }
+        )
+    })
+}
+
+function get_profil(id_ens, callback)
+{
+    pool.getConnection((err, database) =>
+    {
+        if(err) callback(err, null);
+        database.query(
+            {
+                sql: SQL.select_teacher_profil,
+                values: [id_ens],
+                timeout: 10000
+            },
+            (err, rows, fields) => 
+            {
+                if(err) callback(err, null);
+                callback(null, rows[0]);
+            }
+        )
+    })
+}
+
+
+
+function create_identification(password, id_ens, callback)
+{
+    create_profil(id_ens, (err, result) =>
+    {
+        if(err) callback(err,null);
+        pool.getConnection((err, database) =>
+        {
+            if(err) callback(err, null);
+            database.query(
+                {
+                    sql: SQL.insert.identification,
+                    values: [password, false, rnd(150000, 999999), id_ens],
+                    timeout: 10000
+                },
+                (err, rows, fields) => 
+                {
+                    if(err) callback(err, null);
+                    callback(null, true)
+                }
+            )
+        })
+    })
+   
+}
+
+
+
+
 // ---------------------------------------------------- MAINS FUNCTIONS --------------------------------------------- //
 /**
  * function to sign_up as a teacher by creating a teacher in the database and change the session credential
@@ -217,19 +308,19 @@ function validate_teacher_by_mail(mail, number, callback)
  */
 function sign_up(req, res, callback)
 {
-    insert_new_user(req.body.mail, req.body.password, req.body.nom, req.body.prenom, (err, result) =>
+    check_teacher_by_mail(req.body.mail, (err, teacher) =>
     {
-        if(err) callback(err, null);
-        axios.get("/mail/send_verification_mail/" + result.mail + "/" + result.number);
-        check_teacher_by_mail(result.mail, (err, result) =>
+        if(teacher != undefined)
         {
-            if(err) callback(err, null);
-            set_session(req, result.nom, result.prenom, result.mail, result.valide, result.id_ens, (err, result) =>
+            create_identification(req.body.password, teacher.id_ens, (err, identification) =>
             {
                 if(err) callback(err, null);
-                callback(null, result);
+                set_session(req, teacher.mail, teacher.prenom, teacher.nom, false, teacher.id_ens, (err, res) => 
+                {
+                    callback(null, true);
+                })
             })
-        })
+        }
     })
 }
 
@@ -241,21 +332,22 @@ function sign_up(req, res, callback)
  */
 function sign_in(req, res, callback)
 {
-    check_teacher_by_mail_password(req.params.mail, req.params.password, (err, result) =>
+    check_teacher_by_mail(req.params.mail, (err, teacher) => 
     {
         if(err) callback(err, null);
-        if(result != undefined)
+        check_identification(teacher.id_ens, req.params.password, (err, identification) =>
         {
-            set_session(req, result.nom, result.prenom, result.mail, result.valide, result.id_ens, (err, result) =>
+            if(err) callback(err, null);
+            if(identification != undefined)
             {
-                if(err) callback(err, null);
-                callback(null, true)
-            })
-        }
-        else
-        {
-            callback(null, false);
-        }
+                set_session(req, teacher.nom, teacher.prenom, teacher.mail, identification.valide, teacher.id_ens, (err, res) =>
+                {
+                    if(err) callback(err, null);
+                    callback(null, res);
+                })
+            }
+
+        })
     })
 };
 
@@ -267,7 +359,7 @@ function sign_in(req, res, callback)
  */
 function validate_teacher(req, res, callback)
 {
-    validate_teacher_by_mail(req.session.mail, req.body.number, (err, result) =>
+    validate_teacher_by_mail(req.session.id_ens, req.body.number, (err, result) =>
     {
         if(err) callback(err, null);
         req.session.valide = 1;

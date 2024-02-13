@@ -5,24 +5,30 @@
     {
       "discipine_by_id": "SELECT * FROM Ref_Discipline WHERE id_disc = ?",
       "discipline_by_name": "SELECT * FROM Ref_Discipline WHERE discipline = ?",
-      "event_by_teacher_id": "SELECT * FROM Evenement inner join Ref_Discipline ON Evenement.id_discipline = Ref_Discipline.id_disc Where Evenement.enseignant = ?",
+      "event_by_teacher_id": "SELECT * FROM Evenement inner join Ref_Matiere ON Evenement.matiere = Ref_Matiere.id_mat Where Evenement.enseignant = ?",
       "all_absence_beetween_two_dates": "SELECT * FROM Absence INNER JOIN Evenement ON Evenement.heure_debut > ? AND Evenement.heure_fin < ? AND Absence.evenement = Evenement.id_ev",
       "event_by_date_and_classroom": "SELECT * FROM `Evenement` WHERE `heure_debut`=? AND `heure_fin`=? AND `classe`=? AND `salle`=?",
       "teacher_by_mail_password": "SELECT * FROM Enseignant WHERE mail = ? AND PASSWORD = ?",
       "teacher_by_mail": "SELECT * FROM Enseignant WHERE mail = ?",
-      "teacher_random_number": "SELECT random_number FROM Enseignant WHERE mail = ?",
-      "available_teacher": "SELECT * FROM Enseignant WHERE NOT EXISTS( SELECT 1 FROM Evenement WHERE Evenement.enseignant = Enseignant.id_ens AND( ( Evenement.heure_debut > ? AND Evenement.heure_debut < ? ) OR( Evenement.heure_fin > ? AND Evenement.heure_fin < ? ) ))"
+      "teacher_random_number": "SELECT random_number FROM Identification WHERE enseignant = ?",
+      "available_teacher": "SELECT * FROM Enseignant WHERE NOT EXISTS( SELECT 1 FROM Evenement WHERE Evenement.enseignant = Enseignant.id_ens AND( ( Evenement.heure_debut > ? AND Evenement.heure_debut < ? ) OR( Evenement.heure_fin > ? AND Evenement.heure_fin < ? ) ))",
+      "identification_by_teacher_id_password": "SELECT * FROM Identification WHERE enseignant = ? AND mdp = ?",
+      "teacher_profil": "SELECT * FROM Profil WHERE enseignant = ?",
+      "course" : "SELECT * FROM Ref_Matiere WHERE matiere = ?",
+      "absence_available": "SELECT * FROM Absence INNER JOIN Evenement ON Absence.evenement = Evenement.id_ev WHERE id_ens != ?"
     },
     "insert":
     {
-      "evenement": "INSERT INTO Evenement (id_discipline, niveau, classe, salle, date, heure_debut, heure_fin, enseignant) VALUES (?,?,?,?,?,?,?,?)",
+      "event": "INSERT INTO Evenement (salle, date, heure_debut, heure_fin, classe, matiere, enseignant) VALUES (?,?,?,?,?,?,?)",
       "discipline": "INSERT IGNORE INTO Ref_Discipline (discipline) VALUES (?)",
       "absence": "INSERT INTO `Absence`(`motif`, `evenement`) VALUES (?, ?)",
-      "teacher": "INSERT INTO `Enseignant` (mail, password, nom, prenom, random_number, valide) VALUES (?,?,?,?,?,?)"
+      "teacher": "INSERT INTO `Enseignant` (mail, password, nom, prenom, random_number, valide) VALUES (?,?,?,?,?,?)",
+      "identification": "INSERT INTO `Identification` (mdp, valide, random_number, enseignant) VALUES (?,?,?,?)",
+      "profil": "INSERT INTO Profil (enseignant) values (?)"
     },
     "update":
     {
-      "teacher_validation": "UPDATE Enseignant SET valide = 1 WHERE mail = ?"
+      "teacher_validation": "UPDATE Identification SET valide = 1 WHERE enseignant = ?"
     }
   }
 }

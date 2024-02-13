@@ -1,7 +1,7 @@
 const asyncHandler = require("express-async-handler");
 const
     {
-    get_timetable,
+    get_teacher_timetable,
     get_events_by_teacher_id,
     insert_timetable,
     } = require(__dirname + "/cruds/crud_event.js");
@@ -28,7 +28,7 @@ exports.insert_teacher_timetable = asyncHandler((req, res) =>
  */
 exports.get_timetable = asyncHandler((req, res) =>
 {
-    get_timetable(req, res, (err, result) =>
+    get_teacher_timetable(req, res, (err, result) =>
     {
         if(err) {console.error(err); res.sendStatus(500)};
         res.send(result);
@@ -51,3 +51,4 @@ exports.event_delete_get = asyncHandler(async (req, res, next) => {
 exports.event_update_get = asyncHandler(async (req, res, next) => {
     res.sendStatus(501);
 });
+

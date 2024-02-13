@@ -45,6 +45,13 @@ let ec = new EventCalendar(calendar_element, {
     }
 });
 
+ec.addEvent(
+    {
+        "title": "test",
+        start: "2024-02-13 14:00:00",
+        end: "2024-02-13 17:00:00"
+    }
+)
 function format_time(time)
 {
     console.log(time);
@@ -104,19 +111,12 @@ function success(result) {
     {
         console.log(response.data);
         // Fail code = 0
-        if(response.data.code === 0)
-        {
-            result_element.innerHTML = "L'url ou le QR code ne corresponde pas à un EDT valide."
-        }
-        // Succes, api render data from object {ressponse.data = {"code": int, "data" : object}
-        else
-        {
+
             result_element.innerHTML = "Votre EDT à bien été lu et enregistré.";
-            for(let event of response.data.data)
+            for(let event of response.data)
             {
                 ec.addEvent(event);
             }
-        }
     })
     // Prints result as a link inside result element
 
@@ -140,11 +140,11 @@ close_scanner.addEventListener("click", () => {
 })
 
 
-
 axios.get("/sql/event/get_timetable").then((response) => {
-    console.log(response.data)
+
     for(let event of response.data)
     {
+        console.log(event)
         ec.addEvent(event);
     }
 })

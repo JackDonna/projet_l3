@@ -52,6 +52,26 @@ function prof_dispo(debut, fin, callback)
     })
 }
 
+
+function get_available_absence(id_ens, callback)
+{
+    pool.getConnection((err, db) => 
+    {
+        db.query(
+            {
+                sql: SQL.select.absence_available,
+                values: [id_ens],
+                timeout: 10000
+            },
+            (err, rows, fields) => 
+            {
+                if(err) callback(err, null);
+                callback(null, rows);
+            }
+        )
+    })
+}
+
 // --------------------------------------- NOT IMPLEMENTED YET ----------------------------------------- //
 /**
  * function insert a new absence with the router parameters
@@ -83,8 +103,16 @@ function get_available_teacher(req, res, callback)
     })
 }
 
+function get_absence(req, res, callback)
+{
+    get_available_teacher(req.session.id_ens, (err, res) => {
+        if(err) callback (err,null);
+        callback(null, res);
+    })
+}
+
 // --------------------------------------------------- EXPORTS ------------------------------------------------------ //
-module.exports = {insert_new_absence, get_available_teacher}
+module.exports = {insert_new_absence, get_available_teacher, get_absence}
 
 // exports.select_all_absence_beewtween_two_dates = (d_debut, d_fin, callback) =>
 // {
