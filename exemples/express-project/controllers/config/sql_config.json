@@ -15,7 +15,7 @@
       "identification_by_teacher_id_password": "SELECT * FROM Identification WHERE enseignant = ? AND mdp = ?",
       "teacher_profil": "SELECT * FROM Profil WHERE enseignant = ?",
       "course" : "SELECT * FROM Ref_Matiere WHERE matiere = ?",
-      "absence_available": "SELECT * FROM Absence INNER JOIN Evenement ON Absence.evenement = Evenement.id_ev WHERE id_ens != ?"
+      "absence_available": "SELECT * FROM Absence INNER JOIN Evenement ON Absence.evenement = Evenement.id_ev WHERE enseignant != ?"
     },
     "insert":
     {

@@ -31,7 +31,7 @@ exports.available_teacher = asyncHandler( (req, res) => {
     });
 })
 
-exports.get_available_absence = asyncHandler((req, res) => 
+exports.available_absence = asyncHandler((req, res) => 
 {
     get_absence(req, res, (err, result) =>
     {

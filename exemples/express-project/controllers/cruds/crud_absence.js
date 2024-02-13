@@ -105,7 +105,7 @@ function get_available_teacher(req, res, callback)
 
 function get_absence(req, res, callback)
 {
-    get_available_teacher(req.session.id_ens, (err, res) => {
+    get_available_absence(req.session.id_ens, (err, res) => {
         if(err) callback (err,null);
         callback(null, res);
     })

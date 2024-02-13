@@ -33,5 +33,6 @@ router.delete("/event/delete/:id", event_controller.event_delete_get);
 // router.get("/abs/list/:debut/:fin", absence_controller.list_absence);
 router.post("/absence/insert", absence_controller.insert_absence);
 router.get("/absence/prof_dispo/:debut/:fin", absence_controller.available_teacher);
+router.get("/absence/get_available_absence", absence_controller.available_absence);
 
 module.exports = router;
