@@ -85,6 +85,7 @@ function check_teacher_by_mail(mail, callback)
                 values: [mail]
             },
             (err, rows, fields) => {
+                console.log(rows)
                 if(err) callback(err, null);
                 callback(null, rows[0]);
             }
