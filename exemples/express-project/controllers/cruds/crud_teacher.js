@@ -378,53 +378,6 @@ module.exports =
     }
 
 
-
-
-// liste tout les utilisateurs
-// exports.user_list = asyncHandler(async (req, res, next) => {
-//     pool.getConnection((err, db) =>
-//     {
-//         db.query('SELECT * FROM `Enseignant`', (err, rows, fields) => {
-//             if (err) throw err
-//             let obj = []
-//             for(let i in rows){
-//                 obj.push({'id_ens' : rows[i].id_ens,'mail' : rows[i].mail, 'numen' : rows[i].numen, 'nom': rows[i].nom, 'prenom': rows[i].prenom})
-//             }
-//             res.send(obj);
-//         })
-//     })
-// });
-
-// information pour un utilisateur
-// exports.user_detail = asyncHandler(async (req, res, next) => {
-//     pool.getConnection((err, db) =>
-//     {
-//         db.query('SELECT * FROM `Enseignant` WHERE `id_ens`= ?',[req.params.id], (err, rows, fields) => {
-//             if (err) throw err
-//
-//             res.send({'id_ens' : rows[0].id_ens,'mail' : rows[0].mail, 'numen' : rows[0].numen, 'nom': rows[0].nom, 'prenom': rows[0].prenom});
-//         })
-//     })
-// });
-
-// exports.user_create = asyncHandler(async (req, res, next) => {
-//
-//     create_user(req.body.mail, req.body.password, req.body.nom, req.body.prenom, function(err, result) {
-//         if(err) throw err;
-//         console.log(result)
-//         console.log("finito")
-//         req.session.regenerate(function (err) {
-//             if (err) next(err)
-//             req.session.nom = result.nom;
-//             req.session.prenom = result.prenom;
-//             req.session.mail = result.mail;
-//             req.session.valide = false;
-//             res.send(true);
-//         })
-//         axios.get("/mail/send_verif_mail/" + req.body.mail + "/" + result.number);
-//     })
-// });
-
 // Supprime un user
 // exports.user_delete = asyncHandler(async (req, res, next) => {
 //     pool.getConnection((err, db) =>
