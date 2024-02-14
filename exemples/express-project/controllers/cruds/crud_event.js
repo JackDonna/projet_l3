@@ -252,7 +252,7 @@ function get_events_by_teacher_id(id, callback)
                 for (let row of rows)
                 {
                     let title = "none";
-                    rowlibelle_court != undefined ? title = rowlibelle_court : null;
+                    row.libelle_court != undefined ? title = rowlibelle_court : null;
                     obj.push(build_event(row.libelle_court, row.date, row.heure_debut, row.heure_fin, row.salle, row.id_ev, row.classe, row.salle));
                 }
                 callback(null, obj);
