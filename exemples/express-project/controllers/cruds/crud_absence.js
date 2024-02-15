@@ -111,6 +111,158 @@ function get_absence(req, res, callback)
     })
 }
 
+
+
+
+
+/**
+ * function get nomenclature from courses
+ * @param courses {integer} id of courses
+ * @param callback {function} callback function (err, result)
+ */
+function nomenclature_by_courses(courses,callback)
+{
+    pool.getConnection((err,db) =>
+    {
+        db.query(
+            {
+                sql: SQL.select.nomenclature_by_matiere,
+                timeout: 10000,
+                values: [courses]
+            },
+            (err, rows, fields) => {
+                if (err) throw err
+                callback(null, rows)
+            })
+    })
+}
+
+
+
+/**
+ * function get id_mat by id_abs
+ * @param absence {integer} id of absence
+ * @param callback {function} callback function (err, result)
+ */
+function courses_by_absence(absence,callback)
+{
+    pool.getConnection((err,db) =>
+    {
+        db.query(
+            {
+                sql: SQL.select.courses_by_absence,
+                timeout: 10000,
+                values: [absence]
+            },
+            (err, rows, fields) => {
+                if (err) throw err
+                callback(null, rows)
+            })
+    })
+}
+
+
+
+
+/**
+ * function get id_discipline by nomenclature
+ * @param nomenclature {integer} number of nomnclature
+ * @param callback {function} callback function (err, result)
+ */
+function discipline_by_nomenclture(nomenclature, callback)
+{
+    pool.getConnection((err,db) =>
+    {
+        db.query(
+            {
+                sql: SQL.select.discipline_by_nomenclature,
+                timeout: 10000,
+                values: [noenclature]
+            },
+            (err, rows, fields) => {
+                if (err) throw err
+                callback(null, rows)
+            })
+    })
+}
+
+
+
+
+/**
+ * function get id_discipline by nomenclature
+ * @param discipline {integer} number of nomnclature
+ * @param teacher {integer} number of nomnclature
+ * @param callback {function} callback function (err, result)
+ */
+function correspondance_by_discipline(discipline,teacher,callback)
+{
+    pool.getConnection((err,db) =>
+    {
+        db.query(
+            {
+                sql: SQL.select.teacher_by_discipline,
+                timeout: 10000,
+                values: [teacher,disipline]
+            },
+            (err, rows, fields) => {
+                if (err) throw err
+                callback(null, rows)
+            })
+    })
+}
+
+
+
+
+/**
+ * function get list of teacher match with courses
+ * @param absence {integer} id of courses
+ * @param teacher {integer} id of teacher
+ * @param callback {function} callback function (err, result)
+ */
+function teacher_available_by_courses(req,res,absence, teacher,callback)
+{
+
+    courses_by_absence(req.absence,(err, result) =>
+    {
+        if(err) callback(err, null);
+        callback(null, result);
+    });
+
+    nomenclature_by_courses(result,(err, result) =>
+    {
+        if(err) callback(err, null);
+        callback(null, result);
+    })
+
+
+    discipline_by_nomenclture(result,(err, result) =>
+    {
+        if(err) callback(err, null);
+        callback(null, result);
+    })
+
+    let id_disc = result;
+
+    get_available_teacher(req,res,(err, result) =>
+    {
+        if(err) callback(err, null);
+        callback(null, result);
+    });
+
+
+
+    let firstTri = res;
+    let trie = [];
+
+    firstTri.forEach((element) => trie.push(correspondance_by_discipline(id_disc,element.id_ens)));
+
+    res = trie;
+}
+
+
+
 // --------------------------------------------------- EXPORTS ------------------------------------------------------ //
 module.exports = {insert_new_absence, get_available_teacher, get_absence}
 

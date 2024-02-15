@@ -43,6 +43,10 @@ router.get("/sign_up", function(req, res) {
   res.render("calendar");
 })
 
+router.get("/dashboard_admin",function(req, res) {
+  res.render("dashboard_admin");
+})
+
 router.get('/logout', function (req, res, next) {
   // logout logic
 
