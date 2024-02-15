@@ -5,6 +5,7 @@ const
         sign_in,
         sign_up
     } = require(__dirname + "/cruds/crud_teacher.js");
+const {sign_in_admin} = require("./cruds/crud_teacher");
 
 // ----------------------------------- EXPORTS FUNCTIONS CRUDS RESULT -------------------------------- //
 /**
@@ -45,7 +46,15 @@ exports.sign_up = asyncHandler((req, res) =>
     sign_up(req, res, (err, result) =>
     {
         if(err) {console.error(err); res.sendStatus(500)};
+        res.sendStatus(200);
+    })
+})
 
+exports.sign_in_as_admin = asyncHandler((res, req) =>
+{
+    sign_in_admin(req, res, (err, res) =>
+    {
+        if(err) {console.error(err); res.sendStatus(500)};
         res.sendStatus(200);
     })
 })

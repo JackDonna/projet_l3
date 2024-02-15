@@ -7,12 +7,14 @@ form.addEventListener("submit", (e) => {
     let password = document.querySelector("#form_password").value;
     let nom = document.querySelector("#form_nom").value;
     let prenom =document.querySelector("#form_prenom").value;
+    let admin = document.querySelector("#admin").checked;
 
     let obj = {
         "nom": nom,
         "prenom": prenom,
         "mail": mail,
-        "password": password
+        "password": password,
+        "admin": admin
     }
     axios.post("/sql/teacher/sign_up", obj).then((response) => {
         console.log(response.data)

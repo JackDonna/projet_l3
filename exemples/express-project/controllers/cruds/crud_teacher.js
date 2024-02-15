@@ -25,7 +25,7 @@ function rnd(min, max) {
  * @param id_teacher {int} id of the teacher own this session
  * @param callback {function} callback function (err, result)
  */
-function set_session(req, name, firstname, mail, validation, id_teacher, callback)
+function set_session(req, name, firstname, mail, validation, id_teacher, admin, callback)
 {
     req.session.regenerate( (err) =>
     {
@@ -35,6 +35,7 @@ function set_session(req, name, firstname, mail, validation, id_teacher, callbac
         req.session.mail = mail;
         req.session.valide = validation;
         req.session.id_ens = id_teacher;
+        req.session.admin = admin;
         req.session.save( (err) =>
         {
             if (err) callback(err, null);
@@ -298,6 +299,46 @@ function create_identification(password, id_ens, callback)
    
 }
 
+function check_admin_by_mail_pasword(mail, password, callback)
+{
+    pool.getConnection((err, db) =>
+    {
+        if(err) callback(err, null);
+        db.query(
+            {
+                sql: SQL.select.admin_by_mail_password,
+                values: [mail, password],
+                timeout: 10000
+            },
+            (err, rows, fields) =>
+            {
+                if(err) callback(err, null);
+                callback(null, rows);
+            }
+        )
+    })
+}
+
+function check_admin(mail, callback)
+{
+    pool.getConnection((err, db) =>
+    {
+        if(err) callback(err, null);
+        db.query(
+            {
+                sql: SQL.select.teacher_by_mail,
+                timeout: 10000,
+                values: [mail]
+            },
+            (err, rows, fields) => {
+                console.log(rows)
+                if(err) callback(err, null);
+                callback(null, rows[0]);
+            }
+        )
+    })
+}
+
 
 
 
@@ -318,7 +359,7 @@ function sign_up(req, res, callback)
             {
                 if(err) callback(err, null);
                 axios.get("mail/send_verification_mail/" + req.body.mail + "/" + identification);
-                set_session(req, teacher.mail, teacher.prenom, teacher.nom, false, teacher.id_ens, (err, res) => 
+                set_session(req, teacher.mail, teacher.prenom, teacher.nom, false, teacher.id_ens, false, (err, res) =>
                 {
                     callback(null, true);
                 })
@@ -335,27 +376,36 @@ function sign_up(req, res, callback)
  */
 function sign_in(req, res, callback)
 {
-    check_teacher_by_mail(req.params.mail, (err, teacher) => 
+    check_teacher_by_mail(req.params.mail, (err, teacher) =>
     {
-        if(err) callback(err, null);
-        if(teacher == undefined){callback(err, null); return}
-        console.log("coucou");
-        check_identification(teacher.id_ens, req.params.password, (err, identification) =>
-        {
-            if(err) callback(err, null);
-            if(identification != undefined)
+            console.log("coucou");
+            check_identification(teacher.id_ens, req.params.password, (err, identification) =>
             {
-                set_session(req, teacher.nom, teacher.prenom, teacher.mail, identification.valide, teacher.id_ens, (err, res) =>
+                if(err) callback(err, null);
+                if(identification != undefined)
                 {
-                    if(err) callback(err, null);
-                    callback(null, res);
-                })
-            }
+                    set_session(req, teacher.nom, teacher.prenom, teacher.mail, identification.valide, teacher.id_ens, false, (err, res) =>
+                    {
+                        if(err) callback(err, null);
+                        callback(null, res);
+                    })
+                }
 
-        })
+            })
     })
 };
 
+function sign_in_admin(req, res, callback)
+{
+    check_admin_by_mail_pasword(req.params.mail, req.params.password, (err, admin) =>
+    {
+        if(err){callback(err, null); return;}
+        set_session(req, admin.nom, admin.prenom, admin.mail, true, admin.id, true, (err, res) =>
+        {
+            callback(null, true);
+        })
+    })
+}
 /**
  * function to validate a teacher by checking the random number and set the session and the database
  * @param req router parameters
@@ -377,7 +427,8 @@ module.exports =
     {
         validate_teacher,
         sign_in,
-        sign_up
+        sign_up,
+        sign_in_admin
     }
 
 
