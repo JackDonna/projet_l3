@@ -8,10 +8,10 @@ form.addEventListener("submit", (e) => {
     let admin = document.querySelector("#admin").checked;
     if(admin)
     {
-        axios.get("/sql/teacher/sign_in_as_admin/" + mail + "/" + password + "/" + admin).then((response) => {
+        axios.get("/sql/teacher/sign_in_as_admin/" + mail + "/" + password).then((response) => {
             console.log(response.data)
             if(response.data) {
-                window.location.replace("/");
+                window.location.replace("/dashboard_admin");
             }
             else
             {
@@ -21,7 +21,7 @@ form.addEventListener("submit", (e) => {
     }
     else
     {
-        axios.get("/sql/teacher/sign_in/" + mail + "/" + password + "/" + admin).then((response) => {
+        axios.get("/sql/teacher/sign_in/" + mail + "/" + password).then((response) => {
             console.log(response.data)
             if(response.data) {
                 window.location.replace("/");

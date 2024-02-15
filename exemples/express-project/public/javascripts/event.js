@@ -22,11 +22,13 @@ async function ajouterDansBoite() {
          let p = document.createElement("p");
    
          // Affecter la valeur de chaque clé à chaque paragraphe
+         console.log(evenement)
          p.innerHTML = `
             Motif : ${evenement.motif}<br>
             Date : ${evenement.date}<br>
             Heure du début :${evenement.heure_debut}<br>
             Heure de fin : ${evenement.heure_fin}<br>
+            Professeur : ${evenement.prenom}
          `;
    
          // Ajouter le paragraphe à la boite
@@ -39,5 +41,5 @@ async function ajouterDansBoite() {
    
 }
 
-
-setInterval(ajouterDansBoite, 5000);
+ajouterDansBoite();
+setInterval(ajouterDansBoite, 10000);

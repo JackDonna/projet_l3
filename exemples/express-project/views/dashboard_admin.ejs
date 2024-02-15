@@ -10,6 +10,7 @@
     <title>dashboard admin</title>
   </head>
   <body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <div class="header"></div>
     <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" />
     <label for="openSidebarMenu" class="sidebarIconToggle">
@@ -38,9 +39,11 @@
         </li>
       </ul>
     </div>
+
+    <div id="boite_event"></div>
     <div id="center" class="main center"></div>
 
-    <%- include('footer') %>
+    <a href="/logout">Se deconnecter</a>
   </body>
   <script src=""></script>
   <script src="javascripts/event.js"></script>

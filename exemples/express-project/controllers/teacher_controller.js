@@ -3,9 +3,10 @@ const
     {
         validate_teacher,
         sign_in,
-        sign_up
+        sign_up,
+        sign_in_admin
     } = require(__dirname + "/cruds/crud_teacher.js");
-const {sign_in_admin} = require("./cruds/crud_teacher");
+
 
 // ----------------------------------- EXPORTS FUNCTIONS CRUDS RESULT -------------------------------- //
 /**
@@ -50,9 +51,9 @@ exports.sign_up = asyncHandler((req, res) =>
     })
 })
 
-exports.sign_in_as_admin = asyncHandler((res, req) =>
+exports.sign_in_as_admin = asyncHandler((req, res) =>
 {
-    sign_in_admin(req, res, (err, res) =>
+    sign_in_admin(req, res, (err, result) =>
     {
         if(err) {console.error(err); res.sendStatus(500)};
         res.sendStatus(200);

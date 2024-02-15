@@ -55,13 +55,14 @@ function prof_dispo(debut, fin, callback)
 
 function get_available_absence(id_ens, callback)
 {
+    console.log(id_ens)
     pool.getConnection((err, db) => 
     {
         db.query(
             {
                 sql: SQL.select.absence_available,
                 values: [id_ens],
-                timeout: 10000
+                timeout: 3000
             },
             (err, rows, fields) => 
             {

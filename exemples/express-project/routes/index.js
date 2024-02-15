@@ -28,7 +28,31 @@ function is_valide_and_authenticated(req, res, next) {
   }
 }
 
-router.get("/", is_valide_and_authenticated, (req, res, next) => {
+function is_admin(req, res, next)
+{
+    if(!req.session.admin)
+    {
+      res.redirect("/sign_in");
+    }
+    else
+    {
+      next();
+    }
+}
+
+function is_not_admin(req, res, next)
+{
+  if(req.session.admin)
+  {
+    res.redirect("/sign_in");
+  }
+  else
+  {
+    next();
+  }
+}
+
+router.get("/", is_valide_and_authenticated, is_not_admin, (req, res, next) => {
   res.render("index");
 })
 router.get("/sign_in", function(req, res) {
@@ -38,12 +62,12 @@ router.get("/sign_in", function(req, res) {
 router.get("/sign_up", function(req, res) {
   res.render("sign_up");
 })
-  router.get("/calendar", is_valide_and_authenticated, (req, res) => {
+  router.get("/calendar", is_valide_and_authenticated, is_not_admin, (req, res) => {
   res.locals.nom = req.session.nom;
   res.render("calendar");
 })
 
-router.get("/dashboard_admin",function(req, res) {
+router.get("/dashboard_admin", is_admin, (req, res)  => {
   res.render("dashboard_admin");
 })
 

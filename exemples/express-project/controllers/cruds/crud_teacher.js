@@ -23,6 +23,7 @@ function rnd(min, max) {
  * @param mail {string} mail of the session
  * @param validation {boolean} tell if the session is a valide session or not
  * @param id_teacher {int} id of the teacher own this session
+ * @param admin
  * @param callback {function} callback function (err, result)
  */
 function set_session(req, name, firstname, mail, validation, id_teacher, admin, callback)
@@ -86,7 +87,6 @@ function check_teacher_by_mail(mail, callback)
                 values: [mail]
             },
             (err, rows, fields) => {
-                console.log(rows)
                 if(err) callback(err, null);
                 callback(null, rows[0]);
             }
@@ -313,31 +313,13 @@ function check_admin_by_mail_pasword(mail, password, callback)
             (err, rows, fields) =>
             {
                 if(err) callback(err, null);
-                callback(null, rows);
-            }
-        )
-    })
-}
-
-function check_admin(mail, callback)
-{
-    pool.getConnection((err, db) =>
-    {
-        if(err) callback(err, null);
-        db.query(
-            {
-                sql: SQL.select.teacher_by_mail,
-                timeout: 10000,
-                values: [mail]
-            },
-            (err, rows, fields) => {
-                console.log(rows)
-                if(err) callback(err, null);
                 callback(null, rows[0]);
             }
         )
     })
 }
+
+
 
 
 
@@ -378,20 +360,25 @@ function sign_in(req, res, callback)
 {
     check_teacher_by_mail(req.params.mail, (err, teacher) =>
     {
-            console.log("coucou");
-            check_identification(teacher.id_ens, req.params.password, (err, identification) =>
+            if(teacher != undefined)
             {
-                if(err) callback(err, null);
-                if(identification != undefined)
+                check_identification(teacher.id_ens, req.params.password, (err, identification) =>
                 {
-                    set_session(req, teacher.nom, teacher.prenom, teacher.mail, identification.valide, teacher.id_ens, false, (err, res) =>
+                    if(err) callback(err, null);
+                    if(identification != undefined)
                     {
-                        if(err) callback(err, null);
-                        callback(null, res);
-                    })
-                }
+                        set_session(req, teacher.nom, teacher.prenom, teacher.mail, identification.valide, teacher.id_ens, false, (err, res) =>
+                        {
+                            callback(null, true);
+                        })
+                    }
+                })
+            }
+            else
+            {
+                callback(err, null);
+            }
 
-            })
     })
 };
 
@@ -400,10 +387,17 @@ function sign_in_admin(req, res, callback)
     check_admin_by_mail_pasword(req.params.mail, req.params.password, (err, admin) =>
     {
         if(err){callback(err, null); return;}
-        set_session(req, admin.nom, admin.prenom, admin.mail, true, admin.id, true, (err, res) =>
+        if(admin != undefined)
         {
-            callback(null, true);
-        })
+            set_session(req, admin.nom, admin.prenom, admin.mail, true, admin.id_admin, true, (err, result) =>
+            {
+                callback(null, true);
+            })
+        }
+        else
+        {
+            callback(err, false);
+        }
     })
 }
 /**
