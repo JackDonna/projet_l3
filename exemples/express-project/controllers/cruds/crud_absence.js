@@ -82,11 +82,18 @@ function get_available_absence(id_ens, callback)
  */
 function insert_new_absence(req, res, callback)
 {
-    insert_absence(req.body.motif, req.body.id_event, (err, result) =>
+    try {
+        insert_absence(req.body.motif, req.body.id_event, (err, result) =>
+        {
+            if(err) callback(err, null);
+            callback(null, true);
+        })
+    }
+    catch(err)
     {
-        if(err) callback(err, null);
-        callback(null, true);
-    })
+        console.error(err);
+    }
+
 }
 
 /**
