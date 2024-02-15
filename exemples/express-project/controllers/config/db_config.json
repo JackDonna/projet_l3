@@ -5,6 +5,6 @@
   "password": "POecfwI((xAEmA!T",
   "database": "test_RPA",
   "waitForConnection": true,
-  "connectionLimit": 1500,
-  "queueLimit": 1500
+  "connectionLimit": 9000000,
+  "queueLimit": 900000
 }

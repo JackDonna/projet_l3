@@ -2,13 +2,17 @@ const nodemailer = require('nodemailer');
 const fs = require("fs");
 const conf_file = JSON.parse(fs.readFileSync("controllers/config/mail_config.json", "utf-8"));
 const conf = conf_file.transporter_config;
+let mdp = 'azertgbn_';
+let mail = 'rdp@dptinfo-usmb.fr';
 const transporter = nodemailer.createTransport({
-    "host": "ssl0.ovh.net",
-    "port": 465,
-    "secure": true,
-    "auth": {
-        "user": "azertgbn_",
-        "pass": "rdp@dptinfo-usmb.fr"
+    // host: 'mail.partage.univ-smb.fr',
+    host: 'ssl0.ovh.net',
+    // port: 587,
+    port: 465,
+    secure: true,
+    auth: {
+        user: mail,
+        pass: mdp
     }
 });
 require('dotenv').config();
