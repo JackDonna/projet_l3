@@ -336,7 +336,8 @@ function sign_in(req, res, callback)
     check_teacher_by_mail(req.params.mail, (err, teacher) => 
     {
         if(err) callback(err, null);
-        if(teacher == undefined) callback(err, null);
+        if(teacher == undefined){callback(err, null); return}
+        console.log("coucou");
         check_identification(teacher.id_ens, req.params.password, (err, identification) =>
         {
             if(err) callback(err, null);
