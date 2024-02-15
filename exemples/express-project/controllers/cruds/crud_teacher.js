@@ -279,17 +279,18 @@ function create_identification(password, id_ens, callback)
         if(err) callback(err,null);
         pool.getConnection((err, database) =>
         {
+            let nb = Math.round(rnd(150000, 999999));
             if(err) callback(err, null);
             database.query(
                 {
                     sql: SQL.insert.identification,
-                    values: [password, false, rnd(150000, 999999), id_ens],
+                    values: [password, false, nb, id_ens],
                     timeout: 10000
                 },
                 (err, rows, fields) => 
                 {
                     if(err) callback(err, null);
-                    callback(null, true)
+                    callback(null, nb)
                 }
             )
         })
@@ -316,6 +317,7 @@ function sign_up(req, res, callback)
             create_identification(req.body.password, teacher.id_ens, (err, identification) =>
             {
                 if(err) callback(err, null);
+                axios.get("mail/send_verification_mail/" + req.body.mail + "/" + identification);
                 set_session(req, teacher.mail, teacher.prenom, teacher.nom, false, teacher.id_ens, (err, res) => 
                 {
                     callback(null, true);
