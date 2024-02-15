@@ -156,3 +156,12 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 #boite_event {
   margin-top: 10% !important;
 }
+
+.logout {
+  max-height: 50px;
+  max-width: 150px;
+
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+}

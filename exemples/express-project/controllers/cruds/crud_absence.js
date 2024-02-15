@@ -55,6 +55,7 @@ function prof_dispo(debut, fin, callback)
 
 function get_available_absence(id_ens, callback)
 {
+
     console.log(id_ens)
     pool.getConnection((err, db) => 
     {
@@ -93,7 +94,6 @@ function insert_new_absence(req, res, callback)
     {
         console.error(err);
     }
-
 }
 
 /**

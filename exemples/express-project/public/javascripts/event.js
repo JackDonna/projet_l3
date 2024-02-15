@@ -28,7 +28,7 @@ async function ajouterDansBoite() {
             Date : ${evenement.date}<br>
             Heure du début :${evenement.heure_debut}<br>
             Heure de fin : ${evenement.heure_fin}<br>
-            Professeur : ${evenement.prenom}
+            Professeur : ${evenement.nom} ${evenement.prenom}
          `;
    
          // Ajouter le paragraphe à la boite
