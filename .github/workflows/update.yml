@@ -5,5 +5,5 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: chmod ${{ github.workspace }}/update.sh
+      - run: chmod +x ${{ github.workspace }}/update.sh
       - run: ${{ github.workspace }}/update.sh
