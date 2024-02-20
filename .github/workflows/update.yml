@@ -8,5 +8,3 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - run: chmod +x ${{ github.workspace }}/update.sh
-      - run: ${{ github.workspace }}/update.sh
