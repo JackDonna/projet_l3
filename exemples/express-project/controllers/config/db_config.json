@@ -1,0 +1,10 @@
+{
+  "host": "rdp.dptinfo-usmb.fr",
+  "port": 3306,
+  "user": "app",
+  "password": "POecfwI((xAEmA!T",
+  "database": "test_RPA",
+  "waitForConnection": true,
+  "connectionLimit": 9000000,
+  "queueLimit": 900000
+}

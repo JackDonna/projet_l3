@@ -1,0 +1,64 @@
+{
+  "colors": [
+    {
+      "name": "cours annul",
+      "color": "#FB1008"
+    },
+    {
+      "name": "mercatique",
+      "color": "#e62eca"
+    },
+    {
+      "name": "entrepreneuriat",
+      "color": "#ffdf4f"
+    },
+    {
+      "name": "anim",
+      "color": "#4de62e"
+    },
+    {
+      "name": "math",
+      "color": "#ff21cd"
+    },
+    {
+      "name": "fran",
+      "color": "#00ba90"
+    },
+    {
+      "name": "science",
+      "color": "#fa8133"
+    },
+    {
+      "name": "508",
+      "color": "#00cb5c"
+    },
+    {
+      "name": "504",
+      "color": "#9100cb"
+    },
+    {
+      "name": "503",
+      "color": "#e6889d"
+    },
+    {
+      "name": "502",
+      "color": "#a08174"
+    },
+    {
+      "name": "506",
+      "color": "#cffefe"
+    },
+    {
+      "name": "507",
+      "color": "#edcffe"
+    },
+    {
+      "name": "505",
+      "color": "#81f803"
+    },
+    {
+      "name": "vacance",
+      "color": "#cdcdcd"
+    }
+  ]
+}

@@ -1,6 +1,5 @@
-var express = require('express');
-var router = express.Router();
-var escapeHtml = require('escape-html')
+let express = require('express');
+let router = express.Router();
 
 function isAuthenticated (req, res, next) {
   return !!req.session.nom
@@ -16,8 +15,10 @@ function isValide (req, res, next) {
 }
 
 function is_valide_and_authenticated(req, res, next) {
-  if(!isAuthenticated(req,res,next)) res.redirect("/sign_in");
-  if(!isValide(req,res,next)) {
+  if(!isAuthenticated(req,res,next)) {
+    res.redirect("/sign_in");
+  }
+  else if(!isValide(req,res,next)) {
     console.log(req.session)
     res.redirect("/valide_account");
   }
@@ -27,8 +28,32 @@ function is_valide_and_authenticated(req, res, next) {
   }
 }
 
-router.get("/", (req, res, next) => {
-  res.redirect("/calendar");
+function is_admin(req, res, next)
+{
+    if(!req.session.admin)
+    {
+      res.redirect("/sign_in");
+    }
+    else
+    {
+      next();
+    }
+}
+
+function is_not_admin(req, res, next)
+{
+  if(req.session.admin)
+  {
+    res.redirect("/sign_in");
+  }
+  else
+  {
+    next();
+  }
+}
+
+router.get("/", is_valide_and_authenticated, is_not_admin, (req, res, next) => {
+  res.render("index");
 })
 router.get("/sign_in", function(req, res) {
   res.render("sign_in");
@@ -37,10 +62,13 @@ router.get("/sign_in", function(req, res) {
 router.get("/sign_up", function(req, res) {
   res.render("sign_up");
 })
-router.get("/calendar", is_valide_and_authenticated, (req, res) => {
-  console.log(req.session.user)
+  router.get("/calendar", is_valide_and_authenticated, is_not_admin, (req, res) => {
   res.locals.nom = req.session.nom;
   res.render("calendar");
+})
+
+router.get("/dashboard_admin", is_admin, (req, res)  => {
+  res.render("dashboard_admin");
 })
 
 router.get('/logout', function (req, res, next) {
@@ -62,7 +90,7 @@ router.get('/logout', function (req, res, next) {
   })
 })
 
-router.get("/valide_account", (req, res) => {
+router.get("/valide_account", isOnlyAuthenticated, (req, res) => {
   res.locals.mail = req.session.mail
   res.render("valide_account");
 })

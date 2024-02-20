@@ -1,11 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="javascripts/pwa.webmanifest" />
+    <link rel="stylesheet" href="stylesheets/index.css" />
+
+    <title>RDP</title>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <header>
+      <a href="#0"
+        ><img
+          src="assets/icons/settings_FILL0_wght400_GRAD0_opsz24.svg"
+          alt="settings"
+      /></a>
+      <a href="#1"
+        ><img
+          src="assets/icons/account_circle_FILL0_wght400_GRAD0_opsz24.svg"
+          alt="account"
+      /></a>
+    </header>
+    <hr />
+    <div id="boite_event"></div>
+    <div class="container"></div>
+
+    <a href="/logout">Se deconnecter</a>
+    <%- include('footer') %>
+
+
   </body>
 </html>

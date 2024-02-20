@@ -11,9 +11,7 @@ main {
   justify-content: center;
   align-items: center;
 }
-#reader {
-  width: 600px;
-}
+
 #result {
   text-align: center;
   font-size: 1.5rem;
@@ -65,13 +63,10 @@ main {
 }
 
 .hide {
-  display: none;
+  display: none !important;
 
 }
 
-#reader{
-
-}
 
 #scan_code {
   padding: 2em;
@@ -79,11 +74,38 @@ main {
   top: 25%;
   background-color: whitesmoke;
   opacity: 100%;
-  z-index: 1;
+  z-index: 5000;
+  width: 700px;
+  height: 500px;
 }
 
 #close_scanner {
   cursor: pointer;
+}
+
+#add_absence {
+  position: fixed;
+  top: 20%;
+  left: 30%;
+  background-color: whitesmoke;
+  width: 40%;
+  height: 40%;
+  z-index: 9;
+}
+
+.loading {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
 
 @media screen and (max-width: 700px) {
@@ -92,5 +114,10 @@ main {
 
     height: 50px;
     width: 50px;
+  }
+
+  #scan_code {
+    height: 300px;
+    width: 300px;
   }
 }

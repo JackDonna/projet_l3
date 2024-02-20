@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>connexion</title>
+    <link rel="manifest" href="javascripts/pwa.webmanifest" />
     <link rel="stylesheet" href="stylesheets/valide.css" />
-</head>
+    <title>connexion</title>
+  </head>
 
-<body>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-Validation pour le compte : <%= mail %>
-<div class="container" >
-    <form action="" id="form">
+    <div class="container">
+      <p>
+        Validation pour le compte : <br />
+        <%= mail %>
+      </p>
+      <form action="" id="form">
         <h1>Validation</h1>
-        <input type="text" placeholder="Code de validation" id="form_code"/>
+        <input type="text" placeholder="Code de validation" id="form_code" />
         <input class="button" type="submit" value="Inscription" />
-    </form>
-    <div>
+      </form>
+      <div class="inscription">
+        <a href="/logout">Se deconnecter ou utiliser un autre compte</a>
+      </div>
+      <div>
         <p class="error"></p>
+      </div>
     </div>
-</div>
-<a href="/logout">Se deconnecter ou utiliser un autre compte</a>
 
-<script src="javascripts/valide.js"></script>
-</body>
+    <script src="javascripts/valide.js"></script>
+  </body>
 </html>

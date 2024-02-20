@@ -1,100 +1,188 @@
-/**
- * All imports -----------------------------------------------------
- * @var axios is from axios.js import CDN
- */
-/**
- * @var EventCalendar is from EventCalendar.js CDN import
- */
-/**
- * @var Html5QrcodeScanner is from Html5QrcodeScanner CDN import
- */
-/** All method use by import ----------------------------------------
- * @method EventCalendar.addEvent add event to the calendar, take an object
- */
-/**
- * @method EventCalendar.setOption set option after declaration of calendar
- */
+// ----------------------------------------------------------------------------------------------------------------------------//
+// --- DOM ELEMENTS -----------------------------------------------------------------------------------------------------------//
+// ----------------------------------------------------------------------------------------------------------------------------//
 
-// DOM element to display result of qr code
-let result_element = document.querySelector("#result");
-// Dom element to display calendar
-let calendar_element = document.getElementById('calendar');
-// Object calendar
-let ec = new EventCalendar(calendar_element, {
+const result_element   = document.querySelector("#result");
+const calendar_element = document.getElementById('calendar');
+const absence_form     = document.getElementById('add_absence');
+const reader           = document.getElementById("scan_code");
+const scan_button      = document.getElementById("scan_qr_code");
+const close_scanner    = document.getElementById("close_scanner");
+const render_region    = document.getElementById("reader__scan_region");
+const loading          = document.querySelector(".loading");
+const start_absence    = absence_form.querySelector(".start_absence");
+const end_absence      = absence_form.querySelector(".end_absence");
+const reason           = absence_form.querySelector(".reason");
+const submit           = absence_form.querySelector(".submit_form");
+const close_form       = absence_form.querySelector("#close_form");
+
+// ----------------------------------------------------------------------------------------------------------------------------//
+// ----GLOBALS VARIABLES ------------------------------------------------------------------------------------------------------//
+// ----------------------------------------------------------------------------------------------------------------------------//
+
+const scanner = new Html5QrcodeScanner('reader', {
+    qrbox : qrboxFunction,
+    fps: 60
+});
+
+const ec = new EventCalendar(calendar_element, {
     view: 'timeGridWeek',
     events: [],
     locale: "fr",
     firstDay: 1,
     slotMinTime: "06:00:00",
     slotMaxTime: "21:00:00",
-});
-
-window.addEventListener('resize', () => {
-    if (window.innerWidth < 700) {
-        ec.setOption("view", "timeGridDay");
-    }
-    else {
-        ec.setOption("view", "timeGridWeek");
+    eventClick: function(info)
+    {
+        absence_form.classList.remove("hide");
+        start_absence.value = format_time(info.event.start);
+        end_absence.value = format_time(info.event.end);
+        global_event = info.event;
     }
 });
 
-const scanner = new Html5QrcodeScanner('reader', {
-    // Scanner will be initialized in DOM inside element with id of 'reader'
-    qrbox: {
-        width: 300,
-        height: 300,
-    },  // Sets dimensions of scanning box (set relative to reader element width)
-    fps: 60, // Frames per second to attempt a scan
-});
 
 
-scanner.render(success, error);
-// Starts scanner
 
+var global_event = {};
+
+// ----------------------------------------------------------------------------------------------------------------------------//
+// --- FUNCTIONS --------------------------------------------------------------------------------------------------------------//
+// ----------------------------------------------------------------------------------------------------------------------------//
+
+/**
+ * format a time to display it in time fields form
+ * @param {Date} time base date to extract hour in it
+ * @return {string} formatted date
+ */
+function format_time(time)
+{
+    let hour = time.getHours();
+    hour < 10 ? hour = "0" + hour : null;
+
+    let minute = time.getMinutes();
+    minute < 10 ? minute = "0" + minute : null;
+    return hour + ":" + minute;
+}
+
+/**
+ * function handle sucess of qr code scanning
+ * @param {string} result link of the qr code
+ */
 function success(result) {
     let obj = {
         "url": result
     }
+    scanner.clear();
+    reader.classList.add("hide");
+    document.getElementById('reader').remove();
+    loading.classList.remove("hide");
 
-    // Fetching potential icals data from qr code to API
-    axios.post("/api/download", obj).then(function(response)
-    {
-        // Fail code = 0
-        if(response.data.code === 0)
-        {
-            result_element.innerHTML = "L'url ou le QR code ne corresponde pas à un EDT valide."
-        }
-        // Succes, api render data from object {ressponse.data = {"code": int, "data" : object}
-        else
-        {
-            result_element.innerHTML = "Votre EDT à bien été lu et enregistré.";
-            for(let event of response.data.data)
-            {
-                ec.addEvent(event);
-            }
+    axios.post("sql/event/insert_timetable_sync", obj, {
+        onDownloadProgress: progressEvent => {
+        const dataChunk = progressEvent;
+        console.log(dataChunk.event)
+    },
+        timeout: 6000000
+    })
+        .then((response) => {
+            get_timetable();
+    })
+}
+
+/**
+ * function hancle qr code scan error
+ * @param {Error} err 
+ */
+function error(err) {
+    console.error(err);
+}
+
+/**
+ * function set the qr code GUI, need to call whene initialize the qrcode
+ * @param {number} viewfinderWidth 
+ * @param {number} viewfinderHeight 
+ * @returns 
+ */
+function qrboxFunction(viewfinderWidth, viewfinderHeight) {
+    let minEdgePercentage = 0.7; // 70%
+    let minEdgeSize = Math.min(viewfinderWidth, viewfinderHeight);
+    let qrboxSize = Math.floor(minEdgeSize * minEdgePercentage);
+    return {
+        width: qrboxSize,
+        height: qrboxSize
+    };
+}
+
+/**
+ * get the timtable to RDP API
+ */
+function get_timetable()
+{
+    axios.get("/sql/event/get_timetable").then((response) => {
+
+        for(let event of response.data.data)
+        {   
+            ec.addEvent(event);
         }
     })
-    // Prints result as a link inside result element
-    scanner.clear();
-    // Clears scanning instance
-
-    document.getElementById('reader').remove();
-    // Removes reader element from DOM since no longer needed
-
-}
-function error(err) {
-    //console.error(err);
-    // Prints any errors to the console
 }
 
-let reader = document.getElementById("scan_code");
-let scan_button = document.getElementById("scan_qr_code");
-let close_scanner = document.getElementById("close_scanner");
-let render_region = document.getElementById("reader__scan_region");
+/**
+ * resize calendar with the current window size
+ */
+function resize_calendar()
+{
+    if (window.innerWidth < 800) 
+    {
+        ec.setOption("view", "timeGridDay");
+    }
+    else 
+    {
+        ec.setOption("view", "timeGridWeek");
+    }
+}
+// ----------------------------------------------------------------------------------------------------------------------------//
+// --- FUNCTIONS CALLS --------------------------------------------------------------------------------------------------------//
+// ----------------------------------------------------------------------------------------------------------------------------//
+
+get_timetable();
+scanner.render(success, error);
+
+// ----------------------------------------------------------------------------------------------------------------------------//
+// --- EVENTES LISTENERS ------------------------------------------------------------------------------------------------------//
+// ----------------------------------------------------------------------------------------------------------------------------//
+
 scan_button.addEventListener("click", () => {
     reader.classList.remove("hide");
 })
 close_scanner.addEventListener("click", () => {
     reader.classList.add("hide");
 })
+
+submit.addEventListener("click", function ()
+{
+    console.log(global_event)
+    axios.post("sql/absence/insert/", {id_event: global_event.id, motif: reason.value}).then((response) =>
+    {
+        console.log(response.data);
+    })
+})
+
+close_form.addEventListener("click", () =>
+{
+    absence_form.classList.add("hide");
+})
+
+window.onload((e) =>
+{
+    resize_calendar();
+})
+
+window.onresize((e) => 
+{
+    resize_calendar();
+})
+
+
 

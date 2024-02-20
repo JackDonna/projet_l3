@@ -4,8 +4,7 @@ let error = document.querySelector(".error")
 form.addEventListener("submit", (e) => {
   let number = form.querySelector("#form_code").value
   e.preventDefault();
-
-  axios.get("/sql/user/verifie_user/" + number).then((response) => {
+  axios.post("/sql/teacher/validate/", {number: number}).then((response) => {
     if(response.data) {
       window.location.replace("/calendar");
     }
