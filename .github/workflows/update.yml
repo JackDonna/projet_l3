@@ -5,4 +5,5 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: sudo ./update.sh
+      - run: chmod ${{ github.workspace }}/update.sh
+      - run: ${{ github.workspace }}/update.sh
