@@ -6,6 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: pwd
-      - run: ls ${{ github.workspace }}
+      - run: ls .github/workflows
       - run: chmod +x ${{ github.workspace }}/update.sh
       - run: ${{ github.workspace }}/update.sh
