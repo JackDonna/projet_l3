@@ -13,6 +13,7 @@ const
  * @body link to get the timetable from an external server (pronote, EDT, school software ...)
  * @type {*|express.RequestHandler<core.ParamsDictionary, any, any, core.Query>}
  */
+
 exports.insert_teacher_timetable = asyncHandler((req, res) =>
 {
     insert_timetable(req, res, (err, result) =>
