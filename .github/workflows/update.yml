@@ -5,7 +5,6 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: pwd
-      - run: ls .github/workflows
+      - run: ls
       - run: chmod +x ${{ github.workspace }}/update.sh
       - run: ${{ github.workspace }}/update.sh
