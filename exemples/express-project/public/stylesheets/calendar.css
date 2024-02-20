@@ -63,13 +63,10 @@ main {
 }
 
 .hide {
-  display: none;
+  display: none !important;
 
 }
 
-#reader{
-
-}
 
 #scan_code {
   padding: 2em;
@@ -94,6 +91,21 @@ main {
   width: 40%;
   height: 40%;
   z-index: 9;
+}
+
+.loading {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
 
 @media screen and (max-width: 700px) {

@@ -230,6 +230,69 @@ function insert_all_events(events, id, callback)
     callback(null, true);
 }
 
+
+function insert_all_events_sync(res, events, id, callback)
+{
+    
+    pool.getConnection((err, db) => {
+        if(err) callback(err, null)
+        let goal = events.length;
+        let counter = 0;
+
+        res.setHeader("Content-Type", "text/html");
+        
+        for (let event of events) {
+            let start_houre = new Date(event.start);
+            let end_houre = new Date(event.end);
+            let formatted_date = new Date(event.start);
+            start_houre.setHours(start_houre.getHours() + 1)
+            end_houre.setHours(end_houre.getHours() + 1)
+            start_houre = start_houre.toISOString().split("T")[0] + " " + start_houre.toISOString().split("T")[1].slice(0, -4);
+            start_houre = start_houre.slice(0, -1);
+            end_houre = end_houre.toISOString().split("T")[0] + " " + end_houre.toISOString().split("T")[1].slice(0, -4);
+            end_houre = end_houre.slice(0, -1);
+            formatted_date = formatted_date.toISOString().split("T")[0];
+            let salle = "none";
+            let classe = "none";
+            let niveau = "none";
+            try {
+                salle = event.description.val.split('Salle : ')[1];
+                salle = salle.split('\n')[0];
+            } catch {
+                null
+            }
+            if(salle == undefined) salle = "none";
+
+            get_course(db, event.title, (err, course) =>
+            {
+                if(err) callback(err, null);
+                if(course == undefined)
+                {
+                    course = null
+                }
+                else
+                {
+                    course = course.id_mat;
+                }
+
+                console.log(course);
+                console.log(salle, formatted_date, start_houre, end_houre, null, course, id)
+                insert_event(db, salle, formatted_date, start_houre, end_houre, null, course, id, function (err, result) {
+                    counter ++;
+                    var percent = (counter * 100) / goal;
+                    res.write(percent.toString());
+                    res.flush();
+                    if(counter == goal)
+                    {
+                        res.end();
+                        callback(null, true)
+                    }   
+                })
+            })
+        }
+    })
+}
+
 /**r
  * function get a collection of all event who contains teacher given id
  * @param id {int} teacher id
@@ -277,6 +340,19 @@ function insert_timetable(req, res, callback)
         insert_all_events(result, req.session.id_ens, (err, result) =>
         {
             if(err) callback(err, null);
+            callback(null, true);
+        })
+    })
+}
+
+function insert_timetable_sync(req, res, callback)
+{
+    parse_edt(req.body.url, (err, result) =>
+    {
+        let data = [...result];
+        insert_all_events_sync(res, result, req.session.id_ens, (err, result) =>
+        {
+            if(err) callback(err, null);
             callback(null, data);
         })
     })
@@ -300,8 +376,8 @@ function get_teacher_timetable(req, res, callback)
 // --------------------------------------------------- EXPORTS ------------------------------------------------------ //
 module.exports =
     {
-    get_events_by_teacher_id,
     insert_all_events,
     insert_timetable,
     get_teacher_timetable,
+    insert_timetable_sync,
     };

@@ -11,6 +11,7 @@ const neo4jRouter = require('./routes/neo4j');
 const nodeRouter = require('./routes/node');
 const connectRouter = require('./routes/connexion');
 const mailRouter = require('./routes/mail');
+var compression = require('compression')
 
 
 const app = express();
@@ -21,6 +22,7 @@ app.use(session({
   saveUninitialized: true,
   expires: 600000
 }))
+app.use(compression())
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

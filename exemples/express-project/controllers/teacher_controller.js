@@ -1,4 +1,5 @@
 const asyncHandler = require("express-async-handler");
+const {RequestResponse} = require("./utils/object_engine");
 const
     {
         validate_teacher,
@@ -18,8 +19,18 @@ exports.teacher_validation = asyncHandler((req, res) =>
 {
     validate_teacher(req, res, (err, result) =>
     {
-        if(err) {console.error(err); res.sendStatus(500)};
-        res.sendStatus(200);
+        let response = new RequestResponse
+        (
+            "teacherAPI",
+            "POST",
+            result,
+            "boolean",
+            "Validate an account",
+            err
+        );
+
+        if(err) console.error(err);
+        res.send(response);
     })
 })
 
@@ -32,8 +43,18 @@ exports.sign_in = asyncHandler((req, res) =>
 {
     sign_in(req, res, (err, result) =>
     {
-        if(err) {console.error(err); res.sendStatus(500)};
-        res.sendStatus(200);
+        let response = new RequestResponse
+        (
+            "teacherAPI",
+            "GET",
+            result,
+            "boolean",
+            "Set session and GET account information",
+            err
+        );
+
+        if(err) console.error(err);
+        res.send(response);
     })
 })
 
@@ -46,16 +67,41 @@ exports.sign_up = asyncHandler((req, res) =>
 {
     sign_up(req, res, (err, result) =>
     {
-        if(err) {console.error(err); res.sendStatus(500)};
-        res.sendStatus(200);
+        let response = new RequestResponse
+        (
+            "teacherAPI",
+            "POST",
+            result,
+            "boolean",
+            "Create an account",
+            err
+        );
+
+        if(err) console.error(err);
+        res.send(response);
     })
 })
 
+/**
+ * @function sign_in_as_admin get request to be signed-in as an admin
+ * @params mail and password
+ * @type {*|express.RequestHandler<core.ParamsDictionary, any, any, core.Query>}
+ */
 exports.sign_in_as_admin = asyncHandler((req, res) =>
 {
     sign_in_admin(req, res, (err, result) =>
     {
-        if(err) {console.error(err); res.sendStatus(500)};
-        res.sendStatus(200);
+        let response = new RequestResponse
+        (
+            "teacherAPI",
+            "GET",
+            result,
+            "boolean",
+            "Set session and GET admin info",
+            err
+        );
+
+        if(err) console.error(err);
+        res.send(response);
     })
 })

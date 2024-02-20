@@ -1,4 +1,6 @@
 const asyncHandler = require("express-async-handler");
+const {RequestResponse} = require("./utils/object_engine");
+const express = require("express");
 const
     {
         insert_new_absence,
@@ -14,10 +16,21 @@ const
 exports.insert_absence = asyncHandler( (req, res) => {
     insert_new_absence(req, res, (err, result) =>
     {
-        if(err) {console.error(err); res.sendStatus(500)};
-        res.sendStatus(200);
+        let response = new RequestResponse
+        (
+            "absenceAPI",
+            "POST",
+            result,
+            "boolean",
+            "put a timetable insto the database",
+            err
+        );
+
+        if(err) console.error(err);
+        res.send(response);
     });
 })
+
 
 /**
  * @function available_teacher get request to get the teachers available in the sql database
@@ -26,17 +39,41 @@ exports.insert_absence = asyncHandler( (req, res) => {
 exports.available_teacher = asyncHandler( (req, res) => {
     get_available_teacher(req, res, (err, result) =>
     {
-        if(err) {console.error(err); res.sendStatus(500)};
-        res.send(result);
+        let response = new RequestResponse
+        (
+            "absenceAPI",
+            "GET",
+            result,
+            "<teacherCollection>",
+            "get all teacher avaible with filter",
+            err
+        );
+
+        if(err) console.error(err);
+        res.send(response);
     });
 })
 
+/**
+ * @function avaible_absence get request to send the avaible absence, only for admin
+ * @type {*|express.RequestHandler<core.ParamsDictionary, any, any, core.Query>}
+ */
 exports.available_absence = asyncHandler((req, res) => 
 {
     get_absence(req, res, (err, result) =>
     {
-        if(err) {console.error(err); res.sendStatus(500)};
-        res.send(result);
+        let response = new RequestResponse
+        (
+            "absenceAPI",
+            "GET",
+            result,
+            "<absenceCollection>",
+            "get absence avaible for admin only",
+            err
+        );
+
+        if(err) console.error(err);
+        res.send(response);
     })
 })
 

@@ -400,6 +400,7 @@ function sign_in_admin(req, res, callback)
         }
     })
 }
+
 /**
  * function to validate a teacher by checking the random number and set the session and the database
  * @param req router parameters
