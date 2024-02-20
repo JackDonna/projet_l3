@@ -10,5 +10,5 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - run: sudo chmod +x ${{ github.workspace }}/.github/worflows/update.sh
+      - run: sudo chmod +x ${{ github.workspace }}/.github/workflows/update.sh
       - run: sudo ${{ github.workspace }}/.github/workflows/update.sh
