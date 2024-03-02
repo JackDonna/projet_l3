@@ -13,9 +13,8 @@ const
  * @function ajout_absence post request to insert new absence in the sql database
  * @type {*|express.RequestHandler<core.ParamsDictionary, any, any, core.Query>}
  */
-exports.insert_absence = asyncHandler( (req, res) => {
-    insert_new_absence(req, res, (err, result) =>
-    {
+exports.insert_absence = asyncHandler((req, res) => {
+    insert_new_absence(req, res, (err, result) => {
         let response = new RequestResponse
         (
             "absenceAPI",
@@ -26,7 +25,7 @@ exports.insert_absence = asyncHandler( (req, res) => {
             err
         );
 
-        if(err) console.error(err);
+        if (err) console.error(err);
         res.send(response);
     });
 })
@@ -36,9 +35,8 @@ exports.insert_absence = asyncHandler( (req, res) => {
  * @function available_teacher get request to get the teachers available in the sql database
  * @type {*|express.RequestHandler<core.ParamsDictionary, any, any, core.Query>}
  */
-exports.available_teacher = asyncHandler( (req, res) => {
-    get_available_teacher(req, res, (err, result) =>
-    {
+exports.available_teacher = asyncHandler((req, res) => {
+    get_available_teacher(req, res, (err, result) => {
         let response = new RequestResponse
         (
             "absenceAPI",
@@ -49,19 +47,16 @@ exports.available_teacher = asyncHandler( (req, res) => {
             err
         );
 
-        if(err) console.error(err);
+        if (err) console.error(err);
         res.send(response);
     });
 })
-
 /**
  * @function avaible_absence get request to send the avaible absence, only for admin
  * @type {*|express.RequestHandler<core.ParamsDictionary, any, any, core.Query>}
  */
-exports.available_absence = asyncHandler((req, res) => 
-{
-    get_absence(req, res, (err, result) =>
-    {
+exports.available_absence = asyncHandler((req, res) => {
+    get_absence(req, res, (err, result) => {
         let response = new RequestResponse
         (
             "absenceAPI",
@@ -72,7 +67,7 @@ exports.available_absence = asyncHandler((req, res) =>
             err
         );
 
-        if(err) console.error(err);
+        if (err) console.error(err);
         res.send(response);
     })
 })

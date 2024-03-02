@@ -3,7 +3,7 @@ const axios = require("axios");
 const utils = require("../utils/ics_utils");
 const fs = require("fs");
 const ical = require("ical");
-const { start } = require("repl");
+const {start} = require("repl");
 const config = JSON.parse(fs.readFileSync("controllers/utils/color_config.json", 'utf8'));
 const colors = config.colors;
 const sql_config = JSON.parse(fs.readFileSync("controllers/config/sql_config.json", "utf-8"));
@@ -14,16 +14,15 @@ const SQL = sql_config.sql;
 /**
  * function build a Javascript Object for an event, handle the color of the event too.
  * @param title {string} title of the event
- * @param start {date} start date of the event
- * @param end {date} end date of the event
+ * @param start {string} start date of the event
+ * @param end {string} end date of the event
  * @param location {string} location of the event
  * @param id {int} id of the event (database link)
  * @param classe {string} classe (classe name of the event)
  * @param salle salle (classroom name of the event)
  * @returns {{any}} final built-in JS object
  */
-function build_event(title, date, start, end, location, id, classe, salle)
-{
+function build_event(title, date, start, end, location, id, classe, salle) {
     date = new Date(date);
     date = date.toISOString().split("T")[0];
     start = date + " " + start;
@@ -40,9 +39,8 @@ function build_event(title, date, start, end, location, id, classe, salle)
             salle: salle
         }
     event.backgroundColor = "#08CFFB"
-    for (let color of colors)
-    {
-        if(title.toLowerCase().includes(color.name.toLowerCase()) || color.name.toLowerCase().includes(title.toLowerCase())) {
+    for (let color of colors) {
+        if (title.toLowerCase().includes(color.name.toLowerCase()) || color.name.toLowerCase().includes(title.toLowerCase())) {
             event.backgroundColor = color.color
         }
     }
@@ -55,8 +53,7 @@ function build_event(title, date, start, end, location, id, classe, salle)
  * @param discipline {string} discipline name
  * @param callback {function} callback function (err, result)
  */
-function insert_discipline(db, discipline, callback)
-{
+function insert_discipline(db, discipline, callback) {
     db.query(
         {
             sql: SQL.insert.discipline,
@@ -64,7 +61,7 @@ function insert_discipline(db, discipline, callback)
             values: [discipline]
         },
         (err, rows, fields) => {
-            if(err) callback(err, null);
+            if (err) callback(err, null);
             callback(null, true);
         })
 }
@@ -75,8 +72,7 @@ function insert_discipline(db, discipline, callback)
  * @param discipline {string} discipline name
  * @param callback {function} callback function (err, result)
  */
-function select_discipline_by_name(db, discipline, callback)
-{
+function select_discipline_by_name(db, discipline, callback) {
     db.query(
         {
             sql: SQL.select.discipline_by_name,
@@ -84,7 +80,7 @@ function select_discipline_by_name(db, discipline, callback)
             values: [discipline]
         },
         (err, rows, fields) => {
-            if(err) callback(err, null);
+            if (err) callback(err, null);
             callback(null, rows[0]);
         })
 }
@@ -94,11 +90,9 @@ function select_discipline_by_name(db, discipline, callback)
  * @param id_discipline {int} discipline id
  * @param callback {function} callback function (err, result)
  */
-function select_discipline_by_id(id_discipline, callback)
-{
-    pool.getConnection((err, db) =>
-    {
-        if(err) callback(err, null)
+function select_discipline_by_id(id_discipline, callback) {
+    pool.getConnection((err, db) => {
+        if (err) callback(err, null)
         db.query(
             {
                 sql: SQL.select.discipline_by_name,
@@ -106,7 +100,7 @@ function select_discipline_by_id(id_discipline, callback)
                 values: [id_discipline]
             },
             (err, rows, fields) => {
-                if(err) callback(err, null);
+                if (err) callback(err, null);
                 callback(null, rows[0]);
             }
         )
@@ -126,20 +120,19 @@ function select_discipline_by_id(id_discipline, callback)
  * @param enseignant {int} id of the teacher (user) who own this event
  * @param callback {function} callback function (err, result)
  */
-function insert_event(db, salle, date, start, end, classe, course, enseignant, callback)
-{
+function insert_event(db, salle, date, start, end, classe, course, enseignant, callback) {
 
-        db.query(
-            {
-                sql: SQL.insert.event,
-                timeout: 10000,
-                values: [salle, date, start, end, classe, course, enseignant]
-            },
-            (err, rows, fields) => {
-                console.log("inserer cest bon")
-                if(err) callback(err, null);
-                callback(null, true);
-            })
+    db.query(
+        {
+            sql: SQL.insert.event,
+            timeout: 10000,
+            values: [salle, date, start, end, classe, course, enseignant]
+        },
+        (err, rows, fields) => {
+            console.log("inserer cest bon")
+            if (err) callback(err, null);
+            callback(null, true);
+        })
 }
 
 /**
@@ -147,31 +140,28 @@ function insert_event(db, salle, date, start, end, classe, course, enseignant, c
  * @param link {string} the given link
  * @param callback {function} callback function (err, result)
  */
-function parse_edt(link, callback)
-{
+function parse_edt(link, callback) {
     axios.get(link,
         {
-            responseType : 'blob'
+            responseType: 'blob'
         }).then((response) => {
         let data = utils.parseICSURL(response.data, ical);
         callback(null, data);
     })
 }
 
-function get_course(db, course, callback)
-{
-        db.query(
-            {
-                sql: SQL.select.course,
-                values: [course],
-                timeout: 10000
-            },
-            (err, rows, fields) => 
-            {
-                if(err) callback(err, null);
-                callback(null, rows[0]);
-            }
-        )
+function get_course(db, course, callback) {
+    db.query(
+        {
+            sql: SQL.select.course,
+            values: [course],
+            timeout: 10000
+        },
+        (err, rows, fields) => {
+            if (err) callback(err, null);
+            callback(null, rows[0]);
+        }
+    )
 }
 
 /**
@@ -180,10 +170,9 @@ function get_course(db, course, callback)
  * @param id {int} teacher id (found in current session)
  * @param callback {function} callback function (err, result)
  */
-function insert_all_events(events, id, callback)
-{
+function insert_all_events(events, id, callback) {
     pool.getConnection((err, db) => {
-        if(err) callback(err, null);
+        if (err) callback(err, null);
         for (let event of events) {
             let start_houre = new Date(event.start);
             let end_houre = new Date(event.end);
@@ -204,17 +193,13 @@ function insert_all_events(events, id, callback)
             } catch {
                 null
             }
-            if(salle == undefined) salle = "none";
+            if (salle == undefined) salle = "none";
 
-            get_course(db, event.title, (err, course) =>
-            {
-                if(err) callback(err, null);
-                if(course == undefined)
-                {
+            get_course(db, event.title, (err, course) => {
+                if (err) callback(err, null);
+                if (course == undefined) {
                     course = null
-                }
-                else
-                {
+                } else {
                     course = course.id_mat;
                 }
 
@@ -231,16 +216,15 @@ function insert_all_events(events, id, callback)
 }
 
 
-function insert_all_events_sync(res, events, id, callback)
-{
-    
+function insert_all_events_sync(res, events, id, callback) {
+
     pool.getConnection((err, db) => {
-        if(err) callback(err, null)
+        if (err) callback(err, null)
         let goal = events.length;
         let counter = 0;
 
         res.setHeader("Content-Type", "text/html");
-        
+
         for (let event of events) {
             let start_houre = new Date(event.start);
             let end_houre = new Date(event.end);
@@ -261,32 +245,27 @@ function insert_all_events_sync(res, events, id, callback)
             } catch {
                 null
             }
-            if(salle == undefined) salle = "none";
+            if (salle == undefined) salle = "none";
 
-            get_course(db, event.title, (err, course) =>
-            {
-                if(err) callback(err, null);
-                if(course == undefined)
-                {
+            get_course(db, event.title, (err, course) => {
+                if (err) callback(err, null);
+                if (course == undefined) {
                     course = null
-                }
-                else
-                {
+                } else {
                     course = course.id_mat;
                 }
 
                 console.log(course);
                 console.log(salle, formatted_date, start_houre, end_houre, null, course, id)
                 insert_event(db, salle, formatted_date, start_houre, end_houre, null, course, id, function (err, result) {
-                    counter ++;
+                    counter++;
                     var percent = (counter * 100) / goal;
                     res.write(percent.toString());
                     res.flush();
-                    if(counter == goal)
-                    {
+                    if (counter == goal) {
                         res.end();
                         callback(null, true)
-                    }   
+                    }
                 })
             })
         }
@@ -298,11 +277,9 @@ function insert_all_events_sync(res, events, id, callback)
  * @param id {int} teacher id
  * @param callback {function} callback function (err, result)
  */
-function get_events_by_teacher_id(id, callback)
-{
-    pool.getConnection((err, db) =>
-    {
-        if(err) callbakc(err, null);
+function get_events_by_teacher_id(id, callback) {
+    pool.getConnection((err, db) => {
+        if (err) callbakc(err, null);
         db.query(
             {
                 sql: SQL.select.event_by_teacher_id,
@@ -310,10 +287,9 @@ function get_events_by_teacher_id(id, callback)
                 values: [id]
             },
             (err, rows, fields) => {
-                if(err) throw err;
+                if (err) throw err;
                 let obj = [];
-                for (let row of rows)
-                {
+                for (let row of rows) {
                     let title = "none";
                     row.libelle_court != undefined ? title = row.libelle_court : null;
                     obj.push(build_event(row.libelle_court, row.date, row.heure_debut, row.heure_fin, row.salle, row.id_ev, row.classe, row.salle));
@@ -332,27 +308,21 @@ function get_events_by_teacher_id(id, callback)
  * @param res router parameters
  * @param callback {function} callback function (err, result)
  */
-function insert_timetable(req, res, callback)
-{
-    parse_edt(req.body.url, (err, result) =>
-    {
+function insert_timetable(req, res, callback) {
+    parse_edt(req.body.url, (err, result) => {
         let data = [...result];
-        insert_all_events(result, req.session.id_ens, (err, result) =>
-        {
-            if(err) callback(err, null);
+        insert_all_events(result, req.session.id_ens, (err, result) => {
+            if (err) callback(err, null);
             callback(null, true);
         })
     })
 }
 
-function insert_timetable_sync(req, res, callback)
-{
-    parse_edt(req.body.url, (err, result) =>
-    {
+function insert_timetable_sync(req, res, callback) {
+    parse_edt(req.body.url, (err, result) => {
         let data = [...result];
-        insert_all_events_sync(res, result, req.session.id_ens, (err, result) =>
-        {
-            if(err) callback(err, null);
+        insert_all_events_sync(res, result, req.session.id_ens, (err, result) => {
+            if (err) callback(err, null);
             callback(null, data);
         })
     })
@@ -364,11 +334,9 @@ function insert_timetable_sync(req, res, callback)
  * @param res router parameters
  * @param callback {function} callback function (err, result)
  */
-function get_teacher_timetable(req, res, callback)
-{
-    get_events_by_teacher_id(req.session.id_ens, (err, result) =>
-    {
-        if(err) callback(err, null);
+function get_teacher_timetable(req, res, callback) {
+    get_events_by_teacher_id(req.session.id_ens, (err, result) => {
+        if (err) callback(err, null);
         callback(null, result)
     })
 }
@@ -376,8 +344,8 @@ function get_teacher_timetable(req, res, callback)
 // --------------------------------------------------- EXPORTS ------------------------------------------------------ //
 module.exports =
     {
-    insert_all_events,
-    insert_timetable,
-    get_teacher_timetable,
-    insert_timetable_sync,
+        insert_all_events,
+        insert_timetable,
+        get_teacher_timetable,
+        insert_timetable_sync,
     };

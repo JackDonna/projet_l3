@@ -2,26 +2,26 @@
 // --- DOM ELEMENTS -----------------------------------------------------------------------------------------------------------//
 // ----------------------------------------------------------------------------------------------------------------------------//
 
-const result_element   = document.querySelector("#result");
+const result_element = document.querySelector("#result");
 const calendar_element = document.getElementById('calendar');
-const absence_form     = document.getElementById('add_absence');
-const reader           = document.getElementById("scan_code");
-const scan_button      = document.getElementById("scan_qr_code");
-const close_scanner    = document.getElementById("close_scanner");
-const render_region    = document.getElementById("reader__scan_region");
-const loading          = document.querySelector(".loading");
-const start_absence    = absence_form.querySelector(".start_absence");
-const end_absence      = absence_form.querySelector(".end_absence");
-const reason           = absence_form.querySelector(".reason");
-const submit           = absence_form.querySelector(".submit_form");
-const close_form       = absence_form.querySelector("#close_form");
+const absence_form = document.getElementById('add_absence');
+const reader = document.getElementById("scan_code");
+const scan_button = document.getElementById("scan_qr_code");
+const close_scanner = document.getElementById("close_scanner");
+const render_region = document.getElementById("reader__scan_region");
+const loading = document.querySelector(".loading");
+const start_absence = absence_form.querySelector(".start_absence");
+const end_absence = absence_form.querySelector(".end_absence");
+const reason = absence_form.querySelector(".reason");
+const submit = absence_form.querySelector(".submit_form");
+const close_form = absence_form.querySelector("#close_form");
 
 // ----------------------------------------------------------------------------------------------------------------------------//
 // ----GLOBALS VARIABLES ------------------------------------------------------------------------------------------------------//
 // ----------------------------------------------------------------------------------------------------------------------------//
 
 const scanner = new Html5QrcodeScanner('reader', {
-    qrbox : qrboxFunction,
+    qrbox: qrboxFunction,
     fps: 60
 });
 
@@ -32,16 +32,13 @@ const ec = new EventCalendar(calendar_element, {
     firstDay: 1,
     slotMinTime: "06:00:00",
     slotMaxTime: "21:00:00",
-    eventClick: function(info)
-    {
+    eventClick: function (info) {
         absence_form.classList.remove("hide");
         start_absence.value = format_time(info.event.start);
         end_absence.value = format_time(info.event.end);
         global_event = info.event;
     }
 });
-
-
 
 
 var global_event = {};
@@ -55,8 +52,7 @@ var global_event = {};
  * @param {Date} time base date to extract hour in it
  * @return {string} formatted date
  */
-function format_time(time)
-{
+function format_time(time) {
     let hour = time.getHours();
     hour < 10 ? hour = "0" + hour : null;
 
@@ -80,19 +76,19 @@ function success(result) {
 
     axios.post("sql/event/insert_timetable_sync", obj, {
         onDownloadProgress: progressEvent => {
-        const dataChunk = progressEvent;
-        console.log(dataChunk.event)
-    },
+            const dataChunk = progressEvent;
+            console.log(dataChunk.event)
+        },
         timeout: 6000000
     })
         .then((response) => {
             get_timetable();
-    })
+        })
 }
 
 /**
  * function hancle qr code scan error
- * @param {Error} err 
+ * @param {Error} err
  */
 function error(err) {
     console.error(err);
@@ -100,9 +96,9 @@ function error(err) {
 
 /**
  * function set the qr code GUI, need to call whene initialize the qrcode
- * @param {number} viewfinderWidth 
- * @param {number} viewfinderHeight 
- * @returns 
+ * @param {number} viewfinderWidth
+ * @param {number} viewfinderHeight
+ * @returns
  */
 function qrboxFunction(viewfinderWidth, viewfinderHeight) {
     let minEdgePercentage = 0.7; // 70%
@@ -115,14 +111,23 @@ function qrboxFunction(viewfinderWidth, viewfinderHeight) {
 }
 
 /**
+ * A JavaScript function that fetches timetable from the server and adds each returned event to the EventCalendar instance `ec`
+ *
+ * This function makes a GET request to the "/sql/event/get_timetable" endpoint using axios.
+ * Upon successful request, the function logs the data from the response and adds each event from the response data to the calendar.
+ *
+ * The function does not take any parameters and does not explicitly return anything.
+ *
+ * Note: This function uses the EventCalendar instance `ec` which should be defined before calling this function.
+ */
+
+/**
  * get the timtable to RDP API
  */
-function get_timetable()
-{
+function get_timetable() {
     axios.get("/sql/event/get_timetable").then((response) => {
-
-        for(let event of response.data.data)
-        {   
+        console.log(response.data.data)
+        for (let event of response.data.data) {
             ec.addEvent(event);
         }
     })
@@ -131,17 +136,14 @@ function get_timetable()
 /**
  * resize calendar with the current window size
  */
-function resize_calendar()
-{
-    if (window.innerWidth < 800) 
-    {
+function resize_calendar() {
+    if (window.innerWidth < 800) {
         ec.setOption("view", "timeGridDay");
-    }
-    else 
-    {
+    } else {
         ec.setOption("view", "timeGridWeek");
     }
 }
+
 // ----------------------------------------------------------------------------------------------------------------------------//
 // --- FUNCTIONS CALLS --------------------------------------------------------------------------------------------------------//
 // ----------------------------------------------------------------------------------------------------------------------------//
@@ -160,27 +162,22 @@ close_scanner.addEventListener("click", () => {
     reader.classList.add("hide");
 })
 
-submit.addEventListener("click", function ()
-{
+submit.addEventListener("click", function () {
     console.log(global_event)
-    axios.post("sql/absence/insert/", {id_event: global_event.id, motif: reason.value}).then((response) =>
-    {
+    axios.post("sql/absence/insert/", {id_event: global_event.id, motif: reason.value}).then((response) => {
         console.log(response.data);
     })
 })
 
-close_form.addEventListener("click", () =>
-{
+close_form.addEventListener("click", () => {
     absence_form.classList.add("hide");
 })
 
-window.onload((e) =>
-{
+window.onload((e) => {
     resize_calendar();
 })
 
-window.onresize((e) => 
-{
+window.onresize((e) => {
     resize_calendar();
 })
 

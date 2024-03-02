@@ -5,11 +5,31 @@ const
         validate_teacher,
         sign_in,
         sign_up,
-        sign_in_admin
+        sign_in_admin,
+        getTeacherForAdminPanel
     } = require(__dirname + "/cruds/crud_teacher.js");
 
 
 // ----------------------------------- EXPORTS FUNCTIONS CRUDS RESULT -------------------------------- //
+
+exports.teachersUnavailable = asyncHandler((req, res) =>
+{
+    getTeacherForAdminPanel(req, res, (err, teachers) =>
+    {
+        let response = new RequestResponse
+        (
+            "teacherAPI",
+            "GET",
+            teachers,
+            "boolean",
+            "Validate an account",
+            err
+        );
+
+        if(err) console.error(err);
+        res.send(response);
+    })
+})
 /**
  * @function teacher_validation post request to set the validation for a teacher in the SQL database ( need to be sign-in)
  * @body number for validation
