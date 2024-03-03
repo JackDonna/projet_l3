@@ -379,7 +379,6 @@ function getTeacherForAdminPanel(req, res, callback) {
     getUnavailableTeachersByEtablishement(req.session.idEtablishement, (err, teachers) => {
         if (err) callback(err, null);
         callback(null, teachers);
-
     })
 }
 

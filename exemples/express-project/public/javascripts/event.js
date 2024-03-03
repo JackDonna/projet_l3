@@ -19,10 +19,10 @@ let dejaAffiche = {};
  */
 async function print_absence() {
 
-   let json = await axios.get("/sql/absence/get_available_absence").then((response) =>
+   let json = await axios.get("/sql/teacher/getUnavailableTeachers").then((response) =>
    {
       console.log(response)
-      let json = response.data
+      let json = response.data.data
       console.log(json)
       for (let i = 0; i < json.length; i++) {
          let evenement = json[i];
@@ -65,4 +65,4 @@ async function print_absence() {
 // ----------------------------------------------------------------------------------------------------------------------------//
 
 print_absence();
-setInterval(ajouterDansBoite, 10000);
+setInterval(print_absence, 10000);

@@ -21,7 +21,8 @@
       "teacher_by_discipline": "SELECT * FROM Correspondance WHERE enseignant = ? AND discipline = ?",
       "nomenclature_by_matiere": "SELECT nomenclature FROM Ref_Matiere WHERE id_mat = ?",
       "admin_by_mail_password": "SELECT * FROM Personnel_Administratif WHERE mail = ? AND password = ?",
-      "unavailableTeacherByEtablishement": "SELECT * FROM Enseignant INNER JOIN Absence INNER JOIN Evenement ON Absence.evenement = Evenement.id_ev WHERE Enseignant.id_ens = Evenement.enseignant AND Enseignant.id_eta = ?"
+      "unavailableTeacherByEtablishement": "SELECT * FROM Enseignant INNER JOIN Absence INNER JOIN Evenement ON Absence.evenement = Evenement.id_ev WHERE Enseignant.id_ens = Evenement.enseignant AND Enseignant.id_eta = ?",
+      "diffusionByTeachers": "SELECT * FROM Diffusion WHERE enseignant = ?"
     },
     "insert":
     {

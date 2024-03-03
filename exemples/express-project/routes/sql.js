@@ -13,7 +13,7 @@ const absence_controller = require("../controllers/absence_controller");
 // router.get("/teacher/detail:id", teacher_controller.user_detail);
 router.get("/teacher/sign_in/:mail/:password", teacher_controller.sign_in);
 router.get("/teacher/sign_in_as_admin/:mail/:password", teacher_controller.sign_in_as_admin);
-router.get("/teacher/getUnavailableTeacher", teacher_controller.teachersUnavailable);
+router.get("/teacher/getUnavailableTeachers", teacher_controller.teachersUnavailable);
 router.post("/teacher/validate", teacher_controller.teacher_validation);
 router.post("/teacher/sign_up", teacher_controller.sign_up);
 // router.delete("/teacher/delete/:id", teacher_controller.user_delete);
