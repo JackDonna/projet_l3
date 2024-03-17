@@ -1,11 +1,11 @@
 const pool = require("../database/db");
 const fs = require("fs");
-const sql_conf_file = JSON.parse(
-  fs.readFileSync("controllers/config/sql_config.json", "utf-8")
-);
+const sql_conf_file = JSON.parse(fs.readFileSync("controllers/config/sql_config.json", "utf-8"));
 const SQL = sql_conf_file.sql;
 
-// -------------------------------------------------- SUBS FUNCTIONS ------------------------------------------------- //
+// ------------------------------------------------------------------------------------------------------------------ //
+// --- SUBS FUNCTIONS -------------------------------------------------------------------------------------------- //
+// ------------------------------------------------------------------------------------------------------------ //
 
 /**
  * Retrieves diffusion data by teacher ID.
@@ -15,24 +15,25 @@ const SQL = sql_conf_file.sql;
  * @return {void}
  */
 function getDiffusionByTeachers(teacherId, callback) {
-  pool.getConnection((err, db) => {
-    if (err) callback(err, null);
-    db.query(
-      {
-        sql: SQL.select.diffusionByteachers,
-        timeout: 10000,
-        values: [teacherId],
-      },
-      (err, rows, fields) => {
+    pool.getConnection((err, db) => {
         if (err) callback(err, null);
-        callback(null, rows);
-      }
-    );
-  });
+        db.query(
+            {
+                sql: SQL.select.diffusionByteachers,
+                timeout: 10000,
+                values: [teacherId],
+            },
+            (err, rows, fields) => {
+                if (err) callback(err, null);
+                callback(null, rows);
+            }
+        );
+    });
 }
-// -------------------------------------------------- NOT IMPLEMENTED YET -------------------------------------------- //
 
-// -------------------------------------------------- MAINS FUNCTIONS ------------------------------------------------ //
+// ------------------------------------------------------------------------------------------------------------------ //
+// --- MAINS FUNCTIONS ------------------------------------------------------------------------------------------- //
+// ------------------------------------------------------------------------------------------------------------ //
 
 /**
  * Retrieves diffusion data for a specific teacher and invokes a callback with the result.
@@ -43,13 +44,15 @@ function getDiffusionByTeachers(teacherId, callback) {
  * @return {void}
  */
 function getMyDiffusionExport(req, res, callback) {
-  const teacherId = req.params.teacherId;
-  getDiffusionByTeachers(teacherId, (err, result) => {
-    if (err) callback(err, null);
-    callback(null, result);
-  });
+    const teacherId = req.params.teacherId;
+    getDiffusionByTeachers(teacherId, (err, result) => {
+        if (err) callback(err, null);
+        callback(null, result);
+    });
 }
 
-// -------------------------------------------------- EXPORTS -------------------------------------------------------- //
+// ------------------------------------------------------------------------------------------------------------------ //
+// --- EXPORTS --------------------------------------------------------------------------------------------------- //
+// ------------------------------------------------------------------------------------------------------------ //
 
 module.exports = { getMyDiffusionExport };

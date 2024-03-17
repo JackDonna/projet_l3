@@ -1,9 +1,7 @@
 const pool = require("../database/db");
 const fs = require("fs");
 const axios = require("axios");
-const sql_config = JSON.parse(
-  fs.readFileSync("controllers/config/sql_config.json", "utf-8")
-);
+const sql_config = JSON.parse(fs.readFileSync("controllers/config/sql_config.json", "utf-8"));
 const SQL = sql_config.sql;
 
 // ------------------------------------------------------------------------------------------------------------------ //
@@ -17,7 +15,7 @@ const SQL = sql_config.sql;
  * @returns {*}
  */
 function rnd(min, max) {
-  return Math.random() * (max - min) + min;
+    return Math.random() * (max - min) + min;
 }
 
 /**
@@ -32,31 +30,21 @@ function rnd(min, max) {
  * @param admin
  * @param callback {function} callback function (err, result)
  */
-function set_session(
-  req,
-  name,
-  firstname,
-  mail,
-  idEtablishement,
-  validation,
-  id_teacher,
-  admin,
-  callback
-) {
-  req.session.regenerate((err) => {
-    if (err) callback(err, null);
-    req.session.nom = name;
-    req.session.prenom = firstname;
-    req.session.mail = mail;
-    req.session.idEtablishement = idEtablishement;
-    req.session.valide = validation;
-    req.session.id_ens = id_teacher;
-    req.session.admin = admin;
-    req.session.save((err) => {
-      if (err) callback(err, null);
-      callback(null, true);
+function set_session(req, name, firstname, mail, idEtablishement, validation, id_teacher, admin, callback) {
+    req.session.regenerate((err) => {
+        if (err) callback(err, null);
+        req.session.nom = name;
+        req.session.prenom = firstname;
+        req.session.mail = mail;
+        req.session.idEtablishement = idEtablishement;
+        req.session.valide = validation;
+        req.session.id_ens = id_teacher;
+        req.session.admin = admin;
+        req.session.save((err) => {
+            if (err) callback(err, null);
+            callback(null, true);
+        });
     });
-  });
 }
 
 /**
@@ -66,20 +54,20 @@ function set_session(
  * @param callback {function} callback function (err, result)
  */
 function check_teacher_by_mail_password(mail, password, callback) {
-  pool.getConnection((err, db) => {
-    if (err) callback(err, null);
-    db.query(
-      {
-        sql: SQL.select.teacher_by_mail_password,
-        timeout: 10000,
-        values: [mail, password],
-      },
-      (err, rows, fields) => {
+    pool.getConnection((err, db) => {
         if (err) callback(err, null);
-        callback(null, rows[0]);
-      }
-    );
-  });
+        db.query(
+            {
+                sql: SQL.select.teacher_by_mail_password,
+                timeout: 10000,
+                values: [mail, password],
+            },
+            (err, rows, fields) => {
+                if (err) callback(err, null);
+                callback(null, rows[0]);
+            }
+        );
+    });
 }
 
 /**
@@ -88,20 +76,20 @@ function check_teacher_by_mail_password(mail, password, callback) {
  * @param callback {function} callback function (err, result)
  */
 function check_teacher_by_mail(mail, callback) {
-  pool.getConnection((err, db) => {
-    if (err) callback(err, null);
-    db.query(
-      {
-        sql: SQL.select.teacher_by_mail,
-        timeout: 10000,
-        values: [mail],
-      },
-      (err, rows, fields) => {
+    pool.getConnection((err, db) => {
         if (err) callback(err, null);
-        callback(null, rows[0]);
-      }
-    );
-  });
+        db.query(
+            {
+                sql: SQL.select.teacher_by_mail,
+                timeout: 10000,
+                values: [mail],
+            },
+            (err, rows, fields) => {
+                if (err) callback(err, null);
+                callback(null, rows[0]);
+            }
+        );
+    });
 }
 
 /**
@@ -113,27 +101,27 @@ function check_teacher_by_mail(mail, callback) {
  * @param callback {function} callback function (err, result)
  */
 function insert_user(mail, password, nom, prenom, callback) {
-  let number = Math.round(rnd(190556, 999999));
-  pool.getConnection((err, db) => {
-    if (err) callback(err, null);
-    db.query(
-      {
-        sql: SQL.insert.teacher,
-        timeout: 10000,
-        values: [mail, password, nom, prenom, number, false],
-      },
-      (err, rows, flield) => {
+    let number = Math.round(rnd(190556, 999999));
+    pool.getConnection((err, db) => {
         if (err) callback(err, null);
-        callback(null, {
-          nom: nom,
-          prenom: prenom,
-          mail: mail,
-          valide: false,
-          number: number,
-        });
-      }
-    );
-  });
+        db.query(
+            {
+                sql: SQL.insert.teacher,
+                timeout: 10000,
+                values: [mail, password, nom, prenom, number, false],
+            },
+            (err, rows, flield) => {
+                if (err) callback(err, null);
+                callback(null, {
+                    nom: nom,
+                    prenom: prenom,
+                    mail: mail,
+                    valide: false,
+                    number: number,
+                });
+            }
+        );
+    });
 }
 
 /**
@@ -145,17 +133,17 @@ function insert_user(mail, password, nom, prenom, callback) {
  * @param callback {function} callback function (err, result)
  */
 function insert_new_user(mail, password, nom, prenom, callback) {
-  check_teacher_by_mail(mail, (err, result) => {
-    if (err) callback(err, null);
-    if (result === undefined) {
-      insert_user(mail, password, nom, prenom, (err, result) => {
+    check_teacher_by_mail(mail, (err, result) => {
         if (err) callback(err, null);
-        callback(null, result);
-      });
-    } else {
-      callback(null, false);
-    }
-  });
+        if (result === undefined) {
+            insert_user(mail, password, nom, prenom, (err, result) => {
+                if (err) callback(err, null);
+                callback(null, result);
+            });
+        } else {
+            callback(null, false);
+        }
+    });
 }
 
 /**
@@ -164,20 +152,20 @@ function insert_new_user(mail, password, nom, prenom, callback) {
  * @param callback {function} callback function (err, result)
  */
 function select_teacher_random_number(mail, callback) {
-  pool.getConnection((err, db) => {
-    if (err) callback(err, null);
-    db.query(
-      {
-        sql: SQL.select.teacher_random_number,
-        values: [mail],
-        timeout: 10000,
-      },
-      (err, rows, fields) => {
+    pool.getConnection((err, db) => {
         if (err) callback(err, null);
-        callback(null, rows[0].random_number);
-      }
-    );
-  });
+        db.query(
+            {
+                sql: SQL.select.teacher_random_number,
+                values: [mail],
+                timeout: 10000,
+            },
+            (err, rows, fields) => {
+                if (err) callback(err, null);
+                callback(null, rows[0].random_number);
+            }
+        );
+    });
 }
 
 /**
@@ -187,24 +175,24 @@ function select_teacher_random_number(mail, callback) {
  * @param callback {function} callback function (err, result)
  */
 function validate_teacher_by_mail(id_ens, number, callback) {
-  select_teacher_random_number(id_ens, (err, result) => {
-    if (err) callback(err, null);
-    if (result == number) {
-      pool.getConnection((err, db) => {
-        db.query(
-          {
-            sql: SQL.update.teacher_validation,
-            values: [id_ens],
-            timeout: 10000,
-          },
-          (err, rows, fields) => {
-            if (err) callback(err, null);
-            callback(null, true);
-          }
-        );
-      });
-    }
-  });
+    select_teacher_random_number(id_ens, (err, result) => {
+        if (err) callback(err, null);
+        if (result == number) {
+            pool.getConnection((err, db) => {
+                db.query(
+                    {
+                        sql: SQL.update.teacher_validation,
+                        values: [id_ens],
+                        timeout: 10000,
+                    },
+                    (err, rows, fields) => {
+                        if (err) callback(err, null);
+                        callback(null, true);
+                    }
+                );
+            });
+        }
+    });
 }
 
 /**
@@ -216,19 +204,19 @@ function validate_teacher_by_mail(id_ens, number, callback) {
  * @return {void}
  */
 function check_identification(id_ens, password, callback) {
-  pool.getConnection((err, database) => {
-    if (err) callback(err, null);
-    database.query(
-      {
-        sql: SQL.select.identification_by_teacher_id_password,
-        values: [id_ens, password],
-      },
-      (err, rows, fields) => {
+    pool.getConnection((err, database) => {
         if (err) callback(err, null);
-        callback(null, rows[0]);
-      }
-    );
-  });
+        database.query(
+            {
+                sql: SQL.select.identification_by_teacher_id_password,
+                values: [id_ens, password],
+            },
+            (err, rows, fields) => {
+                if (err) callback(err, null);
+                callback(null, rows[0]);
+            }
+        );
+    });
 }
 
 /**
@@ -239,37 +227,37 @@ function check_identification(id_ens, password, callback) {
  * @return {void}
  */
 function create_profil(id_ens, callback) {
-  pool.getConnection((err, database) => {
-    if (err) callback(err, null);
-    database.query(
-      {
-        sql: SQL.insert.profil,
-        values: [id_ens],
-        timeout: 10000,
-      },
-      (err, rows, fields) => {
+    pool.getConnection((err, database) => {
         if (err) callback(err, null);
-        callback(null, true);
-      }
-    );
-  });
+        database.query(
+            {
+                sql: SQL.insert.profil,
+                values: [id_ens],
+                timeout: 10000,
+            },
+            (err, rows, fields) => {
+                if (err) callback(err, null);
+                callback(null, true);
+            }
+        );
+    });
 }
 
 function get_profil(id_ens, callback) {
-  pool.getConnection((err, database) => {
-    if (err) callback(err, null);
-    database.query(
-      {
-        sql: SQL.select_teacher_profil,
-        values: [id_ens],
-        timeout: 10000,
-      },
-      (err, rows, fields) => {
+    pool.getConnection((err, database) => {
         if (err) callback(err, null);
-        callback(null, rows[0]);
-      }
-    );
-  });
+        database.query(
+            {
+                sql: SQL.select_teacher_profil,
+                values: [id_ens],
+                timeout: 10000,
+            },
+            (err, rows, fields) => {
+                if (err) callback(err, null);
+                callback(null, rows[0]);
+            }
+        );
+    });
 }
 
 /**
@@ -281,24 +269,24 @@ function get_profil(id_ens, callback) {
  * @return {void}
  */
 function create_identification(password, id_ens, callback) {
-  create_profil(id_ens, (err, result) => {
-    if (err) callback(err, null);
-    pool.getConnection((err, database) => {
-      let nb = Math.round(rnd(150000, 999999));
-      if (err) callback(err, null);
-      database.query(
-        {
-          sql: SQL.insert.identification,
-          values: [password, false, nb, id_ens],
-          timeout: 10000,
-        },
-        (err, rows, fields) => {
-          if (err) callback(err, null);
-          callback(null, nb);
-        }
-      );
+    create_profil(id_ens, (err, result) => {
+        if (err) callback(err, null);
+        pool.getConnection((err, database) => {
+            let nb = Math.round(rnd(150000, 999999));
+            if (err) callback(err, null);
+            database.query(
+                {
+                    sql: SQL.insert.identification,
+                    values: [password, false, nb, id_ens],
+                    timeout: 10000,
+                },
+                (err, rows, fields) => {
+                    if (err) callback(err, null);
+                    callback(null, nb);
+                }
+            );
+        });
     });
-  });
 }
 
 /**
@@ -310,20 +298,20 @@ function create_identification(password, id_ens, callback) {
  * @return {object} The admin user data if found
  */
 function check_admin_by_mail_pasword(mail, password, callback) {
-  pool.getConnection((err, db) => {
-    if (err) callback(err, null);
-    db.query(
-      {
-        sql: SQL.select.admin_by_mail_password,
-        values: [mail, password],
-        timeout: 10000,
-      },
-      (err, rows, fields) => {
+    pool.getConnection((err, db) => {
         if (err) callback(err, null);
-        callback(null, rows[0]);
-      }
-    );
-  });
+        db.query(
+            {
+                sql: SQL.select.admin_by_mail_password,
+                values: [mail, password],
+                timeout: 10000,
+            },
+            (err, rows, fields) => {
+                if (err) callback(err, null);
+                callback(null, rows[0]);
+            }
+        );
+    });
 }
 
 /**
@@ -334,20 +322,20 @@ function check_admin_by_mail_pasword(mail, password, callback) {
  * @return {void}
  */
 function getUnavailableTeachersByEtablishement(idEtablishement, callback) {
-  pool.getConnection((err, sqlDatabase) => {
-    if (err) callback(err, null);
-    sqlDatabase.query(
-      {
-        sql: SQL.select.unavailableTeacherByEtablishement,
-        values: [idEtablishement],
-        timeout: 10000,
-      },
-      (err, rows, fields) => {
+    pool.getConnection((err, sqlDatabase) => {
         if (err) callback(err, null);
-        callback(null, rows);
-      }
-    );
-  });
+        sqlDatabase.query(
+            {
+                sql: SQL.select.unavailableTeacherByEtablishement,
+                values: [idEtablishement],
+                timeout: 10000,
+            },
+            (err, rows, fields) => {
+                if (err) callback(err, null);
+                callback(null, rows);
+            }
+        );
+    });
 }
 
 // ------------------------------------------------------------------------------------------------------------------ //
@@ -361,35 +349,17 @@ function getUnavailableTeachersByEtablishement(idEtablishement, callback) {
  * @param callback {function} callback function (err, result)
  */
 function sign_up(req, res, callback) {
-  check_teacher_by_mail(req.body.mail, (err, teacher) => {
-    if (teacher != undefined) {
-      create_identification(
-        req.body.password,
-        teacher.id_ens,
-        (err, identification) => {
-          if (err) callback(err, null);
-          axios.get(
-            "mail/send_verification_mail/" +
-              req.body.mail +
-              "/" +
-              identification
-          );
-          set_session(
-            req,
-            teacher.mail,
-            teacher.prenom,
-            teacher.nom,
-            false,
-            teacher.id_ens,
-            false,
-            (err, res) => {
-              callback(null, true);
-            }
-          );
+    check_teacher_by_mail(req.body.mail, (err, teacher) => {
+        if (teacher != undefined) {
+            create_identification(req.body.password, teacher.id_ens, (err, identification) => {
+                if (err) callback(err, null);
+                axios.get("mail/send_verification_mail/" + req.body.mail + "/" + identification);
+                set_session(req, teacher.mail, teacher.prenom, teacher.nom, false, teacher.id_ens, false, (err, res) => {
+                    callback(null, true);
+                });
+            });
         }
-      );
-    }
-  });
+    });
 }
 
 /**
@@ -399,34 +369,30 @@ function sign_up(req, res, callback) {
  * @param callback {function} callback function (err, result)
  */
 function sign_in(req, res, callback) {
-  check_teacher_by_mail(req.params.mail, (err, teacher) => {
-    if (teacher != undefined) {
-      check_identification(
-        teacher.id_ens,
-        req.params.password,
-        (err, identification) => {
-          if (err) callback(err, null);
-          if (identification != undefined) {
-            set_session(
-              req,
-              teacher.nom,
-              teacher.prenom,
-              teacher.mail,
-              teacher.id_eta,
-              identification.valide,
-              teacher.id_ens,
-              false,
-              (err, res) => {
-                callback(null, true);
-              }
-            );
-          }
+    check_teacher_by_mail(req.params.mail, (err, teacher) => {
+        if (teacher != undefined) {
+            check_identification(teacher.id_ens, req.params.password, (err, identification) => {
+                if (err) callback(err, null);
+                if (identification != undefined) {
+                    set_session(
+                        req,
+                        teacher.nom,
+                        teacher.prenom,
+                        teacher.mail,
+                        teacher.id_eta,
+                        identification.valide,
+                        teacher.id_ens,
+                        false,
+                        (err, res) => {
+                            callback(null, true);
+                        }
+                    );
+                }
+            });
+        } else {
+            callback(err, null);
         }
-      );
-    } else {
-      callback(err, null);
-    }
-  });
+    });
 }
 
 /**
@@ -438,33 +404,29 @@ function sign_in(req, res, callback) {
  * @return {void}
  */
 function sign_in_admin(req, res, callback) {
-  check_admin_by_mail_pasword(
-    req.params.mail,
-    req.params.password,
-    (err, admin) => {
-      if (err) {
-        callback(err, null);
-        return;
-      }
-      if (admin != undefined) {
-        set_session(
-          req,
-          admin.nom,
-          admin.prenom,
-          admin.mail,
-          admin.etablissement,
-          true,
-          admin.id_admin,
-          true,
-          (err, result) => {
-            callback(null, true);
-          }
-        );
-      } else {
-        callback(err, false);
-      }
-    }
-  );
+    check_admin_by_mail_pasword(req.params.mail, req.params.password, (err, admin) => {
+        if (err) {
+            callback(err, null);
+            return;
+        }
+        if (admin != undefined) {
+            set_session(
+                req,
+                admin.nom,
+                admin.prenom,
+                admin.mail,
+                admin.etablissement,
+                true,
+                admin.id_admin,
+                true,
+                (err, result) => {
+                    callback(null, true);
+                }
+            );
+        } else {
+            callback(err, false);
+        }
+    });
 }
 
 /**
@@ -474,15 +436,11 @@ function sign_in_admin(req, res, callback) {
  * @param callback {function} callback function (err, result)
  */
 function validate_teacher(req, res, callback) {
-  validate_teacher_by_mail(
-    req.session.id_ens,
-    req.body.number,
-    (err, result) => {
-      if (err) callback(err, null);
-      req.session.valide = 1;
-      callback(null, true);
-    }
-  );
+    validate_teacher_by_mail(req.session.id_ens, req.body.number, (err, result) => {
+        if (err) callback(err, null);
+        req.session.valide = 1;
+        callback(null, true);
+    });
 }
 
 /**
@@ -494,13 +452,10 @@ function validate_teacher(req, res, callback) {
  * @return {void}
  */
 function getTeacherForAdminPanel(req, res, callback) {
-  getUnavailableTeachersByEtablishement(
-    req.session.idEtablishement,
-    (err, teachers) => {
-      if (err) callback(err, null);
-      callback(null, teachers);
-    }
-  );
+    getUnavailableTeachersByEtablishement(req.session.idEtablishement, (err, teachers) => {
+        if (err) callback(err, null);
+        callback(null, teachers);
+    });
 }
 
 // ------------------------------------------------------------------------------------------------------------------ //
@@ -508,9 +463,9 @@ function getTeacherForAdminPanel(req, res, callback) {
 // ------------------------------------------------------------------------------------------------------------ //
 
 module.exports = {
-  validate_teacher,
-  sign_in,
-  sign_up,
-  sign_in_admin,
-  getTeacherForAdminPanel,
+    validate_teacher,
+    sign_in,
+    sign_up,
+    sign_in_admin,
+    getTeacherForAdminPanel,
 };
