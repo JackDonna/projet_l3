@@ -31,7 +31,8 @@
       "absence": "INSERT INTO `Absence`(`motif`, `evenement`) VALUES (?, ?)",
       "teacher": "INSERT INTO `Enseignant` (mail, password, nom, prenom, random_number, valide) VALUES (?,?,?,?,?,?)",
       "identification": "INSERT INTO `Identification` (mdp, valide, random_number, enseignant) VALUES (?,?,?,?)",
-      "profil": "INSERT INTO Profil (enseignant) values (?)"
+      "profil": "INSERT INTO Profil (enseignant) values (?)",
+      "proposition": "INSERT INTO `proposition`(`enseignant`, `absence`) VALUES (?,?)"
     },
     "update":
     {
