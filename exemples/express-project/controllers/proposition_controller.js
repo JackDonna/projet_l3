@@ -1,7 +1,7 @@
 const asyncHandler = require("express-async-handler");
 const { RequestResponse } = require("./utils/object_engine");
 const express = require("express");
-const { proposeOnAbsenceExport } = require(__dirname +
+const { proposeOnAbsenceExport, getPropositionOnAbsence } = require(__dirname +
   "/cruds/crud_proposition.js");
 
   // ----------------------------------- EXPORTS FUNCTIONS CRUDS RESULT -------------------------------- //
@@ -28,3 +28,27 @@ exports.insertNewProposition = asyncHandler((req, res) => {
       res.send(response);
     });
   });
+
+
+  /**
+ * Get all the teacher who propose on an absence.
+ *
+ * @param {Object} req - The request object
+ * @param {Object} res - The response object
+ * @return {void}
+ */
+exports.TeachersPropositionOnAbsence = asyncHandler((req, res) => {
+  getPropositionOnAbsence(req, res, (err, result) => {
+    let response = new RequestResponse(
+      "propositionAPI",
+      "GET",
+      result,
+      "boolean",
+      "Get teacher on absence",
+      err
+    );
+
+    if (err) console.error(err);
+    res.send(response);
+  });
+});

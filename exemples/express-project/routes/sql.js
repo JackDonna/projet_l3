@@ -6,6 +6,7 @@ const teacher_controller = require("../controllers/teacher_controller");
 const event_controller = require("../controllers/event_controller");
 const etab_controller = require("../controllers/etablishment_controller");
 const absence_controller = require("../controllers/absence_controller");
+const proposition_controller = require("../controllers/proposition_controller");
 
 // ------------------------------------------- TEACHER CONTROLLERS ---------------------------------------- //
 // router.get("/teacher", teacher_controller.user_list);
@@ -37,5 +38,10 @@ router.delete("/event/delete/:id", event_controller.event_delete_get);
 router.post("/absence/insert", absence_controller.insert_absence);
 router.get("/absence/prof_dispo/:debut/:fin", absence_controller.available_teacher);
 router.get("/absence/get_available_absence", absence_controller.available_absence);
+
+// ------------------------------------------ PROPOSITION CONTROLLERS ------------------------------------ //
+// ---- NOT IMPLEMENT YET ------ //
+//router.post("/proposition/new_proposition", proposition_controller.insertNewProposition);
+//router.get("/proposition/teacher_on_absence/:abs", proposition_controller.TeachersPropositionOnAbsence);
 
 module.exports = router;    
