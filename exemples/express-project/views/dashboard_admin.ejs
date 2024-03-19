@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="manifest" href="javascripts/pwa.webmanifest" />
     <link rel="stylesheet" href="stylesheets/dashboard_admin.css" />
-    <link rel="stylesheet" href="stylesheets/index.css" />
+    <!-- <link rel="stylesheet" href="stylesheets/index.css" /> -->
     <title>dashboard admin</title>
   </head>
   <body>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <div class="header"></div>
+    <div class="header">
+      <a class="logout" href="/logout">Se deconnecter</a>
+    </div>
     <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" />
     <label for="openSidebarMenu" class="sidebarIconToggle">
       <div class="spinner diagonal part-1"></div>
@@ -24,26 +26,32 @@
           <a
             href="#0"
             target="_blank"
-            >Professeurs absents</a
+            >Absences</a
           >
         </li>
         <li>
           <a href="#1" target="_blank"
-            >Cours annulés</a
+            >Liste de diffusion</a
           >
         </li>
         <li>
           <a href="#2" target="_blank"
-            >Professeurs éligibles</a
+            >Propositions</a
+          >
+        </li>
+        <li>
+          <a href="#3" target="_blank"
+          >Remplacements</a
           >
         </li>
       </ul>
     </div>
+    <div class="container">
+      <div id="boite_event"></div>
+    </div>
 
-    <div id="boite_event"></div>
-    <div id="center" class="main center"></div>
+    <!-- <div id="center" class="main center"></div> -->
 
-    <a class="logout" href="/logout">Se deconnecter</a>
   </body>
   <script src=""></script>
   <script src="javascripts/event.js"></script>

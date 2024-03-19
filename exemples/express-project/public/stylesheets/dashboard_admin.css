@@ -19,7 +19,7 @@ body {
   font-family: "Varela Round", sans-serif;
 }
 .header {
-  display: block;
+  /* display: block; */
   margin: 0 auto;
   width: 100%;
   max-width: 100%;
@@ -29,6 +29,9 @@ body {
   height: 60px !important;
   overflow: hidden;
   z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
 .main {
   margin: 0 auto;
@@ -153,15 +156,36 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   margin-top: -9px;
 }
 
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
 #boite_event {
   margin-top: 10% !important;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding: 30px;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.box_absence {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 300px;
+  background: whitesmoke;
+  margin-bottom: 30px;
+  padding: 15px;
+  border: solid 3px;
+  border-radius: 15px;
 }
 
 .logout {
-  max-height: 50px;
-  max-width: 150px;
-
-  position: absolute;
-  bottom: 5%;
-  left: 5%;
+  margin-right: 20px;
 }
