@@ -22,7 +22,8 @@
       "nomenclature_by_matiere": "SELECT nomenclature FROM Ref_Matiere WHERE id_mat = ?",
       "admin_by_mail_password": "SELECT * FROM Personnel_Administratif WHERE mail = ? AND password = ?",
       "unavailableTeacherByEtablishement": "SELECT * FROM Enseignant INNER JOIN Absence INNER JOIN Evenement ON Absence.evenement = Evenement.id_ev WHERE Enseignant.id_ens = Evenement.enseignant AND Enseignant.id_eta = ?",
-      "diffusionByTeachers": "SELECT * FROM Diffusion WHERE enseignant = ?"
+      "diffusionByTeachers": "SELECT * FROM Diffusion WHERE enseignant = ?",
+      "all_Teacher_on_absence": "SELECT e.* FROM Enseignant e JOIN Proposition p ON e.id_ens = p.enseignant WHERE p.absence = ?"
     },
     "insert":
     {
@@ -31,7 +32,8 @@
       "absence": "INSERT INTO `Absence`(`motif`, `evenement`) VALUES (?, ?)",
       "teacher": "INSERT INTO `Enseignant` (mail, password, nom, prenom, random_number, valide) VALUES (?,?,?,?,?,?)",
       "identification": "INSERT INTO `Identification` (mdp, valide, random_number, enseignant) VALUES (?,?,?,?)",
-      "profil": "INSERT INTO Profil (enseignant) values (?)"
+      "profil": "INSERT INTO Profil (enseignant) values (?)",
+      "proposition": "INSERT INTO `Proposition`(`enseignant`, `absence`) VALUES (?,?)"
     },
     "update":
     {
