@@ -330,6 +330,7 @@ function get_events_by_teacher_id(id, callback) {
     });
 }
 
+
 /**
  * Return if teacher available on plage horaire.
  *
@@ -346,7 +347,7 @@ function teacher_is_available(id_teacher, debut, fin, date, callback) {
         db.query(
             {
                 sql: SQL.select.teacher_is_available,
-                values: [id_teacher, debut, fin, date],
+                values: [date, debut, fin, id_teacher],
                 timeout: 10000,
             },
             (err, rows, fields) => {

@@ -24,7 +24,7 @@
       "unavailableTeacherByEtablishement": "SELECT * FROM Enseignant INNER JOIN Absence INNER JOIN Evenement ON Absence.evenement = Evenement.id_ev WHERE Enseignant.id_ens = Evenement.enseignant AND Enseignant.id_eta = ?",
       "diffusionByTeachers": "SELECT * FROM Diffusion WHERE enseignant = ?",
       "allProposedTeacher": "SELECT e.* FROM Enseignant e JOIN Proposition p ON e.id_ens = p.enseignant WHERE p.absence = ?",
-      "teacher_is_available": "SELECT COUNT(*) AS nb_events FROM Evenement WHERE `enseignant` = ? AND `heure_debut` >= ? AND `heure_fin` <= ? AND `date`= ?"
+      "teacher_is_available": "SET @date_event = ?;SET @h_d = ?;SET @h_f = ?;SET @ens = ?;SELECT COUNT(*) AS nb_event FROM Evenement WHERE `enseignant` = @ens AND `date` = @date_event AND((heure_debut < @h_d AND heure_fin > @h_d)OR(heure_debut < @h_f AND heure_fin > @h_f)OR(heure_debut = @h_d AND heure_fin = @h_f)OR(heure_debut >= @h_d AND heure_fin <= @h_f)OR(heure_debut <= @h_d AND heure_fin >= @h_f))"
     },
     "insert":
     {
