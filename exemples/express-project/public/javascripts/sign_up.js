@@ -23,7 +23,7 @@ form.addEventListener("submit", (e) => {
         }
         else
         {
-            error.innerText = "Erreur l'adresse mail est déjà utiliser ou les champs sont vide ou contiennent des caractères incorectes"
+            error.innerText = "Erreur l'adresse mail est déjà utilisé ou les champs sont vide ou contiennent des caractères incorrectes"
         }
     })
 })
