@@ -54,6 +54,14 @@ function PropositionOnAbsence(absenceId, callback) {
     });
 }
 
+/**
+ * Function to insert a proposition for a teacher.
+ *
+ * @param {number} teacherId - The ID of the teacher
+ * @param {number} propositionId - The ID of the proposition
+ * @param {function} callback - The callback function
+ * @return {void}
+ */
 function insertProposition(teacherId, propositionId, callback) {
     pool.getConnection((err, db) => {
         if (err) callback(err, null);

@@ -36,6 +36,13 @@ exports.TeachersPropositionOnAbsence = asyncHandler((req, res) => {
     });
 });
 
+/**
+ * Function to handle accepting a proposition by a teacher.
+ *
+ * @param {Object} req - The request object
+ * @param {Object} res - The response object
+ * @return {void}
+ */
 exports.acceptPropositionByTeacher = asyncHandler((req, res) => {
     acceptProposition(req, res, (err, result) => {
         let response = new RequestResponse("propositionAPI", "POST", result, "boolean", "Accept proposition", err);
