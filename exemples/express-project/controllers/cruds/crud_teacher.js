@@ -411,6 +411,7 @@ function sign_up(req, res, callback) {
  */
 function sign_in(req, res, callback) {
     check_teacher_by_mail(req.params.mail, (err, teacher) => {
+        console.log(teacher);
         if (teacher != undefined) {
             check_identificationByPassword(teacher.id_ens, req.params.password, (err, identification) => {
                 if (err) callback(err, null);
@@ -425,13 +426,14 @@ function sign_in(req, res, callback) {
                         teacher.id_ens,
                         false,
                         (err, res) => {
+                            console.log(teacher.nom + " est connecté.");
                             callback(null, true);
                         }
                     );
                 }
             });
         } else {
-            callback(err, null);
+            callback(null, false);
         }
     });
 }
@@ -510,3 +512,4 @@ module.exports = {
     sign_in_admin,
     getTeacherForAdminPanel,
 };
+sign_in;
