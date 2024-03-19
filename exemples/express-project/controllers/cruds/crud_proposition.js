@@ -54,6 +54,23 @@ function PropositionOnAbsence(absenceId, callback) {
     });
 }
 
+function insertProposition(teacherId, propositionId, callback) {
+    pool.getConnection((err, db) => {
+        if (err) callback(err, null);
+        db.query(
+            {
+                sql: SQL.insert.remplacement,
+                timeout: 10000,
+                values: [teacherId, propositionId],
+            },
+            (err, rows, fields) => {
+                if (err) callback(err, false);
+                callback(null, true);
+            }
+        );
+    });
+}
+
 // -------------------------------------------------- MAINS FUNCTIONS ------------------------------------------------ //
 
 /**
@@ -89,6 +106,23 @@ function getPropositionOnAbsence(req, res, callback) {
     });
 }
 
+/**
+ * Accepts a proposition sent in the request body, inserts it into the database, and calls the callback with the result.
+ *
+ * @param {Object} req - The request object
+ * @param {Object} res - The response object
+ * @param {Function} callback - The callback function to be called with the result
+ * @return {void}
+ */
+function acceptProposition(req, res, callback) {
+    const teacherId = req.body.teacherId;
+    const propositionId = req.body.propositionId;
+    insertProposition(teacherId, propositionId, (err, result) => {
+        if (err) callback(err, null);
+        callback(null, result);
+    });
+}
+
 // -------------------------------------------------- EXPORTS -------------------------------------------------------- //
 
-module.exports = { proposeOnAbsenceExport, getPropositionOnAbsence };
+module.exports = { proposeOnAbsenceExport, getPropositionOnAbsence, acceptProposition };

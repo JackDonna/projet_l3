@@ -203,13 +203,38 @@ function validate_teacher_by_mail(id_ens, number, callback) {
  * @param {function} callback - The callback function to handle the result
  * @return {void}
  */
-function check_identification(id_ens, password, callback) {
+function check_identificationByPassword(id_ens, password, callback) {
     pool.getConnection((err, database) => {
         if (err) callback(err, null);
         database.query(
             {
                 sql: SQL.select.identification_by_teacher_id_password,
                 values: [id_ens, password],
+                timeout: 10000,
+            },
+            (err, rows, fields) => {
+                if (err) callback(err, null);
+                callback(null, rows[0]);
+            }
+        );
+    });
+}
+
+/**
+ * Check if identification exists for a teacher in the database.
+ *
+ * @param {type} idTeacher - The ID of the teacher
+ * @param {type} callback - Callback function
+ * @return {type} The first row of identification data
+ */
+function checkIdentificationExist(idTeacher, callback) {
+    pool.getConnection((err, database) => {
+        if (err) callback(err, null);
+        database.query(
+            {
+                sql: SQL.select.identificationByTeacher,
+                values: [idTeacher],
+                timeout: 10000,
             },
             (err, rows, fields) => {
                 if (err) callback(err, null);
@@ -350,15 +375,31 @@ function getUnavailableTeachersByEtablishement(idEtablishement, callback) {
  */
 function sign_up(req, res, callback) {
     check_teacher_by_mail(req.body.mail, (err, teacher) => {
-        if (teacher != undefined) {
-            create_identification(req.body.password, teacher.id_ens, (err, identification) => {
-                if (err) callback(err, null);
-                axios.get("mail/send_verification_mail/" + req.body.mail + "/" + identification);
-                set_session(req, teacher.mail, teacher.prenom, teacher.nom, false, teacher.id_ens, false, (err, res) => {
-                    callback(null, true);
+        if (err) callback(err, null);
+        checkIdentificationExist(teacher.id_ens, (err, identification) => {
+            if (err) callback(err, null);
+            if (teacher != undefined && identification == undefined) {
+                create_identification(req.body.password, teacher.id_ens, (err, identification) => {
+                    if (err) callback(err, null);
+                    axios.get("mail/send_verification_mail/" + req.body.mail + "/" + identification);
+                    set_session(
+                        req,
+                        teacher.nom,
+                        teacher.prenom,
+                        teacher.mail,
+                        teacher.id_eta,
+                        false,
+                        teacher.id_ens,
+                        false,
+                        (err, res) => {
+                            callback(null, true);
+                        }
+                    );
                 });
-            });
-        }
+            } else {
+                callback(null, false);
+            }
+        });
     });
 }
 
@@ -371,7 +412,7 @@ function sign_up(req, res, callback) {
 function sign_in(req, res, callback) {
     check_teacher_by_mail(req.params.mail, (err, teacher) => {
         if (teacher != undefined) {
-            check_identification(teacher.id_ens, req.params.password, (err, identification) => {
+            check_identificationByPassword(teacher.id_ens, req.params.password, (err, identification) => {
                 if (err) callback(err, null);
                 if (identification != undefined) {
                     set_session(

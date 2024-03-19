@@ -1,4 +1,4 @@
-let express = require('express');
+let express = require("express");
 let router = express.Router();
 
 // ------------------------------------------- IMPORT CONTROLLERS ----------------------------------------- //
@@ -43,5 +43,6 @@ router.get("/absence/get_available_absence", absence_controller.available_absenc
 // ---- NOT IMPLEMENT YET ------ //
 //router.post("/proposition/new_proposition", proposition_controller.insertNewProposition);
 //router.get("/proposition/teacher_on_absence/:abs", proposition_controller.TeachersPropositionOnAbsence);
+router.post("/proposition/acceptProposition", proposition_controller.acceptPropositionByTeacher);
 
-module.exports = router;    
+module.exports = router;

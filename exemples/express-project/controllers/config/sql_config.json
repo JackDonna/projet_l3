@@ -33,7 +33,8 @@
       "teacher": "INSERT INTO `Enseignant` (mail, password, nom, prenom, random_number, valide) VALUES (?,?,?,?,?,?)",
       "identification": "INSERT INTO `Identification` (mdp, valide, random_number, enseignant) VALUES (?,?,?,?)",
       "profil": "INSERT INTO Profil (enseignant) values (?)",
-      "proposition": "INSERT INTO `Proposition`(`enseignant`, `absence`) VALUES (?,?)"
+      "proposition": "INSERT INTO `Proposition`(`enseignant`, `absence`) VALUES (?,?)",
+      "remplacement": "INSERT INTO `Remplacement`(`horodatage_remp`, `enseignant`, `proposition`) VALUES (NULL,?,?)"
     },
     "update":
     {
