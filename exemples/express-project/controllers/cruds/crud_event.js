@@ -330,6 +330,37 @@ function get_events_by_teacher_id(id, callback) {
     });
 }
 
+/**
+ * Return if teacher available on plage horaire.
+ *
+ * @param {integer} id_teacher - The id of the teacher
+ * @param {string} debut - The begining of the event
+ * @param {string} fin - The end of the event
+ * @param {string} date - The date of the event
+ * @param {function} callback - The callback function to handle the result
+ * @return {void}
+ */
+function teacher_is_available(id_teacher, debut, fin, date, callback) {
+    pool.getConnection((err, db) => {
+        if (err) callbakc(err, null);
+        db.query(
+            {
+                sql: SQL.select.teacher_is_available,
+                values: [id_teacher, debut, fin, date],
+                timeout: 10000,
+            },
+            (err, rows, fields) => {
+                if (err) callback(err, null);
+                if(rows[0] > 0){
+                    callback(null, false);
+                } else {
+                    callback(null, true);
+                }
+            }
+        );
+    })
+}
+
 // ------------------------------------------------------------------------------------------------------------------ //
 // -- MAINS FUNCTIONS -------------------------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------------------------------------------ //
