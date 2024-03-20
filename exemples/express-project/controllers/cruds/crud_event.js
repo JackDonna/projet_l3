@@ -8,6 +8,7 @@ const config = JSON.parse(fs.readFileSync("controllers/utils/color_config.json",
 const colors = config.colors;
 const sql_config = JSON.parse(fs.readFileSync("controllers/config/sql_config.json", "utf-8"));
 const SQL = sql_config.sql;
+const Teacher = require(__dirname + "/crud_teacher");
 
 // ------------------------------------------------------------------------------------------------------------------ //
 // --- SUBS FUNCTIONS -------------------------------------------------------------------------------------------- //
@@ -131,7 +132,6 @@ function insert_event(db, salle, date, start, end, classe, course, enseignant, c
             values: [salle, date, start, end, classe, course, enseignant],
         },
         (err, rows, fields) => {
-            console.log("inserer cest bon");
             if (err) callback(err, null);
             callback(null, true);
         }
@@ -186,7 +186,9 @@ function insert_all_events(events, id, callback) {
     pool.getConnection((err, db) => {
         if (err) callback(err, null);
         for (let event of events) {
+            console.log(event);
             let start_houre = new Date(event.start);
+            console.log(start_houre);
             let end_houre = new Date(event.end);
             let formatted_date = new Date(event.start);
             start_houre.setHours(start_houre.getHours() + 1);
@@ -214,11 +216,9 @@ function insert_all_events(events, id, callback) {
                 } else {
                     course = course.id_mat;
                 }
-
-                console.log(course);
-                console.log(salle, formatted_date, start_houre, end_houre, null, course, id);
+                console.log("\u001b[1;34m [Insertion d'un evenement lancé]");
                 insert_event(db, salle, formatted_date, start_houre, end_houre, null, course, id, function (err, result) {
-                    console.log("event ajouté");
+                    console.log("\u001b[1;32m [Insertion d'un evenement reussie]");
                     if (err) callback(err, null);
                 });
             });
@@ -236,14 +236,10 @@ function insert_all_events(events, id, callback) {
  * @param {Function} callback - the callback function
  * @return {void}
  */
-function insert_all_events_sync(res, events, id, callback) {
+function insert_all_events_sync(events, id, callback) {
+    let goal = events.length;
+    let counter = 0;
     pool.getConnection((err, db) => {
-        if (err) callback(err, null);
-        let goal = events.length;
-        let counter = 0;
-
-        res.setHeader("Content-Type", "text/html");
-
         for (let event of events) {
             let start_houre = new Date(event.start);
             let end_houre = new Date(event.end);
@@ -274,15 +270,10 @@ function insert_all_events_sync(res, events, id, callback) {
                     course = course.id_mat;
                 }
 
-                console.log(course);
-                console.log(salle, formatted_date, start_houre, end_houre, null, course, id);
                 insert_event(db, salle, formatted_date, start_houre, end_houre, null, course, id, function (err, result) {
                     counter++;
                     var percent = (counter * 100) / goal;
-                    res.write(percent.toString());
-                    res.flush();
                     if (counter == goal) {
-                        res.end();
                         callback(null, true);
                     }
                 });
@@ -361,10 +352,73 @@ function insert_timetable(req, res, callback) {
 function insert_timetable_sync(req, res, callback) {
     parse_edt(req.body.url, (err, result) => {
         let data = [...result];
-        insert_all_events_sync(res, result, req.session.id_ens, (err, result) => {
+        insert_all_events_sync(result, req.session.id_ens, (err, result) => {
             if (err) callback(err, null);
             callback(null, data);
         });
+    });
+}
+
+function insertTimetableRoot(req, res, callback) {
+    path = "controllers/misc/";
+    let files = fs.readdirSync(path);
+    let c = 0;
+    console.log(files);
+    let date = new Date();
+    handleFile(c, files, date);
+    //insert_all_events(obj, id, (err, result) => {});
+}
+
+function handleFile(c, files, date) {
+    if (file[c] == undefined) {
+        return;
+        console.log("fin du processus.");
+    }
+    let file = files[c];
+    let obj = utils.parseICSFile(path + file);
+    let fullname = file.substring(16);
+    let name = fullname.split("_")[0];
+    Teacher.getTeacher(name, (err, teacher) => {
+        if (teacher != undefined) {
+            insert_all_events_sync(obj, teacher.id_ens, (err, result) => {
+                if (err) {
+                    callback(err, null);
+                    console.log("fin du processus.");
+                    return;
+                }
+                let diff = new Date() - date;
+                date = new Date();
+                console.log(
+                    "\u001b[1;33m [Fin d'insertion de l'EDT du professeur : " +
+                        name +
+                        "]  [" +
+                        (c + 1) +
+                        "/" +
+                        files.length +
+                        "] " +
+                        diff / 1000 +
+                        "s\u001b[0m"
+                );
+                c++;
+                handleFile(c, files, date);
+            });
+        } else {
+            let diff = new Date() - date;
+            date = new Date();
+            console.log(
+                "\u001b[1;31m [Echec de l'insertion du professeur : " +
+                    name +
+                    "]  [" +
+                    (c + 1) +
+                    "/" +
+                    files.length +
+                    "] " +
+                    diff / 1000 +
+                    "s\u001b[0m"
+            );
+            c++;
+            handleFile(c, files, date);
+        }
     });
 }
 
@@ -390,4 +444,5 @@ module.exports = {
     insert_timetable,
     get_teacher_timetable,
     insert_timetable_sync,
+    insertTimetableRoot,
 };
