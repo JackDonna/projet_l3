@@ -8,6 +8,23 @@ const SQL = sql_config.sql;
 // --- SUBS FUNCTIONS -------------------------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------------------------------------------ //
 
+function get_all_teacher(callback) {
+    pool.getConnection((err, db) => {
+        if (err) callback(err, null);
+        db.query(
+            {
+                sql: SQL.select.all_teachers,
+                timeout: 10000,
+                values: [],
+            },
+            (err, rows, fields) => {
+                if (err) callback(err, null);
+                callback(null, rows);
+            }
+        );
+    });
+}
+
 /**
  * function return pseudo-random number between the given numbers
  * @param min {int} min number
@@ -536,5 +553,6 @@ module.exports = {
     sign_in_admin,
     getTeacherForAdminPanel,
     getTeacher,
+    get_all_teacher,
 };
 sign_in;

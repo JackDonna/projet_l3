@@ -1,7 +1,15 @@
 const asyncHandler = require("express-async-handler");
 const { RequestResponse } = require("./utils/object_engine");
-const { validate_teacher, sign_in, sign_up, sign_in_admin, getTeacherForAdminPanel, getTeacher } = require(__dirname +
-    "/cruds/crud_teacher.js");
+
+const {
+    validate_teacher,
+    sign_in,
+    sign_up,
+    sign_in_admin,
+    getTeacherForAdminPanel,
+    getTeacher,
+    get_all_teacher,
+} = require(__dirname + "/cruds/crud_teacher.js");
 
 // ----------------------------------- EXPORTS FUNCTIONS CRUDS RESULT -------------------------------- //
 
@@ -79,6 +87,14 @@ exports.sign_in_as_admin = asyncHandler((req, res) => {
 exports.searchTeacher = asyncHandler((req, res) => {
     getTeacher(req, res, (err, result) => {
         let response = new RequestResponse("teacherAPI", "GET", result, "teacher", "Search teacher", err);
+        if (err) console.error(err);
+        res.send(response);
+    });
+});
+
+exports.get_teacher_list = asyncHandler((req, res) => {
+    get_all_teacher((err, result) => {
+        let response = new RequestResponse("teacherAPI", "GET", result, "array", "List of teacher", err);
         if (err) console.error(err);
         res.send(response);
     });
