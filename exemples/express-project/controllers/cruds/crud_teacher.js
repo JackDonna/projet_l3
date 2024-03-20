@@ -19,7 +19,7 @@ function get_all_teacher(callback){
             },
             (err, rows, fields) => {
                 if (err) callback(err, null);
-                callback(null, rows[0]);
+                callback(null, rows);
             }
         );
     });
@@ -518,13 +518,6 @@ function getTeacherForAdminPanel(req, res, callback) {
     });
 }
 
-function get_all_teachers(callback){
-    get_all_teacher((err, result)=>{
-        if(err) callback(err, null);
-        callback(null, result)
-    })
-}
-
 // ------------------------------------------------------------------------------------------------------------------ //
 // --- EXPORTS --------------------------------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------------------------------------------ //
@@ -535,6 +528,6 @@ module.exports = {
     sign_up,
     sign_in_admin,
     getTeacherForAdminPanel,
-    get_all_teachers,
+    get_all_teacher,
 };
 sign_in;
