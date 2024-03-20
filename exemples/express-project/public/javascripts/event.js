@@ -44,21 +44,21 @@ async function print_absence() {
          }
    
          // Créer un paragraphe pour chaque donnée
-         let p = document.createElement("p");
-         p.classList.add("box_absence");
+         let div = document.createElement("div");
+         div.classList.add("box_absence");
    
          // Affecter la valeur de chaque clé à chaque paragraphe
          console.log(evenement)
-         p.innerHTML = `
-            Motif : ${evenement.motif}<br>
-            Date : ${evenement.date.split('T',1)}<br>
-            Heure du début : ${evenement.heure_debut}<br>
-            Heure de fin : ${evenement.heure_fin}<br>
-            Professeur : ${evenement.nom} ${evenement.prenom}
+         div.innerHTML = `
+            <p><span class="cle">Motif : </span>${evenement.motif}</p>
+            <p><span class="cle">Date : </span>${evenement.date.split('T',1)}</p>
+            <p><span class="cle">Heure de début : </span>${evenement.heure_debut}</p>
+            <p><span class="cle">Heure de fin : </span>${evenement.heure_fin}</p>
+            <p><span class="cle">Professeur : </span>${evenement.nom} ${evenement.prenom}</p>
          `;
    
          // Ajouter le paragraphe à la boite
-         affichage_absence.appendChild(p);
+         affichage_absence.appendChild(div);
          
          // Marquer l'événement comme déjà affiché
          dejaAffiche[JSON.stringify(evenement)] = true;
@@ -89,6 +89,10 @@ remplacements.addEventListener("click", () => {
    affichage_propositions.style.display = "none";
    affichage_remplacements.style.display = "flex";
 })
+
+function logout(){
+   window.location.href = "/logout";
+}
 
 // ----------------------------------------------------------------------------------------------------------------------------//
 // --- EVENTES LISTENERS ------------------------------------------------------------------------------------------------------//

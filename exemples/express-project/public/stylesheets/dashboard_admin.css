@@ -177,20 +177,32 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   padding-right: 60px;
   flex-direction: column;
   flex-wrap: wrap;
-  border-right: solid 3px #888;
+  border-right: solid 3px #9fccce;
 }
 
 .box_absence {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
+  flex-direction: column;
   height: 150px;
   width: 300px;
   background: whitesmoke;
   margin-bottom: 30px;
-  padding: 15px;
-  border: solid 3px;
+  padding: 0 15px;
+  border: solid 3px #9fccce;
   border-radius: 15px;
+}
+
+.box_absence p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.cle {
+  color: #9fccce;
 }
 
 #container_list_diff {
@@ -198,7 +210,6 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   justify-content: center;
   align-items: start;
   padding-top: 300px;
-  background: crimson;
 }
 
 #container_propositions {
@@ -206,7 +217,6 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   justify-content: center;
   align-items: start;
   padding-top: 300px;
-  background: darkgreen;
 }
 
 #container_remplacements {
@@ -214,9 +224,11 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   justify-content: center;
   align-items: start;
   padding-top: 300px;
-  background: lightskyblue;
 }
 
 .logout {
   margin-right: 20px;
+}
+.logout:hover {
+  cursor: pointer;
 }
