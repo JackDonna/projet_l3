@@ -367,6 +367,29 @@ function teacher_is_available(id_teacher, debut, fin, date, callback) {
 // ------------------------------------------------------------------------------------------------------------ //
 
 /**
+ * Return array of teacher available on a date
+ *
+ * @param {array} id_teacher - The id of the teacher
+ * @param {string} debut - The begining of the event
+ * @param {string} fin - The end of the event
+ * @param {string} date - The date of the event
+ * @param {function} callback - The callback function to handle the result
+ * @return {void}
+ */
+function all_teachers_available(tab_teacher, debut, fin, date, callback) {
+    res = []
+    for(i=0; i< tab_teacher.length; i++){
+        teacher_is_available(tab_teacher[i]["id_ens"], debut, fin, date, (err, result) => {
+            if(err) callback(err, null);
+            if(result){
+                res.push(tab_teacher[i]);
+            }
+        });
+    }
+    callback(null, res);
+}
+
+/**
  * function insert timetable in the database
  * @param req router paramaters
  * @param res router parameters
