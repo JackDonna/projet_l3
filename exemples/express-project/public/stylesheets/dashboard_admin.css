@@ -164,7 +164,7 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   grid-template-columns: repeat(2, 1fr);
 }
 
-#boite_event {
+#container_absence {
   /*
   margin-top: 10% !important;
    */
