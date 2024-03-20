@@ -2,7 +2,18 @@
 // --- DOM ELEMENTS -----------------------------------------------------------------------------------------------------------//
 // ----------------------------------------------------------------------------------------------------------------------------//
  
-const boite = document.getElementById("container_absence");
+const affichage_absence = document.getElementById("container_absence");
+
+const absence = document.getElementById("absence");
+
+const affichage_list_diff = document.getElementById("container_list_diff");
+const list_diff = document.getElementById("list_diff");
+
+const affichage_propositions = document.getElementById("container_propositions");
+const propositions = document.getElementById("propositions");
+
+const affichage_remplacements = document.getElementById("container_remplacements");
+const remplacements = document.getElementById("remplacements");
 
 // ----------------------------------------------------------------------------------------------------------------------------//
 // ----GLOBALS VARIABLES ------------------------------------------------------------------------------------------------------//
@@ -47,14 +58,37 @@ async function print_absence() {
          `;
    
          // Ajouter le paragraphe à la boite
-         boite.appendChild(p);
+         affichage_absence.appendChild(p);
          
          // Marquer l'événement comme déjà affiché
          dejaAffiche[JSON.stringify(evenement)] = true;
       }
    });
-   
 }
+
+absence.addEventListener("click", () => {
+   affichage_list_diff.style.display = "none";
+   affichage_propositions.style.display = "none";
+   affichage_remplacements.style.display = "none";
+})
+
+list_diff.addEventListener("click", () => {
+   affichage_list_diff.style.display = "flex";
+   affichage_propositions.style.display = "none";
+   affichage_remplacements.style.display = "none";
+})
+
+propositions.addEventListener("click", () => {
+   affichage_list_diff.style.display = "none";
+   affichage_propositions.style.display = "flex";
+   affichage_remplacements.style.display = "none";
+})
+
+remplacements.addEventListener("click", () => {
+   affichage_list_diff.style.display = "none";
+   affichage_propositions.style.display = "none";
+   affichage_remplacements.style.display = "flex";
+})
 
 // ----------------------------------------------------------------------------------------------------------------------------//
 // --- EVENTES LISTENERS ------------------------------------------------------------------------------------------------------//

@@ -177,7 +177,7 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   padding-right: 60px;
   flex-direction: column;
   flex-wrap: wrap;
-  border-right: solid 3px black;
+  border-right: solid 3px #888;
 }
 
 .box_absence {
@@ -191,6 +191,30 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   padding: 15px;
   border: solid 3px;
   border-radius: 15px;
+}
+
+#container_list_diff {
+  display: none;
+  justify-content: center;
+  align-items: start;
+  padding-top: 300px;
+  background: crimson;
+}
+
+#container_propositions {
+  display: none;
+  justify-content: center;
+  align-items: start;
+  padding-top: 300px;
+  background: darkgreen;
+}
+
+#container_remplacements {
+  display: none;
+  justify-content: center;
+  align-items: start;
+  padding-top: 300px;
+  background: lightskyblue;
 }
 
 .logout {
