@@ -58,8 +58,11 @@ body {
   left: 0;
   width: 250px;
   margin-top: 60px;
+  /*
   transform: translateX(-250px);
   transition: transform 250ms ease-in-out;
+
+   */
   background: #9fccce;
 }
 .sidebarMenuInner {
@@ -162,15 +165,19 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 }
 
 #boite_event {
+  /*
   margin-top: 10% !important;
+   */
   height: auto;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: end;
-  padding: 30px;
+  padding-top: 100px;
+  padding-right: 60px;
   flex-direction: column;
   flex-wrap: wrap;
+  border-right: solid 3px black;
 }
 
 .box_absence {

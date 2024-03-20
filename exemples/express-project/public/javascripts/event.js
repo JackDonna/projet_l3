@@ -40,8 +40,8 @@ async function print_absence() {
          console.log(evenement)
          p.innerHTML = `
             Motif : ${evenement.motif}<br>
-            Date : ${evenement.date}<br>
-            Heure du début :${evenement.heure_debut}<br>
+            Date : ${evenement.date.split('T',1)}<br>
+            Heure du début : ${evenement.heure_debut}<br>
             Heure de fin : ${evenement.heure_fin}<br>
             Professeur : ${evenement.nom} ${evenement.prenom}
          `;
