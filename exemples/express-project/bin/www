@@ -7,7 +7,7 @@ const http = require("http");
 var https = require("https");
 var fs = require("fs");
 
-const port = normalizePort(process.env.PORT || "25000");
+const port = normalizePort(process.env.PORT || "80");
 app.set("port", port);
 
 /**

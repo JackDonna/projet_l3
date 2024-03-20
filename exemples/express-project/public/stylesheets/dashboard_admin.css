@@ -164,7 +164,7 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   grid-template-columns: repeat(2, 1fr);
 }
 
-#boite_event {
+#container_absence {
   /*
   margin-top: 10% !important;
    */
@@ -177,22 +177,58 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   padding-right: 60px;
   flex-direction: column;
   flex-wrap: wrap;
-  border-right: solid 3px black;
+  border-right: solid 3px #9fccce;
 }
 
 .box_absence {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
+  flex-direction: column;
   height: 150px;
   width: 300px;
   background: whitesmoke;
   margin-bottom: 30px;
-  padding: 15px;
-  border: solid 3px;
+  padding: 0 15px;
+  border: solid 3px #9fccce;
   border-radius: 15px;
+}
+
+.box_absence p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.cle {
+  color: #9fccce;
+}
+
+#container_list_diff {
+  display: none;
+  justify-content: center;
+  align-items: start;
+  padding-top: 300px;
+}
+
+#container_propositions {
+  display: none;
+  justify-content: center;
+  align-items: start;
+  padding-top: 300px;
+}
+
+#container_remplacements {
+  display: none;
+  justify-content: center;
+  align-items: start;
+  padding-top: 300px;
 }
 
 .logout {
   margin-right: 20px;
+}
+.logout:hover {
+  cursor: pointer;
 }
