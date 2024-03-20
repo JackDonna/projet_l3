@@ -18,7 +18,7 @@
       "absence_available":                       "SELECT * FROM Absence INNER JOIN Evenement ON Absence.evenement = Evenement.id_ev INNER JOIN Enseignant ON Enseignant.id_ens = Evenement.enseignant",
       "discipline_by_nomenclature":              "SELECT id_disc FROM Ref_Discipline WHERE nomenclature = ?",
       "courses_by_absence":                      "SELECT Evenement.matiere FROM Evenement INNER JOIN Absence ON Absence.evenement = Evenement.id_ev WHERE Absence.id_abs = ?",
-      "teacher_by_discipline":                   "SELECT * FROM Correspondance WHERE enseignant = ? AND discipline = ?",
+      "teacher_by_discipline":                   "SELECT COUNT(*) FROM Correspondance WHERE enseignant = ? AND discipline = ?",
       "nomenclature_by_matiere":                 "SELECT nomenclature FROM Ref_Matiere WHERE id_mat = ?",
       "admin_by_mail_password":                  "SELECT * FROM Personnel_Administratif WHERE mail = ? AND password = ?",
       "unavailableTeacherByEtablishement":       "SELECT * FROM Enseignant INNER JOIN Absence INNER JOIN Evenement ON Absence.evenement = Evenement.id_ev WHERE Enseignant.id_ens = Evenement.enseignant AND Enseignant.id_eta = ?",
