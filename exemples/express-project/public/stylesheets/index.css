@@ -93,16 +93,15 @@ img {
 }
 
 #boite_event {
-
    height: auto;
    width: 100%;
    display: flex;
    justify-content: center;
    align-items: center;
-   padding-top: 100px;
    flex-direction: column;
    overflow: scroll;
-
+   overflow-x: hidden;
+  padding-top: 15em;
 }
 
 .box_absence {

@@ -14,6 +14,16 @@ let dejaAffiche = {};
 // --- FUNCTIONS --------------------------------------------------------------------------------------------------------------//
 // ----------------------------------------------------------------------------------------------------------------------------//
 
+
+/**
+ * Fonction pour afficher une boîte de dialogue de confirmation avant de supprimer la boîte
+ */
+function confirmerAvantSuppression(p) {
+    if (confirm("Voulez-vous vraiment choisir cet événement ?")) {
+        boite.removeChild(p); // Supprimer le paragraphe parent (la boîte)
+    }
+}
+
 /**
  * function add absence in GUI by the APi RDP
  */
@@ -35,6 +45,7 @@ async function print_absence() {
          // Créer un paragraphe pour chaque donnée
          let p = document.createElement("p");
          p.classList.add("box_absence");
+         
    
          // Affecter la valeur de chaque clé à chaque paragraphe
          console.log(evenement)
@@ -46,13 +57,23 @@ async function print_absence() {
             Professeur : ${evenement.nom} ${evenement.prenom}
          `;
    
+         // Créer un bouton pour cacher la boîte
+         let bouton = document.createElement("button");
+         bouton.innerHTML = "Choisir";
+         bouton.onclick = function() {
+            confirmerAvantSuppression(p); // Afficher la confirmation avant de supprimer
+         };
+         p.appendChild(bouton);
+
          // Ajouter le paragraphe à la boite
          boite.appendChild(p);
+
          
          // Marquer l'événement comme déjà affiché
          dejaAffiche[JSON.stringify(evenement)] = true;
       }
    });
+
    
 }
 
