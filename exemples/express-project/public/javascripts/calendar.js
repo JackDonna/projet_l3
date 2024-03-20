@@ -3,8 +3,8 @@
 // ----------------------------------------------------------------------------------------------------------------------------//
 
 const result_element = document.querySelector("#result");
-const calendar_element = document.getElementById('calendar');
-const absence_form = document.getElementById('add_absence');
+const calendar_element = document.getElementById("calendar");
+const absence_form = document.getElementById("add_absence");
 const reader = document.getElementById("scan_code");
 const scan_button = document.getElementById("scan_qr_code");
 const close_scanner = document.getElementById("close_scanner");
@@ -20,13 +20,13 @@ const close_form = absence_form.querySelector("#close_form");
 // ----GLOBALS VARIABLES ------------------------------------------------------------------------------------------------------//
 // ----------------------------------------------------------------------------------------------------------------------------//
 
-const scanner = new Html5QrcodeScanner('reader', {
+const scanner = new Html5QrcodeScanner("reader", {
     qrbox: qrboxFunction,
-    fps: 60
+    fps: 60,
 });
 
 const ec = new EventCalendar(calendar_element, {
-    view: 'timeGridWeek',
+    view: "timeGridWeek",
     events: [],
     locale: "fr",
     firstDay: 1,
@@ -37,9 +37,8 @@ const ec = new EventCalendar(calendar_element, {
         start_absence.value = format_time(info.event.start);
         end_absence.value = format_time(info.event.end);
         global_event = info.event;
-    }
+    },
 });
-
 
 var global_event = {};
 
@@ -54,10 +53,10 @@ var global_event = {};
  */
 function format_time(time) {
     let hour = time.getHours();
-    hour < 10 ? hour = "0" + hour : null;
+    hour < 10 ? (hour = "0" + hour) : null;
 
     let minute = time.getMinutes();
-    minute < 10 ? minute = "0" + minute : null;
+    minute < 10 ? (minute = "0" + minute) : null;
     return hour + ":" + minute;
 }
 
@@ -67,23 +66,24 @@ function format_time(time) {
  */
 function success(result) {
     let obj = {
-        "url": result
-    }
+        url: result,
+    };
     scanner.clear();
     reader.classList.add("hide");
-    document.getElementById('reader').remove();
+    document.getElementById("reader").remove();
     loading.classList.remove("hide");
 
-    axios.post("sql/event/insert_timetable_sync", obj, {
-        onDownloadProgress: progressEvent => {
-            const dataChunk = progressEvent;
-            console.log(dataChunk.event)
-        },
-        timeout: 6000000
-    })
+    axios
+        .post("sql/event/insert_timetable_sync", obj, {
+            onDownloadProgress: (progressEvent) => {
+                const dataChunk = progressEvent;
+                console.log(dataChunk.event);
+            },
+            timeout: 6000000,
+        })
         .then((response) => {
             get_timetable();
-        })
+        });
 }
 
 /**
@@ -106,7 +106,7 @@ function qrboxFunction(viewfinderWidth, viewfinderHeight) {
     let qrboxSize = Math.floor(minEdgeSize * minEdgePercentage);
     return {
         width: qrboxSize,
-        height: qrboxSize
+        height: qrboxSize,
     };
 }
 
@@ -126,11 +126,11 @@ function qrboxFunction(viewfinderWidth, viewfinderHeight) {
  */
 function get_timetable() {
     axios.get("/sql/event/get_timetable").then((response) => {
-        console.log(response.data.data)
+        console.log(response.data.data);
         for (let event of response.data.data) {
             ec.addEvent(event);
         }
-    })
+    });
 }
 
 /**
@@ -157,29 +157,26 @@ scanner.render(success, error);
 
 scan_button.addEventListener("click", () => {
     reader.classList.remove("hide");
-})
+});
 close_scanner.addEventListener("click", () => {
     reader.classList.add("hide");
-})
+});
 
 submit.addEventListener("click", function () {
-    console.log(global_event)
-    axios.post("sql/absence/insert/", {id_event: global_event.id, motif: reason.value}).then((response) => {
+    console.log(global_event);
+    axios.post("sql/absence/insert/", { id_event: global_event.id, motif: reason.value }).then((response) => {
         console.log(response.data);
-    })
-})
+    });
+});
 
 close_form.addEventListener("click", () => {
     absence_form.classList.add("hide");
-})
+});
 
 window.onload((e) => {
     resize_calendar();
-})
+});
 
 window.onresize((e) => {
     resize_calendar();
-})
-
-
-
+});

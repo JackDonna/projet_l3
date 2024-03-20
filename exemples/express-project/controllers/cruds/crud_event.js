@@ -26,13 +26,11 @@ const Teacher = require(__dirname + "/crud_teacher");
  * @returns {{any}} final built-in JS object
  */
 function build_event(title, date, start, end, location, id, classe, salle) {
-    date = new Date(date);
-    date = date.toISOString().split("T")[0];
-    start = date + " " + start;
-    end = date + " " + end;
+    start = date.toLocaleDateString("se-SV", { timeZone: "Europe/Paris" }) + " " + start;
+    end = date.toLocaleDateString("se-SV", { timeZone: "Europe/Paris" }) + " " + end;
     let event = {
         title: title,
-        date: date,
+        date: date.toLocaleDateString("se-SV", { timeZone: "Europe/Paris" }),
         start: start,
         end: end,
         location: location,
@@ -125,6 +123,9 @@ function select_discipline_by_id(id_discipline, callback) {
  * @param callback {function} callback function (err, result)
  */
 function insert_event(db, salle, date, start, end, classe, course, enseignant, callback) {
+    /*console.log(
+        `INSERT INTO Evenement (salle, date, heure_debut, heure_fin, classe, matiere, enseignant) VALUES (${salle},${date},${start},${end},${classe},${course},${enseignant})`
+    );*/
     db.query(
         {
             sql: SQL.insert.event,
@@ -186,18 +187,9 @@ function insert_all_events(events, id, callback) {
     pool.getConnection((err, db) => {
         if (err) callback(err, null);
         for (let event of events) {
-            console.log(event);
-            let start_houre = new Date(event.start);
-            console.log(start_houre);
-            let end_houre = new Date(event.end);
-            let formatted_date = new Date(event.start);
-            start_houre.setHours(start_houre.getHours() + 1);
-            end_houre.setHours(end_houre.getHours() + 1);
-            start_houre = start_houre.toISOString().split("T")[0] + " " + start_houre.toISOString().split("T")[1].slice(0, -4);
-            start_houre = start_houre.slice(0, -1);
-            end_houre = end_houre.toISOString().split("T")[0] + " " + end_houre.toISOString().split("T")[1].slice(0, -4);
-            end_houre = end_houre.slice(0, -1);
-            formatted_date = formatted_date.toISOString().split("T")[0];
+            let start_houre = new Date(event.start).toLocaleString("sv-SE", { timeZone: "Europe/Paris" });
+            let end_houre = new Date(event.end).toLocaleString("sv-SE", { timeZone: "Europe/Paris" });
+            let formatted_date = new Date(event.start).toLocaleDateString("sv-SE", { timeZone: "Europe/Paris" });
             let salle = "none";
             let classe = "none";
             let niveau = "none";
@@ -241,16 +233,9 @@ function insert_all_events_sync(events, id, callback) {
     let counter = 0;
     pool.getConnection((err, db) => {
         for (let event of events) {
-            let start_houre = new Date(event.start);
-            let end_houre = new Date(event.end);
-            let formatted_date = new Date(event.start);
-            start_houre.setHours(start_houre.getHours() + 1);
-            end_houre.setHours(end_houre.getHours() + 1);
-            start_houre = start_houre.toISOString().split("T")[0] + " " + start_houre.toISOString().split("T")[1].slice(0, -4);
-            start_houre = start_houre.slice(0, -1);
-            end_houre = end_houre.toISOString().split("T")[0] + " " + end_houre.toISOString().split("T")[1].slice(0, -4);
-            end_houre = end_houre.slice(0, -1);
-            formatted_date = formatted_date.toISOString().split("T")[0];
+            let start_houre = new Date(event.start).toLocaleString("sv-SE", { timeZone: "Europe/Paris" });
+            let end_houre = new Date(event.end).toLocaleString("sv-SE", { timeZone: "Europe/Paris" });
+            let formatted_date = new Date(event.start).toLocaleDateString("sv-SE", { timeZone: "Europe/Paris" });
             let salle = "none";
             let classe = "none";
             let niveau = "none";
@@ -305,7 +290,7 @@ function get_events_by_teacher_id(id, callback) {
                     obj.push(
                         build_event(
                             row.libelle_court,
-                            row.date,
+                            new Date(row.date),
                             row.heure_debut,
                             row.heure_fin,
                             row.salle,
@@ -320,7 +305,6 @@ function get_events_by_teacher_id(id, callback) {
         );
     });
 }
-
 
 /**
  * Return if teacher available on plage horaire.
@@ -343,14 +327,14 @@ function teacher_is_available(id_teacher, debut, fin, date, callback) {
             },
             (err, rows, fields) => {
                 if (err) callback(err, null);
-                if(rows[0] > 0){
+                if (rows[0] > 0) {
                     callback(null, false);
                 } else {
                     callback(null, true);
                 }
             }
         );
-    })
+    });
 }
 
 // ------------------------------------------------------------------------------------------------------------------ //
@@ -368,11 +352,11 @@ function teacher_is_available(id_teacher, debut, fin, date, callback) {
  * @return {void}
  */
 function all_teachers_available(tab_teacher, debut, fin, date, callback) {
-    res = []
-    for(i=0; i< tab_teacher.length; i++){
+    res = [];
+    for (i = 0; i < tab_teacher.length; i++) {
         teacher_is_available(tab_teacher[i]["id_ens"], debut, fin, date, (err, result) => {
-            if(err) callback(err, null);
-            if(result){
+            if (err) callback(err, null);
+            if (result) {
                 res.push(tab_teacher[i]);
             }
         });
@@ -414,20 +398,20 @@ function insert_timetable_sync(req, res, callback) {
     });
 }
 
-function insertTimetableRoot(req, res, callback) {
+function insertTimetableRoot() {
     path = "controllers/misc/";
     let files = fs.readdirSync(path);
     let c = 0;
-    console.log(files);
     let date = new Date();
+    console.log("début du processus");
     handleFile(c, files, date);
     //insert_all_events(obj, id, (err, result) => {});
 }
 
 function handleFile(c, files, date) {
-    if (file[c] == undefined) {
-        return;
+    if (c == files.length) {
         console.log("fin du processus.");
+        return;
     }
     let file = files[c];
     let obj = utils.parseICSFile(path + file);
