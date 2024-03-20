@@ -6,6 +6,7 @@ const {
   sign_up,
   sign_in_admin,
   getTeacherForAdminPanel,
+  get_all_teachers,
 } = require(__dirname + "/cruds/crud_teacher.js");
 
 // ----------------------------------- EXPORTS FUNCTIONS CRUDS RESULT -------------------------------- //
@@ -108,3 +109,16 @@ exports.sign_in_as_admin = asyncHandler((req, res) => {
     res.send(response);
   });
 });
+
+exports.get_teacher_list = asyncHandler((req, res) => {
+  get_all_teachers((err, result) => {
+    let response = new RequestResponse(
+      "teacherAPI",
+      "GET",
+      result,
+      "boolean",
+      "List of teacher",
+      err
+    )
+  })
+})
