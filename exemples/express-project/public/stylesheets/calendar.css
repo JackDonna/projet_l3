@@ -17,6 +17,10 @@ main {
   font-size: 1.5rem;
 }
 
+#calendar {
+  overflow: scroll;
+}
+
 #html5-qrcode-button-camera-permission {
   background-color: cornflowerblue;
   padding: 1em;
