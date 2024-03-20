@@ -217,7 +217,7 @@ function correspondance_by_discipline(discipline, teacher, callback) {
  * @param teacher {integer} id of teacher
  * @param callback {function} callback function (err, result)
  */
-function teacher_available_by_courses(req, res, absence, teacher, callback) {
+function teacher_available_by_courses(absence, tabTeacher, callback) {
     courses_by_absence(absence, (err, result) => {
         if (err) callback(err, null);
         nomenclature_by_courses(result, (err, result) => {
@@ -225,14 +225,19 @@ function teacher_available_by_courses(req, res, absence, teacher, callback) {
             discipline_by_nomenclture(result, (err, result) => {
                 if (err) callback(err, null);
                 let id_disc = result;
+                let trie = [];
 
-                get_available_teacher(req, res, (err, result) => {
-                    if (err) callback(err, null);
-                    let firstTri = result;
-                    let trie = [];
+                for (i = 0; i < tabTeacher.length(); i++) {
+                    element = tabTeacher[i];
+                    correspondance_by_discipline(id_disc, element["id_ens"], (err, res) => {
+                        if (err) callback(err, null);
+                    });
 
-                    firstTri.forEach((element) => trie.push(correspondance_by_discipline(id_disc, element.id_ens)));
-                });
+                    if (res == 1){
+                        trie.push(element);
+                    }
+                }
+
             });
         });
     });
