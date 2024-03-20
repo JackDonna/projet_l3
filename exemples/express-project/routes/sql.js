@@ -9,7 +9,7 @@ const absence_controller = require("../controllers/absence_controller");
 const proposition_controller = require("../controllers/proposition_controller");
 
 // ------------------------------------------- TEACHER CONTROLLERS ---------------------------------------- //
-router.get("/teachers", teacher_controller.get_teacher_list);
+router.get("/teacher/teacher", teacher_controller.get_teacher_list);
 // router.get("/teacher/:id/:nom/:prenom/update", teacher_controller.user_update);
 // router.get("/teacher/detail:id", teacher_controller.user_detail);
 router.get("/teacher/sign_in/:mail/:password", teacher_controller.sign_in);
