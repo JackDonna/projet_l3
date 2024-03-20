@@ -238,6 +238,8 @@ function teacher_available_by_courses(absence, tabTeacher, callback) {
                     }
                 }
 
+                callback(null, trie);
+
             });
         });
     });
