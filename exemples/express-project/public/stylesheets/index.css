@@ -6,13 +6,10 @@
   margin: 0;
 }
 
-html,
-body {
-  height: 100%;
-}
 
-body {
+html, body {
   /* background: #555; */
+  height : 100%;
   display: grid;
   grid-template-rows: auto auto 1fr auto;
   overflow-x: hidden;
@@ -93,18 +90,20 @@ img {
 }
 
 #boite_event {
-   height: auto;
+   height: 100%;
    width: 100%;
-   display: flex;
+   display: grid; /*  /!\ Pas de display Flex quand ça ne sert à rien /!\   */
    justify-content: center;
    align-items: center;
    flex-direction: column;
-   overflow: scroll;
+   overflow: auto;
    overflow-x: hidden;
-  padding-top: 15em;
+   margin-top: 1em;
 }
 
+
 .box_absence {
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,3 +116,32 @@ img {
   border-radius: 15px;
 }
 
+/* Animation de montée */
+@keyframes slide-up {
+  0% {
+      transform: translateY(100%);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+/* Animation de fondu */
+@keyframes fade-out {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
+
+/* Ajout de la classe pour l'animation de montée */
+.slide-up {
+  animation: slide-up 0.5s ease;
+}
+
+/* Ajout de la classe pour l'animation de fondu */
+.fade-out {
+  animation: fade-out 0.5s ease;
+}
