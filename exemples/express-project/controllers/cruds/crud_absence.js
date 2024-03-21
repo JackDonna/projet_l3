@@ -137,7 +137,7 @@ function nomenclature_by_courses(courses, callback) {
             {
                 sql: SQL.select.nomenclature_by_matiere,
                 timeout: 10000,
-                values: [courses],
+                values: [courses[0].matiere],
             },
             (err, rows, fields) => {
                 if (err) throw err;
@@ -152,13 +152,13 @@ function nomenclature_by_courses(courses, callback) {
  * @param absence {integer} id of absence/
  * @param callback {function} callback function (err, result)
  */
-function courses_by_absence(absence, callback) {
+function courses_by_evenement(id_ev, callback) {
     pool.getConnection((err, db) => {
         db.query(
             {
-                sql: SQL.select.courses_by_absence,
+                sql: SQL.select.get_matiere_by_evenement,
                 timeout: 10000,
-                values: [absence],
+                values: [id_ev],
             },
             (err, rows, fields) => {
                 if (err) throw err;
@@ -179,7 +179,7 @@ function discipline_by_nomenclture(nomenclature, callback) {
             {
                 sql: SQL.select.discipline_by_nomenclature,
                 timeout: 10000,
-                values: [noenclature],
+                values: [nomenclature[0].nomenclature],
             },
             (err, rows, fields) => {
                 if (err) throw err;
@@ -217,22 +217,31 @@ function correspondance_by_discipline(discipline, teacher, callback) {
  * @param teacher {integer} id of teacher
  * @param callback {function} callback function (err, result)
  */
-function teacher_available_by_courses(req, res, absence, teacher, callback) {
-    courses_by_absence(absence, (err, result) => {
+function teacher_available_by_courses(id_evenement, tabTeacher, callback) {
+    courses_by_evenement(id_evenement, (err, result) => {
         if (err) callback(err, null);
         nomenclature_by_courses(result, (err, result) => {
             if (err) callback(err, null);
             discipline_by_nomenclture(result, (err, result) => {
                 if (err) callback(err, null);
                 let id_disc = result;
+                let trie = [];
 
-                get_available_teacher(req, res, (err, result) => {
-                    if (err) callback(err, null);
-                    let firstTri = result;
-                    let trie = [];
+                //console.log(tabTeacher)
 
-                    firstTri.forEach((element) => trie.push(correspondance_by_discipline(id_disc, element.id_ens)));
-                });
+                for (i = 0; i < tabTeacher.length; i++) {
+                    element = tabTeacher[i];
+                    correspondance_by_discipline(id_disc, element["id_ens"], (err, res) => {
+                        if (err) callback(err, null);
+                    });
+
+                    if (res == 1){
+                        trie.push(element);
+                    }
+                }
+
+                callback(null, trie);
+
             });
         });
     });
@@ -242,4 +251,4 @@ function teacher_available_by_courses(req, res, absence, teacher, callback) {
 // --- EXPORTS --------------------------------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------------------------------------------ //
 
-module.exports = { insert_new_absence, get_available_teacher, get_absence };
+module.exports = { insert_new_absence, get_available_teacher, get_absence,teacher_available_by_courses };

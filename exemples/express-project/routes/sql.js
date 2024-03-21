@@ -39,6 +39,7 @@ router.delete("/event/delete/:id", event_controller.event_delete_get);
 router.post("/absence/insert", absence_controller.insert_absence);
 router.get("/absence/prof_dispo/:debut/:fin", absence_controller.available_teacher);
 router.get("/absence/get_available_absence", absence_controller.available_absence);
+router.post("/absence/filtre", absence_controller.filtre_diffusion);
 
 // ------------------------------------------ PROPOSITION CONTROLLERS ------------------------------------ //
 // ---- NOT IMPLEMENT YET ------ //
