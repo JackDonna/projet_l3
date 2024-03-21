@@ -6,15 +6,13 @@
   margin: 0;
 }
 
-html,
-body {
-  height: 100%;
-}
 
-body {
+html, body {
   /* background: #555; */
+  height : 100%;
   display: grid;
   grid-template-rows: auto auto 1fr auto;
+  overflow-x: hidden;
 }
 
 header {
@@ -92,22 +90,62 @@ img {
 }
 
 #boite_event {
-  display: grid;
-  justify-content: left;
-  align-items: center;
-  height: 100px;
-  width: 100%;
-  border-radius: 15px;
-  padding: 10px;
-  margin: 10px;
+   height: 100%;
+   width: 100%;
+   display: grid; /*  /!\ Pas de display Flex quand ça ne sert à rien /!\   */
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   overflow: auto;
+   overflow-x: hidden;
+   margin-top: 1em;
 }
 
+
 .box_absence {
+
   display: flex;
-  background-color: whitesmoke;
-  border: 1px solid #1e1e1e;
-  margin-bottom: 1em;
-  width: 10em;
   justify-content: center;
-  border-radius: 0.5rem;
+  align-items: center;
+  height: 150px;
+  width: 300px;
+  background: whitesmoke;
+  margin-bottom: 30px;
+  padding: 15px;
+  border: solid 3px;
+  border-radius: 15px;
+}
+
+button {
+  margin-left : 1em;
+  border : none;
+}
+/* Animation de montée */
+@keyframes slide-up {
+  0% {
+      transform: translateY(100%);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+/* Animation de fondu */
+@keyframes fade-out {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
+
+/* Ajout de la classe pour l'animation de montée */
+.slide-up {
+  animation: slide-up 0.5s ease;
+}
+
+/* Ajout de la classe pour l'animation de fondu */
+.fade-out {
+  animation: fade-out 0.5s ease;
 }

@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="manifest" href="javascripts/pwa.webmanifest" />
     <link rel="stylesheet" href="stylesheets/dashboard_admin.css" />
-    <link rel="stylesheet" href="stylesheets/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,200" />
     <title>dashboard admin</title>
   </head>
   <body>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <div class="header"></div>
+    <div class="header">
+      <span class="material-symbols-outlined logout" onclick="logout()">logout</span>
+    </div>
     <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" />
     <label for="openSidebarMenu" class="sidebarIconToggle">
       <div class="spinner diagonal part-1"></div>
@@ -20,30 +22,33 @@
     </label>
     <div id="sidebarMenu">
       <ul class="sidebarMenuInner">
-        <li>
-          <a
-            href="#0"
-            target="_blank"
-            >Professeurs absents</a
-          >
+        <li id="absence">
+          <p>Absences</p>
         </li>
-        <li>
-          <a href="#1" target="_blank"
-            >Cours annulés</a
-          >
+        <li id="list_diff">
+          <p>Liste de diffusion</p>
         </li>
-        <li>
-          <a href="#2" target="_blank"
-            >Professeurs éligibles</a
-          >
+        <li id="propositions">
+          <p>Propositions</p>
+        </li>
+        <li id="remplacements">
+          <p>Remplacements</p>
         </li>
       </ul>
     </div>
+    <div class="container">
+      <div id="container_absence"></div>
+      <div id="container_list_diff">
+        <h1>Liste de diffusion</h1>
+      </div>
+      <div id="container_propositions">
+        <h1>Propositions</h1>
+      </div>
+      <div id="container_remplacements">
+        <h1>Remplacements</h1>
+      </div>
+    </div>
 
-    <div id="boite_event"></div>
-    <div id="center" class="main center"></div>
-
-    <a class="logout" href="/logout">Se deconnecter</a>
   </body>
   <script src=""></script>
   <script src="javascripts/event.js"></script>

@@ -2,7 +2,18 @@
 // --- DOM ELEMENTS -----------------------------------------------------------------------------------------------------------//
 // ----------------------------------------------------------------------------------------------------------------------------//
  
-const boite = document.getElementById("boite_event");
+const affichage_absence = document.getElementById("container_absence");
+
+const absence = document.getElementById("absence");
+
+const affichage_list_diff = document.getElementById("container_list_diff");
+const list_diff = document.getElementById("list_diff");
+
+const affichage_propositions = document.getElementById("container_propositions");
+const propositions = document.getElementById("propositions");
+
+const affichage_remplacements = document.getElementById("container_remplacements");
+const remplacements = document.getElementById("remplacements");
 
 // ----------------------------------------------------------------------------------------------------------------------------//
 // ----GLOBALS VARIABLES ------------------------------------------------------------------------------------------------------//
@@ -19,10 +30,10 @@ let dejaAffiche = {};
  */
 async function print_absence() {
 
-   let json = await axios.get("/sql/absence/get_available_absence").then((response) =>
+   let json = await axios.get("/sql/teacher/getUnavailableTeachers").then((response) =>
    {
       console.log(response)
-      let json = response.data
+      let json = response.data.data
       console.log(json)
       for (let i = 0; i < json.length; i++) {
          let evenement = json[i];
@@ -33,27 +44,54 @@ async function print_absence() {
          }
    
          // Créer un paragraphe pour chaque donnée
-         let p = document.createElement("p");
-         p.classList.add("box_absence");
+         let div = document.createElement("div");
+         div.classList.add("box_absence");
    
          // Affecter la valeur de chaque clé à chaque paragraphe
          console.log(evenement)
-         p.innerHTML = `
-            Motif : ${evenement.motif}<br>
-            Date : ${evenement.date}<br>
-            Heure du début :${evenement.heure_debut}<br>
-            Heure de fin : ${evenement.heure_fin}<br>
-            Professeur : ${evenement.nom} ${evenement.prenom}
+         div.innerHTML = `
+            <p><span class="cle">Motif : </span>${evenement.motif}</p>
+            <p><span class="cle">Date : </span>${evenement.date.split('T',1)}</p>
+            <p><span class="cle">Heure de début : </span>${evenement.heure_debut}</p>
+            <p><span class="cle">Heure de fin : </span>${evenement.heure_fin}</p>
+            <p><span class="cle">Professeur : </span>${evenement.nom} ${evenement.prenom}</p>
          `;
    
          // Ajouter le paragraphe à la boite
-         boite.appendChild(p);
+         affichage_absence.appendChild(div);
          
          // Marquer l'événement comme déjà affiché
          dejaAffiche[JSON.stringify(evenement)] = true;
       }
    });
-   
+}
+
+absence.addEventListener("click", () => {
+   affichage_list_diff.style.display = "none";
+   affichage_propositions.style.display = "none";
+   affichage_remplacements.style.display = "none";
+})
+
+list_diff.addEventListener("click", () => {
+   affichage_list_diff.style.display = "flex";
+   affichage_propositions.style.display = "none";
+   affichage_remplacements.style.display = "none";
+})
+
+propositions.addEventListener("click", () => {
+   affichage_list_diff.style.display = "none";
+   affichage_propositions.style.display = "flex";
+   affichage_remplacements.style.display = "none";
+})
+
+remplacements.addEventListener("click", () => {
+   affichage_list_diff.style.display = "none";
+   affichage_propositions.style.display = "none";
+   affichage_remplacements.style.display = "flex";
+})
+
+function logout(){
+   window.location.href = "/logout";
 }
 
 // ----------------------------------------------------------------------------------------------------------------------------//
@@ -65,4 +103,4 @@ async function print_absence() {
 // ----------------------------------------------------------------------------------------------------------------------------//
 
 print_absence();
-setInterval(ajouterDansBoite, 10000);
+setInterval(print_absence, 10000);
