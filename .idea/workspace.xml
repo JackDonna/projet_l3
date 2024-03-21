@@ -4,13 +4,6 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< Updated upstream
-    <list default="true" id="dcd9f067-578b-4156-9def-dfda21dea99a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exemples/express-project/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/bin/www" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exemples/express-project/controllers/config/sql_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/controllers/config/sql_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exemples/express-project/controllers/cruds/crud_event.js" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/controllers/cruds/crud_event.js" afterDir="false" />
-=======
     <list default="true" id="dcd9f067-578b-4156-9def-dfda21dea99a" name="Changes" comment="return">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exemples/express-project/controllers/absence_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/controllers/absence_controller.js" afterDir="false" />
@@ -20,7 +13,6 @@
       <change beforePath="$PROJECT_DIR$/exemples/express-project/controllers/cruds/crud_event.js" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/controllers/cruds/crud_event.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exemples/express-project/public/javascripts/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/public/javascripts/calendar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exemples/express-project/routes/sql.js" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/routes/sql.js" afterDir="false" />
->>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,10 +44,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-<<<<<<< Updated upstream
-=======
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
->>>>>>> Stashed changes
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
