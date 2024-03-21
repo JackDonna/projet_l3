@@ -333,12 +333,6 @@ function teacher_is_available(id_teacher, debut, fin, date, db) {
                 }
             }
         );
-<<<<<<< Updated upstream
-    });
-=======
-
-
->>>>>>> Stashed changes
 }
 
 // ------------------------------------------------------------------------------------------------------------------ //
@@ -356,13 +350,7 @@ function teacher_is_available(id_teacher, debut, fin, date, db) {
  * @return {void}
  */
 function all_teachers_available(tab_teacher, debut, fin, date, callback) {
-<<<<<<< Updated upstream
-    res = [];
-    for (i = 0; i < tab_teacher.length; i++) {
-        teacher_is_available(tab_teacher[i]["id_ens"], debut, fin, date, (err, result) => {
-            if (err) callback(err, null);
-            if (result) {
-=======
+
     res = []
     pool.getConnection((err, db) => {
         if (err) {callback (err,null)}
@@ -377,7 +365,7 @@ function all_teachers_available(tab_teacher, debut, fin, date, callback) {
             //console.log(result);
 
             if(result == true){
->>>>>>> Stashed changes
+
                 res.push(tab_teacher[i]);
                 //console.log(res);
             }
@@ -386,19 +374,11 @@ function all_teachers_available(tab_teacher, debut, fin, date, callback) {
         });
 
     }
-<<<<<<< Updated upstream
     console.log(res)
     setTimeout(callback(null,res),1000);
     console.log(res)
     callback(null, res);
-=======
-
-    console.log(res)
-
     })
-    console.log(res)
-    setTimeout(null, res);
->>>>>>> Stashed changes
 }
 
 /**
@@ -540,10 +520,7 @@ module.exports = {
     insert_timetable,
     get_teacher_timetable,
     insert_timetable_sync,
-<<<<<<< Updated upstream
     insertTimetableRoot,
-=======
     get_event_by_id,
     all_teachers_available,
->>>>>>> Stashed changes
 };
