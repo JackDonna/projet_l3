@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="javascripts/pwa.webmanifest" />
+    <link rel="stylesheet" href="stylesheets/dashboard_admin.css" />
+    <link rel="stylesheet" href="stylesheets/index.css" />
+    <title>dashboard admin</title>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <div class="root">
+      <form action="/sql/event/rootInsert" method="POST" id="form">
+        <input type="text" name="path" id="path">
+        <input type="submit">
+      </form>
+    </div>
+  </body>
+</html>

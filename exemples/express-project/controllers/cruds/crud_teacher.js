@@ -8,7 +8,7 @@ const SQL = sql_config.sql;
 // --- SUBS FUNCTIONS -------------------------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------------------------------------------ //
 
-function get_all_teacher(callback){
+function get_all_teacher(callback) {
     pool.getConnection((err, db) => {
         if (err) callback(err, null);
         db.query(
@@ -380,6 +380,23 @@ function getUnavailableTeachersByEtablishement(idEtablishement, callback) {
     });
 }
 
+function searchTeacher(name, callback) {
+    pool.getConnection((err, sqlDatabase) => {
+        if (err) callback(err, null);
+        sqlDatabase.query(
+            {
+                sql: SQL.select.searchTeacher,
+                values: [name],
+                timeout: 10000,
+            },
+            (err, rows, fields) => {
+                if (err) callback(err, null);
+                callback(null, rows[0]);
+            }
+        );
+    });
+}
+
 // ------------------------------------------------------------------------------------------------------------------ //
 // --- MAINS FUNCTIONS ------------------------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------------------------------------------ //
@@ -518,6 +535,13 @@ function getTeacherForAdminPanel(req, res, callback) {
     });
 }
 
+function getTeacher(name, callback) {
+    searchTeacher(name, (err, teacher) => {
+        if (err) callback(err, null);
+        callback(null, teacher);
+    });
+}
+
 // ------------------------------------------------------------------------------------------------------------------ //
 // --- EXPORTS --------------------------------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------------------------------------------ //
@@ -528,6 +552,7 @@ module.exports = {
     sign_up,
     sign_in_admin,
     getTeacherForAdminPanel,
+    getTeacher,
     get_all_teacher,
 };
 sign_in;

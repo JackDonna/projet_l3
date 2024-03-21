@@ -15,6 +15,7 @@ router.get("/teacher/teacher", teacher_controller.get_teacher_list);
 router.get("/teacher/sign_in/:mail/:password", teacher_controller.sign_in);
 router.get("/teacher/sign_in_as_admin/:mail/:password", teacher_controller.sign_in_as_admin);
 router.get("/teacher/getUnavailableTeachers", teacher_controller.teachersUnavailable);
+router.get("/teacher/getTeacher/:name", teacher_controller.searchTeacher);
 router.post("/teacher/validate", teacher_controller.teacher_validation);
 router.post("/teacher/sign_up", teacher_controller.sign_up);
 // router.delete("/teacher/delete/:id", teacher_controller.user_delete);

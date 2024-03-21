@@ -1,30 +1,25 @@
 const asyncHandler = require("express-async-handler");
 const { RequestResponse } = require("./utils/object_engine");
+
 const {
-  validate_teacher,
-  sign_in,
-  sign_up,
-  sign_in_admin,
-  getTeacherForAdminPanel,
-  get_all_teacher,
+    validate_teacher,
+    sign_in,
+    sign_up,
+    sign_in_admin,
+    getTeacherForAdminPanel,
+    getTeacher,
+    get_all_teacher,
 } = require(__dirname + "/cruds/crud_teacher.js");
 
 // ----------------------------------- EXPORTS FUNCTIONS CRUDS RESULT -------------------------------- //
 
 exports.teachersUnavailable = asyncHandler((req, res) => {
-  getTeacherForAdminPanel(req, res, (err, teachers) => {
-    let response = new RequestResponse(
-      "teacherAPI",
-      "GET",
-      teachers,
-      "boolean",
-      "Validate an account",
-      err
-    );
+    getTeacherForAdminPanel(req, res, (err, teachers) => {
+        let response = new RequestResponse("teacherAPI", "GET", teachers, "boolean", "Validate an account", err);
 
-    if (err) console.error(err);
-    res.send(response);
-  });
+        if (err) console.error(err);
+        res.send(response);
+    });
 });
 /**
  * @function teacher_validation post request to set the validation for a teacher in the SQL database ( need to be sign-in)
@@ -32,19 +27,12 @@ exports.teachersUnavailable = asyncHandler((req, res) => {
  * @type {*|express.RequestHandler<core.ParamsDictionary, any, any, core.Query>}
  */
 exports.teacher_validation = asyncHandler((req, res) => {
-  validate_teacher(req, res, (err, result) => {
-    let response = new RequestResponse(
-      "teacherAPI",
-      "POST",
-      result,
-      "boolean",
-      "Validate an account",
-      err
-    );
+    validate_teacher(req, res, (err, result) => {
+        let response = new RequestResponse("teacherAPI", "POST", result, "boolean", "Validate an account", err);
 
-    if (err) console.error(err);
-    res.send(response);
-  });
+        if (err) console.error(err);
+        res.send(response);
+    });
 });
 
 /**
@@ -53,19 +41,19 @@ exports.teacher_validation = asyncHandler((req, res) => {
  * @type {*|express.RequestHandler<core.ParamsDictionary, any, any, core.Query>}
  */
 exports.sign_in = asyncHandler((req, res) => {
-  sign_in(req, res, (err, result) => {
-    let response = new RequestResponse(
-      "teacherAPI",
-      "GET",
-      result,
-      "boolean",
-      "Set session and GET account information",
-      err
-    );
+    sign_in(req, res, (err, result) => {
+        let response = new RequestResponse(
+            "teacherAPI",
+            "GET",
+            result,
+            "boolean",
+            "Set session and GET account information",
+            err
+        );
 
-    if (err) console.error(err);
-    res.send(response);
-  });
+        if (err) console.error(err);
+        res.send(response);
+    });
 });
 
 /**
@@ -74,19 +62,12 @@ exports.sign_in = asyncHandler((req, res) => {
  * @type {*|express.RequestHandler<core.ParamsDictionary, any, any, core.Query>}
  */
 exports.sign_up = asyncHandler((req, res) => {
-  sign_up(req, res, (err, result) => {
-    let response = new RequestResponse(
-      "teacherAPI",
-      "POST",
-      result,
-      "boolean",
-      "Create an account",
-      err
-    );
+    sign_up(req, res, (err, result) => {
+        let response = new RequestResponse("teacherAPI", "POST", result, "boolean", "Create an account", err);
 
-    if (err) console.error(err);
-    res.send(response);
-  });
+        if (err) console.error(err);
+        res.send(response);
+    });
 });
 
 /**
@@ -95,32 +76,26 @@ exports.sign_up = asyncHandler((req, res) => {
  * @type {*|express.RequestHandler<core.ParamsDictionary, any, any, core.Query>}
  */
 exports.sign_in_as_admin = asyncHandler((req, res) => {
-  sign_in_admin(req, res, (err, result) => {
-    let response = new RequestResponse(
-      "teacherAPI",
-      "GET",
-      result,
-      "boolean",
-      "Set session and GET admin info",
-      err
-    );
+    sign_in_admin(req, res, (err, result) => {
+        let response = new RequestResponse("teacherAPI", "GET", result, "boolean", "Set session and GET admin info", err);
 
-    if (err) console.error(err);
-    res.send(response);
-  });
+        if (err) console.error(err);
+        res.send(response);
+    });
+});
+
+exports.searchTeacher = asyncHandler((req, res) => {
+    getTeacher(req, res, (err, result) => {
+        let response = new RequestResponse("teacherAPI", "GET", result, "teacher", "Search teacher", err);
+        if (err) console.error(err);
+        res.send(response);
+    });
 });
 
 exports.get_teacher_list = asyncHandler((req, res) => {
-  get_all_teacher((err, result) => {
-    let response = new RequestResponse(
-      "teacherAPI",
-      "GET",
-      result,
-      "array",
-      "List of teacher",
-      err
-    )
-    if (err) console.error(err);
-    res.send(response);
-  })
-})
+    get_all_teacher((err, result) => {
+        let response = new RequestResponse("teacherAPI", "GET", result, "array", "List of teacher", err);
+        if (err) console.error(err);
+        res.send(response);
+    });
+});
