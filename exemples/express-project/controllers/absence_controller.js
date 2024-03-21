@@ -5,8 +5,23 @@ const
     {
         insert_new_absence,
         get_available_teacher,
-        get_absence
+        get_absence,
+        teacher_available_by_courses,
     } = require(__dirname + "/cruds/crud_absence.js");
+const
+    {
+        get_event_by_id,
+        all_teachers_available,
+    } = require(__dirname + "/cruds/crud_event.js");
+
+const
+    {
+        get_all_teacher,
+    } = require(__dirname + "/cruds/crud_teacher.js");
+const
+    {
+        insert_all_diffusion,
+    } = require(__dirname + "/cruds/crud_diffusion.js");
 
 // ----------------------------------- EXPORTS FUNCTIONS CRUDS RESULT -------------------------------- //
 /**
@@ -80,3 +95,43 @@ exports.available_absence = asyncHandler((req, res) => {
 //         res.send(result)
 //     })
 // })
+
+
+exports.filtre_diffusion = asyncHandler ((req, res) => {
+    let id_event = req.body.id_abs;
+    get_event_by_id(id_event,(err,result) => {
+        if (err) callback(err,null);
+        let hdebut = result[0].heure_debut;
+        let hfin = result[0].heure_fin;
+        let date = result[0].date;
+
+
+    // Créer un objet Date en utilisant la chaîne de date
+        var dateObj = new Date(date);
+
+    // Extraire la date (année, mois, jour)
+        var year = dateObj.getFullYear();
+        var month = dateObj.getMonth() + 1; // Les mois sont indexés à partir de 0
+        var day = dateObj.getDate();
+
+    // Formater la date au format "YYYY-MM-DD"
+        var formattedDate = year + "-" + (month < 10 ? "0" + month : month) + "-" + (day < 10 ? "0" + day : day);
+
+        date = formattedDate;
+
+        get_all_teacher((err,result) => {
+            if (err) callback(err,null);
+            //console.log(result);
+            all_teachers_available(result,hdebut,hfin,date,(err,result) => {
+                if (err) callback(err,null);
+                //console.log(result);
+                teacher_available_by_courses(id_event,result,(err, result) => {
+                    if (err) callback(err,null);
+                    insert_all_diffusion(result,id_event, (err, result) => { // à Changer
+                        if (err) callback(err,null);
+                    })
+                })
+            })
+        })
+    })
+});

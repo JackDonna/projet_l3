@@ -4,11 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="dcd9f067-578b-4156-9def-dfda21dea99a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exemples/express-project/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/bin/www" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exemples/express-project/controllers/config/sql_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/controllers/config/sql_config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exemples/express-project/controllers/cruds/crud_event.js" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/controllers/cruds/crud_event.js" afterDir="false" />
+=======
+    <list default="true" id="dcd9f067-578b-4156-9def-dfda21dea99a" name="Changes" comment="return">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exemples/express-project/controllers/absence_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/controllers/absence_controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exemples/express-project/controllers/config/sql_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/controllers/config/sql_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exemples/express-project/controllers/cruds/crud_absence.js" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/controllers/cruds/crud_absence.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exemples/express-project/controllers/cruds/crud_diffusion.js" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/controllers/cruds/crud_diffusion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exemples/express-project/controllers/cruds/crud_event.js" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/controllers/cruds/crud_event.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exemples/express-project/public/javascripts/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/public/javascripts/calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exemples/express-project/routes/sql.js" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/routes/sql.js" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +52,10 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+<<<<<<< Updated upstream
+=======
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+>>>>>>> Stashed changes
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -53,8 +69,19 @@
       <updated>1710836618455</updated>
       <workItem from="1710836619478" duration="5897000" />
       <workItem from="1710870301977" duration="268000" />
-      <workItem from="1710943587148" duration="5219000" />
+      <workItem from="1710943587148" duration="12289000" />
+      <workItem from="1710964830138" duration="12868000" />
+      <workItem from="1711003314855" duration="299000" />
     </task>
+    <task id="LOCAL-00001" summary="return">
+      <option name="closed" value="true" />
+      <created>1710949934975</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710949934975</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -70,5 +97,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="return" />
+    <option name="LAST_COMMIT_MESSAGE" value="return" />
   </component>
 </project>

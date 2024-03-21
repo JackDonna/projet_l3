@@ -51,8 +51,36 @@ function getMyDiffusionExport(req, res, callback) {
     });
 }
 
+
+function insert_diffusion(id_teach, id_abs, callback){
+    pool.getConnection((err, db) => {
+        if (err) callback(err, null);
+        db.query(
+            {
+                sql: SQL.insert.diffusion,
+                timeout: 10000,
+                values: [id_teach,id_abs],
+            },
+            (err, rows, fields) => {
+                if (err) callback(err, null);
+                callback(null, true);
+            }
+        );
+    });
+}
+
+function insert_all_diffusion(tabTeacher,id_abs,callback){
+    for (i = 0; i < tabTeacher.length; i++){
+        insert_diffusion(tabTeacher[i]["id_ens"],id_abs, (err,result) => {
+            if (err) callback(err, null);
+        });
+    }
+}
+
 // ------------------------------------------------------------------------------------------------------------------ //
 // --- EXPORTS --------------------------------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------------------------------------------ //
 
-module.exports = { getMyDiffusionExport };
+module.exports = { getMyDiffusionExport,
+                   insert_all_diffusion
+};
