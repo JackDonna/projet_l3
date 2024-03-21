@@ -16,11 +16,43 @@ let dejaAffiche = {};
 
 
 /**
+ * Fonction pour déclencher l'animation de montée des boîtes
+ */
+function declencherAnimationMontee() {
+   // Récupere toutes les boîtes existantes
+   let boites = document.querySelectorAll(".box_absence");
+
+   // Parcoure chaque boîte
+   boites.forEach(function(boite) {
+       // Ajoute la classe pour déclencher l'animation de montée
+       boite.classList.add("slide-up");
+   });
+}
+
+
+/**
+ * Fonction pour ajouter une classe pour l'animation de fondu et supprimer la boîte après la fin de l'animation
+ */
+function supprimerBoiteAvecAnimation(p) {
+   setTimeout(function(){
+      // Ajoute la classe pour l'animation de fondu
+      p.classList.add("fade-out");
+
+      // Supprime la boîte après la fin de l'animation
+      setTimeout(function() {
+         boite.removeChild(p);
+         declencherAnimationMontee(p);
+      }, 500); 
+   }, 50);
+}
+
+
+/**
  * Fonction pour afficher une boîte de dialogue de confirmation avant de supprimer la boîte
  */
 function confirmerAvantSuppression(p) {
     if (confirm("Voulez-vous vraiment choisir cet événement ?")) {
-        boite.removeChild(p); // Supprimer le paragraphe parent (la boîte)
+      supprimerBoiteAvecAnimation(p); // Supprime le paragraphe parent (la boîte) avec une animation de fade en sortie
     }
 }
 
@@ -37,17 +69,17 @@ async function print_absence() {
       for (let i = 0; i < json.length; i++) {
          let evenement = json[i];
          
-         // Vérifier si l'événement a déjà été affiché
+         // Vérifie si l'événement a déjà été affiché
          if (dejaAffiche[JSON.stringify(evenement)]) {
             continue; // Passer à la prochaine itération si l'événement existe déjà
          }
    
-         // Créer un paragraphe pour chaque donnée
+         // Crée un paragraphe pour chaque donnée
          let p = document.createElement("p");
          p.classList.add("box_absence");
          
    
-         // Affecter la valeur de chaque clé à chaque paragraphe
+         // Affecte la valeur de chaque clé à chaque paragraphe
          console.log(evenement)
          p.innerHTML = `
             Motif : ${evenement.motif}<br>
@@ -57,19 +89,20 @@ async function print_absence() {
             Professeur : ${evenement.nom} ${evenement.prenom}
          `;
    
-         // Créer un bouton pour cacher la boîte
+         // Crée un bouton pour cacher la boîte
          let bouton = document.createElement("button");
          bouton.innerHTML = "Choisir";
          bouton.onclick = function() {
             confirmerAvantSuppression(p); // Afficher la confirmation avant de supprimer
          };
+         
          p.appendChild(bouton);
 
-         // Ajouter le paragraphe à la boite
+         // Ajoute le paragraphe à la boite
          boite.appendChild(p);
 
          
-         // Marquer l'événement comme déjà affiché
+         // Marque l'événement comme déjà affiché
          dejaAffiche[JSON.stringify(evenement)] = true;
       }
    });
