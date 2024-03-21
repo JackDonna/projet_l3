@@ -101,6 +101,7 @@ input[type="checkbox"] {
   display: none;
 }
 .sidebarIconToggle {
+  display: none;
   transition: all 0.3s;
   box-sizing: border-box;
   cursor: pointer;
