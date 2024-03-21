@@ -316,7 +316,7 @@ function get_events_by_teacher_id(id, callback) {
  * @param {function} callback - The callback function to handle the result
  * @return {void}
  */
-function teacher_is_available(id_teacher, debut, fin, date, db) {
+function teacher_is_available(db, id_teacher, debut, fin, date, callback) {
         db.query(
             {
                 sql: SQL.select.teacher_is_available2,
@@ -324,13 +324,8 @@ function teacher_is_available(id_teacher, debut, fin, date, db) {
                 timeout: 10000,
             },
             (err, rows) => {
-                //console.log(rows);
-                if (err) callback(err, null);
-                if (rows[0] > 0) {
-                    callback(null, false);
-                } else {
-                    callback(null, true);
-                }
+                if(err) callback (err, null);
+                callback(null, rows[0]["nb_event"] == 0);
             }
         );
 }
@@ -351,33 +346,22 @@ function teacher_is_available(id_teacher, debut, fin, date, db) {
  */
 function all_teachers_available(tab_teacher, debut, fin, date, callback) {
 
-    res = []
+    let res = [];
     pool.getConnection((err, db) => {
         if (err) {callback (err,null)}
 
-        console.log(tab_teacher[0].id_ens)
+        let c = 0;
 
-    for(i=0; i < tab_teacher.length; i++){
-        teacher_is_available(tab_teacher[i].id_ens, debut, fin, date, db, (err, result) => {
-            if(err) {console.log(err)}
+        for(let i=0; i < tab_teacher.length; i++){
+            teacher_is_available(db, tab_teacher[i].id_ens, debut, fin, date, (err, result) => {
+                if(result) res.push(tab_teacher[i]);
+                c ++;
+                if(c == tab_teacher.length) {
+                    callback(null, res);
+                }
+            });
 
-            console.log(result);
-            //console.log(result);
-
-            if(result == true){
-
-                res.push(tab_teacher[i]);
-                //console.log(res);
-            }
-            //console.log(res);
-
-        });
-
-    }
-    console.log(res)
-    setTimeout(callback(null,res),1000);
-    console.log(res)
-    callback(null, res);
+        }
     })
 }
 
