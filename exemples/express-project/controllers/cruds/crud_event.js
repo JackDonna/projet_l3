@@ -361,6 +361,9 @@ function all_teachers_available(tab_teacher, debut, fin, date, callback) {
             }
         });
     }
+    console.log(res)
+    setTimeout(callback(null,res),1000);
+    console.log(res)
     callback(null, res);
 }
 
