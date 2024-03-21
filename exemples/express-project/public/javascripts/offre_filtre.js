@@ -29,7 +29,7 @@ function confirmerAvantSuppression(p) {
  */
 async function print_absence() {
 
-   let json = await axios.get("/sql/teacher/getUnavailableTeachers").then((response) =>
+   let json = await axios.get("/sql/absence/get_available_absence").then((response) =>
    {
       console.log(response)
       let json = response.data.data

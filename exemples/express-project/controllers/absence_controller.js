@@ -98,9 +98,8 @@ exports.available_absence = asyncHandler((req, res) => {
 
 
 exports.filtre_diffusion = asyncHandler ((req, res) => {
-    let id_event = req.body.id_abs;
+    let id_event = req.body.id_ev;
     get_event_by_id(id_event,(err,result) => {
-        if (err) callback(err,null);
         let hdebut = result[0].heure_debut;
         let hfin = result[0].heure_fin;
         let date = result[0].date;
@@ -119,16 +118,22 @@ exports.filtre_diffusion = asyncHandler ((req, res) => {
 
         date = formattedDate;
 
-        get_all_teacher((err,result) => {
-            if (err) callback(err,null);
+        get_all_teacher((err, teachers) => {
+            if (err) console.error(err);
+            console.log("tout les pof recuperer")
             //console.log(result);
-            all_teachers_available(result,hdebut,hfin,date,(err,result) => {
-                if (err) callback(err,null);
+            all_teachers_available(teachers,hdebut,hfin,date,(err,available) => {
+                console.log("trie par horaire fini")
+                if (err) console.error(err);
                 //console.log(result);
-                teacher_available_by_courses(id_event,result,(err, result) => {
-                    if (err) callback(err,null);
-                    insert_all_diffusion(result,id_event, (err, result) => { // à Changer
-                        if (err) callback(err,null);
+                teacher_available_by_courses(id_event,available,(err, courses) => {
+
+                    if (err) console.error(err);
+                    console.log("trie par matière fini")
+                    insert_all_diffusion(courses, id_event, (err, result) => { // à Changer
+                        console.log("insertion des diffusion fini")
+                        if (err) console.error(err);
+                        res.send("ok");
                     })
                 })
             })

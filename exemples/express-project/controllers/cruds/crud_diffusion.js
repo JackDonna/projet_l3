@@ -52,9 +52,8 @@ function getMyDiffusionExport(req, res, callback) {
 }
 
 
-function insert_diffusion(id_teach, id_abs, callback){
-    pool.getConnection((err, db) => {
-        if (err) callback(err, null);
+function insert_diffusion(db, id_teach, id_abs, callback){
+
         db.query(
             {
                 sql: SQL.insert.diffusion,
@@ -66,15 +65,22 @@ function insert_diffusion(id_teach, id_abs, callback){
                 callback(null, true);
             }
         );
-    });
 }
 
 function insert_all_diffusion(tabTeacher,id_abs,callback){
-    for (i = 0; i < tabTeacher.length; i++){
-        insert_diffusion(tabTeacher[i]["id_ens"],id_abs, (err,result) => {
-            if (err) callback(err, null);
-        });
-    }
+    console.log("insertion")
+    pool.getConnection((err, db) => {
+        console.log("connection ok")
+        if(err) console.error(err)
+        console.log(tabTeacher)
+        for (let i = 0; i < tabTeacher.length; i++){
+            console.log("insertion " + i + " / " + tabTeacher.length)
+            insert_diffusion(db, tabTeacher[i].id_ens, id_abs, (err,result) => {
+                if (err) callback(err, null);
+            });
+        }
+        callback(null, true);
+    });
 }
 
 // ------------------------------------------------------------------------------------------------------------------ //

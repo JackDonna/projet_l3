@@ -61,7 +61,6 @@ function prof_dispo(debut, fin, callback) {
  * @return {void}
  */
 function get_available_absence(id_ens, callback) {
-    console.log(id_ens);
     pool.getConnection((err, db) => {
         db.query(
             {
@@ -120,6 +119,7 @@ function get_available_teacher(req, res, callback) {
  * @return {undefined}
  */
 function get_absence(req, res, callback) {
+    console.log(req.session.id_ens)
     get_available_absence(req.session.id_ens, (err, res) => {
         if (err) callback(err, null);
         callback(null, res);
@@ -183,7 +183,7 @@ function discipline_by_nomenclture(nomenclature, callback) {
             },
             (err, rows, fields) => {
                 if (err) throw err;
-                callback(null, rows);
+                callback(null, rows[0]);
             }
         );
     });
@@ -195,20 +195,21 @@ function discipline_by_nomenclture(nomenclature, callback) {
  * @param teacher {integer} number of nomnclature
  * @param callback {function} callback function (err, result)
  */
-function correspondance_by_discipline(discipline, teacher, callback) {
-    pool.getConnection((err, db) => {
+function correspondance_by_discipline(db, discipline, teacher, callback) {
+
         db.query(
             {
                 sql: SQL.select.teacher_by_discipline,
                 timeout: 10000,
-                values: [teacher, disipline],
+                values: [teacher, discipline],
             },
             (err, rows, fields) => {
                 if (err) throw err;
+                console.log("teacher : " + teacher + " for disc : " + discipline + " result : " + rows.length)
                 callback(null, rows);
+
             }
         );
-    });
 }
 
 /**
@@ -224,24 +225,28 @@ function teacher_available_by_courses(id_evenement, tabTeacher, callback) {
             if (err) callback(err, null);
             discipline_by_nomenclture(result, (err, result) => {
                 if (err) callback(err, null);
-                let id_disc = result;
+                console.log(result);
+                let id_disc = result.id_disc;
                 let trie = [];
 
                 //console.log(tabTeacher)
 
-                for (i = 0; i < tabTeacher.length; i++) {
-                    element = tabTeacher[i];
-                    correspondance_by_discipline(id_disc, element["id_ens"], (err, res) => {
-                        if (err) callback(err, null);
-                    });
-
-                    if (res == 1){
-                        trie.push(element);
+                let c = 0;
+                pool.getConnection((err, db) => {
+                    for (i = 0; i < tabTeacher.length; i++) {
+                        let element = tabTeacher[i];
+                        correspondance_by_discipline(db, id_disc, element.id_ens, (err, res) => {
+                            if (err) callback(err, null);
+                            if (res.length > 0) {
+                                trie.push(element);
+                            }
+                            c++;
+                            if (c == tabTeacher.length) {
+                                callback(null, trie);
+                            }
+                        });
                     }
-                }
-
-                callback(null, trie);
-
+                });
             });
         });
     });
