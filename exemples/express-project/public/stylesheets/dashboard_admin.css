@@ -199,11 +199,20 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .cle {
   color: #9fccce;
+}
+
+#absence_logo {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+#absence_logo img {
+  padding-top: 40%;
 }
 
 #container_list_diff {
