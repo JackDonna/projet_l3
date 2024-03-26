@@ -208,23 +208,43 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 
 #container_list_diff {
   display: none;
-  justify-content: center;
+  justify-content: start;
   align-items: start;
-  padding-top: 300px;
+  padding-left: 60px;
+  flex-direction: column;
+  padding-top: 100px;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  height: 150px;
+  width: 500px;
+  background: whitesmoke;
+  margin-bottom: 30px;
+  padding: 0 15px;
+  border: solid 3px #9fccce;
+  border-radius: 15px;
 }
 
 #container_propositions {
   display: none;
-  justify-content: center;
+  justify-content: start;
   align-items: start;
-  padding-top: 300px;
+  padding-left: 60px;
+  flex-direction: column;
+  padding-top: 100px;
 }
 
 #container_remplacements {
   display: none;
-  justify-content: center;
+  justify-content: start;
   align-items: start;
-  padding-top: 300px;
+  padding-left: 60px;
+  flex-direction: column;
+  padding-top: 100px;
 }
 
 .logout {
