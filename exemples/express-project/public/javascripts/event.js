@@ -30,19 +30,24 @@ let dejaAffiche = {};
 /**
  * function add absence in GUI by the APi RDP
  */
+
+var count = 0;
+
 async function print_absence() {
 
-   let json = await axios.get("/sql/teacher/getUnavailableTeachers").then((response) =>
+   await axios.get("/sql/teacher/getUnavailableTeachers").then((response) =>
    {
-      console.log(response)
+      // console.log(response)
       let json = response.data.data
-      console.log(json)
+      // console.log(json)
       for (let i = 0; i < json.length; i++) {
          let evenement = json[i];
          
          // Vérifier si l'événement a déjà été affiché
          if (dejaAffiche[JSON.stringify(evenement)]) {
             continue; // Passer à la prochaine itération si l'événement existe déjà
+         }else {
+            count++;
          }
    
          // Créer un paragraphe pour chaque donnée
@@ -50,7 +55,7 @@ async function print_absence() {
          div.classList.add("box_absence");
    
          // Affecter la valeur de chaque clé à chaque paragraphe
-         console.log(evenement)
+         // console.log(evenement)
          div.innerHTML = `
             <p><span class="cle">Motif : </span>${evenement.motif}</p>
             <p><span class="cle">Date : </span>${evenement.date.split('T',1)}</p>
@@ -64,8 +69,49 @@ async function print_absence() {
          
          // Marquer l'événement comme déjà affiché
          dejaAffiche[JSON.stringify(evenement)] = true;
+
+         let div_list_diff = document.createElement("div");
+         div_list_diff.classList.add("list");
+
+         div_list_diff.innerHTML = `
+      <select name="prof">
+         <option value="">--Liste des professeurs--</option>
+         <option value="">M. Alasseur</option>
+         <option value="">M. Perrod</option>
+         <option value="">M. Lebourgt</option>
+         <option value="">Mme. Anton</option>
+         <option value="">Mme. Guillet</option>
+         <option value="">Mme. Bonnard</option>
+      </select>
+   `;
+
+         affichage_list_diff.appendChild(div_list_diff);
       }
    });
+}
+
+async function print_list_diff(){
+   console.log("test");
+   affichage_list_diff.style.background = "crimson";
+   console.log("compteur : "+count);
+
+   let div = document.createElement("div");
+   div.classList.add("list");
+
+   div.innerHTML = `
+      <select name="prof">
+         <option value="">--Liste des professeurs--</option>
+         <option value="">M. Alasseur</option>
+         <option value="">M. Perrod</option>
+         <option value="">M. Lebourgt</option>
+         <option value="">Mme. Anton</option>
+         <option value="">Mme. Guillet</option>
+         <option value="">Mme. Bonnard</option>
+      </select>
+   `;
+
+   affichage_list_diff.appendChild(div);
+
 }
 
 absence.addEventListener("click", () => {
@@ -101,7 +147,7 @@ function logout(){
 }
 
 // ----------------------------------------------------------------------------------------------------------------------------//
-// --- EVENTES LISTENERS ------------------------------------------------------------------------------------------------------//
+// --- EVENTS LISTENERS ------------------------------------------------------------------------------------------------------//
 // ----------------------------------------------------------------------------------------------------------------------------//
 
 // ----------------------------------------------------------------------------------------------------------------------------//
