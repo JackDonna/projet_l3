@@ -6,6 +6,8 @@ const affichage_absence = document.getElementById("container_absence");
 
 const absence = document.getElementById("absence");
 
+const absence_logo = document.getElementById("absence_logo");
+
 const affichage_list_diff = document.getElementById("container_list_diff");
 const list_diff = document.getElementById("list_diff");
 
@@ -67,24 +69,28 @@ async function print_absence() {
 }
 
 absence.addEventListener("click", () => {
+   absence_logo.style.display = "flex";
    affichage_list_diff.style.display = "none";
    affichage_propositions.style.display = "none";
    affichage_remplacements.style.display = "none";
 })
 
 list_diff.addEventListener("click", () => {
+   absence_logo.style.display = "none";
    affichage_list_diff.style.display = "flex";
    affichage_propositions.style.display = "none";
    affichage_remplacements.style.display = "none";
 })
 
 propositions.addEventListener("click", () => {
+   absence_logo.style.display = "none";
    affichage_list_diff.style.display = "none";
    affichage_propositions.style.display = "flex";
    affichage_remplacements.style.display = "none";
 })
 
 remplacements.addEventListener("click", () => {
+   absence_logo.style.display = "none";
    affichage_list_diff.style.display = "none";
    affichage_propositions.style.display = "none";
    affichage_remplacements.style.display = "flex";
