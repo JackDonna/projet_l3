@@ -274,7 +274,7 @@ function insert_all_events_sync(events, id, callback) {
  */
 function get_events_by_teacher_id(id, callback) {
     pool.getConnection((err, db) => {
-        if (err) callbakc(err, null);
+        if (err) callback(err, null);
         db.query(
             {
                 sql: SQL.select.event_by_teacher_id,
@@ -316,25 +316,18 @@ function get_events_by_teacher_id(id, callback) {
  * @param {function} callback - The callback function to handle the result
  * @return {void}
  */
-function teacher_is_available(id_teacher, debut, fin, date, callback) {
-    pool.getConnection((err, db) => {
-        if (err) callbakc(err, null);
+function teacher_is_available(db, id_teacher, debut, fin, date, callback) {
         db.query(
             {
-                sql: SQL.select.teacher_is_available,
-                values: [date, debut, fin, id_teacher],
+                sql: SQL.select.teacher_is_available2,
+                values: [id_teacher, date, debut, debut, fin, fin, debut, fin, debut, fin, debut, fin],
                 timeout: 10000,
             },
-            (err, rows, fields) => {
-                if (err) callback(err, null);
-                if (rows[0] > 0) {
-                    callback(null, false);
-                } else {
-                    callback(null, true);
-                }
+            (err, rows) => {
+                if(err) callback (err, null);
+                callback(null, rows[0]["nb_event"] == 0);
             }
         );
-    });
 }
 
 // ------------------------------------------------------------------------------------------------------------------ //
@@ -344,7 +337,7 @@ function teacher_is_available(id_teacher, debut, fin, date, callback) {
 /**
  * Return array of teacher available on a date
  *
- * @param {array} id_teacher - The id of the teacher
+ * @param {array} tab_teacher - The id of the teacher
  * @param {string} debut - The begining of the event
  * @param {string} fin - The end of the event
  * @param {string} date - The date of the event
@@ -352,16 +345,24 @@ function teacher_is_available(id_teacher, debut, fin, date, callback) {
  * @return {void}
  */
 function all_teachers_available(tab_teacher, debut, fin, date, callback) {
-    res = [];
-    for (i = 0; i < tab_teacher.length; i++) {
-        teacher_is_available(tab_teacher[i]["id_ens"], debut, fin, date, (err, result) => {
-            if (err) callback(err, null);
-            if (result) {
-                res.push(tab_teacher[i]);
-            }
-        });
-    }
-    callback(null, res);
+
+    let res = [];
+    pool.getConnection((err, db) => {
+        if (err) {callback (err,null)}
+
+        let c = 0;
+
+        for(let i=0; i < tab_teacher.length; i++){
+            teacher_is_available(db, tab_teacher[i].id_ens, debut, fin, date, (err, result) => {
+                if(result) res.push(tab_teacher[i]);
+                c ++;
+                if(c == tab_teacher.length) {
+                    callback(null, res);
+                }
+            });
+
+        }
+    })
 }
 
 /**
@@ -474,6 +475,26 @@ function get_teacher_timetable(req, res, callback) {
     });
 }
 
+
+
+function get_event_by_id(id_ev,callback){
+    pool.getConnection((err, db) => {
+        if (err) callback(err, null);
+        db.query(
+            {
+                sql: SQL.select.get_event,
+                values: [id_ev],
+                timeout: 10000,
+            },
+            (err, rows, fields) => {
+                if (err) callback(err, null);
+                callback(null, rows)
+            }
+        );
+    })
+}
+
+
 // ------------------------------------------------------------------------------------------------------------------ //
 // --- EXPORTS --------------------------------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------------------------------------------ //
@@ -484,4 +505,6 @@ module.exports = {
     get_teacher_timetable,
     insert_timetable_sync,
     insertTimetableRoot,
+    get_event_by_id,
+    all_teachers_available,
 };

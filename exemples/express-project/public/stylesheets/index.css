@@ -116,6 +116,10 @@ img {
   border-radius: 15px;
 }
 
+button {
+  margin-left : 1em;
+  border : none;
+}
 /* Animation de montée */
 @keyframes slide-up {
   0% {

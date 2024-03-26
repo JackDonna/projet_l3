@@ -61,7 +61,7 @@ function confirmerAvantSuppression(p) {
  */
 async function print_absence() {
 
-   let json = await axios.get("/sql/teacher/getUnavailableTeachers").then((response) =>
+   let json = await axios.get("/sql/absence/get_available_absence").then((response) =>
    {
       console.log(response)
       let json = response.data.data
@@ -90,14 +90,22 @@ async function print_absence() {
          `;
    
          // Crée un bouton pour cacher la boîte
-         let bouton = document.createElement("button");
-         bouton.innerHTML = "Choisir";
-         bouton.onclick = function() {
+         let boutonV = document.createElement("button");
+         boutonV.innerHTML = "✅​";
+         boutonV.onclick = function() {
+            confirmerAvantSuppression(p); // Afficher la confirmation avant de supprimer
+         };
+
+         // Crée un bouton pour cacher la boîte
+         let boutonX = document.createElement("button");
+         boutonX.innerHTML = "❌​";
+         boutonX.onclick = function() {
             confirmerAvantSuppression(p); // Afficher la confirmation avant de supprimer
          };
          
-         p.appendChild(bouton);
-
+         p.appendChild(boutonV);
+         p.appendChild(boutonX);
+         
          // Ajoute le paragraphe à la boite
          boite.appendChild(p);
 

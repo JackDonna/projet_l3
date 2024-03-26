@@ -163,10 +163,12 @@ close_scanner.addEventListener("click", () => {
 });
 
 submit.addEventListener("click", function () {
-    console.log(global_event);
     axios.post("sql/absence/insert/", { id_event: global_event.id, motif: reason.value }).then((response) => {
-        console.log(response.data);
+        axios.post("sql/absence/filtre/", {id_ev: global_event.id}).then((response) =>{
+            console.log(response.data);
+        });
     });
+
 });
 
 close_form.addEventListener("click", () => {
