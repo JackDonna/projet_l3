@@ -21,6 +21,7 @@ exports.teachersUnavailable = asyncHandler((req, res) => {
         res.send(response);
     });
 });
+
 /**
  * @function teacher_validation post request to set the validation for a teacher in the SQL database ( need to be sign-in)
  * @body number for validation
