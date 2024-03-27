@@ -4,6 +4,7 @@ const utils = require("../utils/ics_utils");
 const fs = require("fs");
 const ical = require("ical");
 const { start } = require("repl");
+const { forEach } = require("async");
 const config = JSON.parse(fs.readFileSync("controllers/utils/color_config.json", "utf8"));
 const colors = config.colors;
 const sql_config = JSON.parse(fs.readFileSync("controllers/config/sql_config.json", "utf-8"));
@@ -184,39 +185,48 @@ function get_course(db, course, callback) {
  * @param callback {function} callback function (err, result)
  */
 function insert_all_events(events, id, callback) {
-    pool.getConnection((err, db) => {
-        if (err) callback(err, null);
-        for (let event of events) {
-            let start_houre = new Date(event.start).toLocaleString("sv-SE", { timeZone: "Europe/Paris" });
-            let end_houre = new Date(event.end).toLocaleString("sv-SE", { timeZone: "Europe/Paris" });
-            let formatted_date = new Date(event.start).toLocaleDateString("sv-SE", { timeZone: "Europe/Paris" });
-            let salle = "none";
-            let classe = "none";
-            let niveau = "none";
-            try {
-                salle = event.description.val.split("Salle : ")[1];
-                salle = salle.split("\n")[0];
-            } catch {
-                null;
-            }
-            if (salle == undefined) salle = "none";
-
-            get_course(db, event.title, (err, course) => {
-                if (err) callback(err, null);
-                if (course == undefined) {
-                    course = null;
-                } else {
-                    course = course.id_mat;
-                }
-                console.log("\u001b[1;34m [Insertion d'un evenement lancé]");
-                insert_event(db, salle, formatted_date, start_houre, end_houre, null, course, id, function (err, result) {
-                    console.log("\u001b[1;32m [Insertion d'un evenement reussie]");
-                    if (err) callback(err, null);
-                });
-            });
+    let divider = 5;
+    let query = `insert into Evenement (salle, date, heure_debut, heure_fin, classe, matiere, enseignant) values `;
+    let array = new Array(divider).fill(query);
+    let c = 0;
+    for (let event of events) {
+        let start_houre = new Date(event.start).toLocaleString("sv-SE", { timeZone: "Europe/Paris" });
+        let end_houre = new Date(event.end).toLocaleString("sv-SE", { timeZone: "Europe/Paris" });
+        let formatted_date = new Date(event.start).toLocaleDateString("sv-SE", { timeZone: "Europe/Paris" });
+        let salle = "none";
+        let classe = null;
+        let niveau = "none";
+        try {
+            salle = event.description.val.split("Salle : ")[1];
+            salle = salle.split("\n")[0];
+        } catch {
+            null;
         }
+        if (salle == undefined) salle = "none";
+        let courseQuery = `SELECT id_mat FROM Ref_Matiere WHERE matiere = "${event.title} LIMIT 1"`;
+        array[
+            c % divider
+        ] += `("${salle}","${formatted_date}","${start_houre}","${end_houre}",${classe},(${courseQuery}),"${id}"),`;
+        c++;
+    }
+    pool.getConnection((err, db) => {
+        for (let i = 0; i < divider; i++) {
+            array[i] = array[i].substring(-1);
+            db.query(
+                {
+                    sql: array[i].substring(0, array[i].length - 1),
+                    timeout: 10000,
+                },
+                (err, rows, values) => {
+                    if (err) callback(err, null);
+                    if (i == divider - 1) {
+                        db.release();
+                    }
+                }
+            );
+        }
+        callback(null, true);
     });
-    callback(null, true);
 }
 
 /**
@@ -246,7 +256,6 @@ function insert_all_events_sync(events, id, callback) {
                 null;
             }
             if (salle == undefined) salle = "none";
-
             get_course(db, event.title, (err, course) => {
                 if (err) callback(err, null);
                 if (course == undefined) {
@@ -317,17 +326,17 @@ function get_events_by_teacher_id(id, callback) {
  * @return {void}
  */
 function teacher_is_available(db, id_teacher, debut, fin, date, callback) {
-        db.query(
-            {
-                sql: SQL.select.teacher_is_available2,
-                values: [id_teacher, date, debut, debut, fin, fin, debut, fin, debut, fin, debut, fin],
-                timeout: 10000,
-            },
-            (err, rows) => {
-                if(err) callback (err, null);
-                callback(null, rows[0]["nb_event"] == 0);
-            }
-        );
+    db.query(
+        {
+            sql: SQL.select.teacher_is_available2,
+            values: [id_teacher, date, debut, debut, fin, fin, debut, fin, debut, fin, debut, fin],
+            timeout: 10000,
+        },
+        (err, rows) => {
+            if (err) callback(err, null);
+            callback(null, rows[0]["nb_event"] == 0);
+        }
+    );
 }
 
 // ------------------------------------------------------------------------------------------------------------------ //
@@ -345,24 +354,24 @@ function teacher_is_available(db, id_teacher, debut, fin, date, callback) {
  * @return {void}
  */
 function all_teachers_available(tab_teacher, debut, fin, date, callback) {
-
     let res = [];
     pool.getConnection((err, db) => {
-        if (err) {callback (err,null)}
+        if (err) {
+            callback(err, null);
+        }
 
         let c = 0;
 
-        for(let i=0; i < tab_teacher.length; i++){
+        for (let i = 0; i < tab_teacher.length; i++) {
             teacher_is_available(db, tab_teacher[i].id_ens, debut, fin, date, (err, result) => {
-                if(result) res.push(tab_teacher[i]);
-                c ++;
-                if(c == tab_teacher.length) {
+                if (result) res.push(tab_teacher[i]);
+                c++;
+                if (c == tab_teacher.length) {
                     callback(null, res);
                 }
             });
-
         }
-    })
+    });
 }
 
 /**
@@ -400,66 +409,42 @@ function insert_timetable_sync(req, res, callback) {
 }
 
 function insertTimetableRoot() {
-    path = "controllers/misc/";
+    path = "controllers/misc/edt";
     let files = fs.readdirSync(path);
-    let c = 0;
-    let date = new Date();
-    console.log("début du processus");
-    handleFile(c, files, date);
+    handleFile(0, files, new Date());
     //insert_all_events(obj, id, (err, result) => {});
 }
 
 function handleFile(c, files, date) {
-    if (c == files.length) {
-        console.log("fin du processus.");
-        return;
+    if (c < files.length) {
+        console.log(c + 1 + "/" + files.length);
+        let file = files[c];
+        let obj = utils.parseICSFile("controllers/misc/edt/" + file);
+        let fullname = file.substring(16);
+        let name = fullname.split("_")[0];
+        Teacher.getTeacher(name, (err, teacher) => {
+            if (teacher != undefined) {
+                insert_all_events(obj, teacher.id_ens, (err, result) => {
+                    if (err) {
+                        console.log(err);
+                        return;
+                    }
+                    handleFile(c + 1, files, date);
+                });
+            } else {
+                console.log("professeur non trouvé.");
+                handleFile(c + 1, files, date);
+            }
+        });
+    } else {
+        console.log(
+            "\u001b[" +
+                32 +
+                "m" +
+                `[EVENTS : "AUTO LAUNCHED PROCESS" - (${new Date().toLocaleString()}) - OK / EVENTS INSERTED]` +
+                "\u001b[0m"
+        );
     }
-    let file = files[c];
-    let obj = utils.parseICSFile(path + file);
-    let fullname = file.substring(16);
-    let name = fullname.split("_")[0];
-    Teacher.getTeacher(name, (err, teacher) => {
-        if (teacher != undefined) {
-            insert_all_events_sync(obj, teacher.id_ens, (err, result) => {
-                if (err) {
-                    callback(err, null);
-                    console.log("fin du processus.");
-                    return;
-                }
-                let diff = new Date() - date;
-                date = new Date();
-                console.log(
-                    "\u001b[1;33m [Fin d'insertion de l'EDT du professeur : " +
-                        name +
-                        "]  [" +
-                        (c + 1) +
-                        "/" +
-                        files.length +
-                        "] " +
-                        diff / 1000 +
-                        "s\u001b[0m"
-                );
-                c++;
-                handleFile(c, files, date);
-            });
-        } else {
-            let diff = new Date() - date;
-            date = new Date();
-            console.log(
-                "\u001b[1;31m [Echec de l'insertion du professeur : " +
-                    name +
-                    "]  [" +
-                    (c + 1) +
-                    "/" +
-                    files.length +
-                    "] " +
-                    diff / 1000 +
-                    "s\u001b[0m"
-            );
-            c++;
-            handleFile(c, files, date);
-        }
-    });
 }
 
 /**
@@ -475,9 +460,7 @@ function get_teacher_timetable(req, res, callback) {
     });
 }
 
-
-
-function get_event_by_id(id_ev,callback){
+function get_event_by_id(id_ev, callback) {
     pool.getConnection((err, db) => {
         if (err) callback(err, null);
         db.query(
@@ -488,12 +471,11 @@ function get_event_by_id(id_ev,callback){
             },
             (err, rows, fields) => {
                 if (err) callback(err, null);
-                callback(null, rows)
+                callback(null, rows);
             }
         );
-    })
+    });
 }
-
 
 // ------------------------------------------------------------------------------------------------------------------ //
 // --- EXPORTS --------------------------------------------------------------------------------------------------- //

@@ -51,33 +51,29 @@ function getMyDiffusionExport(req, res, callback) {
     });
 }
 
-
-function insert_diffusion(db, id_teach, id_abs, callback){
-
-        db.query(
-            {
-                sql: SQL.insert.diffusion,
-                timeout: 10000,
-                values: [id_teach,id_abs],
-            },
-            (err, rows, fields) => {
-                if (err) callback(err, null);
-                callback(null, true);
-            }
-        );
+function insert_diffusion(db, id_teach, id_abs, callback) {
+    db.query(
+        {
+            sql: SQL.insert.diffusion,
+            timeout: 10000,
+            values: [id_teach, id_abs],
+        },
+        (err, rows, fields) => {
+            if (err) callback(err, null);
+            callback(null, true);
+        }
+    );
 }
 
-function insert_all_diffusion(tabTeacher,id_abs,callback){
-    console.log("insertion")
+function insert_all_diffusion(tabTeacher, id_abs, callback) {
     pool.getConnection((err, db) => {
-        console.log("connection ok")
-        if(err) console.error(err)
-        console.log(tabTeacher)
-        for (let i = 0; i < tabTeacher.length; i++){
-            console.log("insertion " + i + " / " + tabTeacher.length)
-            insert_diffusion(db, tabTeacher[i].id_ens, id_abs, (err,result) => {
+        if (err) console.error(err);
+        let i = 0;
+        for (let diffusion of tabTeacher) {
+            insert_diffusion(db, diffusion.id, id_abs, (err, result) => {
                 if (err) callback(err, null);
             });
+            i++;
         }
         callback(null, true);
     });
@@ -87,6 +83,4 @@ function insert_all_diffusion(tabTeacher,id_abs,callback){
 // --- EXPORTS --------------------------------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------------------------------------------ //
 
-module.exports = { getMyDiffusionExport,
-                   insert_all_diffusion
-};
+module.exports = { getMyDiffusionExport, insert_all_diffusion };

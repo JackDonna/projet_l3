@@ -29,7 +29,11 @@
       "all_teachers":                           "SELECT * FROM `Enseignant`",
       "teacher_is_available2":                   "SELECT COUNT(*) AS nb_event FROM Evenement WHERE `enseignant` = ? AND `date` = ? AND((heure_debut < ? AND heure_fin > ?)OR(heure_debut < ? AND heure_fin > ?)OR(heure_debut = ? AND heure_fin = ?)OR(heure_debut >= ? AND heure_fin <= ?)OR(heure_debut <= ? AND heure_fin >= ?))",
       "get_event":                              "SELECT * FROM `Evenement` WHERE id_ev = ?",
-      "get_matiere_by_evenement":               "SELECT matiere FROM Evenement WHERE id_ev = ?"
+      "get_matiere_by_evenement":               "SELECT matiere FROM Evenement WHERE id_ev = ?",
+      "classeByName" :                          "SELECT * FROM Ref_Classe WHERE classe = ?",
+      "teacherLikeName" :                       "SELECT * FROM Enseignant WHERE nom LIKE ?",
+      "allTeacherAvailableTheTrueOne" :         "SELECT Enseignant.id_ens as id FROM Enseignant WHERE EXISTS (SELECT * FROM Enseignant inner join Evenement on Evenement.enseignant = Enseignant.id_ens and Evenement.date = ? and ( (Evenement.heure_debut BETWEEN ? and ?) or (Evenement.heure_fin BETWEEN ? and ?) ) and ( (? BETWEEN heure_debut and heure_fin) or (? BETWEEN heure_debut and heure_fin) ) );",
+      "allTeacherCompatibleWithDisc" :          "select c.enseignant as id from Correspondance as c inner join Absence as a inner join Evenement as e inner join Ref_Matiere as rm inner join Ref_Discipline as rd ON a.evenement = e.id_ev and e.matiere = rm.id_mat and rm.nomenclature = rd.nomenclature and c.discipline = rd.id_disc where e.id_ev = ?;"
     },
     "insert":
     {
@@ -41,7 +45,8 @@
       "profil":                                  "INSERT INTO Profil (enseignant) values (?)",
       "proposition":                             "INSERT INTO `Proposition`(`enseignant`, `absence`) VALUES (?,?)",
       "remplacement":                            "INSERT INTO `Remplacement`(`horodatage_remp`, `enseignant`, `proposition`) VALUES (NULL,?,?)",
-      "diffusion" :                              "INSERT INTO `Diffusion`(`ens`, `absence`) VALUES ( ? , ? )"
+      "diffusion" :                              "INSERT INTO `Diffusion`(`ens`, `absence`) VALUES ( ? , ? )",
+      "linkTeacherClasse" :                      "INSERT INTO Panel (enseignant, classe) VALUES (?, ?)"
     },
     "update":
     {

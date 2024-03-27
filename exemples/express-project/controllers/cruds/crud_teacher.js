@@ -57,6 +57,7 @@ function set_session(req, name, firstname, mail, idEtablishement, validation, id
         req.session.valide = validation;
         req.session.id_ens = id_teacher;
         req.session.admin = admin;
+        req.session.signedIn = true;
         req.session.save((err) => {
             if (err) callback(err, null);
             callback(null, true);
@@ -445,7 +446,6 @@ function sign_up(req, res, callback) {
  */
 function sign_in(req, res, callback) {
     check_teacher_by_mail(req.params.mail, (err, teacher) => {
-        console.log(teacher);
         if (teacher != undefined) {
             check_identificationByPassword(teacher.id_ens, req.params.password, (err, identification) => {
                 if (err) callback(err, null);
@@ -460,7 +460,6 @@ function sign_in(req, res, callback) {
                         teacher.id_ens,
                         false,
                         (err, res) => {
-                            console.log(teacher.nom + " est connecté.");
                             callback(null, true);
                         }
                     );
@@ -542,6 +541,20 @@ function getTeacher(name, callback) {
     });
 }
 
+function getTeacherLike(db, name, callback) {
+    db.query(
+        {
+            sql: SQL.select.teacherLikeName,
+            timeout: 10000,
+            values: [name],
+        },
+        (err, rows, fields) => {
+            if (err) callback(err, null);
+            callback(null, rows[0]);
+        }
+    );
+}
+
 // ------------------------------------------------------------------------------------------------------------------ //
 // --- EXPORTS --------------------------------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------------------------------------------ //
@@ -554,5 +567,6 @@ module.exports = {
     getTeacherForAdminPanel,
     getTeacher,
     get_all_teacher,
+    getTeacherLike,
 };
 sign_in;
