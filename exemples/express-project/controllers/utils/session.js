@@ -52,47 +52,53 @@ function pIsAuthenticated(req, res, next) {
 }
 
 function pIsValidated(req, res, next) {
-    if (!pIsAuthenticated) return;
-    if (!req.session.valide) {
-        console.log(
-            "\u001b[" +
-                33 +
-                "m" +
-                `[SECURITY : "${req.ip}" - (${new Date().toLocaleString()}) - NOT VALIDATED / REFUSED ACCESS]` +
-                "\u001b[0m"
-        );
-        res.redirect("/valide_account");
-    } else {
-        console.log(
-            "\u001b[" +
-                32 +
-                "m" +
-                `[SECURITY : "${req.session.nom}" - (${new Date().toLocaleString()}) - VALIDATED / ACCESS GRANTED]` +
-                "\u001b[0m"
-        );
-        next();
-    }
+    pIsAuthenticated(req, res, () => {
+        if (!req.session.valide) {
+            console.log(
+                "\u001b[" +
+                    33 +
+                    "m" +
+                    `[SECURITY : "${req.ip}" - (${new Date().toLocaleString()}) - NOT VALIDATED / REFUSED ACCESS]` +
+                    "\u001b[0m"
+            );
+            res.redirect("/valide_account");
+        } else {
+            console.log(
+                "\u001b[" +
+                    32 +
+                    "m" +
+                    `[SECURITY : "${req.session.nom}" - (${new Date().toLocaleString()}) - VALIDATED / ACCESS GRANTED]` +
+                    "\u001b[0m"
+            );
+            next();
+        }
+    });
 }
 
 function pIsAdministrator(req, res, next) {
-    if (!pIsAuthenticated(req, res)) return;
-    if (!pIsValidated(req, res)) return;
-    if (!req.session.admin) {
-        console.log(
-            "\u001b[" +
-                31 +
-                "m" +
-                `[URGENT SECURITY : "${req.ip}" - (${new Date().toLocaleString()}) - NOT ADMINISTRATOR / REFUSED ACCESS]` +
-                "\u001b[0m"
-        );
-        res.redirect("/forbidden");
-    }
-}
-
-function pIsValidatedAndAuthenticated(req, res) {
-    if (!pIsAuthenticated(req, res)) return false;
-    if (!pIsValidated(req, res)) return false;
-    return true;
+    pIsValidated(req, res, () => {
+        if (!req.session.admin) {
+            console.log(
+                "\u001b[" +
+                    31 +
+                    "m" +
+                    `[URGENT SECURITY : "${req.ip}" - (${new Date().toLocaleString()}) - NOT ADMINISTRATOR / REFUSED ACCESS]` +
+                    "\u001b[0m"
+            );
+            res.redirect("/forbidden");
+        } else {
+            console.log(
+                "\u001b[" +
+                    32 +
+                    "m" +
+                    `[URGENT SECURITY : "${
+                        req.session.nom
+                    }" - (${new Date().toLocaleString()}) - ADMINISTRATOR / ACCESS GRANTED]` +
+                    "\u001b[0m"
+            );
+            next();
+        }
+    });
 }
 
 module.exports = {

@@ -382,15 +382,16 @@ function getUnavailableTeachersByEtablishement(idEtablishement, callback) {
 }
 
 function searchTeacher(name, callback) {
-    pool.getConnection((err, sqlDatabase) => {
-        if (err) callback(err, null);
-        sqlDatabase.query(
+    pool.getConnection((err, db) => {
+        if (err) console.error(err);
+        db.query(
             {
                 sql: SQL.select.searchTeacher,
                 values: [name],
-                timeout: 10000,
+                timeout: 100000,
             },
             (err, rows, fields) => {
+                db.release();
                 if (err) callback(err, null);
                 callback(null, rows[0]);
             }

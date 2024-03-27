@@ -126,8 +126,8 @@ function qrboxFunction(viewfinderWidth, viewfinderHeight) {
  */
 function get_timetable() {
     axios.get("/sql/event/get_timetable").then((response) => {
-        console.log(response.data.data);
-        for (let event of response.data.data) {
+        console.log(response.data);
+        for (let event of response.data) {
             ec.addEvent(event);
         }
     });

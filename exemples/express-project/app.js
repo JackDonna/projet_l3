@@ -20,11 +20,11 @@ const EVENTS = require("./controllers/cruds/crud_event");
 const insertEvent = false;
 
 if (insertClasses) {
-    CLASSES.getFilesClasse();
+    CLASSES.insertClassesFiles();
 }
 
 if (insertEvent) {
-    EVENTS.insertTimetableRoot();
+    EVENTS.insertTimetablesFiles();
 }
 
 const app = express();

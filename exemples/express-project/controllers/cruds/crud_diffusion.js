@@ -31,6 +31,22 @@ function getDiffusionByTeachers(teacherId, callback) {
     });
 }
 
+function insertDiffusionSQL(id_teach, id_abs, callback) {
+    pool.getConnection((err, db) => {
+        if (err) callback(err, null);
+        db.query(
+            {
+                sql: SQL.insert.diffusion,
+                timeout: 10000,
+                values: [id_teach, id_abs],
+            },
+            (err, rows, fields) => {
+                db.release();
+                callback(err, true);
+            }
+        );
+    });
+}
 // ------------------------------------------------------------------------------------------------------------------ //
 // --- MAINS FUNCTIONS ------------------------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------------------------------------------ //
@@ -51,36 +67,17 @@ function getMyDiffusionExport(req, res, callback) {
     });
 }
 
-function insert_diffusion(db, id_teach, id_abs, callback) {
-    db.query(
-        {
-            sql: SQL.insert.diffusion,
-            timeout: 10000,
-            values: [id_teach, id_abs],
-        },
-        (err, rows, fields) => {
+function insertDiffusions(tabTeacher, id_abs, callback) {
+    tabTeacher.forEach((diffusion) => {
+        insertDiffusionSQL(diffusion.id, id_abs, (err, result) => {
             if (err) callback(err, null);
-            callback(null, true);
-        }
-    );
-}
-
-function insert_all_diffusion(tabTeacher, id_abs, callback) {
-    pool.getConnection((err, db) => {
-        if (err) console.error(err);
-        let i = 0;
-        for (let diffusion of tabTeacher) {
-            insert_diffusion(db, diffusion.id, id_abs, (err, result) => {
-                if (err) callback(err, null);
-            });
-            i++;
-        }
-        callback(null, true);
+        });
     });
+    callback(null, true);
 }
 
 // ------------------------------------------------------------------------------------------------------------------ //
 // --- EXPORTS --------------------------------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------------------------------------------ //
 
-module.exports = { getMyDiffusionExport, insert_all_diffusion };
+module.exports = { getMyDiffusionExport, insertDiffusions };
