@@ -199,11 +199,20 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .cle {
   color: #9fccce;
+}
+
+#absence_logo {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+#absence_logo img {
+  padding-top: 40%;
 }
 
 #container_list_diff {
@@ -252,4 +261,27 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 }
 .logout:hover {
   cursor: pointer;
+}
+
+@media only screen and (max-width : 390px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #sidebarMenu {
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out;
+  }
+
+  .sidebarIconToggle{
+    display: block;
+  }
+
+  #container_absence{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0 0;
+  }
 }
