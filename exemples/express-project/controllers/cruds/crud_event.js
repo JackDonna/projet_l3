@@ -231,7 +231,7 @@ const insertEventsQuerysSQL = (querys, callback) => {
  * @return {void}
  */
 const insertEventsSQL = (events, id, callback) => {
-    const divider = 5;
+    const divider = 4;
     let query = `insert into Evenement (salle, date, heure_debut, heure_fin, classe, matiere, enseignant) values `;
     let array = new Array(divider).fill(query);
     let c = 0;
@@ -311,7 +311,7 @@ const getEventsByTeacherIDSQL = (id, callback) => {
 const insertTimetableFileSQL = (files, c) => {
     if (c >= files.length) return;
     let array = [];
-    let divider = 10;
+    let divider = 50;
     for (let i = 0; i < divider; i++) {
         if (c + i < files.length) {
             array.push(files[c + i]);
@@ -325,7 +325,6 @@ const insertTimetableFileSQL = (files, c) => {
         Teacher.getTeacher(name, (err, teacher) => {
             if (teacher != undefined) {
                 insertEventsSQL(obj, teacher.id_ens, (err, result) => {
-                    console.log(c + 1 + k + "/" + files.length);
                     k++;
                     if (k == array.length - 1) {
                         insertTimetableFileSQL(files, c + divider);

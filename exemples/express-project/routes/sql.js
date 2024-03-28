@@ -9,15 +9,15 @@ const absence_controller = require("../controllers/absence_controller");
 const proposition_controller = require("../controllers/proposition_controller");
 
 // ------------------------------------------- TEACHER CONTROLLERS ---------------------------------------- //
-router.get("/teacher/teacher", teacher_controller.get_teacher_list);
+
 // router.get("/teacher/:id/:nom/:prenom/update", teacher_controller.user_update);
 // router.get("/teacher/detail:id", teacher_controller.user_detail);
-router.get("/teacher/sign_in/:mail/:password", teacher_controller.sign_in);
-router.get("/teacher/sign_in_as_admin/:mail/:password", teacher_controller.sign_in_as_admin);
-router.get("/teacher/getUnavailableTeachers", teacher_controller.teachersUnavailable);
-router.get("/teacher/getTeacher/:name", teacher_controller.searchTeacher);
-router.post("/teacher/validate", teacher_controller.teacher_validation);
-router.post("/teacher/sign_up", teacher_controller.sign_up);
+router.get("/teacher/sign_in/:mail/:password", teacher_controller.signINREQUEST);
+router.get("/teacher/sign_in_as_admin/:mail/:password", teacher_controller.signINAdministratorREQUEST);
+router.get("/teacher/getUnavailableTeachers", teacher_controller.getYourTeacherREQUEST);
+router.get("/teacher/getTeacher/:name", teacher_controller.searchTeacherREQUEST);
+router.post("/teacher/validate", teacher_controller.validateTeacherREQUEST);
+router.post("/teacher/sign_up", teacher_controller.signUPREQUEST);
 // router.delete("/teacher/delete/:id", teacher_controller.user_delete);
 
 // ------------------------------------------- EVENT CONTROLLERS ----------------------------------------- //

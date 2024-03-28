@@ -1,5 +1,22 @@
+function createSession(req, name, firstname, mail, idEtablishement, idTeacher, isValidated, isAdministrator, callback) {
+    req.session.regenerate((err) => {
+        if (err) callback(err, null);
+        req.session.nom = name;
+        req.session.prenom = firstname;
+        req.session.mail = mail;
+        req.session.idEtablishement = idEtablishement;
+        req.session.valide = isValidated;
+        req.session.id_ens = idTeacher;
+        req.session.admin = isAdministrator;
+        req.session.signedIn = true;
+        req.session.save((err) => {
+            callback(err, true);
+        });
+    });
+}
+
 function isAuthenticated(req, res, next) {
-    return req.session.id_ens;
+    return req.session.signedIn;
 }
 
 function isOnlyAuthenticated(req, res, next) {
@@ -110,4 +127,5 @@ module.exports = {
     pIsAuthenticated,
     pIsValidated,
     pIsAdministrator,
+    createSession,
 };
