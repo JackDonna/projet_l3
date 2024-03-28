@@ -13,6 +13,7 @@
       "teacher_random_number":                  "SELECT random_number FROM Identification WHERE enseignant = ?",
       "available_teacher":                      "SELECT * FROM Enseignant WHERE NOT EXISTS( SELECT 1 FROM Evenement WHERE Evenement.enseignant = Enseignant.id_ens AND( ( Evenement.heure_debut > ? AND Evenement.heure_debut < ? ) OR( Evenement.heure_fin > ? AND Evenement.heure_fin < ? ) ))",
       "identification_by_teacher_id_password":  "SELECT * FROM Identification WHERE enseignant = ? AND mdp = ?",
+      "identificationByTeacherID":              "SELECT * FROM Identification WHERE enseignant = ?",
       "teacher_profil":                         "SELECT * FROM Profil WHERE enseignant = ?",
       "course":                                 "SELECT * FROM Ref_Matiere WHERE matiere = ?",
       "absence_available":                      "SELECT * FROM `Evenement` as e Inner join Diffusion as d Inner join Enseignant as n Inner join Absence as a on e.id_ev = d.absence and n.id_ens = d.ens and a.evenement = e.id_ev where d.ens = ?; ",

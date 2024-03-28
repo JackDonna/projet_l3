@@ -14,7 +14,7 @@ const proposition_controller = require("../controllers/proposition_controller");
 // router.get("/teacher/detail:id", teacher_controller.user_detail);
 router.get("/teacher/sign_in/:mail/:password", teacher_controller.signINREQUEST);
 router.get("/teacher/sign_in_as_admin/:mail/:password", teacher_controller.signINAdministratorREQUEST);
-router.get("/teacher/getUnavailableTeachers", teacher_controller.getYourTeacherREQUEST);
+router.get("/teacher/getUnavailableTeachers", teacher_controller.getYourUnaivalableTeacherREQUEST);
 router.get("/teacher/getTeacher/:name", teacher_controller.searchTeacherREQUEST);
 router.post("/teacher/validate", teacher_controller.validateTeacherREQUEST);
 router.post("/teacher/sign_up", teacher_controller.signUPREQUEST);
@@ -38,8 +38,8 @@ router.post("/absence/filtre", absence_controller.spreadAbsenceREQUEST);
 
 // ------------------------------------------ PROPOSITION CONTROLLERS ------------------------------------ //
 // ---- NOT IMPLEMENT YET ------ //
-//router.post("/proposition/new_proposition", proposition_controller.insertNewProposition);
-//router.get("/proposition/teacher_on_absence/:abs", proposition_controller.TeachersPropositionOnAbsence);
-router.post("/proposition/acceptProposition", proposition_controller.acceptPropositionByTeacher);
+router.post("/proposition/new_proposition", proposition_controller.insertPropositionREQUEST);
+router.get("/proposition/teacher_on_absence/:abs", proposition_controller.getProposedTeacherREQUEST);
+router.post("/proposition/acceptProposition", proposition_controller.acceptPropositionREQUEST);
 
 module.exports = router;

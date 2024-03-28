@@ -1,8 +1,6 @@
 const asyncHandler = require("express-async-handler");
-const { RequestResponse } = require("./utils/object_engine");
-const express = require("express");
-const { proposeOnAbsenceExport, getPropositionOnAbsence, acceptProposition } = require(__dirname +
-    "/cruds/crud_proposition.js");
+const { insertProposition, getProposedTeacher, acceptProposition } = require(__dirname + "/cruds/crud_proposition.js");
+const Session = require(__dirname + "/utils/session.js");
 
 // ----------------------------------- EXPORTS FUNCTIONS CRUDS RESULT -------------------------------- //
 
@@ -13,11 +11,16 @@ const { proposeOnAbsenceExport, getPropositionOnAbsence, acceptProposition } = r
  * @param {Object} res - The response object
  * @return {void}
  */
-exports.insertNewProposition = asyncHandler((req, res) => {
-    proposeOnAbsenceExport(req, res, (err, result) => {
-        let response = new RequestResponse("propositionAPI", "POST", result, "boolean", "Insert proposition", err);
-        if (err) console.error(err);
-        res.send(response);
+exports.insertPropositionREQUEST = asyncHandler((req, res) => {
+    Session.pIsValidated(req, res, () => {
+        insertProposition(req, res, (err, result) => {
+            if (err) {
+                console.error(err);
+                res.sendStatus(500);
+            } else {
+                res.sendStatus(200);
+            }
+        });
     });
 });
 
@@ -28,11 +31,16 @@ exports.insertNewProposition = asyncHandler((req, res) => {
  * @param {Object} res - The response object
  * @return {void}
  */
-exports.TeachersPropositionOnAbsence = asyncHandler((req, res) => {
-    getPropositionOnAbsence(req, res, (err, result) => {
-        let response = new RequestResponse("propositionAPI", "GET", result, "boolean", "Get teacher on absence", err);
-        if (err) console.error(err);
-        res.send(response);
+exports.getProposedTeacherREQUEST = asyncHandler((req, res) => {
+    Session.pIsAdministrator(req, res, () => {
+        getProposedTeacher(req, res, (err, result) => {
+            if (err) {
+                console.error(err);
+                res.sendStatus(500);
+            } else {
+                res.sendStatus(result);
+            }
+        });
     });
 });
 
@@ -43,10 +51,15 @@ exports.TeachersPropositionOnAbsence = asyncHandler((req, res) => {
  * @param {Object} res - The response object
  * @return {void}
  */
-exports.acceptPropositionByTeacher = asyncHandler((req, res) => {
-    acceptProposition(req, res, (err, result) => {
-        let response = new RequestResponse("propositionAPI", "POST", result, "boolean", "Accept proposition", err);
-        if (err) console.error(err);
-        res.send(response);
+exports.acceptPropositionREQUEST = asyncHandler((req, res) => {
+    Session.pIsValidated(req, res, () => {
+        acceptProposition(req, res, (err, result) => {
+            if (err) {
+                console.error(err);
+                res.sendStatus(500);
+            } else {
+                res.sendStatus(200);
+            }
+        });
     });
 });

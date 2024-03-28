@@ -1,8 +1,15 @@
 const asyncHandler = require("express-async-handler");
-const { RequestResponse } = require("./utils/object_engine");
 
-const { getTeacherLike, signIN, signUP, signINAdministrator, getYourTeacher, getTeacher, validateTeacher } = require(__dirname +
-    "/cruds/crud_teacher.js");
+const {
+    getTeacherLike,
+    signIN,
+    signUP,
+    signINAdministrator,
+    getYourUnaivalableTeacher,
+    getTeacher,
+    validateTeacher,
+} = require(__dirname + "/cruds/crud_teacher.js");
+const Session = require(__dirname + "/utils/session.js");
 
 // ----------------------------------- EXPORTS FUNCTIONS CRUDS RESULT -------------------------------- //
 
@@ -11,14 +18,16 @@ const { getTeacherLike, signIN, signUP, signINAdministrator, getYourTeacher, get
  * @param {Object} req - The request object.
  * @param {Object} res - The response object.
  */
-exports.getYourTeacherREQUEST = asyncHandler((req, res) => {
-    getYourTeacher(req, res, (err, teachers) => {
-        if (err) {
-            console.error(err);
-            res.sendStatus(500);
-        } else {
-            res.send(teachers);
-        }
+exports.getYourUnaivalableTeacherREQUEST = asyncHandler((req, res) => {
+    Session.pIsAdministrator(req, res, () => {
+        getYourUnaivalableTeacher(req, res, (err, teachers) => {
+            if (err) {
+                console.error(err);
+                res.sendStatus(500);
+            } else {
+                res.send(teachers);
+            }
+        });
     });
 });
 
@@ -28,13 +37,15 @@ exports.getYourTeacherREQUEST = asyncHandler((req, res) => {
  * @param {Object} res - The response object.
  */
 exports.validateTeacherREQUEST = asyncHandler((req, res) => {
-    validateTeacher(req, res, (err, result) => {
-        if (err) {
-            console.error(err);
-            res.sendStatus(500);
-        } else {
-            res.sendStatus(200);
-        }
+    Session.pIsAuthenticated(req, res, () => {
+        validateTeacher(req, res, (err, result) => {
+            if (err) {
+                console.error(err);
+                res.sendStatus(500);
+            } else {
+                res.sendStatus(200);
+            }
+        });
     });
 });
 

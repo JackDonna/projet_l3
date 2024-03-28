@@ -4,6 +4,7 @@ const axios = require("axios");
 const sql_config = JSON.parse(fs.readFileSync("controllers/config/sql_config.json", "utf-8"));
 const SQL = sql_config.sql;
 const Session = require("../utils/session");
+const { sendVerificationMailLocal } = require(__dirname + "/crud_mail");
 
 // ------------------------------------------------------------------------------------------------------------------ //
 // --- SUBS FUNCTIONS -------------------------------------------------------------------------------------------- //
@@ -77,7 +78,7 @@ const getTeacherValidationCodeSQL = (mail, callback) => {
             },
             (err, rows, fields) => {
                 db.release();
-                callback(err, rows);
+                callback(err, rows[0]);
             }
         );
     });
@@ -93,7 +94,7 @@ const getTeacherValidationCodeSQL = (mail, callback) => {
 const validateTeacherSQL = (idTeacher, number, callback) => {
     getTeacherValidationCodeSQL(idTeacher, (err, result) => {
         if (err) callback(err, null);
-        if (result == number) {
+        if (result.random_number == number) {
             pool.getConnection((err, db) => {
                 db.query(
                     {
@@ -148,7 +149,7 @@ const isIdentificationExistSQL = (idTeacher, callback) => {
         if (err) callback(err, null);
         db.query(
             {
-                sql: SQL.select.identificationByTeacher,
+                sql: SQL.select.identificationByTeacherID,
                 values: [idTeacher],
                 timeout: 10000,
             },
@@ -216,8 +217,8 @@ const getProfilSQL = (idTeacher, callback) => {
  * @param {function} callback - The callback function to handle the result.
  * @return {void}
  */
-const createIdentificationSQL = (password, idTeacher, callback) => {
-    create_profil(idTeacher, (err, result) => {
+const createIdentificationSQL = (password, teacherID, callback) => {
+    createProfilSQL(teacherID, (err, result) => {
         if (err) callback(err, null);
         pool.getConnection((err, db) => {
             if (err) callback(err, null);
@@ -225,12 +226,12 @@ const createIdentificationSQL = (password, idTeacher, callback) => {
             db.query(
                 {
                     sql: SQL.insert.identification,
-                    values: [password, false, validatioNnumber, idTeacher],
+                    values: [password, false, validatioNnumber, teacherID],
                     timeout: 10000,
                 },
                 (err, rows, fields) => {
                     db.release();
-                    callback(err, nb);
+                    callback(err, validatioNnumber);
                 }
             );
         });
@@ -353,7 +354,11 @@ const signUP = (req, res, callback) => {
             if (teacher != undefined && identification == undefined) {
                 createIdentificationSQL(password, teacher.id_ens, (err, validationNumber) => {
                     if (err) callback(err, null);
-                    axios.get("mail/send_verification_mail/" + mail + "/" + validationNumber);
+                    sendVerificationMailLocal(mail, validationNumber, (err, res) => {
+                        if (err) {
+                            console.error(err);
+                        }
+                    });
                     Session.createSession(
                         req,
                         teacher.nom,
@@ -473,7 +478,7 @@ const validateTeacher = (req, res, callback) => {
  * @param {Function} callback - The callback function to handle the result.
  * @return {void}
  */
-const getYourTeacher = (req, res, callback) => {
+const getYourUnaivalableTeacher = (req, res, callback) => {
     const idEtablishement = req.session.idEtablishement;
 
     getUnavailableTeachersByEtablishementSQL(idEtablishement, (err, teachers) => {
@@ -517,7 +522,7 @@ module.exports = {
     signIN,
     signUP,
     signINAdministrator,
-    getYourTeacher,
+    getYourUnaivalableTeacher,
     getTeacher,
     getTeacherLike,
     validateTeacher,

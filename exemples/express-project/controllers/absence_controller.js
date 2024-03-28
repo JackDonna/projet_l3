@@ -1,5 +1,5 @@
 const asyncHandler = require("express-async-handler");
-const { insertAbsence, spreadAbsence } = require(__dirname + "/cruds/crud_absence.js");
+const { insertAbsence, spreadAbsence, getYourAbsences } = require(__dirname + "/cruds/crud_absence.js");
 const Session = require(__dirname + "/utils/session.js");
 
 // ----------------------------------- EXPORTS FUNCTIONS CRUDS RESULT -------------------------------- //
@@ -33,7 +33,7 @@ exports.insertAbsenceREQUEST = asyncHandler((req, res) => {
  */
 exports.getYourAbsenceREQUEST = asyncHandler((req, res) => {
     Session.pIsValidated(req, res, () => {
-        get_absence(req, res, (err, result) => {
+        getYourAbsences(req, res, (err, result) => {
             if (err) {
                 console.error(err);
                 res.sendStatus(500);

@@ -40,12 +40,12 @@ const insertAbsenceSQL = (reason, idEvent, callback) => {
  * @param {function} callback - The callback function
  * @return {void}
  */
-const getAbsenceWithoutThisTeacherSQL = (idTeacher, callback) => {
+const getAbsenceWithoutThisTeacherSQL = (teacherID, callback) => {
     pool.getConnection((err, db) => {
         db.query(
             {
                 sql: SQL.select.absence_available,
-                values: [id_ens],
+                values: [teacherID],
                 timeout: 3000,
             },
             (err, rows, fields) => {
