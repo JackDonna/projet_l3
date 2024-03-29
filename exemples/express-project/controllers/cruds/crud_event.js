@@ -380,7 +380,6 @@ const insertTimetableURL = (req, res, callback) => {
     // REQUIRE CONNECTION AND VALIDATION
     Session.pIsValidated(req, res, () => {
         downloadTimetableFromURL(req.body.url, (err, result) => {
-            let data = [...result];
             insertEventSQL(result, req.session.id_ens, (err, result) => {
                 if (err) callback(err, null);
                 callback(null, true);
