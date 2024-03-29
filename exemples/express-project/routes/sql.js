@@ -9,24 +9,20 @@ const absence_controller = require("../controllers/absence_controller");
 const proposition_controller = require("../controllers/proposition_controller");
 
 // ------------------------------------------- TEACHER CONTROLLERS ---------------------------------------- //
-router.get("/teacher/teacher", teacher_controller.get_teacher_list);
+
 // router.get("/teacher/:id/:nom/:prenom/update", teacher_controller.user_update);
 // router.get("/teacher/detail:id", teacher_controller.user_detail);
-router.get("/teacher/sign_in/:mail/:password", teacher_controller.sign_in);
-router.get("/teacher/sign_in_as_admin/:mail/:password", teacher_controller.sign_in_as_admin);
-router.get("/teacher/getUnavailableTeachers", teacher_controller.teachersUnavailable);
-router.get("/teacher/getTeacher/:name", teacher_controller.searchTeacher);
-router.post("/teacher/validate", teacher_controller.teacher_validation);
-router.post("/teacher/sign_up", teacher_controller.sign_up);
+router.get("/teacher/sign_in/:mail/:password", teacher_controller.signINREQUEST);
+router.get("/teacher/sign_in_as_admin/:mail/:password", teacher_controller.signINAdministratorREQUEST);
+router.get("/teacher/getUnavailableTeachers", teacher_controller.getYourUnaivalableTeacherREQUEST);
+router.get("/teacher/getTeacher/:name", teacher_controller.searchTeacherREQUEST);
+router.post("/teacher/validate", teacher_controller.validateTeacherREQUEST);
+router.post("/teacher/sign_up", teacher_controller.signUPREQUEST);
 // router.delete("/teacher/delete/:id", teacher_controller.user_delete);
 
 // ------------------------------------------- EVENT CONTROLLERS ----------------------------------------- //
-router.get("/events", event_controller.event_list);
-router.get("/event/create", event_controller.event_create_get);
-router.get("/event/detail/:id", event_controller.event_detail);
-router.get("/event/get_timetable", event_controller.get_timetable);
-router.post("/event/insert_timetable", event_controller.insert_teacher_timetable);
-router.post("/event/insert_timetable_sync", event_controller.insert_teacher_timetable_sync);
+router.get("/event/get_timetable", event_controller.getYourTimetableREQUEST);
+router.post("/event/insert_timetable", event_controller.insertTeacherTimetableREQUEST);
 router.post("/event/update/:id", event_controller.event_update_get);
 router.delete("/event/delete/:id", event_controller.event_delete_get);
 
@@ -36,15 +32,14 @@ router.delete("/event/delete/:id", event_controller.event_delete_get);
 
 // ------------------------------------------ ABSENCES CONTROLLERS --------------------------------------- //
 // router.get("/abs/list/:debut/:fin", absence_controller.list_absence);
-router.post("/absence/insert", absence_controller.insert_absence);
-router.get("/absence/prof_dispo/:debut/:fin", absence_controller.available_teacher);
-router.get("/absence/get_available_absence", absence_controller.available_absence);
-router.post("/absence/filtre", absence_controller.filtre_diffusion);
+router.post("/absence/insert", absence_controller.insertAbsenceREQUEST);
+router.get("/absence/get_available_absence", absence_controller.getYourAbsenceREQUEST);
+router.post("/absence/filtre", absence_controller.spreadAbsenceREQUEST);
 
 // ------------------------------------------ PROPOSITION CONTROLLERS ------------------------------------ //
 // ---- NOT IMPLEMENT YET ------ //
-//router.post("/proposition/new_proposition", proposition_controller.insertNewProposition);
-//router.get("/proposition/teacher_on_absence/:abs", proposition_controller.TeachersPropositionOnAbsence);
-router.post("/proposition/acceptProposition", proposition_controller.acceptPropositionByTeacher);
+router.post("/proposition/new_proposition", proposition_controller.insertPropositionREQUEST);
+router.get("/proposition/teacher_on_absence/:abs", proposition_controller.getProposedTeacherREQUEST);
+router.post("/proposition/acceptProposition", proposition_controller.acceptPropositionREQUEST);
 
 module.exports = router;

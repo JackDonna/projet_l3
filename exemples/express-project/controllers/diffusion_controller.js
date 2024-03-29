@@ -1,30 +1,26 @@
 const asyncHandler = require("express-async-handler");
-const { RequestResponse } = require("./utils/object_engine");
-const express = require("express");
-const { getMyDiffusionExport } = require(__dirname +
-  "/cruds/crud_diffusion.js");
+const { getMyDiffusions } = require(__dirname + "/cruds/crud_diffusion.js");
+const Session = require(__dirname + "/utils/session.js");
 
 // ----------------------------------- EXPORTS FUNCTIONS CRUDS RESULT -------------------------------- //
 
 /**
- * Retrieves diffusion data for the current user.
- *
+ * This function is an async handler for getting my diffusion.
+ * It calls the getMyDiffusions function with the request and response objects.
+ * If an error occurs, it logs the error and sends a status of 500.
+ * If successful, it sends the result.
  * @param {Object} req - The request object
  * @param {Object} res - The response object
- * @return {void}
  */
 exports.getMyDiffusion = asyncHandler((req, res) => {
-  getMyDiffusionExport(req, res, (err, result) => {
-    let response = new RequestResponse(
-      "diffusionAPI",
-      "GET",
-      result,
-      "boolean",
-      "Get my diffusion",
-      err
-    );
-
-    if (err) console.error(err);
-    res.send(response);
-  });
+    Session.pIsValidated(req, res, () => {
+        getMyDiffusions(req, res, (err, result) => {
+            if (err) {
+                console.error(err);
+                res.sendStatus(500);
+            } else {
+                res.send(result);
+            }
+        });
+    });
 });

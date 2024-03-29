@@ -6,14 +6,14 @@ const SQL = sql_conf_file.sql;
 // -------------------------------------------------- SUBS FUNCTIONS ------------------------------------------------- //
 
 /**
- * Add a Teacher in the proposition list.
+ * Inserts a new proposition into the database for a given teacher and absence.
  *
- * @param {number} teacherId - The ID of the teacher
- * @param {number} absenceId - The ID of the absence
- * @param {function} callback - The callback function
+ * @param {number} teacherId - The ID of the teacher.
+ * @param {number} absenceId - The ID of the absence.
+ * @param {function} callback - The callback function to handle the result of the query.
  * @return {void}
  */
-function proposeOnAbsence(teacherId, absenceId, callback) {
+const insertPropositionSQL = (teacherId, absenceId, callback) => {
     pool.getConnection((err, db) => {
         if (err) callback(err, null);
         db.query(
@@ -23,21 +23,20 @@ function proposeOnAbsence(teacherId, absenceId, callback) {
                 values: [teacherId, absenceId],
             },
             (err, rows, fields) => {
-                if (err) callback(err, null);
-                callback(null, rows);
+                callback(err, rows);
             }
         );
     });
-}
+};
 
 /**
- * Get all the teacher who propose on an absence.
+ * Retrieves the proposed teacher SQL query result based on the provided absence ID.
  *
- * @param {number} absenceId - The ID of the absence
- * @param {function} callback - The callback function
+ * @param {number} absenceId - The ID of the absence to retrieve proposed teacher for.
+ * @param {function} callback - The callback function to handle the result.
  * @return {void}
  */
-function PropositionOnAbsence(absenceId, callback) {
+const getProposedTeacherSQL = (absenceId, callback) => {
     pool.getConnection((err, db) => {
         if (err) callback(err, null);
         db.query(
@@ -52,32 +51,31 @@ function PropositionOnAbsence(absenceId, callback) {
             }
         );
     });
-}
+};
 
 /**
- * Function to insert a proposition for a teacher.
+ * Insert a proposition for a teacher into the database.
  *
  * @param {number} teacherId - The ID of the teacher
  * @param {number} propositionId - The ID of the proposition
- * @param {function} callback - The callback function
+ * @param {function} callback - Callback function to handle results
  * @return {void}
  */
-function insertProposition(teacherId, propositionId, callback) {
+const insertAcceptedPropositionSQL = (teacherID, propositionID, callback) => {
     pool.getConnection((err, db) => {
         if (err) callback(err, null);
         db.query(
             {
                 sql: SQL.insert.remplacement,
                 timeout: 10000,
-                values: [teacherId, propositionId],
+                values: [teacherID, propositionID],
             },
             (err, rows, fields) => {
-                if (err) callback(err, false);
-                callback(null, true);
+                callback(err, rows);
             }
         );
     });
-}
+};
 
 // -------------------------------------------------- MAINS FUNCTIONS ------------------------------------------------ //
 
@@ -89,14 +87,14 @@ function insertProposition(teacherId, propositionId, callback) {
  * @param {Function} callback - The callback function to be invoked with the result
  * @return {void}
  */
-function proposeOnAbsenceExport(req, res, callback) {
-    const teacherId = req.body.teacherId;
+const insertProposition = (req, res, callback) => {
+    const teacherID = req.body.teacherId;
     const absenceID = req.body.absenceID;
-    proposeOnAbsence(teacherId, absenceID, (err, result) => {
-        if (err) callback(err, null);
-        callback(null, result);
+
+    insertPropositionSQL(teacherID, absenceID, (err, result) => {
+        callback(err, result);
     });
-}
+};
 
 /**
  * Get all the teacher who propose on an absence.
@@ -106,31 +104,23 @@ function proposeOnAbsenceExport(req, res, callback) {
  * @param {Function} callback - The callback function to be invoked with the result
  * @return {void}
  */
-function getPropositionOnAbsence(req, res, callback) {
+const getProposedTeacher = (req, res, callback) => {
     const absenceID = req.params.abs;
-    PropositionOnAbsence(absenceID, (err, result) => {
-        if (err) callback(err, null);
-        callback(null, result);
-    });
-}
 
-/**
- * Accepts a proposition sent in the request body, inserts it into the database, and calls the callback with the result.
- *
- * @param {Object} req - The request object
- * @param {Object} res - The response object
- * @param {Function} callback - The callback function to be called with the result
- * @return {void}
- */
-function acceptProposition(req, res, callback) {
-    const teacherId = req.body.teacherId;
-    const propositionId = req.body.propositionId;
-    insertProposition(teacherId, propositionId, (err, result) => {
-        if (err) callback(err, null);
-        callback(null, result);
+    PropositionOnAbsence(absenceID, (err, result) => {
+        callback(err, result);
     });
-}
+};
+
+const acceptProposition = (req, res, callback) => {
+    const teacherID = req.body.teacherID;
+    const propositionID = req.body.propositionID;
+
+    insertAcceptedPropositionSQL(teacherID, propositionID, (err, result) => {
+        callback(err, result);
+    });
+};
 
 // -------------------------------------------------- EXPORTS -------------------------------------------------------- //
 
-module.exports = { proposeOnAbsenceExport, getPropositionOnAbsence, acceptProposition };
+module.exports = { insertProposition, getProposedTeacher, acceptProposition };

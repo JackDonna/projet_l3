@@ -8,13 +8,13 @@ const SQL = sql_conf_file.sql;
 // ------------------------------------------------------------------------------------------------------------ //
 
 /**
- * Retrieves diffusion data by teacher ID.
+ * Retrieves diffusions by teacher ID from the database.
  *
- * @param {number} teacherId - The ID of the teacher
- * @param {function} callback - The callback function
+ * @param {number} teacherId - The ID of the teacher to retrieve diffusions for.
+ * @param {function} callback - The callback function to handle the results.
  * @return {void}
  */
-function getDiffusionByTeachers(teacherId, callback) {
+const getYourDiffusionsSQL = (teacherId, callback) => {
     pool.getConnection((err, db) => {
         if (err) callback(err, null);
         db.query(
@@ -29,60 +29,73 @@ function getDiffusionByTeachers(teacherId, callback) {
             }
         );
     });
-}
+};
 
+/**
+ * Inserts diffusion SQL into the database.
+ *
+ * @param {number} id_teach - The ID of the teacher.
+ * @param {number} id_abs - The ID of the abstract.
+ * @param {function} callback - The callback function.
+ * @return {void}
+ */
+const insertDiffusionSQL = (id_teach, id_abs, callback) => {
+    pool.getConnection((err, db) => {
+        if (err) callback(err, null);
+        db.query(
+            {
+                sql: SQL.insert.diffusion,
+                timeout: 10000,
+                values: [id_teach, id_abs],
+            },
+            (err, rows, fields) => {
+                db.release();
+                callback(err, true);
+            }
+        );
+    });
+};
 // ------------------------------------------------------------------------------------------------------------------ //
 // --- MAINS FUNCTIONS ------------------------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------------------------------------------ //
 
 /**
- * Retrieves diffusion data for a specific teacher and invokes a callback with the result.
+ * Retrieves the diffusions associated with a specific teacher.
  *
- * @param {Object} req - The request object
- * @param {Object} res - The response object
- * @param {Function} callback - The callback function to be invoked with the result
- * @return {void}
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ * @param {Function} callback - The callback function.
+ * @param {Error} callback.err - The error, if any.
+ * @param {Array} callback.result - The result array of diffusions.
  */
-function getMyDiffusionExport(req, res, callback) {
+const getMyDiffusions = (req, res, callback) => {
     const teacherId = req.params.teacherId;
+
     getDiffusionByTeachers(teacherId, (err, result) => {
         if (err) callback(err, null);
         callback(null, result);
     });
-}
+};
 
-function insert_diffusion(db, id_teach, id_abs, callback) {
-    db.query(
-        {
-            sql: SQL.insert.diffusion,
-            timeout: 10000,
-            values: [id_teach, id_abs],
-        },
-        (err, rows, fields) => {
+/**
+ * Inserts diffusions for the specified teacher IDs and absence ID.
+ *
+ * @param {Array} teacherIDs - The array of teacher IDs
+ * @param {number} idAbsence - The ID of the absence
+ * @param {function} callback - The callback function
+ * @return {boolean} The result of the insertion
+ */
+const insertDiffusions = (teacherIDs, idAbsence, callback) => {
+    teacherIDs.forEach((teacherID) => {
+        insertDiffusionSQL(teacherID.id, idAbsence, (err, result) => {
             if (err) callback(err, null);
-            callback(null, true);
-        }
-    );
-}
-
-function insert_all_diffusion(tabTeacher, id_abs, callback) {
-    console.log("insertion");
-    pool.getConnection((err, db) => {
-        console.log("connection ok");
-        if (err) console.error(err);
-        console.log(tabTeacher);
-        for (let i = 0; i < tabTeacher.length; i++) {
-            console.log("insertion " + (i + 1) + " / " + tabTeacher.length);
-            insert_diffusion(db, tabTeacher[i].id_ens, id_abs, (err, result) => {
-                if (err) callback(err, null);
-            });
-        }
-        callback(null, true);
+        });
     });
-}
+    callback(null, true);
+};
 
 // ------------------------------------------------------------------------------------------------------------------ //
 // --- EXPORTS --------------------------------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------------------------------------------ //
 
-module.exports = { getMyDiffusionExport, insert_all_diffusion };
+module.exports = { getMyDiffusions, insertDiffusions };

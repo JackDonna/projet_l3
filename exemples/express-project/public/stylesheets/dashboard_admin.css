@@ -199,32 +199,61 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .cle {
   color: #9fccce;
 }
 
-#container_list_diff {
-  display: none;
+#absence_logo {
+  display: flex;
   justify-content: center;
   align-items: start;
-  padding-top: 300px;
+}
+
+#absence_logo img {
+  padding-top: 40%;
+}
+
+#container_list_diff {
+  display: none;
+  justify-content: start;
+  align-items: start;
+  padding-left: 60px;
+  flex-direction: column;
+  padding-top: 100px;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  height: 150px;
+  width: 500px;
+  background: whitesmoke;
+  margin-bottom: 30px;
+  padding: 0 15px;
+  border: solid 3px #9fccce;
+  border-radius: 15px;
 }
 
 #container_propositions {
   display: none;
-  justify-content: center;
+  justify-content: start;
   align-items: start;
-  padding-top: 300px;
+  padding-left: 60px;
+  flex-direction: column;
+  padding-top: 100px;
 }
 
 #container_remplacements {
   display: none;
-  justify-content: center;
+  justify-content: start;
   align-items: start;
-  padding-top: 300px;
+  padding-left: 60px;
+  flex-direction: column;
+  padding-top: 100px;
 }
 
 .logout {
@@ -232,4 +261,27 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 }
 .logout:hover {
   cursor: pointer;
+}
+
+@media only screen and (max-width : 390px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #sidebarMenu {
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out;
+  }
+
+  .sidebarIconToggle{
+    display: block;
+  }
+
+  #container_absence{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0 0;
+  }
 }

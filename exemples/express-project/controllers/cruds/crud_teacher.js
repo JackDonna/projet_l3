@@ -3,12 +3,23 @@ const fs = require("fs");
 const axios = require("axios");
 const sql_config = JSON.parse(fs.readFileSync("controllers/config/sql_config.json", "utf-8"));
 const SQL = sql_config.sql;
+const Session = require("../utils/session");
+const { sendVerificationMailLocal } = require(__dirname + "/crud_mail");
 
 // ------------------------------------------------------------------------------------------------------------------ //
 // --- SUBS FUNCTIONS -------------------------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------------------------------------------ //
+const rnd = (min, max) => {
+    return Math.random() * (max - min) + min;
+};
 
-function get_all_teacher(callback) {
+/**
+ * Retrieves all teachers from the database.
+ *
+ * @param {function} callback - Callback function to handle results or errors.
+ * @return {void}
+ */
+const getAllTeachersSQL = (callback) => {
     pool.getConnection((err, db) => {
         if (err) callback(err, null);
         db.query(
@@ -18,81 +29,21 @@ function get_all_teacher(callback) {
                 values: [],
             },
             (err, rows, fields) => {
-                if (err) callback(err, null);
-                callback(null, rows);
+                db.release();
+                callback(err, rows);
             }
         );
     });
-}
+};
 
 /**
- * function return pseudo-random number between the given numbers
- * @param min {int} min number
- * @param max {int} min number
- * @returns {*}
+ * Check if a teacher exists by their email in the database.
+ *
+ * @param {string} mail - The email of the teacher to check
+ * @param {function} callback - The callback function to handle the result
+ * @return {void}
  */
-function rnd(min, max) {
-    return Math.random() * (max - min) + min;
-}
-
-/**
- * function set the session (need router parameters) with given credentials
- * @param req router context
- * @param name {string} name of the session
- * @param firstname {firstname} firstname of the session
- * @param mail {string} mail of the session
- * @param idEtablishement
- * @param validation {boolean} tell if the session is a valide session or not
- * @param id_teacher {int} id of the teacher own this session
- * @param admin
- * @param callback {function} callback function (err, result)
- */
-function set_session(req, name, firstname, mail, idEtablishement, validation, id_teacher, admin, callback) {
-    req.session.regenerate((err) => {
-        if (err) callback(err, null);
-        req.session.nom = name;
-        req.session.prenom = firstname;
-        req.session.mail = mail;
-        req.session.idEtablishement = idEtablishement;
-        req.session.valide = validation;
-        req.session.id_ens = id_teacher;
-        req.session.admin = admin;
-        req.session.save((err) => {
-            if (err) callback(err, null);
-            callback(null, true);
-        });
-    });
-}
-
-/**
- * function check if a teacher exist with the mail and password by select and return him
- * @param mail {string} mail of the searched teacher
- * @param password {string} password of the searched teacher
- * @param callback {function} callback function (err, result)
- */
-function check_teacher_by_mail_password(mail, password, callback) {
-    pool.getConnection((err, db) => {
-        if (err) callback(err, null);
-        db.query(
-            {
-                sql: SQL.select.teacher_by_mail_password,
-                timeout: 10000,
-                values: [mail, password],
-            },
-            (err, rows, fields) => {
-                if (err) callback(err, null);
-                callback(null, rows[0]);
-            }
-        );
-    });
-}
-
-/**
- * function check if a teacher exist with the mail by select and return him
- * @param mail {string} mail of the searched teacher
- * @param callback {function} callback function (err, result)
- */
-function check_teacher_by_mail(mail, callback) {
+const isTeacherExistsByMailSQL = (mail, callback) => {
     pool.getConnection((err, db) => {
         if (err) callback(err, null);
         db.query(
@@ -102,73 +53,21 @@ function check_teacher_by_mail(mail, callback) {
                 values: [mail],
             },
             (err, rows, fields) => {
-                if (err) callback(err, null);
-                callback(null, rows[0]);
+                db.release();
+                callback(err, rows[0]);
             }
         );
     });
-}
+};
 
 /**
- * function insert a teacher in the SQL database
- * @param mail {string} mail of the new teacher
- * @param password {string} password of the new teacher
- * @param nom {string} name of the new teacher
- * @param prenom {string} firstname of the new teacher
- * @param callback {function} callback function (err, result)
+ * Retrieves the validation code for a teacher's mail address from the SQL database.
+ *
+ * @param {string} mail - The email address of the teacher.
+ * @param {function} callback - The callback function to handle the result of the query.
+ * @return {void}
  */
-function insert_user(mail, password, nom, prenom, callback) {
-    let number = Math.round(rnd(190556, 999999));
-    pool.getConnection((err, db) => {
-        if (err) callback(err, null);
-        db.query(
-            {
-                sql: SQL.insert.teacher,
-                timeout: 10000,
-                values: [mail, password, nom, prenom, number, false],
-            },
-            (err, rows, flield) => {
-                if (err) callback(err, null);
-                callback(null, {
-                    nom: nom,
-                    prenom: prenom,
-                    mail: mail,
-                    valide: false,
-                    number: number,
-                });
-            }
-        );
-    });
-}
-
-/**
- * function insert a new teacher in the sql database, and check befor if the user already exist
- * @param mail {string} mail of the new teacher
- * @param password {string} password of the new teacher
- * @param nom {string} name of the new teacher
- * @param prenom {string} firstname of the new teacher
- * @param callback {function} callback function (err, result)
- */
-function insert_new_user(mail, password, nom, prenom, callback) {
-    check_teacher_by_mail(mail, (err, result) => {
-        if (err) callback(err, null);
-        if (result === undefined) {
-            insert_user(mail, password, nom, prenom, (err, result) => {
-                if (err) callback(err, null);
-                callback(null, result);
-            });
-        } else {
-            callback(null, false);
-        }
-    });
-}
-
-/**
- * function select only the random number of the wanted teacher by the mail
- * @param mail {string} mail of the wanted teacher
- * @param callback {function} callback function (err, result)
- */
-function select_teacher_random_number(mail, callback) {
+const getTeacherValidationCodeSQL = (mail, callback) => {
     pool.getConnection((err, db) => {
         if (err) callback(err, null);
         db.query(
@@ -178,168 +77,175 @@ function select_teacher_random_number(mail, callback) {
                 timeout: 10000,
             },
             (err, rows, fields) => {
-                if (err) callback(err, null);
-                callback(null, rows[0].random_number);
+                db.release();
+                callback(err, rows[0]);
             }
         );
     });
-}
+};
 
 /**
- * function validate a teacher by check if the code is correct and change the validation state of the teacher in the database
- * @param mail {string} mail of the teacher
- * @param number {int} number send by the user who want to be connected as a teacher
- * @param callback {function} callback function (err, result)
+ * Validate a teacher using SQL validation code.
+ *
+ * @param {type} idTeacher - The ID of the teacher to validate
+ * @param {type} number - The validation number to compare
+ * @param {Function} callback - Callback function to handle the result
  */
-function validate_teacher_by_mail(id_ens, number, callback) {
-    select_teacher_random_number(id_ens, (err, result) => {
+const validateTeacherSQL = (idTeacher, number, callback) => {
+    getTeacherValidationCodeSQL(idTeacher, (err, result) => {
         if (err) callback(err, null);
-        if (result == number) {
+        if (result.random_number == number) {
             pool.getConnection((err, db) => {
                 db.query(
                     {
                         sql: SQL.update.teacher_validation,
-                        values: [id_ens],
+                        values: [idTeacher],
                         timeout: 10000,
                     },
                     (err, rows, fields) => {
-                        if (err) callback(err, null);
-                        callback(null, true);
+                        db.release();
+                        callback(err, rows);
                     }
                 );
             });
         }
     });
-}
+};
 
 /**
- * Check identification of a user.
+ * Check if the provided password matches the identification SQL for a given teacher ID.
  *
- * @param {string} id_ens - The user's identification number
- * @param {string} password - The user's password
- * @param {function} callback - The callback function to handle the result
- * @return {void}
+ * @param {type} idTeacher - The ID of the teacher
+ * @param {type} password - The password to check
+ * @param {function} callback - Callback function to handle the result
+ * @return {type} Returns the result of the callback function
  */
-function check_identificationByPassword(id_ens, password, callback) {
-    pool.getConnection((err, database) => {
+const isPasswordMatchidentificationSQL = (idTeacher, password, callback) => {
+    pool.getConnection((err, db) => {
         if (err) callback(err, null);
-        database.query(
+        db.query(
             {
                 sql: SQL.select.identification_by_teacher_id_password,
-                values: [id_ens, password],
+                values: [idTeacher, password],
                 timeout: 10000,
             },
             (err, rows, fields) => {
-                if (err) callback(err, null);
-                callback(null, rows[0]);
+                db.release();
+                callback(err, rows[0]);
             }
         );
     });
-}
+};
 
 /**
- * Check if identification exists for a teacher in the database.
+ * Checks if identification exists in the database for a given teacher.
  *
- * @param {type} idTeacher - The ID of the teacher
- * @param {type} callback - Callback function
- * @return {type} The first row of identification data
+ * @param {number} idTeacher - The ID of the teacher to check identification for.
+ * @param {function} callback - The callback function to handle the result.
+ * @return {void}
  */
-function checkIdentificationExist(idTeacher, callback) {
-    pool.getConnection((err, database) => {
+const isIdentificationExistSQL = (idTeacher, callback) => {
+    pool.getConnection((err, db) => {
         if (err) callback(err, null);
-        database.query(
+        db.query(
             {
-                sql: SQL.select.identificationByTeacher,
+                sql: SQL.select.identificationByTeacherID,
                 values: [idTeacher],
                 timeout: 10000,
             },
             (err, rows, fields) => {
-                if (err) callback(err, null);
-                callback(null, rows[0]);
+                db.release();
+                callback(err, rows[0]);
             }
         );
     });
-}
+};
 
 /**
  * Create a profile with the given ID.
  *
- * @param {number} id_ens - The ID of the profile
+ * @param {number} idTeacher - The ID of the profile
  * @param {function} callback - Callback function to handle the result
  * @return {void}
  */
-function create_profil(id_ens, callback) {
-    pool.getConnection((err, database) => {
+const createProfilSQL = (idTeacher, callback) => {
+    pool.getConnection((err, db) => {
         if (err) callback(err, null);
-        database.query(
+        db.query(
             {
                 sql: SQL.insert.profil,
-                values: [id_ens],
+                values: [idTeacher],
                 timeout: 10000,
             },
             (err, rows, fields) => {
-                if (err) callback(err, null);
-                callback(null, true);
+                db.release();
+                callback(err, rows);
             }
         );
     });
-}
-
-function get_profil(id_ens, callback) {
-    pool.getConnection((err, database) => {
-        if (err) callback(err, null);
-        database.query(
-            {
-                sql: SQL.select_teacher_profil,
-                values: [id_ens],
-                timeout: 10000,
-            },
-            (err, rows, fields) => {
-                if (err) callback(err, null);
-                callback(null, rows[0]);
-            }
-        );
-    });
-}
+};
 
 /**
- * Creates an identification record in the database for a given user profile.
+ * Retrieves the SQL profile of a teacher based on their ID.
  *
- * @param {string} password - The password associated with the identification.
- * @param {string} id_ens - The ID of the user profile.
- * @param {function} callback - The callback function that handles the result.
+ * @param {number} idTeacher - The ID of the teacher.
+ * @param {function} callback - The callback function to handle the result.
  * @return {void}
  */
-function create_identification(password, id_ens, callback) {
-    create_profil(id_ens, (err, result) => {
+const getProfilSQL = (idTeacher, callback) => {
+    pool.getConnection((err, db) => {
         if (err) callback(err, null);
-        pool.getConnection((err, database) => {
-            let nb = Math.round(rnd(150000, 999999));
+        db.query(
+            {
+                sql: SQL.select_teacher_profil,
+                values: [idTeacher],
+                timeout: 10000,
+            },
+            (err, rows, fields) => {
+                db.release();
+                callback(err, rows);
+            }
+        );
+    });
+};
+
+/**
+ * Creates an identification SQL entry for a teacher.
+ *
+ * @param {string} password - The password for the identification.
+ * @param {number} idTeacher - The ID of the teacher.
+ * @param {function} callback - The callback function to handle the result.
+ * @return {void}
+ */
+const createIdentificationSQL = (password, teacherID, callback) => {
+    createProfilSQL(teacherID, (err, result) => {
+        if (err) callback(err, null);
+        pool.getConnection((err, db) => {
             if (err) callback(err, null);
-            database.query(
+            let validatioNnumber = Math.round(rnd(150000, 999999));
+            db.query(
                 {
                     sql: SQL.insert.identification,
-                    values: [password, false, nb, id_ens],
+                    values: [password, false, validatioNnumber, teacherID],
                     timeout: 10000,
                 },
                 (err, rows, fields) => {
-                    if (err) callback(err, null);
-                    callback(null, nb);
+                    db.release();
+                    callback(err, validatioNnumber);
                 }
             );
         });
     });
-}
+};
 
 /**
- * Checks if the admin user exists by verifying the provided email and password.
+ * Check if an administrator exists by email and password in the database.
  *
- * @param {string} mail - The email of the admin user
- * @param {string} password - The password of the admin user
+ * @param {string} mail - The email of the administrator
+ * @param {string} password - The password of the administrator
  * @param {function} callback - The callback function to handle the result
- * @return {object} The admin user data if found
  */
-function check_admin_by_mail_pasword(mail, password, callback) {
+const isAdministratorExistByMailPasswordSQL = (mail, password, callback) => {
     pool.getConnection((err, db) => {
         if (err) callback(err, null);
         db.query(
@@ -349,81 +255,118 @@ function check_admin_by_mail_pasword(mail, password, callback) {
                 timeout: 10000,
             },
             (err, rows, fields) => {
-                if (err) callback(err, null);
-                callback(null, rows[0]);
+                db.release();
+                callback(err, rows[0]);
             }
         );
     });
-}
+};
 
 /**
- * Retrieves unavailable teachers by establishment ID from the database.
+ * Retrieves unavailable teachers by establishment ID.
  *
- * @param {number} idEtablishement - The ID of the establishment to retrieve unavailable teachers for.
- * @param {function} callback - Callback function to handle the results.
+ * @param {number} idEtablishement - The ID of the establishment.
+ * @param {function} callback - The callback function to handle the result.
  * @return {void}
  */
-function getUnavailableTeachersByEtablishement(idEtablishement, callback) {
-    pool.getConnection((err, sqlDatabase) => {
+const getUnavailableTeachersByEtablishementSQL = (idEtablishement, callback) => {
+    pool.getConnection((err, db) => {
         if (err) callback(err, null);
-        sqlDatabase.query(
+        db.query(
             {
                 sql: SQL.select.unavailableTeacherByEtablishement,
                 values: [idEtablishement],
                 timeout: 10000,
             },
             (err, rows, fields) => {
-                if (err) callback(err, null);
-                callback(null, rows);
+                db.release();
+                callback(err, rows);
             }
         );
     });
-}
+};
 
-function searchTeacher(name, callback) {
-    pool.getConnection((err, sqlDatabase) => {
-        if (err) callback(err, null);
-        sqlDatabase.query(
+/**
+ * Retrieves a teacher from the database based on their name.
+ *
+ * @param {string} name - The name of the teacher to search for.
+ * @param {function} callback - The callback function to handle the query result.
+ * @return {void}
+ */
+const searchTeacherSQL = (name, callback) => {
+    pool.getConnection((err, db) => {
+        if (err) console.error(err);
+        db.query(
             {
                 sql: SQL.select.searchTeacher,
                 values: [name],
-                timeout: 10000,
+                timeout: 100000,
             },
             (err, rows, fields) => {
-                if (err) callback(err, null);
-                callback(null, rows[0]);
+                db.release();
+                callback(err, rows[0]);
             }
         );
     });
-}
+};
+
+/**
+ * Searches for a teacher in the database whose name is similar to the given name.
+ *
+ * @param {Object} db - The database connection object.
+ * @param {string} name - The name to search for.
+ * @param {function} callback - The callback function to be called with the search results.
+ * @return {void}
+ */
+const searchTeacherLikeSQL = (db, name, callback) => {
+    db.query(
+        {
+            sql: SQL.select.teacherLikeName,
+            timeout: 10000,
+            values: [name],
+        },
+        (err, rows, fields) => {
+            callback(err, rows[0]);
+        }
+    );
+};
 
 // ------------------------------------------------------------------------------------------------------------------ //
 // --- MAINS FUNCTIONS ------------------------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------------------------------------------ //
 
 /**
- * function to sign_up as a teacher by creating a teacher in the database and change the session credential
- * @param req router parameters
- * @param res router parameters
- * @param callback {function} callback function (err, result)
+ * Sign up a teacher and send a verification email.
+ *
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ * @param {Function} callback - The callback function.
+ * @return {undefined}
  */
-function sign_up(req, res, callback) {
-    check_teacher_by_mail(req.body.mail, (err, teacher) => {
+const signUP = (req, res, callback) => {
+    const mail = req.body.mail;
+    const password = req.body.password;
+
+    isTeacherExistsByMailSQL(mail, (err, teacher) => {
         if (err) callback(err, null);
-        checkIdentificationExist(teacher.id_ens, (err, identification) => {
+        isIdentificationExistSQL(teacher.id_ens, (err, identification) => {
             if (err) callback(err, null);
             if (teacher != undefined && identification == undefined) {
-                create_identification(req.body.password, teacher.id_ens, (err, identification) => {
+                createIdentificationSQL(password, teacher.id_ens, (err, validationNumber) => {
                     if (err) callback(err, null);
-                    axios.get("mail/send_verification_mail/" + req.body.mail + "/" + identification);
-                    set_session(
+                    sendVerificationMailLocal(mail, validationNumber, (err, res) => {
+                        if (err) {
+                            console.error(err);
+                        }
+                    });
+                    Session.createSession(
                         req,
                         teacher.nom,
                         teacher.prenom,
                         teacher.mail,
                         teacher.id_eta,
-                        false,
                         teacher.id_ens,
+                        false,
                         false,
                         (err, res) => {
                             callback(null, true);
@@ -435,32 +378,35 @@ function sign_up(req, res, callback) {
             }
         });
     });
-}
+};
 
 /**
- * function to sign_in as a teacher by checking the credential and set the session
- * @param req router parameters
- * @param res router parameters
- * @param callback {function} callback function (err, result)
+ * Sign in a teacher using their email and password.
+ *
+ * @param {Object} req - The request object containing the email and password in the body.
+ * @param {Object} res - The response object.
+ * @param {Function} callback - The callback function to be called after the sign-in process.
+ * @return {void} The callback function is called with an error (if any) and a boolean indicating if the sign-in was successful.
  */
-function sign_in(req, res, callback) {
-    check_teacher_by_mail(req.params.mail, (err, teacher) => {
-        console.log(teacher);
+const signIN = (req, res, callback) => {
+    const mail = req.params.mail;
+    const password = req.params.password;
+
+    isTeacherExistsByMailSQL(mail, (err, teacher) => {
         if (teacher != undefined) {
-            check_identificationByPassword(teacher.id_ens, req.params.password, (err, identification) => {
+            isPasswordMatchidentificationSQL(teacher.id_ens, password, (err, identification) => {
                 if (err) callback(err, null);
                 if (identification != undefined) {
-                    set_session(
+                    Session.createSession(
                         req,
                         teacher.nom,
                         teacher.prenom,
                         teacher.mail,
                         teacher.id_eta,
-                        identification.valide,
                         teacher.id_ens,
+                        identification.valide,
                         false,
                         (err, res) => {
-                            console.log(teacher.nom + " est connecté.");
                             callback(null, true);
                         }
                     );
@@ -470,31 +416,31 @@ function sign_in(req, res, callback) {
             callback(null, false);
         }
     });
-}
+};
 
 /**
- * Signs in an admin by checking the email and password, setting the session if admin exists.
+ * Signs in an administrator using the provided request and response, and calls the callback upon completion.
  *
- * @param {Object} req - The request object
- * @param {Object} res - The response object
- * @param {Function} callback - The callback function
+ * @param {Object} req - the request object
+ * @param {Object} res - the response object
+ * @param {Function} callback - the callback function
  * @return {void}
  */
-function sign_in_admin(req, res, callback) {
-    check_admin_by_mail_pasword(req.params.mail, req.params.password, (err, admin) => {
-        if (err) {
-            callback(err, null);
-            return;
-        }
+const signINAdministrator = (req, res, callback) => {
+    const mail = req.body.mail;
+    const password = req.body.password;
+
+    isAdministratorExistByMailPasswordSQL(mail, password, (err, admin) => {
+        if (err) callback(err, null);
         if (admin != undefined) {
-            set_session(
+            Session.createSession(
                 req,
                 admin.nom,
                 admin.prenom,
                 admin.mail,
                 admin.etablissement,
-                true,
                 admin.id_admin,
+                true,
                 true,
                 (err, result) => {
                     callback(null, true);
@@ -504,55 +450,80 @@ function sign_in_admin(req, res, callback) {
             callback(err, false);
         }
     });
-}
+};
 
 /**
- * function to validate a teacher by checking the random number and set the session and the database
- * @param req router parameters
- * @param res router parameters
- * @param callback {function} callback function (err, result)
- */
-function validate_teacher(req, res, callback) {
-    validate_teacher_by_mail(req.session.id_ens, req.body.number, (err, result) => {
-        if (err) callback(err, null);
-        req.session.valide = 1;
-        callback(null, true);
-    });
-}
-
-/**
- * Retrieves the teacher details for the admin panel.
+ * Validates a teacher using the provided request and response objects.
  *
- * @param {Object} req - the request object
- * @param {Object} res - the response object
- * @param {Function} callback - the callback function
+ * @param {Object} req - the request object containing session and body information
+ * @param {Object} res - the response object to send data back
+ * @param {Function} callback - the callback function to handle errors and results
  * @return {void}
  */
-function getTeacherForAdminPanel(req, res, callback) {
-    getUnavailableTeachersByEtablishement(req.session.idEtablishement, (err, teachers) => {
-        if (err) callback(err, null);
-        callback(null, teachers);
-    });
-}
+const validateTeacher = (req, res, callback) => {
+    const idTeacher = req.session.id_ens;
+    const validationNumber = req.body.number;
 
-function getTeacher(name, callback) {
-    searchTeacher(name, (err, teacher) => {
-        if (err) callback(err, null);
-        callback(null, teacher);
+    validateTeacherSQL(idTeacher, validationNumber, (err, result) => {
+        req.session.valide = true;
+        callback(err, result);
     });
-}
+};
+
+/**
+ * Retrieves the unavailable teachers for a specific establishment.
+ *
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ * @param {Function} callback - The callback function to handle the result.
+ * @return {void}
+ */
+const getYourUnaivalableTeacher = (req, res, callback) => {
+    const idEtablishement = req.session.idEtablishement;
+
+    getUnavailableTeachersByEtablishementSQL(idEtablishement, (err, teachers) => {
+        callback(err, teachers);
+    });
+};
+
+/**
+ * Retrieves a teacher from the database based on their name.
+ *
+ * @param {string} name - The name of the teacher to retrieve.
+ * @param {function} callback - The callback function to handle the result. It should have the signature (error, teacher) where 'error' is an error object (if any) and 'teacher' is the retrieved teacher object.
+ * @return {void} This function does not return a value.
+ */
+const getTeacher = (name, callback) => {
+    searchTeacherSQL(name, (err, teacher) => {
+        callback(err, teacher);
+    });
+};
+
+/**
+ * Retrieves a teacher from the database whose name is similar to the given name.
+ *
+ * @param {Object} db - The database connection object.
+ * @param {string} name - The name of the teacher to search for.
+ * @param {function} callback - The callback function to be called with the retrieved teacher.
+ * @return {undefined} This function does not return a value.
+ */
+const getTeacherLike = (db, name, callback) => {
+    searchTeacherLikeSQL(db, name, (err, teacher) => {
+        callback(err, teacher);
+    });
+};
 
 // ------------------------------------------------------------------------------------------------------------------ //
 // --- EXPORTS --------------------------------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------------------------------------------ //
 
 module.exports = {
-    validate_teacher,
-    sign_in,
-    sign_up,
-    sign_in_admin,
-    getTeacherForAdminPanel,
+    getTeacherLike,
+    signIN,
+    signUP,
+    signINAdministrator,
+    getYourUnaivalableTeacher,
     getTeacher,
-    get_all_teacher,
+    getTeacherLike,
+    validateTeacher,
 };
-sign_in;

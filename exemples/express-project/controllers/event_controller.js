@@ -1,84 +1,73 @@
 const asyncHandler = require("express-async-handler");
 const { RequestResponse } = require("./utils/object_engine");
-const { get_teacher_timetable, insert_timetable, insert_timetable_sync, insertTimetableRoot } = require(__dirname +
+const { insertTimetableURL, insertTimetablesFiles, getYourTimetable, getEventByID } = require(__dirname +
     "/cruds/crud_event.js");
+const Session = require(__dirname + "/utils/session.js");
 
 // ----------------------------------- EXPORTS FUNCTIONS CRUDS RESULT -------------------------------- //
+
 /**
- * @function insert_timetable for POST request, insert a timetable in the SQL database
- * @body link to get the timetable from an external server (pronote, EDT, school software ...)
- * @type {*|express.RequestHandler<core.ParamsDictionary, any, any, core.Query>}
+ * Handles the insertTeacherTmetableREQUEST endpoint.
+ *
+ * @param {Request} req - The request object.
+ * @param {Response} res - The response object.
+ * @return {Promise<void>} A Promise that resolves when the function completes.
  */
-
-exports.insert_teacher_timetable = asyncHandler((req, res) => {
-    insert_timetable(req, res, (err, result) => {
-        let response = new RequestResponse(
-            "eventsAPI",
-            "POST",
-            result,
-            "boolean",
-            "put a new timetable link-based or qr-code based",
-            err
-        );
-
-        if (err) console.error(err);
-        res.send(response);
+exports.insertTeacherTimetableREQUEST = asyncHandler(async (req, res) => {
+    Session.pIsValidated(req, res, () => {
+        insertTimetableURL(req, res, (err, result) => {
+            if (err) {
+                console.error(err);
+                res.sendStatus(500);
+            } else {
+                res.sendStatus(200);
+            }
+        });
     });
 });
 
 /**
- * @function get_timetable for get request, query collection of event to the SQL database
- * @params teacher id to query the correct events
- * @type {*|express.RequestHandler<core.ParamsDictionary, any, any, core.Query>}
+ * Handles the get_timetable endpoint.
+ *
+ * GET request to get the timetable of a teacher,
+ * sends a Json with the result of the database query.
+ *
+ * @param {Request} req - The request object.
+ * @param {Response} res - The response object.
+ * @return {Promise<void>} A Promise that resolves when the function completes.
  */
-exports.get_timetable = asyncHandler((req, res) => {
-    get_teacher_timetable(req, res, (err, result) => {
-        let response = new RequestResponse(
-            "teacherAPI",
-            "GET",
-            result,
-            "<eventsCollection>",
-            "get timetable for a teacher by ID",
-            err
-        );
-
-        if (err) console.error(err);
-        res.send(response);
+exports.getYourTimetableREQUEST = asyncHandler(async (req, res) => {
+    Session.pIsValidated(req, res, () => {
+        getYourTimetable(req, res, (err, result) => {
+            if (err) {
+                console.error(err);
+                res.sendStatus(500);
+            } else {
+                res.send(result);
+            }
+        });
     });
 });
 
 /**
- * @function insert_teacher_timetable_sync POST request to insert a timetable into the database, send the result whene database query are finish
- * @type {*|express.RequestHandler<core.ParamsDictionary, any, any, core.Query>}
+ * Inserts timetable files into a database.
+ *
+ * @async
+ * @function insertTimetablesFilesREQUEST
+ * @param {Object} req - The Express.js request object.
+ * @param {Object} res - The Express.js response object.
+ * @returns {Promise<void>} - A Promise that resolves when the operation is complete.
  */
-exports.insert_teacher_timetable_sync = asyncHandler((req, res) => {
-    insert_timetable_sync(req, res, (err, result) => {
-        let response = new RequestResponse(
-            "teacherAPI",
-            "POST",
-            result,
-            "boolean",
-            "Insert timetable in the database ( require session connection )",
-            err
-        );
-
-        if (err) console.error(err);
-        res.send(response);
-    });
-});
-
-exports.insertAsRoot = asyncHandler((req, res) => {
-    insertTimetableRoot(req, res, (err, result) => {
-        let response = new RequestResponse(
-            "teacherAPI",
-            "POST",
-            result,
-            "boolean",
-            "Insert timetable in the database ( require session connection )",
-            err
-        );
-        if (err) console.error(err);
-        res.send(response);
+exports.insertTimetablesFilesREQUEST = asyncHandler((req, res) => {
+    Session.pIsAdministrator(req, res, () => {
+        insertTimetablesFiles(req, res, (err, result) => {
+            if (err) {
+                console.error(err);
+                res.sendStatus(500);
+            } else {
+                res.sendStatus(200);
+            }
+        });
     });
 });
 

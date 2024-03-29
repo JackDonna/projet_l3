@@ -20,14 +20,15 @@ require("dotenv").config();
 // ------------------------------------------------------------------------------------------------------------ //
 
 /**
- * function send an e-mail with nodemailer built-in library
- * @param to {string} recipient for the e-mail
- * @param subject {string} subject of the e-mail
- * @param message {string} message of the e-mail
- * @param callback {function} callback function (err, result)
+ * Sends an email with the provided information.
+ *
+ * @param {string} to - The email address to send the email to
+ * @param {string} subject - The subject of the email
+ * @param {string} message - The message content of the email
+ * @param {function} callback - The callback function to handle the result
+ * @return {undefined}
  */
-function send_mail(to, subject, message, callback) {
-    console.log(conf);
+const sendMail = (to, subject, message, callback) => {
     transporter.sendMail(
         {
             from: conf.auth.pass,
@@ -36,38 +37,59 @@ function send_mail(to, subject, message, callback) {
             text: message,
         },
         (err, result) => {
-            if (err) callback(err, null);
-            callback(null, true);
+            callback(err, true);
         }
     );
-}
+};
+
+/**
+ * Sends a verification email to the specified email address with the given validation number.
+ *
+ * @param {string} mail - The email address to send the verification email to.
+ * @param {string} validationNumber - The validation number to include in the email.
+ * @param {function} callback - The callback function to execute after sending the email.
+ * @return {void} This function does not return anything.
+ */
+const sendVerificationMailLocal = (mail, validationNumber, callback) => {
+    sendMail(
+        mail,
+        "Inscription Application RDP",
+        "Bonjour votre compte sur l'application RDP à bien été enregistré. \n" +
+            "Vous pouvez dès maintenant l'activer avec le code de verification suivant : " +
+            validationNumber,
+        (err, result) => {
+            callback(err, true);
+        }
+    );
+};
 
 // ------------------------------------------------------------------------------------------------------------------ //
 // --- MAINS FUNCTIONS ------------------------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------------------------------------------ //
 
 /**
- * functions send an e-mail to verify a teacher with the correct code (needed to validate himself)
- * @param req router parameters
- * @param res router parameters
- * @param callback {function} callback function (err, result)
+ * Sends a verification email using the provided request and response objects, and calls the callback with an error or true as the result.
+ *
+ * @param {Object} req - the request object
+ * @param {Object} res - the response object
+ * @param {Function} callback - the callback function
+ * @return {undefined}
  */
-function send_mail_for_verification(req, res, callback) {
-    send_mail(
+const sendVerificationMail = (req, res, callback) => {
+    sendMail(
         req.params.mail,
         "Inscription Application RDP",
         "Bonjour votre compte sur l'application RDP à bien été enregistré. \n" +
             "Vous pouvez dès maintenant l'activer avec le code de verification suivant : " +
             req.params.number,
         (err, result) => {
-            if (err) callback(err, null);
-            callback(null, true);
+            callback(err, true);
         }
     );
-}
+};
 
 // ------------------------------------------------------------------------------------------------------------------ //
 // --- EXPORTS --------------------------------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------------------------------------------ //
 
-module.exports = { send_mail_for_verification };
+module.exports = { sendVerificationMail, sendVerificationMailLocal };

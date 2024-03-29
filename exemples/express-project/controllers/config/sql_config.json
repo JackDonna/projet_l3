@@ -13,6 +13,7 @@
       "teacher_random_number":                  "SELECT random_number FROM Identification WHERE enseignant = ?",
       "available_teacher":                      "SELECT * FROM Enseignant WHERE NOT EXISTS( SELECT 1 FROM Evenement WHERE Evenement.enseignant = Enseignant.id_ens AND( ( Evenement.heure_debut > ? AND Evenement.heure_debut < ? ) OR( Evenement.heure_fin > ? AND Evenement.heure_fin < ? ) ))",
       "identification_by_teacher_id_password":  "SELECT * FROM Identification WHERE enseignant = ? AND mdp = ?",
+      "identificationByTeacherID":              "SELECT * FROM Identification WHERE enseignant = ?",
       "teacher_profil":                         "SELECT * FROM Profil WHERE enseignant = ?",
       "course":                                 "SELECT * FROM Ref_Matiere WHERE matiere = ?",
       "absence_available":                      "SELECT * FROM `Evenement` as e Inner join Diffusion as d Inner join Enseignant as n Inner join Absence as a on e.id_ev = d.absence and n.id_ens = d.ens and a.evenement = e.id_ev where d.ens = ?; ",
@@ -29,7 +30,11 @@
       "all_teachers":                           "SELECT * FROM `Enseignant`",
       "teacher_is_available2":                   "SELECT COUNT(*) AS nb_event FROM Evenement WHERE `enseignant` = ? AND `date` = ? AND((heure_debut < ? AND heure_fin > ?)OR(heure_debut < ? AND heure_fin > ?)OR(heure_debut = ? AND heure_fin = ?)OR(heure_debut >= ? AND heure_fin <= ?)OR(heure_debut <= ? AND heure_fin >= ?))",
       "get_event":                              "SELECT * FROM `Evenement` WHERE id_ev = ?",
-      "get_matiere_by_evenement":               "SELECT matiere FROM Evenement WHERE id_ev = ?"
+      "get_matiere_by_evenement":               "SELECT matiere FROM Evenement WHERE id_ev = ?",
+      "classeByName" :                          "SELECT * FROM Ref_Classe WHERE classe = ?",
+      "teacherLikeName" :                       "SELECT * FROM Enseignant WHERE nom LIKE ?",
+      "allTeacherAvailableTheTrueOne" :         "SELECT Enseignant.id_ens as id FROM Enseignant WHERE EXISTS (SELECT * FROM Enseignant inner join Evenement on Evenement.enseignant = Enseignant.id_ens and Evenement.date = ? and ( (Evenement.heure_debut BETWEEN ? and ?) or (Evenement.heure_fin BETWEEN ? and ?) ) and ( (? BETWEEN heure_debut and heure_fin) or (? BETWEEN heure_debut and heure_fin) ) );",
+      "allTeacherCompatibleWithDisc" :          "select c.enseignant as id from Correspondance as c inner join Absence as a inner join Evenement as e inner join Ref_Matiere as rm inner join Ref_Discipline as rd ON a.evenement = e.id_ev and e.matiere = rm.id_mat and rm.nomenclature = rd.nomenclature and c.discipline = rd.id_disc where e.id_ev = ?;"
     },
     "insert":
     {
@@ -41,7 +46,8 @@
       "profil":                                  "INSERT INTO Profil (enseignant) values (?)",
       "proposition":                             "INSERT INTO `Proposition`(`enseignant`, `absence`) VALUES (?,?)",
       "remplacement":                            "INSERT INTO `Remplacement`(`horodatage_remp`, `enseignant`, `proposition`) VALUES (NULL,?,?)",
-      "diffusion" :                              "INSERT INTO `Diffusion`(`ens`, `absence`) VALUES ( ? , ? )"
+      "diffusion" :                              "INSERT INTO `Diffusion`(`ens`, `absence`) VALUES ( ? , ? )",
+      "linkTeacherClasse" :                      "INSERT INTO Panel (enseignant, classe) VALUES (?, ?)"
     },
     "update":
     {

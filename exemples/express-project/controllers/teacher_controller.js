@@ -1,102 +1,114 @@
 const asyncHandler = require("express-async-handler");
-const { RequestResponse } = require("./utils/object_engine");
 
 const {
-    validate_teacher,
-    sign_in,
-    sign_up,
-    sign_in_admin,
-    getTeacherForAdminPanel,
+    getTeacherLike,
+    signIN,
+    signUP,
+    signINAdministrator,
+    getYourUnaivalableTeacher,
     getTeacher,
-    get_all_teacher,
+    validateTeacher,
 } = require(__dirname + "/cruds/crud_teacher.js");
+const Session = require(__dirname + "/utils/session.js");
 
 // ----------------------------------- EXPORTS FUNCTIONS CRUDS RESULT -------------------------------- //
 
-exports.teachersUnavailable = asyncHandler((req, res) => {
-    getTeacherForAdminPanel(req, res, (err, teachers) => {
-        let response = new RequestResponse("teacherAPI", "GET", teachers, "boolean", "Validate an account", err);
-
-        if (err) console.error(err);
-        res.send(response);
+/**
+ * Handle the GET request for fetching the teacher information.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ */
+exports.getYourUnaivalableTeacherREQUEST = asyncHandler((req, res) => {
+    Session.pIsAdministrator(req, res, () => {
+        getYourUnaivalableTeacher(req, res, (err, teachers) => {
+            if (err) {
+                console.error(err);
+                res.sendStatus(500);
+            } else {
+                res.send(teachers);
+            }
+        });
     });
 });
 
 /**
- * @function teacher_validation post request to set the validation for a teacher in the SQL database ( need to be sign-in)
- * @body number for validation
- * @type {*|express.RequestHandler<core.ParamsDictionary, any, any, core.Query>}
+ * Handles the validation request for a teacher.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
  */
-exports.teacher_validation = asyncHandler((req, res) => {
-    validate_teacher(req, res, (err, result) => {
-        let response = new RequestResponse("teacherAPI", "POST", result, "boolean", "Validate an account", err);
-
-        if (err) console.error(err);
-        res.send(response);
+exports.validateTeacherREQUEST = asyncHandler((req, res) => {
+    Session.pIsAuthenticated(req, res, () => {
+        validateTeacher(req, res, (err, result) => {
+            if (err) {
+                console.error(err);
+                res.sendStatus(500);
+            } else {
+                res.sendStatus(200);
+            }
+        });
     });
 });
 
 /**
- * @function sign_in get request to be signed-in as a teacher
- * @params mail and password
- * @type {*|express.RequestHandler<core.ParamsDictionary, any, any, core.Query>}
+ * Handles the sign-in request.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
  */
-exports.sign_in = asyncHandler((req, res) => {
-    sign_in(req, res, (err, result) => {
-        let response = new RequestResponse(
-            "teacherAPI",
-            "GET",
-            result,
-            "boolean",
-            "Set session and GET account information",
-            err
-        );
-
-        if (err) console.error(err);
-        res.send(response);
+exports.signINREQUEST = asyncHandler((req, res) => {
+    signIN(req, res, (err, result) => {
+        if (err) {
+            console.error(err);
+            res.sendStatus(500);
+        } else {
+            res.sendStatus(200);
+        }
     });
 });
 
 /**
- * @function sign_up post request to query the SQL database and create a teacher account after needed verification
- * @body name, firstname, mail and password
- * @type {*|express.RequestHandler<core.ParamsDictionary, any, any, core.Query>}
+ * Handles the sign-up request.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
  */
-exports.sign_up = asyncHandler((req, res) => {
-    sign_up(req, res, (err, result) => {
-        let response = new RequestResponse("teacherAPI", "POST", result, "boolean", "Create an account", err);
-
-        if (err) console.error(err);
-        res.send(response);
+exports.signUPREQUEST = asyncHandler((req, res) => {
+    signUP(req, res, (err, result) => {
+        if (err) {
+            console.error(err);
+            res.sendStatus(500);
+        } else {
+            res.sendStatus(200);
+        }
     });
 });
 
 /**
- * @function sign_in_as_admin get request to be signed-in as an admin
- * @params mail and password
- * @type {*|express.RequestHandler<core.ParamsDictionary, any, any, core.Query>}
+ * Handles the sign-in request for administrators.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
  */
-exports.sign_in_as_admin = asyncHandler((req, res) => {
-    sign_in_admin(req, res, (err, result) => {
-        let response = new RequestResponse("teacherAPI", "GET", result, "boolean", "Set session and GET admin info", err);
-
-        if (err) console.error(err);
-        res.send(response);
+exports.signINAdministratorREQUEST = asyncHandler((req, res) => {
+    signINAdministrator(req, res, (err, result) => {
+        if (err) {
+            console.error(err);
+            res.sendStatus(500);
+        } else {
+            res.sendStatus(200);
+        }
     });
 });
 
-exports.searchTeacher = asyncHandler((req, res) => {
-    getTeacher(req, res, (err, result) => {
-        let response = new RequestResponse("teacherAPI", "GET", result, "teacher", "Search teacher", err);
-        if (err) console.error(err);
-        res.send(response);
-    });
-});
-
-exports.get_teacher_list = asyncHandler((req, res) => {
-    get_all_teacher((err, result) => {
-        let response = new RequestResponse("teacherAPI", "GET", result, "array", "List of teacher", err);
-        if (err) console.error(err);
-        res.send(response);
+/**
+ * Handles the search request for teachers.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ */
+exports.searchTeacherREQUEST = asyncHandler((req, res) => {
+    getTeacher(req, res, (err, teacher) => {
+        if (err) {
+            console.error(err);
+            res.sendStatus(500);
+        } else {
+            res.send(teacher);
+        }
     });
 });

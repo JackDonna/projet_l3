@@ -126,8 +126,8 @@ function qrboxFunction(viewfinderWidth, viewfinderHeight) {
  */
 function get_timetable() {
     axios.get("/sql/event/get_timetable").then((response) => {
-        console.log(response.data.data);
-        for (let event of response.data.data) {
+        console.log(response.data);
+        for (let event of response.data) {
             ec.addEvent(event);
         }
     });
@@ -164,11 +164,10 @@ close_scanner.addEventListener("click", () => {
 
 submit.addEventListener("click", function () {
     axios.post("sql/absence/insert/", { id_event: global_event.id, motif: reason.value }).then((response) => {
-        axios.post("sql/absence/filtre/", {id_ev: global_event.id}).then((response) =>{
+        axios.post("sql/absence/filtre/", { ev: global_event }).then((response) => {
             console.log(response.data);
         });
     });
-
 });
 
 close_form.addEventListener("click", () => {
