@@ -1,7 +1,7 @@
 // ----------------------------------------------------------------------------------------------------------------------------//
 // --- DOM ELEMENTS -----------------------------------------------------------------------------------------------------------//
 // ----------------------------------------------------------------------------------------------------------------------------//
- 
+
 const affichage_absence = document.getElementById("container_absence");
 
 const absence = document.getElementById("absence");
@@ -31,73 +31,71 @@ let dejaAffiche = {};
  * function add absence in GUI by the APi RDP
  */
 async function print_absence() {
+    let json = await axios.get("/sql/teacher/getUnavailableTeachers").then((response) => {
+        console.log(response);
+        let json = response.data;
+        console.log(json);
+        for (let i = 0; i < json.length; i++) {
+            let evenement = json[i];
 
-   let json = await axios.get("/sql/teacher/getUnavailableTeachers").then((response) =>
-   {
-      console.log(response)
-      let json = response.data.data
-      console.log(json)
-      for (let i = 0; i < json.length; i++) {
-         let evenement = json[i];
-         
-         // Vérifier si l'événement a déjà été affiché
-         if (dejaAffiche[JSON.stringify(evenement)]) {
-            continue; // Passer à la prochaine itération si l'événement existe déjà
-         }
-   
-         // Créer un paragraphe pour chaque donnée
-         let div = document.createElement("div");
-         div.classList.add("box_absence");
-   
-         // Affecter la valeur de chaque clé à chaque paragraphe
-         console.log(evenement)
-         div.innerHTML = `
+            // Vérifier si l'événement a déjà été affiché
+            if (dejaAffiche[JSON.stringify(evenement)]) {
+                continue; // Passer à la prochaine itération si l'événement existe déjà
+            }
+
+            // Créer un paragraphe pour chaque donnée
+            let div = document.createElement("div");
+            div.classList.add("box_absence");
+
+            // Affecter la valeur de chaque clé à chaque paragraphe
+            console.log(evenement);
+            div.innerHTML = `
             <p><span class="cle">Motif : </span>${evenement.motif}</p>
-            <p><span class="cle">Date : </span>${evenement.date.split('T',1)}</p>
+            <p><span class="cle">Date : </span>${evenement.date.split("T", 1)}</p>
             <p><span class="cle">Heure de début : </span>${evenement.heure_debut}</p>
             <p><span class="cle">Heure de fin : </span>${evenement.heure_fin}</p>
             <p><span class="cle">Professeur : </span>${evenement.nom} ${evenement.prenom}</p>
          `;
-   
-         // Ajouter le paragraphe à la boite
-         affichage_absence.appendChild(div);
-         
-         // Marquer l'événement comme déjà affiché
-         dejaAffiche[JSON.stringify(evenement)] = true;
-      }
-   });
+
+            // Ajouter le paragraphe à la boite
+            affichage_absence.appendChild(div);
+
+            // Marquer l'événement comme déjà affiché
+            dejaAffiche[JSON.stringify(evenement)] = true;
+        }
+    });
 }
 
 absence.addEventListener("click", () => {
-   absence_logo.style.display = "flex";
-   affichage_list_diff.style.display = "none";
-   affichage_propositions.style.display = "none";
-   affichage_remplacements.style.display = "none";
-})
+    absence_logo.style.display = "flex";
+    affichage_list_diff.style.display = "none";
+    affichage_propositions.style.display = "none";
+    affichage_remplacements.style.display = "none";
+});
 
 list_diff.addEventListener("click", () => {
-   absence_logo.style.display = "none";
-   affichage_list_diff.style.display = "flex";
-   affichage_propositions.style.display = "none";
-   affichage_remplacements.style.display = "none";
-})
+    absence_logo.style.display = "none";
+    affichage_list_diff.style.display = "flex";
+    affichage_propositions.style.display = "none";
+    affichage_remplacements.style.display = "none";
+});
 
 propositions.addEventListener("click", () => {
-   absence_logo.style.display = "none";
-   affichage_list_diff.style.display = "none";
-   affichage_propositions.style.display = "flex";
-   affichage_remplacements.style.display = "none";
-})
+    absence_logo.style.display = "none";
+    affichage_list_diff.style.display = "none";
+    affichage_propositions.style.display = "flex";
+    affichage_remplacements.style.display = "none";
+});
 
 remplacements.addEventListener("click", () => {
-   absence_logo.style.display = "none";
-   affichage_list_diff.style.display = "none";
-   affichage_propositions.style.display = "none";
-   affichage_remplacements.style.display = "flex";
-})
+    absence_logo.style.display = "none";
+    affichage_list_diff.style.display = "none";
+    affichage_propositions.style.display = "none";
+    affichage_remplacements.style.display = "flex";
+});
 
-function logout(){
-   window.location.href = "/logout";
+function logout() {
+    window.location.href = "/logout";
 }
 
 // ----------------------------------------------------------------------------------------------------------------------------//

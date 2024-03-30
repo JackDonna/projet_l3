@@ -427,8 +427,8 @@ const signIN = (req, res, callback) => {
  * @return {void}
  */
 const signINAdministrator = (req, res, callback) => {
-    const mail = req.body.mail;
-    const password = req.body.password;
+    const mail = req.params.mail;
+    const password = req.params.password;
 
     isAdministratorExistByMailPasswordSQL(mail, password, (err, admin) => {
         if (err) callback(err, null);
