@@ -50,4 +50,3 @@ router.get("/diffusion/DiffusionsProvisor", diffusion_controller.DiffusionsProvi
 
 router.get("/diffusion/getMyDiffusion", diffusion_controller.getMyDiffusionsREQUEST);
 module.exports = router;
-DiffusionsProvisor
