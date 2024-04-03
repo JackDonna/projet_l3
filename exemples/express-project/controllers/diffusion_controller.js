@@ -41,7 +41,7 @@ exports.deleteTeacherOnDiffusion = asyncHandler((req, res) => {
     });
 });
 
-exports.DiffusionsProvisor = asyncHandler((req,res) => {
+exports.diffusionsProvisor = asyncHandler((req,res) => {
     getDiffusionsProvisor(req,(err,result) => {
         if (err) {
             console.error(err);
