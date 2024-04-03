@@ -90,6 +90,31 @@ const insertDiffusions = (db, teacherIDs, idAbsence, callback) => {
     callback(null, true);
 };
 
+/**
+ * Delete a teacher ID from the database in the list of diffusions.
+ *
+ * @param {number} teacherId - The ID of the teacher to to delete in diffusion.
+ * @param {number} absenceId - The ID of the absence.
+ * @param {function} callback - The callback function to handle the results.
+ * @return {void}
+ */
+const deleteOnDiffusion = (teacherId, absenceId, callback) => {
+    pool.getConnection((err, db) => {
+        if (err) callback(err, null);
+        db.query(
+            {
+                sql: SQL.delete.teacher_diffusion,
+                timeout: 10000,
+                values: [teacherId, absenceId],
+            },
+            (err, rows, fields) => {
+                if (err) callback(err, null);
+                callback(null, true);
+            }
+        );
+    });
+};
+
 // ------------------------------------------------------------------------------------------------------------------ //
 // --- EXPORTS --------------------------------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------------------------------------------ //
