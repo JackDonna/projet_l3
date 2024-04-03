@@ -111,8 +111,7 @@ const getMyDiffusions = (req, res, callback) => {
  * @param {Array} callback.result - The result array of diffusions.
  */
 const getDiffusionsProvisor = (req, res, callback) => {
-    const AbsId = req.body.id_abs;
-
+    const AbsId = req.params.id_abs;
     getDiffusionsAbsSQL(AbsId, (err, result) => {
         callback(err, result);
     });
@@ -165,4 +164,4 @@ const deleteOnDiffusion = (teacherId, absenceId, callback) => {
 // --- EXPORTS --------------------------------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------------------------------------------ //
 
-module.exports = { getMyDiffusions, insertDiffusions,getDiffusionsProvisor };
+module.exports = { getMyDiffusions, insertDiffusions, getDiffusionsProvisor };

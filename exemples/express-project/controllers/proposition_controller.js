@@ -38,7 +38,7 @@ exports.getProposedTeacherREQUEST = asyncHandler((req, res) => {
                 console.error(err);
                 res.sendStatus(500);
             } else {
-                res.sendStatus(result);
+                res.send(result);
             }
         });
     });

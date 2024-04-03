@@ -75,12 +75,12 @@ const insertAbsenceSQL = (reason, idEvent, callback) => {
  * @param {function} callback - The callback function
  * @return {void}
  */
-const getAbsenceWithoutThisTeacherSQL = (teacherID, callback) => {
+const getYourAbsencesSQL = (etablishementID, callback) => {
     pool.getConnection((err, db) => {
         db.query(
             {
-                sql: SQL.select.absence_available,
-                values: [teacherID],
+                sql: SQL.select.yourAbsences,
+                values: [etablishementID],
                 timeout: 3000,
             },
             (err, rows, fields) => {
@@ -226,7 +226,7 @@ const insertAbsenceNew = (start, end, date, teacherID, reason, matiere, callback
  * @return {void}
  */
 const getYourAbsences = (req, res, callback) => {
-    getAbsenceWithoutThisTeacherSQL(req.session.id_ens, (err, res) => {
+    getYourAbsencesSQL(req.session.id_eta, (err, res) => {
         if (err) callback(err, null);
         callback(null, res);
     });

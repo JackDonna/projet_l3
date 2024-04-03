@@ -10,6 +10,7 @@ const SQL = sql_config.sql;
 const Teacher = require(__dirname + "/crud_teacher");
 const Session = require("../utils/session.js");
 const e = require("express");
+const { parse } = require("path");
 const Absence = require(__dirname + "/crud_absence");
 
 // ------------------------------------------------------------------------------------------------------------------ //
@@ -315,33 +316,16 @@ const getEventsByTeacherIDSQL = (id, callback) => {
  */
 const insertTimetableFileSQL = (files, c) => {
     if (c >= files.length) return;
-    let array = [];
-    let divider = 50;
-    for (let i = 0; i < divider; i++) {
-        if (c + i < files.length) {
-            array.push(files[c + i]);
+    let file = files[c];
+    let obj = utils.parseICSFile("controllers/misc/edt/" + file);
+    let fullname = file.substring(16);
+    let name = fullname.split("_")[0];
+    console.log("start")
+    Teacher.getTeacher(name, (err, teacher) => {
+        if(teacher != undefined){
+            parseEvents(obj, teacher.id_ens);  
         }
-    }
-    let k = 0;
-    array.forEach((file) => {
-        let obj = utils.parseICSFile("controllers/misc/edt/" + file);
-        let fullname = file.substring(16);
-        let name = fullname.split("_")[0];
-        Teacher.getTeacher(name, (err, teacher) => {
-            if (teacher != undefined) {
-                insertEventsSQL(obj, teacher.id_ens, (err, result) => {
-                    k++;
-                    if (k == array.length - 1) {
-                        insertTimetableFileSQL(files, c + divider);
-                    }
-                });
-            } else {
-                k++;
-                if (k == array.length - 1) {
-                    insertTimetableFileSQL(files, c + divider);
-                }
-            }
-        });
+        insertTimetableFileSQL(files, c + 1);
     });
 };
 
@@ -422,6 +406,7 @@ const getTeacherLinkSQL = (db, teacherID, callback) => {
  * @return {void}
  */
 const parseEvents = (events, teacherID) => {
+    console.log("process to the events")
     processEvents(events, 0, teacherID);
 };
 
@@ -447,6 +432,7 @@ const isIgniored = (e, events) => {
  * @return {void}
  */
 const processEvents = (events, c, teacherID) => {
+
     if (c == events.length) return;
     let event = events[c];
     let start_houre = new Date(event.start).toLocaleString("sv-SE", { timeZone: "Europe/Paris" });
@@ -461,7 +447,6 @@ const processEvents = (events, c, teacherID) => {
         null;
     }
     if (salle == undefined) salle = "none";
-
     if (event.title.toLowerCase().includes("annulé") && !isIgniored(event, events)) {
         let mat = event.title
             .split(":")[1]
@@ -515,9 +500,8 @@ const insertTimetableURL = (req, res, callback) => {
  */
 const insertTimetablesFiles = (req, res, callback) => {
     // REQUIRE CONNECTION AND VALIDATION AS ADMINISTRATOR
-    const path = "controllers/misc/edt";
+    const path = "controllers/misc/edt/";
     let files = fs.readdirSync(path);
-    p = Promise.resolve();
     insertTimetableFileSQL(files, 0);
     console.log(
         "\u001b[" +
@@ -561,9 +545,16 @@ const getEventByID = (idEvent, callback) => {
 
 const getLinkContent = (db, teacherID, callback) => {
     getTeacherLinkSQL(db, teacherID, (err, link) => {
-        downloadTimetableFromURL(link, (err, timetable) => {
-            callback(err, timetable);
-        });
+        console.log("LIEN RECUPERER " + link)
+        if(link!= undefined) {
+            downloadTimetableFromURL(link.link, (err, timetable) => {
+                parseEvents(timetable, teacherID);
+                callback(err, timetable);
+            });
+        }else{
+            callback(err, []);
+        }
+       
     });
 };
 

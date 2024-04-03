@@ -2,6 +2,8 @@
 // --- DOM ELEMENTS -----------------------------------------------------------------------------------------------------------//
 // ----------------------------------------------------------------------------------------------------------------------------//
 
+
+
 const affichage_absence = document.getElementById("container_absence");
 
 const absence = document.getElementById("absence");
@@ -31,6 +33,75 @@ let dejaAffiche = {};
  * function add absence in GUI by the APi RDP
  */
 
+
+var list = {
+    data: [],
+    searched: [],
+
+    drawList() {
+        affichage_absence.innerHTML = "";
+        data.forEach(evenement => {
+            let div = document.createElement("div");
+            div.classList.add("box_absence");
+
+            div.innerHTML = `
+            <p><span class="cle">Motif : </span>${evenement.motif}</p>
+            <p><span class="cle">Date : </span>${evenement.date.split('T', 1)}</p>
+            <p><span class="cle">Heure de début : </span>${evenement.start}</p>
+            <p><span class="cle">Heure de fin : </span>${evenement.end}</p>
+            <p><span class="cle">Professeur : </span>${evenement.nom} ${evenement.prenom}</p>
+         `;
+
+            affichage_absence.appendChild(div);
+
+
+            axios.get("/sql/diffusion/diffusionsProvisor/" + evenement.id_abs).then((response) => {
+
+                let div_list_diff = document.createElement("div");
+                div_list_diff.classList.add("list");
+
+                let select = document.createElement("select");
+                select.setAttribute("name", "prof");
+                response.data.forEach(prof => {
+                    let option = document.createElement("option");
+                    option.setAttribute("value", prof.id_ens);
+                    option.innerHTML = `${prof.nom} ${prof.prenom}`;
+                    select.appendChild(option);
+                })
+                
+                div_list_diff.appendChild(select);
+                affichage_list_diff.appendChild(div_list_diff);
+            })
+
+            axios.get("/sql/proposition/teacher_on_absence/" + evenement.id_abs).then((response) => {
+                let div_list_prop = document.createElement("div");
+                div_list_prop.classList.add("list");
+
+                let select = document.createElement("select");
+                select.setAttribute("name", "prof");
+                response.data.forEach(prof => {
+                    let option = document.createElement("option");
+                    option.setAttribute("value", prof.id_ens);
+                    option.innerHTML = `${prof.nom} ${prof.prenom}`;
+                    select.appendChild(option);
+                })
+                
+                div_list_prop.appendChild(select);
+                affichage_propositions.appendChild(div_list_prop);
+            })
+        });
+    },
+    init() {
+        axios.get("/sql/teacher/getUnavailableTeachers").then((response) => {
+            data = response.data;
+            searched = response.data;
+            this.drawList();
+        })
+    },
+
+    
+}
+
 var count = 0;
 
 async function print_absence() {
@@ -38,6 +109,7 @@ async function print_absence() {
     await axios.get("/sql/teacher/getUnavailableTeachers").then(async (response) => {
         // console.log(response)
         let json = response.data
+        console.log(json)
         // console.log(json)
         for (let i = 0; i < json.length; i++) {
             let evenement = json[i];
@@ -69,8 +141,7 @@ async function print_absence() {
             // Marquer l'événement comme déjà affiché
             dejaAffiche[JSON.stringify(evenement)] = true;
 
-            let div_list_diff = document.createElement("div");
-            div_list_diff.classList.add("list");
+            
 
             let paramValue = evenement.id_abs;
             await axios.post(`/sql/diffusion/diffusionsProvisor`, {id_abs : evenement.id_abs}).then((response) => {
@@ -159,5 +230,4 @@ function logout() {
 // --- FUNCTIONS CALLS --------------------------------------------------------------------------------------------------------//
 // ----------------------------------------------------------------------------------------------------------------------------//
 
-print_absence();
-setInterval(print_absence, 10000);
+list.init();

@@ -34,9 +34,8 @@ router.delete("/event/delete/:id", event_controller.event_delete_get);
 // ------------------------------------------ ABSENCES CONTROLLERS --------------------------------------- //
 // router.get("/abs/list/:debut/:fin", absence_controller.list_absence);
 router.post("/absence/insert", absence_controller.insertAbsenceREQUEST);
-router.get("/absence/get_available_absence", absence_controller.getYourAbsenceREQUEST);
 router.post("/absence/filtre", absence_controller.spreadAbsenceREQUEST);
-
+router.get("/absence/getYourAbsences", absence_controller.getYourAbsencesREQUEST);
 // ------------------------------------------ PROPOSITION CONTROLLERS ------------------------------------ //
 // ---- NOT IMPLEMENT YET ------ //
 router.post("/proposition/new_proposition", proposition_controller.insertPropositionREQUEST);
@@ -46,7 +45,7 @@ router.get("/proposition/getYourReplace", proposition_controller.getYourReplaceR
 
 // ------------------------------------------ DIFFUSION CONTROLLERS ------------------------------------- //
 router.post("/diffusion/deleteTeacher", diffusion_controller.deleteTeacherOnDiffusion);
-router.post("/diffusion/diffusionsProvisor", diffusion_controller.diffusionsProvisor);
-
+router.get("/diffusion/diffusionsProvisor/:id_abs", diffusion_controller.diffusionsProvisor);
 router.get("/diffusion/getMyDiffusion", diffusion_controller.getMyDiffusionsREQUEST);
+
 module.exports = router;

@@ -112,7 +112,7 @@ const getYourReplaceSQL = (etablishementID, callback) => {
  * @return {void}
  */
 const insertProposition = (req, res, callback) => {
-    const teacherID = req.body.teacherId;
+    const teacherID = req.body.teacherID;
     const absenceID = req.body.absenceID;
 
     insertPropositionSQL(teacherID, absenceID, (err, result) => {
@@ -131,7 +131,7 @@ const insertProposition = (req, res, callback) => {
 const getProposedTeacher = (req, res, callback) => {
     const absenceID = req.params.abs;
 
-    PropositionOnAbsence(absenceID, (err, result) => {
+    getProposedTeacherSQL(absenceID, (err, result) => {
         callback(err, result);
     });
 };

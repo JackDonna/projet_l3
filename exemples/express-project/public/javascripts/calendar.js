@@ -20,23 +20,7 @@ const close_form = absence_form.querySelector("#close_form");
 // ----GLOBALS VARIABLES ------------------------------------------------------------------------------------------------------//
 // ----------------------------------------------------------------------------------------------------------------------------//
 
-axios
-    .post(
-        "sql/event/insert_timetable",
-        {
-            url: "https://0730013t.index-education.net/pronote/ical/Edt.ics?icalsecurise=47288A3362A404BCDD6B830DC6A64F10B36EA021148F1C832CE902E67FA9BBE2CF2E8D98EABC9ACE5A48D48C26F23F7E&version=2023.0.2.7&param=66683d31",
-        },
-        {
-            onDownloadProgress: (progressEvent) => {
-                const dataChunk = progressEvent;
-                console.log(dataChunk.event);
-            },
-            timeout: 6000000,
-        }
-    )
-    .then((response) => {
-        get_timetable();
-    });
+
 
 const scanner = new Html5QrcodeScanner("reader", {
     qrbox: qrboxFunction,
@@ -50,12 +34,7 @@ const ec = new EventCalendar(calendar_element, {
     firstDay: 1,
     slotMinTime: "06:00:00",
     slotMaxTime: "21:00:00",
-    eventClick: function (info) {
-        absence_form.classList.remove("hide");
-        start_absence.value = format_time(info.event.start);
-        end_absence.value = format_time(info.event.end);
-        global_event = info.event;
-    },
+
 });
 
 var global_event = {};
@@ -142,14 +121,27 @@ function qrboxFunction(viewfinderWidth, viewfinderHeight) {
 /**
  * get the timtable to RDP API
  */
+
+
 function get_timetable() {
     axios.get("sql/event/get_timetable").then((response) => {
         for (let event of response.data) {
-            ec.addEvent(event);
+            event.start = new Date(event.start);
+            event.end = new Date(event.end);
+            setTime(event.start);
+            setTime(event.end);
+            ec.addEvent(event)
         }
     });
 }
 
+function setTime(time) {
+    if(time.getDay() != 1 && (time.getMonth() > 3 && time.getMonth() < 9)) {
+        time.setHours(time.getHours() + 0);
+    }else {
+        time.setHours(time.getHours() + 0);
+    }
+}
 /**
  * resize calendar with the current window size
  */
