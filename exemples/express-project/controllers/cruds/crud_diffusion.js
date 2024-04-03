@@ -19,13 +19,13 @@ const getYourDiffusionsSQL = (teacherId, callback) => {
         if (err) callback(err, null);
         db.query(
             {
-                sql: SQL.select.diffusionByteachers,
+                sql: SQL.select.diffusionByTeachers,
                 timeout: 10000,
                 values: [teacherId],
             },
             (err, rows, fields) => {
-                if (err) callback(err, null);
-                callback(null, rows);
+                db.release();
+                callback(err, rows);
             }
         );
     });
@@ -39,21 +39,18 @@ const getYourDiffusionsSQL = (teacherId, callback) => {
  * @param {function} callback - The callback function.
  * @return {void}
  */
-const insertDiffusionSQL = (id_teach, id_abs, callback) => {
-    pool.getConnection((err, db) => {
-        if (err) callback(err, null);
-        db.query(
-            {
-                sql: SQL.insert.diffusion,
-                timeout: 10000,
-                values: [id_teach, id_abs],
-            },
-            (err, rows, fields) => {
-                db.release();
-                callback(err, true);
-            }
-        );
-    });
+const insertDiffusionSQL = (db, id_teach, id_abs, callback) => {
+    db.query(
+        {
+            sql: SQL.insert.diffusion,
+            timeout: 10000,
+            values: [id_teach, id_abs],
+        },
+        (err, rows, fields) => {
+            console.log("diffusé");
+            callback(err, true);
+        }
+    );
 };
 // ------------------------------------------------------------------------------------------------------------------ //
 // --- MAINS FUNCTIONS ------------------------------------------------------------------------------------------- //
@@ -69,11 +66,10 @@ const insertDiffusionSQL = (id_teach, id_abs, callback) => {
  * @param {Array} callback.result - The result array of diffusions.
  */
 const getMyDiffusions = (req, res, callback) => {
-    const teacherId = req.params.teacherId;
+    const teacherId = req.session.id_ens;
 
-    getDiffusionByTeachers(teacherId, (err, result) => {
-        if (err) callback(err, null);
-        callback(null, result);
+    getYourDiffusionsSQL(teacherId, (err, result) => {
+        callback(err, result);
     });
 };
 
@@ -85,9 +81,10 @@ const getMyDiffusions = (req, res, callback) => {
  * @param {function} callback - The callback function
  * @return {boolean} The result of the insertion
  */
-const insertDiffusions = (teacherIDs, idAbsence, callback) => {
+const insertDiffusions = (db, teacherIDs, idAbsence, callback) => {
+    if (teacherIDs == undefined) callback(null, false);
     teacherIDs.forEach((teacherID) => {
-        insertDiffusionSQL(teacherID.id, idAbsence, (err, result) => {
+        insertDiffusionSQL(db, teacherID.id, idAbsence, (err, result) => {
             if (err) callback(err, null);
         });
     });

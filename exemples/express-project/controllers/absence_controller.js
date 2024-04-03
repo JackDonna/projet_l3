@@ -32,7 +32,7 @@ exports.insertAbsenceREQUEST = asyncHandler((req, res) => {
  * @return {Promise} A promise that resolves with the absence requests of the current user.
  */
 exports.getYourAbsenceREQUEST = asyncHandler((req, res) => {
-    Session.pIsValidated(req, res, () => {
+    /*Session.pIsValidated(req, res, () => {
         getYourAbsences(req, res, (err, result) => {
             if (err) {
                 console.error(err);
@@ -41,7 +41,7 @@ exports.getYourAbsenceREQUEST = asyncHandler((req, res) => {
                 res.send(result);
             }
         });
-    });
+    });*/
 });
 
 /**

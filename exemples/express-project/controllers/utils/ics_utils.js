@@ -2,7 +2,6 @@ const ical = require("ical");
 
 function parseICSURL(URLdata) {
     const fs = require("fs");
-    console.log(__dirname);
     let config = fs.readFileSync(__dirname + "/color_config.json", "utf8");
     config = JSON.parse(config);
     let colors = config.colors;

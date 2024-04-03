@@ -12,7 +12,7 @@ const Session = require(__dirname + "/utils/session.js");
  * @param {Object} req - The request object
  * @param {Object} res - The response object
  */
-exports.getMyDiffusion = asyncHandler((req, res) => {
+exports.getMyDiffusionsREQUEST = asyncHandler((req, res) => {
     Session.pIsValidated(req, res, () => {
         getMyDiffusions(req, res, (err, result) => {
             if (err) {

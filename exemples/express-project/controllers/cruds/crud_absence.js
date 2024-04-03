@@ -1,12 +1,48 @@
+const e = require("express");
 const pool = require("../database/db");
 const fs = require("fs");
 const sql_conf_file = JSON.parse(fs.readFileSync("controllers/config/sql_config.json", "utf-8"));
 const SQL = sql_conf_file.sql;
 const Diffusion = require(__dirname + "/crud_diffusion");
+const Event = require(__dirname + "/crud_event.js");
 
 // ------------------------------------------------------------------------------------------------------------------ //
 // --- SUBS FUNCTIONS -------------------------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------------------------------------------ //
+
+const downloadTimetableFromURL = (link, callback) => {
+    axios
+        .get(link, {
+            responseType: "blob",
+        })
+        .then((response) => {
+            let data = utils.parseICSURL(response.data, ical);
+            callback(null, data);
+        });
+};
+const getTeacherLinkSQL = (db, teacherID, callback) => {
+    db.query(
+        {
+            sql: SQL.select.teacherLink,
+            values: [teacherID],
+            timeout: 10000,
+        },
+        (err, rows, fields) => {
+            callback(err, rows[0]);
+        }
+    );
+};
+const getLinkContent = (db, teacherID, callback) => {
+    getTeacherLinkSQL(db, teacherID, (err, link) => {
+        if (link != undefined) {
+            downloadTimetableFromURL(link.link, (err, timetable) => {
+                callback(err, timetable);
+            });
+        } else {
+            callback(err, undefined);
+        }
+    });
+};
 
 /**
  * Insert an absence record into the database.
@@ -26,7 +62,6 @@ const insertAbsenceSQL = (reason, idEvent, callback) => {
                 values: [reason, idEvent],
             },
             (err, rows, fields) => {
-                db.release();
                 callback(err, true);
             }
         );
@@ -75,19 +110,27 @@ const getAbsenceWithoutThisTeacherSQL = (teacherID, callback) => {
  * @param {function} callback - Callback function to handle the results
  * @return {void}
  */
-const filterTeachersByTimetable = (date, start, end, callback) => {
-    pool.getConnection((err, db) => {
-        if (err) callback(err, null);
-        db.query(
-            {
-                sql: SQL.select.allTeacherAvailableTheTrueOne,
-                timeout: 10000,
-                values: [date, start, end, start, end, start, end],
-            },
-            (err, rows, fields) => {
-                callback(err, rows);
+const filterTeachersByTimetable = (db, date, start, end, teachers, callback) => {
+    if (teachers.length == 0) callback(null, []);
+    result = [];
+    let c = 0;
+    teachers.forEach((teacher) => {
+        getLinkContent(db, teacher.id, (err, content) => {
+            c++;
+            if (content != undefined) {
+                let array = content.filter(
+                    (e) => e.date == date && ((e.start > start && e.end > start) || (e.start < end && e.end < end))
+                );
+                if ((array.length = 0)) {
+                    result.push(teacher);
+                }
+            } else {
+                result.push(teacher);
             }
-        );
+            if (c == teachers.length) {
+                callback(null, result);
+            }
+        });
     });
 };
 
@@ -99,17 +142,46 @@ const filterTeachersByTimetable = (date, start, end, callback) => {
  *                             It takes two parameters: error and rows.
  * @return {void}
  */
-const filterTeachersByDiscipline = (idEvent, callback) => {
+const filterTeachersByDiscipline = (db, idAbsence, callback) => {
+    db.query(
+        {
+            sql: SQL.select.allTeacherCompatibleWithDisc,
+            timeout: 10000,
+            values: [idAbsence],
+        },
+        (err, rows, fields) => {
+            callback(err, rows);
+        }
+    );
+};
+
+const insertAbsenceNewSQL = (start, end, date, teacherID, reason, matiere, callback) => {
     pool.getConnection((err, db) => {
-        if (err) callback(err, null);
         db.query(
             {
-                sql: SQL.select.allTeacherCompatibleWithDisc,
+                sql: SQL.insert.absence,
                 timeout: 10000,
-                values: [idEvent],
+                values: [reason, start, end, date, matiere, teacherID, date, start, end, start, end, teacherID],
             },
             (err, rows, fields) => {
+                db.release();
                 callback(err, rows);
+            }
+        );
+    });
+};
+
+const selectAbsenceSQL = (start, end, date, teacherID, callback) => {
+    pool.getConnection((err, db) => {
+        db.query(
+            {
+                sql: SQL.select.absence,
+                timeout: 10000,
+                values: [start, end, date, teacherID],
+            },
+            (err, rows, fields) => {
+                db.release();
+                callback(err, rows[0]);
             }
         );
     });
@@ -138,6 +210,13 @@ const insertAbsence = (req, res, callback) => {
     }
 };
 
+const insertAbsenceNew = (start, end, date, teacherID, reason, matiere, callback) => {
+    insertAbsenceNewSQL(start, end, date, teacherID, reason, matiere, (err, result) => {
+        if (err) callback(err, null);
+        callback(null, true);
+    });
+};
+
 /**
  * Retrieves absences for the current user.
  *
@@ -161,39 +240,21 @@ const getYourAbsences = (req, res, callback) => {
  * @param {Function} callback - the callback function to be invoked after absence spreading
  * @return {void} This function does not return a value
  */
-const spreadAbsence = (req, res, callback) => {
-    const isIdInFilterResult = (element, array) => {
-        for (let value of array) {
-            if (value.id == element) {
-                return true;
-            }
-        }
-        return false;
-    };
-    const intersectFiltersResults = (a, b) => {
-        let res = [];
-        a.forEach((value) => {
-            if (isIdInFilterResult(value.id, b)) res.push(value);
-        });
-        return res;
-    };
-    let id = req.body.ev.id;
-    let date = new Date(req.body.ev.start).toLocaleDateString("sv-SE");
-    let start = new Date(req.body.ev.start).toLocaleTimeString();
-    let end = new Date(req.body.ev.end).toLocaleTimeString();
-
-    filterTeachersByTimetable(date, start, end, (err, scheduleResult) => {
-        filterTeachersByDiscipline(id, (err, disciplineResult) => {
-            let result = intersectFiltersResults(scheduleResult, disciplineResult);
-            Diffusion.insertDiffusions(result, id, (err, result) => {
-                console.log(
-                    "\u001b[" +
-                        32 +
-                        "m" +
-                        `[DIFFUSION : "AUTO LAUNCHED PROCESS" - (${new Date().toLocaleString()}) - OK / ABSENCE SPREADED]` +
-                        "\u001b[0m"
-                );
-                callback(err, result);
+const spreadAbsence = (absence, callback) => {
+    pool.getConnection((err, db) => {
+        filterTeachersByDiscipline(db, absence.id_abs, (err, disciplineResult) => {
+            filterTeachersByTimetable(db, absence.date, absence.start, absence.end, disciplineResult, (err, scheduleResult) => {
+                Diffusion.insertDiffusions(db, scheduleResult, absence.id_abs, (err, result) => {
+                    db.release();
+                    console.log(
+                        "\u001b[" +
+                            32 +
+                            "m" +
+                            `[DIFFUSION : "AUTO LAUNCHED PROCESS" - (${new Date().toLocaleString()}) - OK / ABSENCE SPREADED]` +
+                            "\u001b[0m"
+                    );
+                    callback(err, scheduleResult);
+                });
             });
         });
     });
@@ -203,4 +264,12 @@ const spreadAbsence = (req, res, callback) => {
 // --- EXPORTS --------------------------------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------------------------------------------ //
 
-module.exports = { insertAbsence, getYourAbsences, filterTeachersByTimetable, filterTeachersByDiscipline, spreadAbsence };
+module.exports = {
+    insertAbsence,
+    getYourAbsences,
+    filterTeachersByTimetable,
+    filterTeachersByDiscipline,
+    spreadAbsence,
+    insertAbsenceNew,
+    selectAbsenceSQL,
+};

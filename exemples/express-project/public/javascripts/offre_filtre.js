@@ -57,7 +57,7 @@ function confirmerAvantSuppression(p) {
  * function add absence in GUI by the APi RDP
  */
 async function print_absence() {
-    let json = await axios.get("/sql/absence/get_available_absence").then((response) => {
+    let json = await axios.get("/sql/diffusion/getMyDiffusion").then((response) => {
         console.log(response.data);
         let json = response.data;
         console.log(json);
@@ -78,8 +78,8 @@ async function print_absence() {
             p.innerHTML = `
             Motif : ${evenement.motif}<br>
             Date : ${evenement.date.split("T", 1)}<br>
-            Heure du début :${evenement.heure_debut}<br>
-            Heure de fin : ${evenement.heure_fin}<br>
+            Heure du début :${evenement.start}<br>
+            Heure de fin : ${evenement.end}<br>
             Professeur : ${evenement.nom} ${evenement.prenom}
          `;
 

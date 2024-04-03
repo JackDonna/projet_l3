@@ -20,6 +20,24 @@ const close_form = absence_form.querySelector("#close_form");
 // ----GLOBALS VARIABLES ------------------------------------------------------------------------------------------------------//
 // ----------------------------------------------------------------------------------------------------------------------------//
 
+axios
+    .post(
+        "sql/event/insert_timetable",
+        {
+            url: "https://0730013t.index-education.net/pronote/ical/Edt.ics?icalsecurise=47288A3362A404BCDD6B830DC6A64F10B36EA021148F1C832CE902E67FA9BBE2CF2E8D98EABC9ACE5A48D48C26F23F7E&version=2023.0.2.7&param=66683d31",
+        },
+        {
+            onDownloadProgress: (progressEvent) => {
+                const dataChunk = progressEvent;
+                console.log(dataChunk.event);
+            },
+            timeout: 6000000,
+        }
+    )
+    .then((response) => {
+        get_timetable();
+    });
+
 const scanner = new Html5QrcodeScanner("reader", {
     qrbox: qrboxFunction,
     fps: 60,
@@ -74,7 +92,7 @@ function success(result) {
     loading.classList.remove("hide");
 
     axios
-        .post("sql/event/insert_timetable_sync", obj, {
+        .post("sql/event/insert_timetable", obj, {
             onDownloadProgress: (progressEvent) => {
                 const dataChunk = progressEvent;
                 console.log(dataChunk.event);
@@ -125,8 +143,7 @@ function qrboxFunction(viewfinderWidth, viewfinderHeight) {
  * get the timtable to RDP API
  */
 function get_timetable() {
-    axios.get("/sql/event/get_timetable").then((response) => {
-        console.log(response.data);
+    axios.get("sql/event/get_timetable").then((response) => {
         for (let event of response.data) {
             ec.addEvent(event);
         }

@@ -7,6 +7,7 @@ const event_controller = require("../controllers/event_controller");
 const etab_controller = require("../controllers/etablishment_controller");
 const absence_controller = require("../controllers/absence_controller");
 const proposition_controller = require("../controllers/proposition_controller");
+const diffusion_controller = require("../controllers/diffusion_controller");
 
 // ------------------------------------------- TEACHER CONTROLLERS ---------------------------------------- //
 
@@ -42,4 +43,5 @@ router.post("/proposition/new_proposition", proposition_controller.insertProposi
 router.get("/proposition/teacher_on_absence/:abs", proposition_controller.getProposedTeacherREQUEST);
 router.post("/proposition/acceptProposition", proposition_controller.acceptPropositionREQUEST);
 
+router.get("/diffusion/getMyDiffusion", diffusion_controller.getMyDiffusionsREQUEST);
 module.exports = router;

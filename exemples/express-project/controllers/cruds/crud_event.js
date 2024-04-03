@@ -9,6 +9,8 @@ const sql_config = JSON.parse(fs.readFileSync("controllers/config/sql_config.jso
 const SQL = sql_config.sql;
 const Teacher = require(__dirname + "/crud_teacher");
 const Session = require("../utils/session.js");
+const e = require("express");
+const Absence = require(__dirname + "/crud_absence");
 
 // ------------------------------------------------------------------------------------------------------------------ //
 // --- SUBS FUNCTIONS -------------------------------------------------------------------------------------------- //
@@ -43,8 +45,12 @@ const buildEvent = (title, date, start, end, location, id, classe, salle) => {
     };
     event.backgroundColor = "#08CFFB";
     for (let color of colors) {
+        let title = title.toLowerCase();
         if (title.toLowerCase().includes(color.name.toLowerCase()) || color.name.toLowerCase().includes(title.toLowerCase())) {
             event.backgroundColor = color.color;
+        }
+        if (title.include("absence") || title.include("annulé")) {
+            Absence.insertAbsenceNew("", start, end, date);
         }
     }
     return event;
@@ -55,9 +61,8 @@ const buildEvent = (title, date, start, end, location, id, classe, salle) => {
  *
  * @param {Object} db - The database connection object.
  * @param {string} subject - The subject to be inserted.
- * @param {function} callback - The callback function to handle the result of the insertion.
- * @return {void}
- */
+ * @param {function} callback - The callback function to handgetLinkContent
+ * */
 const insertSubjectSQL = (db, subject, callback) => {
     db.query(
         {
@@ -364,6 +369,80 @@ const getEventByIDSQL = (idEvent, callback) => {
     });
 };
 
+const insertLinkSQL = (teacherID, URL, callback) => {
+    pool.getConnection((err, db) => {
+        if (err) callback(err, null);
+        db.query(
+            {
+                sql: SQL.insert.link,
+                values: [URL, teacherID],
+                timeout: 10000,
+            },
+            (err, rows, fields) => {
+                db.release();
+                callback(err, rows);
+            }
+        );
+    });
+};
+const getTeacherLinkSQL = (db, teacherID, callback) => {
+    db.query(
+        {
+            sql: SQL.select.teacherLink,
+            values: [teacherID],
+            timeout: 10000,
+        },
+        (err, rows, fields) => {
+            callback(err, rows[0]);
+        }
+    );
+};
+
+const parseEvents = (events, teacherID) => {
+    processEvents(events, 0, teacherID);
+};
+
+const isIgniored = (e, events) => {
+    let currentDate = new Date();
+    let ignoreArray = events.filter((event) => event.title.toLowerCase().includes("vacance") && event.date == e.date);
+    return ignoreArray.length > 0 || e.date < currentDate;
+};
+const processEvents = (events, c, teacherID) => {
+    if (c == events.length) return;
+    let event = events[c];
+    let start_houre = new Date(event.start).toLocaleString("sv-SE", { timeZone: "Europe/Paris" });
+    let end_houre = new Date(event.end).toLocaleString("sv-SE", { timeZone: "Europe/Paris" });
+    let formatted_date = new Date(event.start).toLocaleDateString("sv-SE", { timeZone: "Europe/Paris" });
+    let salle = "none";
+    let classe = null;
+    try {
+        salle = event.description.val.split("Salle : ")[1];
+        salle = salle.split("\n")[0];
+    } catch {
+        null;
+    }
+    if (salle == undefined) salle = "none";
+
+    if (event.title.toLowerCase().includes("annulé") && !isIgniored(event, events)) {
+        let mat = event.title
+            .split(":")[1]
+            .substring(0, event.title.split(":")[1].length - 1)
+            .substring(1);
+        Absence.insertAbsenceNew(start_houre, end_houre, formatted_date, teacherID, "annulé", mat, (err, result) => {
+            if (err) console.error(err);
+            Absence.selectAbsenceSQL(start_houre, end_houre, formatted_date, teacherID, (err, absence) => {
+                if (absence != undefined) {
+                    Absence.spreadAbsence(absence, (err, result) => {
+                        processEvents(events, c + 1, teacherID);
+                    });
+                }
+            });
+        });
+    } else {
+        processEvents(events, c + 1, teacherID);
+    }
+};
+
 // ------------------------------------------------------------------------------------------------------------------ //
 // -- MAINS FUNCTIONS -------------------------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------------------------------------------ //
@@ -379,10 +458,12 @@ const getEventByIDSQL = (idEvent, callback) => {
 const insertTimetableURL = (req, res, callback) => {
     // REQUIRE CONNECTION AND VALIDATION
     Session.pIsValidated(req, res, () => {
-        downloadTimetableFromURL(req.body.url, (err, result) => {
-            insertEventSQL(result, req.session.id_ens, (err, result) => {
-                if (err) callback(err, null);
-                callback(null, true);
+        downloadTimetableFromURL(req.body.url, (err, timetable) => {
+            console.log("edt recuperer");
+            parseEvents(timetable, req.session.id_ens);
+            insertLinkSQL(req.session.id_ens, req.body.url, (err, insertResult) => {
+                if (err) console.error(err);
+                callback(err, timetable);
             });
         });
     });
@@ -419,9 +500,10 @@ const insertTimetablesFiles = (req, res, callback) => {
  */
 const getYourTimetable = (req, res, callback) => {
     // REQUIRE CONNECTION AND VALIDATION
-    getEventsByTeacherIDSQL(req.session.id_ens, (err, result) => {
-        if (err) callback(err, null);
-        callback(null, result);
+    pool.getConnection((err, db) => {
+        getLinkContent(db, req.session.id_ens, (err, result) => {
+            callback(err, result);
+        });
     });
 };
 
@@ -439,6 +521,14 @@ const getEventByID = (idEvent, callback) => {
     });
 };
 
+const getLinkContent = (db, teacherID, callback) => {
+    getTeacherLinkSQL(db, teacherID, (err, link) => {
+        downloadTimetableFromURL(link.link, (err, timetable) => {
+            callback(err, timetable);
+        });
+    });
+};
+
 // ------------------------------------------------------------------------------------------------------------------ //
 // --- EXPORTS --------------------------------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------------------------------------------ //
@@ -448,4 +538,5 @@ module.exports = {
     insertTimetablesFiles,
     getYourTimetable,
     getEventByID,
+    getLinkContent,
 };
