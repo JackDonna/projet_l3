@@ -1,0 +1,2857 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID;LANGUAGE=fr:Copyright Index-Education - Index-Education - EDT2024 20
+ 24
+METHOD:PUBLISH
+X-CALSTART:20230904T000000Z
+X-CALEND:20240705T000000Z
+X-WR-CALNAME;LANGUAGE=fr:Emploi du Temps - CHEYNET BRUNO - du 04 septembre 
+ 2023 au 05 juillet 2024
+X-WR-CALDESC;LANGUAGE=fr:Emploi du Temps CHEYNET BRUNO généré par le logici
+ el EDT (©INDEX ÉDUCATION) le 15 févr. 2024 - LYCEE VAUGELAS  - semaines 36
+  - 27
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-1-20240215T144720Z-Index-Education
+DTSTART:20230904T090000Z
+DTEND:20230904T100000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-1-20240215T144720Z-Index-Education
+DTSTART:20230906T110000Z
+DTEND:20230906T130000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230908T070723Z
+UID:Cours-4508-1-20240215T144720Z-Index-Education
+DTSTART:20230907T120000Z
+DTEND:20230907T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:L007
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : L007\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : L007<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T070950Z
+UID:Cours-4808-1-20240215T144720Z-Index-Education
+DTSTART:20230904T120000Z
+DTEND:20230904T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H107
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H107\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H107<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-2-20240215T144720Z-Index-Education
+DTSTART:20230911T090000Z
+DTEND:20230911T100000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-2-20240215T144720Z-Index-Education
+DTSTART:20230913T110000Z
+DTEND:20230913T130000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-2-20240215T144720Z-Index-Education
+DTSTART:20230911T120000Z
+DTEND:20230911T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-6368-2-20240215T144720Z-Index-Education
+DTSTART:20230914T120000Z
+DTEND:20230914T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H203
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H203\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H203<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-3-20240215T144720Z-Index-Education
+DTSTART:20230918T090000Z
+DTEND:20230918T100000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-3-20240215T144720Z-Index-Education
+DTSTART:20230920T110000Z
+DTEND:20230920T130000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-3-20240215T144720Z-Index-Education
+DTSTART:20230918T120000Z
+DTEND:20230918T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-6368-3-20240215T144720Z-Index-Education
+DTSTART:20230921T120000Z
+DTEND:20230921T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H203
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H203\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H203<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-4-20240215T144720Z-Index-Education
+DTSTART:20230925T090000Z
+DTEND:20230925T100000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-4-20240215T144720Z-Index-Education
+DTSTART:20230927T110000Z
+DTEND:20230927T130000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-4-20240215T144720Z-Index-Education
+DTSTART:20230925T120000Z
+DTEND:20230925T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-6368-4-20240215T144720Z-Index-Education
+DTSTART:20230928T120000Z
+DTEND:20230928T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H203
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H203\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H203<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-5-20240215T144720Z-Index-Education
+DTSTART:20231002T090000Z
+DTEND:20231002T100000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-5-20240215T144720Z-Index-Education
+DTSTART:20231004T110000Z
+DTEND:20231004T130000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-5-20240215T144720Z-Index-Education
+DTSTART:20231002T120000Z
+DTEND:20231002T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-6368-5-20240215T144720Z-Index-Education
+DTSTART:20231005T120000Z
+DTEND:20231005T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H203
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H203\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H203<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-6-20240215T144720Z-Index-Education
+DTSTART:20231011T110000Z
+DTEND:20231011T130000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-6-20240215T144720Z-Index-Education
+DTSTART:20231009T120000Z
+DTEND:20231009T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-6368-6-20240215T144720Z-Index-Education
+DTSTART:20231012T120000Z
+DTEND:20231012T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H203
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H203\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H203<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-7-20240215T144720Z-Index-Education
+DTSTART:20231016T090000Z
+DTEND:20231016T100000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-7-20240215T144720Z-Index-Education
+DTSTART:20231018T110000Z
+DTEND:20231018T130000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-7-20240215T144720Z-Index-Education
+DTSTART:20231016T120000Z
+DTEND:20231016T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-6368-7-20240215T144720Z-Index-Education
+DTSTART:20231019T120000Z
+DTEND:20231019T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H203
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H203\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H203<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-10-20240215T144720Z-Index-Education
+DTSTART:20231106T100000Z
+DTEND:20231106T110000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-10-20240215T144720Z-Index-Education
+DTSTART:20231108T120000Z
+DTEND:20231108T140000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-3469-10-20240215T144720Z-Index-Education
+DTSTART:20231109T130000Z
+DTEND:20231109T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-10-20240215T144720Z-Index-Education
+DTSTART:20231106T130000Z
+DTEND:20231106T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-11-20240215T144720Z-Index-Education
+DTSTART:20231113T100000Z
+DTEND:20231113T110000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-11-20240215T144720Z-Index-Education
+DTSTART:20231115T120000Z
+DTEND:20231115T140000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-3469-11-20240215T144720Z-Index-Education
+DTSTART:20231116T130000Z
+DTEND:20231116T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-11-20240215T144720Z-Index-Education
+DTSTART:20231113T130000Z
+DTEND:20231113T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-12-20240215T144720Z-Index-Education
+DTSTART:20231120T100000Z
+DTEND:20231120T110000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-12-20240215T144720Z-Index-Education
+DTSTART:20231122T120000Z
+DTEND:20231122T140000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-3469-12-20240215T144720Z-Index-Education
+DTSTART:20231123T130000Z
+DTEND:20231123T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-12-20240215T144720Z-Index-Education
+DTSTART:20231120T130000Z
+DTEND:20231120T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-13-20240215T144720Z-Index-Education
+DTSTART:20231127T100000Z
+DTEND:20231127T110000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-13-20240215T144720Z-Index-Education
+DTSTART:20231129T120000Z
+DTEND:20231129T140000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-3469-13-20240215T144720Z-Index-Education
+DTSTART:20231130T130000Z
+DTEND:20231130T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-13-20240215T144720Z-Index-Education
+DTSTART:20231127T130000Z
+DTEND:20231127T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-14-20240215T144720Z-Index-Education
+DTSTART:20231204T100000Z
+DTEND:20231204T110000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-14-20240215T144720Z-Index-Education
+DTSTART:20231206T120000Z
+DTEND:20231206T140000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-3469-14-20240215T144720Z-Index-Education
+DTSTART:20231207T130000Z
+DTEND:20231207T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-14-20240215T144720Z-Index-Education
+DTSTART:20231204T130000Z
+DTEND:20231204T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-15-20240215T144720Z-Index-Education
+DTSTART:20231211T100000Z
+DTEND:20231211T110000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-15-20240215T144720Z-Index-Education
+DTSTART:20231213T120000Z
+DTEND:20231213T140000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-3469-15-20240215T144720Z-Index-Education
+DTSTART:20231214T130000Z
+DTEND:20231214T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-15-20240215T144720Z-Index-Education
+DTSTART:20231211T130000Z
+DTEND:20231211T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-16-20240215T144720Z-Index-Education
+DTSTART:20231218T100000Z
+DTEND:20231218T110000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-16-20240215T144720Z-Index-Education
+DTSTART:20231220T120000Z
+DTEND:20231220T140000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-3469-16-20240215T144720Z-Index-Education
+DTSTART:20231221T130000Z
+DTEND:20231221T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-16-20240215T144720Z-Index-Education
+DTSTART:20231218T130000Z
+DTEND:20231218T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-19-20240215T144720Z-Index-Education
+DTSTART:20240108T100000Z
+DTEND:20240108T110000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-3469-19-20240215T144720Z-Index-Education
+DTSTART:20240111T130000Z
+DTEND:20240111T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-19-20240215T144720Z-Index-Education
+DTSTART:20240108T130000Z
+DTEND:20240108T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20240109T091143Z
+UID:Cours-7475-19-20240215T144720Z-Index-Education
+DTSTART:20240110T130000Z
+DTEND:20240110T140000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-20-20240215T144720Z-Index-Education
+DTSTART:20240115T100000Z
+DTEND:20240115T110000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-20-20240215T144720Z-Index-Education
+DTSTART:20240117T120000Z
+DTEND:20240117T140000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-3469-20-20240215T144720Z-Index-Education
+DTSTART:20240118T130000Z
+DTEND:20240118T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-20-20240215T144720Z-Index-Education
+DTSTART:20240115T130000Z
+DTEND:20240115T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-21-20240215T144720Z-Index-Education
+DTSTART:20240122T100000Z
+DTEND:20240122T110000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-21-20240215T144720Z-Index-Education
+DTSTART:20240124T120000Z
+DTEND:20240124T140000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-3469-21-20240215T144720Z-Index-Education
+DTSTART:20240125T130000Z
+DTEND:20240125T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-21-20240215T144720Z-Index-Education
+DTSTART:20240122T130000Z
+DTEND:20240122T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-22-20240215T144720Z-Index-Education
+DTSTART:20240129T100000Z
+DTEND:20240129T110000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-22-20240215T144720Z-Index-Education
+DTSTART:20240131T120000Z
+DTEND:20240131T140000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-3469-22-20240215T144720Z-Index-Education
+DTSTART:20240201T130000Z
+DTEND:20240201T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-22-20240215T144720Z-Index-Education
+DTSTART:20240129T130000Z
+DTEND:20240129T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-23-20240215T144720Z-Index-Education
+DTSTART:20240205T100000Z
+DTEND:20240205T110000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-3469-23-20240215T144720Z-Index-Education
+DTSTART:20240208T130000Z
+DTEND:20240208T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-23-20240215T144720Z-Index-Education
+DTSTART:20240205T130000Z
+DTEND:20240205T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-24-20240215T144720Z-Index-Education
+DTSTART:20240212T100000Z
+DTEND:20240212T110000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-24-20240215T144720Z-Index-Education
+DTSTART:20240214T120000Z
+DTEND:20240214T140000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-3469-24-20240215T144720Z-Index-Education
+DTSTART:20240215T130000Z
+DTEND:20240215T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-24-20240215T144720Z-Index-Education
+DTSTART:20240212T130000Z
+DTEND:20240212T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-27-20240215T144720Z-Index-Education
+DTSTART:20240304T100000Z
+DTEND:20240304T110000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-27-20240215T144720Z-Index-Education
+DTSTART:20240306T120000Z
+DTEND:20240306T140000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-3469-27-20240215T144720Z-Index-Education
+DTSTART:20240307T130000Z
+DTEND:20240307T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-27-20240215T144720Z-Index-Education
+DTSTART:20240304T130000Z
+DTEND:20240304T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-28-20240215T144720Z-Index-Education
+DTSTART:20240311T100000Z
+DTEND:20240311T110000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-28-20240215T144720Z-Index-Education
+DTSTART:20240313T120000Z
+DTEND:20240313T140000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-3469-28-20240215T144720Z-Index-Education
+DTSTART:20240314T130000Z
+DTEND:20240314T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-28-20240215T144720Z-Index-Education
+DTSTART:20240311T130000Z
+DTEND:20240311T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-29-20240215T144720Z-Index-Education
+DTSTART:20240318T100000Z
+DTEND:20240318T110000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-29-20240215T144720Z-Index-Education
+DTSTART:20240320T120000Z
+DTEND:20240320T140000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-3469-29-20240215T144720Z-Index-Education
+DTSTART:20240321T130000Z
+DTEND:20240321T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-29-20240215T144720Z-Index-Education
+DTSTART:20240318T130000Z
+DTEND:20240318T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-30-20240215T144720Z-Index-Education
+DTSTART:20240325T100000Z
+DTEND:20240325T110000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-30-20240215T144720Z-Index-Education
+DTSTART:20240327T120000Z
+DTEND:20240327T140000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-3469-30-20240215T144720Z-Index-Education
+DTSTART:20240328T130000Z
+DTEND:20240328T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-30-20240215T144720Z-Index-Education
+DTSTART:20240325T130000Z
+DTEND:20240325T150000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-31-20240215T144720Z-Index-Education
+DTSTART:20240403T110000Z
+DTEND:20240403T130000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-3469-31-20240215T144720Z-Index-Education
+DTSTART:20240404T120000Z
+DTEND:20240404T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-32-20240215T144720Z-Index-Education
+DTSTART:20240408T090000Z
+DTEND:20240408T100000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-32-20240215T144720Z-Index-Education
+DTSTART:20240410T110000Z
+DTEND:20240410T130000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-3469-32-20240215T144720Z-Index-Education
+DTSTART:20240411T120000Z
+DTEND:20240411T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-32-20240215T144720Z-Index-Education
+DTSTART:20240408T120000Z
+DTEND:20240408T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-35-20240215T144720Z-Index-Education
+DTSTART:20240429T090000Z
+DTEND:20240429T100000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-3469-35-20240215T144720Z-Index-Education
+DTSTART:20240502T120000Z
+DTEND:20240502T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-35-20240215T144720Z-Index-Education
+DTSTART:20240429T120000Z
+DTEND:20240429T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-36-20240215T144720Z-Index-Education
+DTSTART:20240506T090000Z
+DTEND:20240506T100000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-36-20240215T144720Z-Index-Education
+DTSTART:20240506T120000Z
+DTEND:20240506T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-37-20240215T144720Z-Index-Education
+DTSTART:20240513T090000Z
+DTEND:20240513T100000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-37-20240215T144720Z-Index-Education
+DTSTART:20240515T110000Z
+DTEND:20240515T130000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-3469-37-20240215T144720Z-Index-Education
+DTSTART:20240516T120000Z
+DTEND:20240516T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-37-20240215T144720Z-Index-Education
+DTSTART:20240513T120000Z
+DTEND:20240513T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-38-20240215T144720Z-Index-Education
+DTSTART:20240522T110000Z
+DTEND:20240522T130000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-3469-38-20240215T144720Z-Index-Education
+DTSTART:20240523T120000Z
+DTEND:20240523T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-39-20240215T144720Z-Index-Education
+DTSTART:20240527T090000Z
+DTEND:20240527T100000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-39-20240215T144720Z-Index-Education
+DTSTART:20240529T110000Z
+DTEND:20240529T130000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-3469-39-20240215T144720Z-Index-Education
+DTSTART:20240530T120000Z
+DTEND:20240530T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-39-20240215T144720Z-Index-Education
+DTSTART:20240527T120000Z
+DTEND:20240527T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-40-20240215T144720Z-Index-Education
+DTSTART:20240603T090000Z
+DTEND:20240603T100000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-40-20240215T144720Z-Index-Education
+DTSTART:20240605T110000Z
+DTEND:20240605T130000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-3469-40-20240215T144720Z-Index-Education
+DTSTART:20240606T120000Z
+DTEND:20240606T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-40-20240215T144720Z-Index-Education
+DTSTART:20240603T120000Z
+DTEND:20240603T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-41-20240215T144720Z-Index-Education
+DTSTART:20240610T090000Z
+DTEND:20240610T100000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-41-20240215T144720Z-Index-Education
+DTSTART:20240612T110000Z
+DTEND:20240612T130000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-3469-41-20240215T144720Z-Index-Education
+DTSTART:20240613T120000Z
+DTEND:20240613T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-41-20240215T144720Z-Index-Education
+DTSTART:20240610T120000Z
+DTEND:20240610T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-42-20240215T144720Z-Index-Education
+DTSTART:20240617T090000Z
+DTEND:20240617T100000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-42-20240215T144720Z-Index-Education
+DTSTART:20240619T110000Z
+DTEND:20240619T130000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-3469-42-20240215T144720Z-Index-Education
+DTSTART:20240620T120000Z
+DTEND:20240620T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-42-20240215T144720Z-Index-Education
+DTSTART:20240617T120000Z
+DTEND:20240617T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-43-20240215T144720Z-Index-Education
+DTSTART:20240624T090000Z
+DTEND:20240624T100000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-43-20240215T144720Z-Index-Education
+DTSTART:20240626T110000Z
+DTEND:20240626T130000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-3469-43-20240215T144720Z-Index-Education
+DTSTART:20240627T120000Z
+DTEND:20240627T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-43-20240215T144720Z-Index-Education
+DTSTART:20240624T120000Z
+DTEND:20240624T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124709Z
+UID:Cours-2896-44-20240215T144720Z-Index-Education
+DTSTART:20240701T090000Z
+DTEND:20240701T100000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230821T124817Z
+UID:Cours-2898-44-20240215T144720Z-Index-Education
+DTSTART:20240703T110000Z
+DTEND:20240703T130000Z
+SUMMARY;LANGUAGE=fr:MATHS COMPLEMENTAIRE - TMATCO2 - <T04MATCO>\, <T05MATCO
+ >\, <T07MATCO>\, <T08MATCO>\, <T09MATCO>\, <T10MATCO>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHS COMPLEMENTAIRE\nProfesseur : CHEYNE
+ T\nGroupe : TMATCO2\nParties de classe : &lt\;T04MATCO&gt\;\, &lt\;T05MATC
+ O&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09MATCO&gt\;\, &l
+ t\;T10MATCO&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHS COMPLEMENTAIRE<br/>Professeur 
+ : CHEYNET<br/>Groupe : TMATCO2<br/>Parties de classe : &lt\;T04MATCO&gt\;\
+ , &lt\;T05MATCO&gt\;\, &lt\;T07MATCO&gt\;\, &lt\;T08MATCO&gt\;\, &lt\;T09M
+ ATCO&gt\;\, &lt\;T10MATCO&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20231110T123456Z
+UID:Cours-3469-44-20240215T144720Z-Index-Education
+DTSTART:20240704T120000Z
+DTEND:20240704T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134720Z
+LAST-MODIFIED:20230911T071016Z
+UID:Cours-3470-44-20240215T144720Z-Index-Education
+DTSTART:20240701T120000Z
+DTEND:20240701T140000Z
+SUMMARY;LANGUAGE=fr:MATHEMATIQUES - 1MATHS2 - <1MATHS2>\, <1MATHS5>\, <1MAT
+ HS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS2>\, <1MATHS5>\, <1MATHS
+ 2>\, <1MATHS5>
+LOCATION;LANGUAGE=fr:H204
+DESCRIPTION;LANGUAGE=fr:Matière : MATHEMATIQUES\nProfesseur : CHEYNET\nGrou
+ pe : 1MATHS2\nParties de classe : &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, 
+ &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&g
+ t\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MA
+ THS5&gt\;\nSalle : H204\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MATHEMATIQUES<br/>Professeur : CHEYN
+ ET<br/>Groupe : 1MATHS2<br/>Parties de classe : &lt\;1MATHS2&gt\;\, &lt\;1
+ MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, 
+ &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&gt\;\, &lt\;1MATHS5&gt\;\, &lt\;1MATHS2&g
+ t\;\, &lt\;1MATHS5&gt\;<br/>Salle : H204<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:EdT
+DTSTAMP:20240215T134720Z
+UID:Ferie-1-20240215T144720Z-Index-Education
+DTSTART;VALUE=DATE:20231022
+DTEND;VALUE=DATE:20231106
+SUMMARY;LANGUAGE=fr:Vacances
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:EdT
+DTSTAMP:20240215T134720Z
+UID:Ferie-2-20240215T144720Z-Index-Education
+DTSTART;VALUE=DATE:20231111
+DTEND;VALUE=DATE:20231112
+SUMMARY;LANGUAGE=fr:Férié
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:EdT
+DTSTAMP:20240215T134720Z
+UID:Ferie-3-20240215T144720Z-Index-Education
+DTSTART;VALUE=DATE:20231224
+DTEND;VALUE=DATE:20240108
+SUMMARY;LANGUAGE=fr:Vacances
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:EdT
+DTSTAMP:20240215T134720Z
+UID:Ferie-4-20240215T144720Z-Index-Education
+DTSTART;VALUE=DATE:20240218
+DTEND;VALUE=DATE:20240304
+SUMMARY;LANGUAGE=fr:Vacances
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:EdT
+DTSTAMP:20240215T134720Z
+UID:Ferie-5-20240215T144720Z-Index-Education
+DTSTART;VALUE=DATE:20240331
+DTEND;VALUE=DATE:20240402
+SUMMARY;LANGUAGE=fr:Vacances
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:EdT
+DTSTAMP:20240215T134720Z
+UID:Ferie-6-20240215T144720Z-Index-Education
+DTSTART;VALUE=DATE:20240414
+DTEND;VALUE=DATE:20240429
+SUMMARY;LANGUAGE=fr:Vacances
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:EdT
+DTSTAMP:20240215T134720Z
+UID:Ferie-7-20240215T144720Z-Index-Education
+DTSTART;VALUE=DATE:20240501
+DTEND;VALUE=DATE:20240502
+SUMMARY;LANGUAGE=fr:Férié
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:EdT
+DTSTAMP:20240215T134720Z
+UID:Ferie-8-20240215T144720Z-Index-Education
+DTSTART;VALUE=DATE:20240508
+DTEND;VALUE=DATE:20240513
+SUMMARY;LANGUAGE=fr:Vacances
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:EdT
+DTSTAMP:20240215T134720Z
+UID:Ferie-9-20240215T144720Z-Index-Education
+DTSTART;VALUE=DATE:20240519
+DTEND;VALUE=DATE:20240521
+SUMMARY;LANGUAGE=fr:Vacances
+END:VEVENT
+END:VCALENDAR

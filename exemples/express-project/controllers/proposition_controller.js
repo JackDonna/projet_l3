@@ -63,3 +63,16 @@ exports.acceptPropositionREQUEST = asyncHandler((req, res) => {
         });
     });
 });
+
+exports.getYourReplaceREQUEST = asyncHandler((req, res) => {
+    Session.pIsAdministrator(req, res, () => {
+        getYourReplace(req, res, (err, result) => {
+            if (err) {
+                console.error(err);
+                res.sendStatus(500);
+            } else {
+                res.send(result);
+            }
+        });
+    });
+});

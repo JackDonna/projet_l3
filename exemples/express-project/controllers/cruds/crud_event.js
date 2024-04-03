@@ -369,6 +369,14 @@ const getEventByIDSQL = (idEvent, callback) => {
     });
 };
 
+/**
+ * Inserts a link into the database for a specific teacher.
+ *
+ * @param {number} teacherID - The ID of the teacher
+ * @param {string} URL - The URL of the link
+ * @param {function} callback - The callback function
+ * @return {void}
+ */
 const insertLinkSQL = (teacherID, URL, callback) => {
     pool.getConnection((err, db) => {
         if (err) callback(err, null);
@@ -385,6 +393,14 @@ const insertLinkSQL = (teacherID, URL, callback) => {
         );
     });
 };
+/**
+ * Generates SQL query to retrieve teacher link by ID.
+ *
+ * @param {object} db - Database connection object
+ * @param {number} teacherID - ID of the teacher
+ * @param {function} callback - Callback function to handle results
+ * @return {void} The callback function is called with the results
+ */
 const getTeacherLinkSQL = (db, teacherID, callback) => {
     db.query(
         {
@@ -398,15 +414,38 @@ const getTeacherLinkSQL = (db, teacherID, callback) => {
     );
 };
 
+/**
+ * Parses the events array for a specific teacher.
+ *
+ * @param {Array} events - the array of events to be parsed
+ * @param {string} teacherID - the ID of the teacher to process events for
+ * @return {void}
+ */
 const parseEvents = (events, teacherID) => {
     processEvents(events, 0, teacherID);
 };
 
+/**
+ * Determines if the event should be ignored based on specific criteria.
+ *
+ * @param {object} e - the event to check
+ * @param {array} events - the list of events to compare against
+ * @return {boolean} true if the event should be ignored, false otherwise
+ */
 const isIgniored = (e, events) => {
     let currentDate = new Date();
     let ignoreArray = events.filter((event) => event.title.toLowerCase().includes("vacance") && event.date == e.date);
     return ignoreArray.length > 0 || e.date < currentDate;
 };
+
+/**
+ * Process events and insert absences for cancelled events.
+ *
+ * @param {Array} events - list of events to process
+ * @param {number} c - current index in the events array
+ * @param {string} teacherID - ID of the teacher
+ * @return {void}
+ */
 const processEvents = (events, c, teacherID) => {
     if (c == events.length) return;
     let event = events[c];
@@ -432,9 +471,8 @@ const processEvents = (events, c, teacherID) => {
             if (err) console.error(err);
             Absence.selectAbsenceSQL(start_houre, end_houre, formatted_date, teacherID, (err, absence) => {
                 if (absence != undefined) {
-                    Absence.spreadAbsence(absence, (err, result) => {
-                        processEvents(events, c + 1, teacherID);
-                    });
+                    Absence.spreadAbsence(absence, (err, result) => {});
+                    processEvents(events, c + 1, teacherID);
                 }
             });
         });

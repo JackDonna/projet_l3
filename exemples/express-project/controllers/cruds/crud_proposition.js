@@ -77,6 +77,30 @@ const insertAcceptedPropositionSQL = (teacherID, propositionID, callback) => {
     });
 };
 
+/**
+ * Get the SQL for your replacement based on the establishment ID.
+ *
+ * @param {type} etablishementID - The ID of the establishment
+ * @param {type} callback - The callback function
+ * @return {type} description of return value
+ */
+const getYourReplaceSQL = (etablishementID, callback) => {
+    pool.getConnection((err, db) => {
+        if (err) callback(err, null);
+        db.query(
+            {
+                sql: SQL.select.yourReplace,
+                timeout: 10000,
+                values: [etablishementID],
+            },
+            (err, rows, fields) => {
+                db.release();
+                callback(err, rows);
+            }
+        );
+    });
+};
+
 // -------------------------------------------------- MAINS FUNCTIONS ------------------------------------------------ //
 
 /**
@@ -121,6 +145,13 @@ const acceptProposition = (req, res, callback) => {
     });
 };
 
+const getYourReplace = (req, res, callback) => {
+    const etablishementID = req.session.idEtablishement;
+
+    getYourReplaceSQL(etablishementID, (err, result) => {
+        callback(err, result);
+    });
+};
 // -------------------------------------------------- EXPORTS -------------------------------------------------------- //
 
-module.exports = { insertProposition, getProposedTeacher, acceptProposition };
+module.exports = { insertProposition, getProposedTeacher, acceptProposition, getYourReplace };

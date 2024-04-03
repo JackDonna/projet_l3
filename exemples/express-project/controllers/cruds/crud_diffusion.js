@@ -47,7 +47,6 @@ const insertDiffusionSQL = (db, id_teach, id_abs, callback) => {
             values: [id_teach, id_abs],
         },
         (err, rows, fields) => {
-            console.log("diffusé");
             callback(err, true);
         }
     );

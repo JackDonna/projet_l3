@@ -1,0 +1,2728 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID;LANGUAGE=fr:Copyright Index-Education - Index-Education - EDT2024 20
+ 24
+METHOD:PUBLISH
+X-CALSTART:20230904T000000Z
+X-CALEND:20240705T000000Z
+X-WR-CALNAME;LANGUAGE=fr:Emploi du Temps - PIERI HELENE - du 04 septembre 2
+ 023 au 05 juillet 2024
+X-WR-CALDESC;LANGUAGE=fr:Emploi du Temps PIERI HELENE généré par le logicie
+ l EDT (©INDEX ÉDUCATION) le 15 févr. 2024 - LYCEE VAUGELAS  - semaines 36 
+ - 27
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T141143Z
+UID:Cours-1506-1-20240215T144722Z-Index-Education
+DTSTART:20230904T090000Z
+DTEND:20230904T100000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nClasse : 108\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Classe : 108<br/>Salle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-1-20240215T144722Z-Index-Education
+DTSTART:20230905T080000Z
+DTEND:20230905T100000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-1-20240215T144722Z-Index-Education
+DTSTART:20230907T060000Z
+DTEND:20230907T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-1-20240215T144722Z-Index-Education
+DTSTART:20230904T060000Z
+DTEND:20230904T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T141143Z
+UID:Cours-1506-2-20240215T144722Z-Index-Education
+DTSTART:20230911T090000Z
+DTEND:20230911T100000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nClasse : 108\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Classe : 108<br/>Salle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-2-20240215T144722Z-Index-Education
+DTSTART:20230912T080000Z
+DTEND:20230912T100000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-2-20240215T144722Z-Index-Education
+DTSTART:20230914T060000Z
+DTEND:20230914T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-2-20240215T144722Z-Index-Education
+DTSTART:20230911T060000Z
+DTEND:20230911T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T141143Z
+UID:Cours-1506-3-20240215T144722Z-Index-Education
+DTSTART:20230918T090000Z
+DTEND:20230918T100000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nClasse : 108\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Classe : 108<br/>Salle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-3-20240215T144722Z-Index-Education
+DTSTART:20230919T080000Z
+DTEND:20230919T100000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-3-20240215T144722Z-Index-Education
+DTSTART:20230921T060000Z
+DTEND:20230921T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-3-20240215T144722Z-Index-Education
+DTSTART:20230918T060000Z
+DTEND:20230918T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T141143Z
+UID:Cours-1506-4-20240215T144722Z-Index-Education
+DTSTART:20230925T090000Z
+DTEND:20230925T100000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nClasse : 108\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Classe : 108<br/>Salle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-4-20240215T144722Z-Index-Education
+DTSTART:20230926T080000Z
+DTEND:20230926T100000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-4-20240215T144722Z-Index-Education
+DTSTART:20230928T060000Z
+DTEND:20230928T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-4-20240215T144722Z-Index-Education
+DTSTART:20230925T060000Z
+DTEND:20230925T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T141143Z
+UID:Cours-1506-5-20240215T144722Z-Index-Education
+DTSTART:20231002T090000Z
+DTEND:20231002T100000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nClasse : 108\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Classe : 108<br/>Salle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-5-20240215T144722Z-Index-Education
+DTSTART:20231003T080000Z
+DTEND:20231003T100000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-5-20240215T144722Z-Index-Education
+DTSTART:20231005T060000Z
+DTEND:20231005T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-5-20240215T144722Z-Index-Education
+DTSTART:20231002T060000Z
+DTEND:20231002T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T141143Z
+UID:Cours-1506-6-20240215T144722Z-Index-Education
+DTSTART:20231009T090000Z
+DTEND:20231009T100000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nClasse : 108\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Classe : 108<br/>Salle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-6-20240215T144722Z-Index-Education
+DTSTART:20231010T080000Z
+DTEND:20231010T100000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-6-20240215T144722Z-Index-Education
+DTSTART:20231012T060000Z
+DTEND:20231012T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-6-20240215T144722Z-Index-Education
+DTSTART:20231009T060000Z
+DTEND:20231009T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-7-20240215T144722Z-Index-Education
+DTSTART:20231017T080000Z
+DTEND:20231017T100000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-7-20240215T144722Z-Index-Education
+DTSTART:20231019T060000Z
+DTEND:20231019T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20240202T164356Z
+UID:Cours-8386-7-20240215T144722Z-Index-Education
+DTSTART:20231016T090000Z
+DTEND:20231016T100000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108G.1 - <108G.1>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nGroupe : 108G.1\nPartie de classe : &lt\;108G.1&gt\;\nSalle : L102 COURS 
+ SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Groupe : 108G.1<br/>Partie de classe : &lt\;108G.1&gt\;<br/>Sa
+ lle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-10-20240215T144722Z-Index-Education
+DTSTART:20231107T090000Z
+DTEND:20231107T110000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-10-20240215T144722Z-Index-Education
+DTSTART:20231109T070000Z
+DTEND:20231109T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-10-20240215T144722Z-Index-Education
+DTSTART:20231106T070000Z
+DTEND:20231106T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20240202T164416Z
+UID:Cours-8388-10-20240215T144722Z-Index-Education
+DTSTART:20231106T100000Z
+DTEND:20231106T110000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108G.2 - <108G.2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nGroupe : 108G.2\nPartie de classe : &lt\;108G.2&gt\;\nSalle : L102 COURS 
+ SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Groupe : 108G.2<br/>Partie de classe : &lt\;108G.2&gt\;<br/>Sa
+ lle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T141143Z
+UID:Cours-1506-11-20240215T144722Z-Index-Education
+DTSTART:20231113T100000Z
+DTEND:20231113T110000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nClasse : 108\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Classe : 108<br/>Salle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-11-20240215T144722Z-Index-Education
+DTSTART:20231114T090000Z
+DTEND:20231114T110000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-11-20240215T144722Z-Index-Education
+DTSTART:20231116T070000Z
+DTEND:20231116T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-11-20240215T144722Z-Index-Education
+DTSTART:20231113T070000Z
+DTEND:20231113T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20240115T070826Z
+UID:Cours-7639-11-20240215T144722Z-Index-Education
+DTSTART:20231117T070000Z
+DTEND:20231117T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - 1SVT1 - <1SVT1>\, <1SVT4>\, <1SV
+ T1>\, <1SVT1>\, <1SVT4>\, <1SVT1>\, <1SVT1>\, <1SVT4>
+LOCATION;LANGUAGE=fr:L106 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : 1SVT1\nParties de classe : &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt\;\, &
+ lt\;1SVT1&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt\;\, &lt\;1SVT1&gt\;\, &lt
+ \;1SVT1&gt\;\, &lt\;1SVT4&gt\;\nSalle : L106 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : 1SVT1<br/>Parties de classe : &lt\;1SVT1&gt\;\, &lt\;
+ 1SVT4&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt\;\, &lt\;1S
+ VT1&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt\;<br/>Salle : L106 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20240115T090035Z
+UID:Cours-7640-11-20240215T144722Z-Index-Education
+DTSTART:20231113T150000Z
+DTEND:20231113T170000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - 1SVT1 - <1SVT1>\, <1SVT4>\, <1SV
+ T1>\, <1SVT1>\, <1SVT4>\, <1SVT1>\, <1SVT1>\, <1SVT4>
+LOCATION;LANGUAGE=fr:L104 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : 1SVT1\nParties de classe : &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt\;\, &
+ lt\;1SVT1&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt\;\, &lt\;1SVT1&gt\;\, &lt
+ \;1SVT1&gt\;\, &lt\;1SVT4&gt\;\nSalle : L104 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : 1SVT1<br/>Parties de classe : &lt\;1SVT1&gt\;\, &lt\;
+ 1SVT4&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt\;\, &lt\;1S
+ VT1&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt\;<br/>Salle : L104 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-12-20240215T144722Z-Index-Education
+DTSTART:20231121T090000Z
+DTEND:20231121T110000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-12-20240215T144722Z-Index-Education
+DTSTART:20231123T070000Z
+DTEND:20231123T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-12-20240215T144722Z-Index-Education
+DTSTART:20231120T070000Z
+DTEND:20231120T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20231119T184935Z
+UID:Cours-6550-12-20240215T144722Z-Index-Education
+DTSTART:20231120T090000Z
+DTEND:20231120T100000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nClasse : 108\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Classe : 108<br/>Salle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20240115T070826Z
+UID:Cours-7639-12-20240215T144722Z-Index-Education
+DTSTART:20231124T070000Z
+DTEND:20231124T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - 1SVT1 - <1SVT1>\, <1SVT4>\, <1SV
+ T1>\, <1SVT1>\, <1SVT4>\, <1SVT1>\, <1SVT1>\, <1SVT4>
+LOCATION;LANGUAGE=fr:L106 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : 1SVT1\nParties de classe : &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt\;\, &
+ lt\;1SVT1&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt\;\, &lt\;1SVT1&gt\;\, &lt
+ \;1SVT1&gt\;\, &lt\;1SVT4&gt\;\nSalle : L106 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : 1SVT1<br/>Parties de classe : &lt\;1SVT1&gt\;\, &lt\;
+ 1SVT4&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt\;\, &lt\;1S
+ VT1&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt\;<br/>Salle : L106 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20240115T090035Z
+UID:Cours-7640-12-20240215T144722Z-Index-Education
+DTSTART:20231120T150000Z
+DTEND:20231120T170000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - 1SVT1 - <1SVT1>\, <1SVT4>\, <1SV
+ T1>\, <1SVT1>\, <1SVT4>\, <1SVT1>\, <1SVT1>\, <1SVT4>
+LOCATION;LANGUAGE=fr:L104 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : 1SVT1\nParties de classe : &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt\;\, &
+ lt\;1SVT1&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt\;\, &lt\;1SVT1&gt\;\, &lt
+ \;1SVT1&gt\;\, &lt\;1SVT4&gt\;\nSalle : L104 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : 1SVT1<br/>Parties de classe : &lt\;1SVT1&gt\;\, &lt\;
+ 1SVT4&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt\;\, &lt\;1S
+ VT1&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt\;<br/>Salle : L104 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T141143Z
+UID:Cours-1506-13-20240215T144722Z-Index-Education
+DTSTART:20231127T100000Z
+DTEND:20231127T110000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nClasse : 108\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Classe : 108<br/>Salle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-13-20240215T144722Z-Index-Education
+DTSTART:20231128T090000Z
+DTEND:20231128T110000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-13-20240215T144722Z-Index-Education
+DTSTART:20231130T070000Z
+DTEND:20231130T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-13-20240215T144722Z-Index-Education
+DTSTART:20231127T070000Z
+DTEND:20231127T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T141143Z
+UID:Cours-1506-14-20240215T144722Z-Index-Education
+DTSTART:20231204T100000Z
+DTEND:20231204T110000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nClasse : 108\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Classe : 108<br/>Salle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-14-20240215T144722Z-Index-Education
+DTSTART:20231205T090000Z
+DTEND:20231205T110000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-14-20240215T144722Z-Index-Education
+DTSTART:20231207T070000Z
+DTEND:20231207T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-14-20240215T144722Z-Index-Education
+DTSTART:20231204T070000Z
+DTEND:20231204T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20240115T070826Z
+UID:Cours-7639-14-20240215T144722Z-Index-Education
+DTSTART:20231208T070000Z
+DTEND:20231208T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - 1SVT1 - <1SVT1>\, <1SVT4>\, <1SV
+ T1>\, <1SVT1>\, <1SVT4>\, <1SVT1>\, <1SVT1>\, <1SVT4>
+LOCATION;LANGUAGE=fr:L106 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : 1SVT1\nParties de classe : &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt\;\, &
+ lt\;1SVT1&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt\;\, &lt\;1SVT1&gt\;\, &lt
+ \;1SVT1&gt\;\, &lt\;1SVT4&gt\;\nSalle : L106 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : 1SVT1<br/>Parties de classe : &lt\;1SVT1&gt\;\, &lt\;
+ 1SVT4&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt\;\, &lt\;1S
+ VT1&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt\;<br/>Salle : L106 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T141143Z
+UID:Cours-1506-15-20240215T144722Z-Index-Education
+DTSTART:20231211T100000Z
+DTEND:20231211T110000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nClasse : 108\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Classe : 108<br/>Salle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-15-20240215T144722Z-Index-Education
+DTSTART:20231212T090000Z
+DTEND:20231212T110000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-15-20240215T144722Z-Index-Education
+DTSTART:20231214T070000Z
+DTEND:20231214T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-15-20240215T144722Z-Index-Education
+DTSTART:20231211T070000Z
+DTEND:20231211T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20240115T090035Z
+UID:Cours-7640-15-20240215T144722Z-Index-Education
+DTSTART:20231211T150000Z
+DTEND:20231211T170000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - 1SVT1 - <1SVT1>\, <1SVT4>\, <1SV
+ T1>\, <1SVT1>\, <1SVT4>\, <1SVT1>\, <1SVT1>\, <1SVT4>
+LOCATION;LANGUAGE=fr:L104 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : 1SVT1\nParties de classe : &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt\;\, &
+ lt\;1SVT1&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt\;\, &lt\;1SVT1&gt\;\, &lt
+ \;1SVT1&gt\;\, &lt\;1SVT4&gt\;\nSalle : L104 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : 1SVT1<br/>Parties de classe : &lt\;1SVT1&gt\;\, &lt\;
+ 1SVT4&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt\;\, &lt\;1S
+ VT1&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt\;<br/>Salle : L104 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T141143Z
+UID:Cours-1506-16-20240215T144722Z-Index-Education
+DTSTART:20231218T100000Z
+DTEND:20231218T110000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nClasse : 108\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Classe : 108<br/>Salle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-16-20240215T144722Z-Index-Education
+DTSTART:20231219T090000Z
+DTEND:20231219T110000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-16-20240215T144722Z-Index-Education
+DTSTART:20231221T070000Z
+DTEND:20231221T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-16-20240215T144722Z-Index-Education
+DTSTART:20231218T070000Z
+DTEND:20231218T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T141143Z
+UID:Cours-1506-19-20240215T144722Z-Index-Education
+DTSTART:20240108T100000Z
+DTEND:20240108T110000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nClasse : 108\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Classe : 108<br/>Salle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-19-20240215T144722Z-Index-Education
+DTSTART:20240109T090000Z
+DTEND:20240109T110000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-19-20240215T144722Z-Index-Education
+DTSTART:20240111T070000Z
+DTEND:20240111T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-19-20240215T144722Z-Index-Education
+DTSTART:20240108T070000Z
+DTEND:20240108T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T141143Z
+UID:Cours-1506-20-20240215T144722Z-Index-Education
+DTSTART:20240115T100000Z
+DTEND:20240115T110000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nClasse : 108\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Classe : 108<br/>Salle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-20-20240215T144722Z-Index-Education
+DTSTART:20240116T090000Z
+DTEND:20240116T110000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-20-20240215T144722Z-Index-Education
+DTSTART:20240118T070000Z
+DTEND:20240118T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-20-20240215T144722Z-Index-Education
+DTSTART:20240115T070000Z
+DTEND:20240115T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20240115T070826Z
+UID:Cours-7639-20-20240215T144722Z-Index-Education
+DTSTART:20240119T070000Z
+DTEND:20240119T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - 1SVT1 - <1SVT1>\, <1SVT4>\, <1SV
+ T1>\, <1SVT1>\, <1SVT4>\, <1SVT1>\, <1SVT1>\, <1SVT4>
+LOCATION;LANGUAGE=fr:L106 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : 1SVT1\nParties de classe : &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt\;\, &
+ lt\;1SVT1&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt\;\, &lt\;1SVT1&gt\;\, &lt
+ \;1SVT1&gt\;\, &lt\;1SVT4&gt\;\nSalle : L106 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : 1SVT1<br/>Parties de classe : &lt\;1SVT1&gt\;\, &lt\;
+ 1SVT4&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt\;\, &lt\;1S
+ VT1&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt\;<br/>Salle : L106 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T141143Z
+UID:Cours-1506-21-20240215T144722Z-Index-Education
+DTSTART:20240122T100000Z
+DTEND:20240122T110000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nClasse : 108\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Classe : 108<br/>Salle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-21-20240215T144722Z-Index-Education
+DTSTART:20240123T090000Z
+DTEND:20240123T110000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-21-20240215T144722Z-Index-Education
+DTSTART:20240125T070000Z
+DTEND:20240125T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-21-20240215T144722Z-Index-Education
+DTSTART:20240122T070000Z
+DTEND:20240122T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20240115T090035Z
+UID:Cours-7656-21-20240215T144722Z-Index-Education
+DTSTART:20240122T150000Z
+DTEND:20240122T170000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - MERIGUET - 1SVT1 - <1SVT1>\, <1S
+ VT4>\, <1SVT1>\, <1SVT1>\, <1SVT4>\, <1SVT1>\, <1SVT1>\, <1SVT4>
+LOCATION;LANGUAGE=fr:L104 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseurs : MERIG
+ UET\, PIERI\nGroupe : 1SVT1\nParties de classe : &lt\;1SVT1&gt\;\, &lt\;1S
+ VT4&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt\;\, &lt\;1SVT
+ 1&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt\;\nSalle : L104 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeurs
+  : MERIGUET\, PIERI<br/>Groupe : 1SVT1<br/>Parties de classe : &lt\;1SVT1&
+ gt\;\, &lt\;1SVT4&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt
+ \;\, &lt\;1SVT1&gt\;\, &lt\;1SVT1&gt\;\, &lt\;1SVT4&gt\;<br/>Salle : L104 
+ COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-22-20240215T144722Z-Index-Education
+DTSTART:20240201T070000Z
+DTEND:20240201T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T141143Z
+UID:Cours-1506-23-20240215T144722Z-Index-Education
+DTSTART:20240205T100000Z
+DTEND:20240205T110000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nClasse : 108\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Classe : 108<br/>Salle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-23-20240215T144722Z-Index-Education
+DTSTART:20240206T090000Z
+DTEND:20240206T110000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-23-20240215T144722Z-Index-Education
+DTSTART:20240208T070000Z
+DTEND:20240208T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-23-20240215T144722Z-Index-Education
+DTSTART:20240205T070000Z
+DTEND:20240205T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T141143Z
+UID:Cours-1506-24-20240215T144722Z-Index-Education
+DTSTART:20240212T100000Z
+DTEND:20240212T110000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nClasse : 108\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Classe : 108<br/>Salle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-24-20240215T144722Z-Index-Education
+DTSTART:20240213T090000Z
+DTEND:20240213T110000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-24-20240215T144722Z-Index-Education
+DTSTART:20240215T070000Z
+DTEND:20240215T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-24-20240215T144722Z-Index-Education
+DTSTART:20240212T070000Z
+DTEND:20240212T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-27-20240215T144722Z-Index-Education
+DTSTART:20240305T090000Z
+DTEND:20240305T110000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-27-20240215T144722Z-Index-Education
+DTSTART:20240307T070000Z
+DTEND:20240307T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-27-20240215T144722Z-Index-Education
+DTSTART:20240304T070000Z
+DTEND:20240304T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20240202T164356Z
+UID:Cours-8386-27-20240215T144722Z-Index-Education
+DTSTART:20240304T100000Z
+DTEND:20240304T110000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108G.1 - <108G.1>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nGroupe : 108G.1\nPartie de classe : &lt\;108G.1&gt\;\nSalle : L102 COURS 
+ SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Groupe : 108G.1<br/>Partie de classe : &lt\;108G.1&gt\;<br/>Sa
+ lle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-28-20240215T144722Z-Index-Education
+DTSTART:20240312T090000Z
+DTEND:20240312T110000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-28-20240215T144722Z-Index-Education
+DTSTART:20240314T070000Z
+DTEND:20240314T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-28-20240215T144722Z-Index-Education
+DTSTART:20240311T070000Z
+DTEND:20240311T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20240202T164416Z
+UID:Cours-8388-28-20240215T144722Z-Index-Education
+DTSTART:20240311T100000Z
+DTEND:20240311T110000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108G.2 - <108G.2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nGroupe : 108G.2\nPartie de classe : &lt\;108G.2&gt\;\nSalle : L102 COURS 
+ SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Groupe : 108G.2<br/>Partie de classe : &lt\;108G.2&gt\;<br/>Sa
+ lle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-29-20240215T144722Z-Index-Education
+DTSTART:20240319T090000Z
+DTEND:20240319T110000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-29-20240215T144722Z-Index-Education
+DTSTART:20240321T070000Z
+DTEND:20240321T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-29-20240215T144722Z-Index-Education
+DTSTART:20240318T070000Z
+DTEND:20240318T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20240202T164356Z
+UID:Cours-8386-29-20240215T144722Z-Index-Education
+DTSTART:20240318T100000Z
+DTEND:20240318T110000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108G.1 - <108G.1>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nGroupe : 108G.1\nPartie de classe : &lt\;108G.1&gt\;\nSalle : L102 COURS 
+ SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Groupe : 108G.1<br/>Partie de classe : &lt\;108G.1&gt\;<br/>Sa
+ lle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-30-20240215T144722Z-Index-Education
+DTSTART:20240326T090000Z
+DTEND:20240326T110000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-30-20240215T144722Z-Index-Education
+DTSTART:20240328T070000Z
+DTEND:20240328T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-30-20240215T144722Z-Index-Education
+DTSTART:20240325T070000Z
+DTEND:20240325T090000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20240202T164416Z
+UID:Cours-8388-30-20240215T144722Z-Index-Education
+DTSTART:20240325T100000Z
+DTEND:20240325T110000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108G.2 - <108G.2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nGroupe : 108G.2\nPartie de classe : &lt\;108G.2&gt\;\nSalle : L102 COURS 
+ SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Groupe : 108G.2<br/>Partie de classe : &lt\;108G.2&gt\;<br/>Sa
+ lle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-31-20240215T144722Z-Index-Education
+DTSTART:20240402T080000Z
+DTEND:20240402T100000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-31-20240215T144722Z-Index-Education
+DTSTART:20240404T060000Z
+DTEND:20240404T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-32-20240215T144722Z-Index-Education
+DTSTART:20240409T080000Z
+DTEND:20240409T100000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-32-20240215T144722Z-Index-Education
+DTSTART:20240411T060000Z
+DTEND:20240411T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-32-20240215T144722Z-Index-Education
+DTSTART:20240408T060000Z
+DTEND:20240408T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20240202T164356Z
+UID:Cours-8386-32-20240215T144722Z-Index-Education
+DTSTART:20240408T090000Z
+DTEND:20240408T100000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108G.1 - <108G.1>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nGroupe : 108G.1\nPartie de classe : &lt\;108G.1&gt\;\nSalle : L102 COURS 
+ SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Groupe : 108G.1<br/>Partie de classe : &lt\;108G.1&gt\;<br/>Sa
+ lle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-35-20240215T144722Z-Index-Education
+DTSTART:20240430T080000Z
+DTEND:20240430T100000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-35-20240215T144722Z-Index-Education
+DTSTART:20240502T060000Z
+DTEND:20240502T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-35-20240215T144722Z-Index-Education
+DTSTART:20240429T060000Z
+DTEND:20240429T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20240202T164416Z
+UID:Cours-8388-35-20240215T144722Z-Index-Education
+DTSTART:20240429T090000Z
+DTEND:20240429T100000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108G.2 - <108G.2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nGroupe : 108G.2\nPartie de classe : &lt\;108G.2&gt\;\nSalle : L102 COURS 
+ SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Groupe : 108G.2<br/>Partie de classe : &lt\;108G.2&gt\;<br/>Sa
+ lle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-36-20240215T144722Z-Index-Education
+DTSTART:20240507T080000Z
+DTEND:20240507T100000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-36-20240215T144722Z-Index-Education
+DTSTART:20240506T060000Z
+DTEND:20240506T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20240202T164356Z
+UID:Cours-8386-36-20240215T144722Z-Index-Education
+DTSTART:20240506T090000Z
+DTEND:20240506T100000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108G.1 - <108G.1>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nGroupe : 108G.1\nPartie de classe : &lt\;108G.1&gt\;\nSalle : L102 COURS 
+ SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Groupe : 108G.1<br/>Partie de classe : &lt\;108G.1&gt\;<br/>Sa
+ lle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-37-20240215T144722Z-Index-Education
+DTSTART:20240514T080000Z
+DTEND:20240514T100000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-37-20240215T144722Z-Index-Education
+DTSTART:20240516T060000Z
+DTEND:20240516T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-37-20240215T144722Z-Index-Education
+DTSTART:20240513T060000Z
+DTEND:20240513T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20240202T164416Z
+UID:Cours-8388-37-20240215T144722Z-Index-Education
+DTSTART:20240513T090000Z
+DTEND:20240513T100000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108G.2 - <108G.2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nGroupe : 108G.2\nPartie de classe : &lt\;108G.2&gt\;\nSalle : L102 COURS 
+ SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Groupe : 108G.2<br/>Partie de classe : &lt\;108G.2&gt\;<br/>Sa
+ lle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-38-20240215T144722Z-Index-Education
+DTSTART:20240521T080000Z
+DTEND:20240521T100000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-38-20240215T144722Z-Index-Education
+DTSTART:20240523T060000Z
+DTEND:20240523T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T141143Z
+UID:Cours-1506-39-20240215T144722Z-Index-Education
+DTSTART:20240527T090000Z
+DTEND:20240527T100000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nClasse : 108\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Classe : 108<br/>Salle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-39-20240215T144722Z-Index-Education
+DTSTART:20240528T080000Z
+DTEND:20240528T100000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-39-20240215T144722Z-Index-Education
+DTSTART:20240530T060000Z
+DTEND:20240530T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-39-20240215T144722Z-Index-Education
+DTSTART:20240527T060000Z
+DTEND:20240527T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T141143Z
+UID:Cours-1506-40-20240215T144722Z-Index-Education
+DTSTART:20240603T090000Z
+DTEND:20240603T100000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nClasse : 108\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Classe : 108<br/>Salle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-40-20240215T144722Z-Index-Education
+DTSTART:20240604T080000Z
+DTEND:20240604T100000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-40-20240215T144722Z-Index-Education
+DTSTART:20240606T060000Z
+DTEND:20240606T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-40-20240215T144722Z-Index-Education
+DTSTART:20240603T060000Z
+DTEND:20240603T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T141143Z
+UID:Cours-1506-41-20240215T144722Z-Index-Education
+DTSTART:20240610T090000Z
+DTEND:20240610T100000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nClasse : 108\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Classe : 108<br/>Salle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-41-20240215T144722Z-Index-Education
+DTSTART:20240611T080000Z
+DTEND:20240611T100000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-41-20240215T144722Z-Index-Education
+DTSTART:20240613T060000Z
+DTEND:20240613T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-41-20240215T144722Z-Index-Education
+DTSTART:20240610T060000Z
+DTEND:20240610T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T141143Z
+UID:Cours-1506-42-20240215T144722Z-Index-Education
+DTSTART:20240617T090000Z
+DTEND:20240617T100000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nClasse : 108\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Classe : 108<br/>Salle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-42-20240215T144722Z-Index-Education
+DTSTART:20240618T080000Z
+DTEND:20240618T100000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-42-20240215T144722Z-Index-Education
+DTSTART:20240620T060000Z
+DTEND:20240620T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-42-20240215T144722Z-Index-Education
+DTSTART:20240617T060000Z
+DTEND:20240617T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T141143Z
+UID:Cours-1506-43-20240215T144722Z-Index-Education
+DTSTART:20240624T090000Z
+DTEND:20240624T100000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nClasse : 108\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Classe : 108<br/>Salle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-43-20240215T144722Z-Index-Education
+DTSTART:20240625T080000Z
+DTEND:20240625T100000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-43-20240215T144722Z-Index-Education
+DTSTART:20240627T060000Z
+DTEND:20240627T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-43-20240215T144722Z-Index-Education
+DTSTART:20240624T060000Z
+DTEND:20240624T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T141143Z
+UID:Cours-1506-44-20240215T144722Z-Index-Education
+DTSTART:20240701T090000Z
+DTEND:20240701T100000Z
+SUMMARY;LANGUAGE=fr:ENSEIGN.SCIENTIFIQUE - 108
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : ENSEIGN.SCIENTIFIQUE\nProfesseur : PIERI\
+ nClasse : 108\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : ENSEIGN.SCIENTIFIQUE<br/>Professeur 
+ : PIERI<br/>Classe : 108<br/>Salle : L102 COURS SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3586-44-20240215T144722Z-Index-Education
+DTSTART:20240702T080000Z
+DTEND:20240702T100000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134131Z
+UID:Cours-3587-44-20240215T144722Z-Index-Education
+DTSTART:20240704T060000Z
+DTEND:20240704T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L103 TP SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L103 TP SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L103 TP SVT<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230821T134111Z
+UID:Cours-3588-44-20240215T144722Z-Index-Education
+DTSTART:20240701T060000Z
+DTEND:20240701T080000Z
+SUMMARY;LANGUAGE=fr:SCIENCES VIE & TERRE - TSVT2 - <TSVT2>\, <TSVT2>\, <TSV
+ T2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>\, <TSVT2>
+LOCATION;LANGUAGE=fr:L102 COURS SVT
+DESCRIPTION;LANGUAGE=fr:Matière : SCIENCES VIE & TERRE\nProfesseur : PIERI\
+ nGroupe : TSVT2\nParties de classe : &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &
+ lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt
+ \;TSVT2&gt\;\, &lt\;TSVT2&gt\;\nSalle : L102 COURS SVT\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : SCIENCES VIE & TERRE<br/>Professeur 
+ : PIERI<br/>Groupe : TSVT2<br/>Parties de classe : &lt\;TSVT2&gt\;\, &lt\;
+ TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TS
+ VT2&gt\;\, &lt\;TSVT2&gt\;\, &lt\;TSVT2&gt\;<br/>Salle : L102 COURS SVT<br
+ />
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:EdT
+DTSTAMP:20240215T134722Z
+UID:Ferie-1-20240215T144722Z-Index-Education
+DTSTART;VALUE=DATE:20231022
+DTEND;VALUE=DATE:20231106
+SUMMARY;LANGUAGE=fr:Vacances
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:EdT
+DTSTAMP:20240215T134722Z
+UID:Ferie-2-20240215T144722Z-Index-Education
+DTSTART;VALUE=DATE:20231111
+DTEND;VALUE=DATE:20231112
+SUMMARY;LANGUAGE=fr:Férié
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:EdT
+DTSTAMP:20240215T134722Z
+UID:Ferie-3-20240215T144722Z-Index-Education
+DTSTART;VALUE=DATE:20231224
+DTEND;VALUE=DATE:20240108
+SUMMARY;LANGUAGE=fr:Vacances
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:EdT
+DTSTAMP:20240215T134722Z
+UID:Ferie-4-20240215T144722Z-Index-Education
+DTSTART;VALUE=DATE:20240218
+DTEND;VALUE=DATE:20240304
+SUMMARY;LANGUAGE=fr:Vacances
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:EdT
+DTSTAMP:20240215T134722Z
+UID:Ferie-5-20240215T144722Z-Index-Education
+DTSTART;VALUE=DATE:20240331
+DTEND;VALUE=DATE:20240402
+SUMMARY;LANGUAGE=fr:Vacances
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:EdT
+DTSTAMP:20240215T134722Z
+UID:Ferie-6-20240215T144722Z-Index-Education
+DTSTART;VALUE=DATE:20240414
+DTEND;VALUE=DATE:20240429
+SUMMARY;LANGUAGE=fr:Vacances
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:EdT
+DTSTAMP:20240215T134722Z
+UID:Ferie-7-20240215T144722Z-Index-Education
+DTSTART;VALUE=DATE:20240501
+DTEND;VALUE=DATE:20240502
+SUMMARY;LANGUAGE=fr:Férié
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:EdT
+DTSTAMP:20240215T134722Z
+UID:Ferie-8-20240215T144722Z-Index-Education
+DTSTART;VALUE=DATE:20240508
+DTEND;VALUE=DATE:20240513
+SUMMARY;LANGUAGE=fr:Vacances
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:EdT
+DTSTAMP:20240215T134722Z
+UID:Ferie-9-20240215T144722Z-Index-Education
+DTSTART;VALUE=DATE:20240519
+DTEND;VALUE=DATE:20240521
+SUMMARY;LANGUAGE=fr:Vacances
+END:VEVENT
+END:VCALENDAR

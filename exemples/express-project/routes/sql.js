@@ -42,6 +42,7 @@ router.post("/absence/filtre", absence_controller.spreadAbsenceREQUEST);
 router.post("/proposition/new_proposition", proposition_controller.insertPropositionREQUEST);
 router.get("/proposition/teacher_on_absence/:abs", proposition_controller.getProposedTeacherREQUEST);
 router.post("/proposition/acceptProposition", proposition_controller.acceptPropositionREQUEST);
+router.get("/proposition/getYourReplace", proposition_controller.getYourReplaceREQUEST);
 
 router.get("/diffusion/getMyDiffusion", diffusion_controller.getMyDiffusionsREQUEST);
 module.exports = router;

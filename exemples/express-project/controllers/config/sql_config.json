@@ -22,7 +22,7 @@
       "teacher_by_discipline":                  "SELECT * FROM Correspondance WHERE enseignant = ? AND discipline = ?",
       "nomenclature_by_matiere":                "SELECT nomenclature FROM Ref_Matiere WHERE id_mat = ?",
       "admin_by_mail_password":                 "SELECT * FROM Personnel_Administratif WHERE mail = ? AND password = ?",
-      "unavailableTeacherByEtablishement":      "SELECT * FROM Enseignant INNER JOIN Absence INNER JOIN Evenement ON Absence.evenement = Evenement.id_ev WHERE Enseignant.id_ens = Evenement.enseignant AND Enseignant.id_eta = ?",
+      "unavailableTeacherByEtablishement":      "SELECT * FROM Enseignant INNER JOIN Absence ON Absence.teacherID = Enseignant.id_ens WHERE Enseignant.id_eta = ?",
       "diffusionByTeachers":                    "SELECT * FROM Diffusion INNER JOIN Absence ON Diffusion.absence = Absence.id_abs INNER JOIN Enseignant ON Enseignant.id_ens = Diffusion.ens WHERE ens = ?",
       "allProposedTeacher":                     "SELECT e.* FROM Enseignant e JOIN Proposition p ON e.id_ens = p.enseignant WHERE p.absence = ?",
       "searchTeacher":                          "SELECT * FROM Enseignant WHERE nom = ?",
@@ -36,7 +36,8 @@
       "allTeacherAvailableTheTrueOne" :         "SELECT Enseignant.id_ens as id FROM Enseignant WHERE EXISTS (SELECT * FROM Enseignant inner join Evenement on Evenement.enseignant = Enseignant.id_ens and Evenement.date = ? and ( (Evenement.heure_debut BETWEEN ? and ?) or (Evenement.heure_fin BETWEEN ? and ?) ) and ( (? BETWEEN heure_debut and heure_fin) or (? BETWEEN heure_debut and heure_fin) ) );",
       "allTeacherCompatibleWithDisc" :          "select c.enseignant as id from Correspondance as c inner join Absence as a inner join Ref_Matiere as rm inner join Ref_Discipline as rd ON a.matiere = rm.id_mat and rm.nomenclature = rd.nomenclature and c.discipline = rd.id_disc where a.id_abs = ?;",
       "teacherLink" :                           "select * from Links where teacher = ? ",
-      "absence":                                "select * from Absence where start = ? and end = ? and date = ? and teacherID = ?"
+      "absence":                                "select * from Absence where start = ? and end = ? and date = ? and teacherID = ?",
+      "yourReplace" :                     "select * from Remplacement inner join Enseignant on Enseignant.id_ens = Remplacement.enseignant where Enseignant.id_eta = ?"
       
       
     },
