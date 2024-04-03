@@ -24,3 +24,19 @@ exports.getMyDiffusionsREQUEST = asyncHandler((req, res) => {
         });
     });
 });
+
+/**
+ * Delete a teacher in the diffusion list on a absence.
+ * @param {Object} req - The request object
+ * @param {Object} res - The response object
+ */
+exports.deleteTeacherOnDiffusion = asyncHandler((req, res) => {
+    deleteOnDiffusion(req.body.teacherID, req.body.absenceID, (err, result) => {
+        if (err) {
+            console.error(err);
+            res.sendStatus(500);
+        } else {
+            console.info(result);
+        }
+    });
+});

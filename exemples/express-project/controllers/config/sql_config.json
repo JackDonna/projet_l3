@@ -28,7 +28,7 @@
       "searchTeacher":                          "SELECT * FROM Enseignant WHERE nom = ?",
       "teacher_is_available":                   "SET @date_event = ?;SET @h_d = ?;SET @h_f = ?;SET @ens = ?;SELECT COUNT(*) AS nb_event FROM Evenement WHERE `enseignant` = @ens AND `date` = @date_event AND((heure_debut < @h_d AND heure_fin > @h_d)OR(heure_debut < @h_f AND heure_fin > @h_f)OR(heure_debut = @h_d AND heure_fin = @h_f)OR(heure_debut >= @h_d AND heure_fin <= @h_f)OR(heure_debut <= @h_d AND heure_fin >= @h_f))",
       "all_teachers":                           "SELECT * FROM `Enseignant`",
-      "teacher_is_available2":                   "SELECT COUNT(*) AS nb_event FROM Evenement WHERE `enseignant` = ? AND `date` = ? AND((heure_debut < ? AND heure_fin > ?)OR(heure_debut < ? AND heure_fin > ?)OR(heure_debut = ? AND heure_fin = ?)OR(heure_debut >= ? AND heure_fin <= ?)OR(heure_debut <= ? AND heure_fin >= ?))",
+      "teacher_is_available2":                  "SELECT COUNT(*) AS nb_event FROM Evenement WHERE `enseignant` = ? AND `date` = ? AND((heure_debut < ? AND heure_fin > ?)OR(heure_debut < ? AND heure_fin > ?)OR(heure_debut = ? AND heure_fin = ?)OR(heure_debut >= ? AND heure_fin <= ?)OR(heure_debut <= ? AND heure_fin >= ?))",
       "get_event":                              "SELECT * FROM `Evenement` WHERE id_ev = ?",
       "get_matiere_by_evenement":               "SELECT matiere FROM Evenement WHERE id_ev = ?",
       "classeByName" :                          "SELECT * FROM Ref_Classe WHERE classe = ?",
@@ -37,9 +37,8 @@
       "allTeacherCompatibleWithDisc" :          "select c.enseignant as id from Correspondance as c inner join Absence as a inner join Ref_Matiere as rm inner join Ref_Discipline as rd ON a.matiere = rm.id_mat and rm.nomenclature = rd.nomenclature and c.discipline = rd.id_disc where a.id_abs = ?;",
       "teacherLink" :                           "select * from Links where teacher = ? ",
       "absence":                                "select * from Absence where start = ? and end = ? and date = ? and teacherID = ?",
-      "yourReplace" :                     "select * from Remplacement inner join Enseignant on Enseignant.id_ens = Remplacement.enseignant where Enseignant.id_eta = ?"
-      
-      
+      "yourReplace" :                           "select * from Remplacement inner join Enseignant on Enseignant.id_ens = Remplacement.enseignant where Enseignant.id_eta = ?"
+
     },
     "insert":
     {
@@ -58,6 +57,10 @@
     "update":
     {
       "teacher_validation":                      "UPDATE Identification SET valide = 1 WHERE enseignant = ?"
+    },
+    "delete":
+    {
+      "teacher_diffusion":                       "DELETE FROM `Diffusion` WHERE `ens`= ? AND `absence`=?"
     }
   }
 }
