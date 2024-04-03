@@ -46,6 +46,8 @@ router.get("/proposition/getYourReplace", proposition_controller.getYourReplaceR
 
 // ------------------------------------------ DIFFUSION CONTROLLERS ------------------------------------- //
 router.post("/diffusion/deleteTeacher", diffusion_controller.deleteTeacherOnDiffusion);
+router.get("/diffusion/DiffusionsProvisor", diffusion_controller.DiffusionsProvisor);
 
 router.get("/diffusion/getMyDiffusion", diffusion_controller.getMyDiffusionsREQUEST);
 module.exports = router;
+DiffusionsProvisor
