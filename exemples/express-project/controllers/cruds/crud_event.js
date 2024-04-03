@@ -561,7 +561,7 @@ const getEventByID = (idEvent, callback) => {
 
 const getLinkContent = (db, teacherID, callback) => {
     getTeacherLinkSQL(db, teacherID, (err, link) => {
-        downloadTimetableFromURL(link.link, (err, timetable) => {
+        downloadTimetableFromURL(link, (err, timetable) => {
             callback(err, timetable);
         });
     });
