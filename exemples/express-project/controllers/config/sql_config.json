@@ -58,6 +58,10 @@
     "update":
     {
       "teacher_validation":                      "UPDATE Identification SET valide = 1 WHERE enseignant = ?"
+    },
+    "delete":
+    {
+      "teacher_diffusion":                       "DELETE FROM `Diffusion` WHERE `ens`= ? AND `absence`=?"
     }
   }
 }

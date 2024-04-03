@@ -44,5 +44,8 @@ router.get("/proposition/teacher_on_absence/:abs", proposition_controller.getPro
 router.post("/proposition/acceptProposition", proposition_controller.acceptPropositionREQUEST);
 router.get("/proposition/getYourReplace", proposition_controller.getYourReplaceREQUEST);
 
+// ------------------------------------------ DIFFUSION CONTROLLERS ------------------------------------- //
+router.post("/diffusion/deleteTeacher", diffusion_controller.deleteTeacherOnDiffusion);
+
 router.get("/diffusion/getMyDiffusion", diffusion_controller.getMyDiffusionsREQUEST);
 module.exports = router;
