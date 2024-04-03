@@ -35,18 +35,17 @@ var count = 0;
 
 async function print_absence() {
 
-    await axios.get("/sql/teacher/getUnavailableTeachers").then((response) =>
-    {
+    await axios.get("/sql/teacher/getUnavailableTeachers").then(async (response) => {
         // console.log(response)
         let json = response.data
         // console.log(json)
         for (let i = 0; i < json.length; i++) {
             let evenement = json[i];
-
+            console.log(evenement.id_abs)
             // Vérifier si l'événement a déjà été affiché
             if (dejaAffiche[JSON.stringify(evenement)]) {
                 continue; // Passer à la prochaine itération si l'événement existe déjà
-            }else {
+            } else {
                 count++;
             }
 
@@ -58,7 +57,7 @@ async function print_absence() {
             // console.log(evenement)
             div.innerHTML = `
             <p><span class="cle">Motif : </span>${evenement.motif}</p>
-            <p><span class="cle">Date : </span>${evenement.date.split('T',1)}</p>
+            <p><span class="cle">Date : </span>${evenement.date.split('T', 1)}</p>
             <p><span class="cle">Heure de début : </span>${evenement.start}</p>
             <p><span class="cle">Heure de fin : </span>${evenement.end}</p>
             <p><span class="cle">Professeur : </span>${evenement.nom} ${evenement.prenom}</p>
@@ -72,6 +71,12 @@ async function print_absence() {
 
             let div_list_diff = document.createElement("div");
             div_list_diff.classList.add("list");
+
+            let paramValue = evenement.id_abs;
+            await axios.post(`/sql/diffusion/diffusionsProvisor`, {id_abs : evenement.id_abs}).then((response) => {
+                console.log("ici : ")
+                console.log(response.data)
+            })
 
             div_list_diff.innerHTML = `
       <select name="prof">
