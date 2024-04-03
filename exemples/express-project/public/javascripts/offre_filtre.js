@@ -83,18 +83,19 @@ async function print_absence() {
             Professeur : ${evenement.nom} ${evenement.prenom}
          `;
 
-            // Crée un bouton pour cacher la boîte
+            // Crée un bouton pour accepter l'offre
             let boutonV = document.createElement("button");
             boutonV.innerHTML = "✅​";
             boutonV.onclick = function () {
                 confirmerAvantSuppression(p); // Afficher la confirmation avant de supprimer
             };
 
-            // Crée un bouton pour cacher la boîte
+            // Crée un bouton pour supprimer l'offre
             let boutonX = document.createElement("button");
             boutonX.innerHTML = "❌​";
             boutonX.onclick = function () {
                 confirmerAvantSuppression(p); // Afficher la confirmation avant de supprimer
+                axios.post("/sql/diffusion/deleteTeacher", {teacherID: evenement.id_ens, absenceID: evenement.id_abs});
             };
 
             p.appendChild(boutonV);
