@@ -53,7 +53,9 @@ main {
   align-items: center;
   justify-content: center;
   transition: 0.2s;
+  /*
   display: none;
+   */
 }
 
 #scan_qr_code:hover{
