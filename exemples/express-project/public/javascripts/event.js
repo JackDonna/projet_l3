@@ -34,52 +34,46 @@ let dejaAffiche = {};
 var count = 0;
 
 async function print_absence() {
-    let json = await axios.get("/sql/teacher/getUnavailableTeachers").then((response) => {
-        console.log(response);
-        let json = response.data;
-        console.log(json);
+
+    await axios.get("/sql/teacher/getUnavailableTeachers").then((response) =>
+    {
+        // console.log(response)
+        let json = response.data
+        // console.log(json)
         for (let i = 0; i < json.length; i++) {
             let evenement = json[i];
 
-   await axios.get("/sql/teacher/getUnavailableTeachers").then((response) =>
-   {
-      // console.log(response)
-      let json = response.data.data
-      // console.log(json)
-      for (let i = 0; i < json.length; i++) {
-         let evenement = json[i];
-         
-         // Vérifier si l'événement a déjà été affiché
-         if (dejaAffiche[JSON.stringify(evenement)]) {
-            continue; // Passer à la prochaine itération si l'événement existe déjà
-         }else {
-            count++;
-         }
-   
-         // Créer un paragraphe pour chaque donnée
-         let div = document.createElement("div");
-         div.classList.add("box_absence");
-   
-         // Affecter la valeur de chaque clé à chaque paragraphe
-         // console.log(evenement)
-         div.innerHTML = `
+            // Vérifier si l'événement a déjà été affiché
+            if (dejaAffiche[JSON.stringify(evenement)]) {
+                continue; // Passer à la prochaine itération si l'événement existe déjà
+            }else {
+                count++;
+            }
+
+            // Créer un paragraphe pour chaque donnée
+            let div = document.createElement("div");
+            div.classList.add("box_absence");
+
+            // Affecter la valeur de chaque clé à chaque paragraphe
+            // console.log(evenement)
+            div.innerHTML = `
             <p><span class="cle">Motif : </span>${evenement.motif}</p>
-            <p><span class="cle">Date : </span>${evenement.date.split("T", 1)}</p>
-            <p><span class="cle">Heure de début : </span>${evenement.heure_debut}</p>
-            <p><span class="cle">Heure de fin : </span>${evenement.heure_fin}</p>
+            <p><span class="cle">Date : </span>${evenement.date.split('T',1)}</p>
+            <p><span class="cle">Heure de début : </span>${evenement.start}</p>
+            <p><span class="cle">Heure de fin : </span>${evenement.end}</p>
             <p><span class="cle">Professeur : </span>${evenement.nom} ${evenement.prenom}</p>
          `;
-   
-         // Ajouter le paragraphe à la boite
-         affichage_absence.appendChild(div);
-         
-         // Marquer l'événement comme déjà affiché
-         dejaAffiche[JSON.stringify(evenement)] = true;
 
-         let div_list_diff = document.createElement("div");
-         div_list_diff.classList.add("list");
+            // Ajouter le paragraphe à la boite
+            affichage_absence.appendChild(div);
 
-         div_list_diff.innerHTML = `
+            // Marquer l'événement comme déjà affiché
+            dejaAffiche[JSON.stringify(evenement)] = true;
+
+            let div_list_diff = document.createElement("div");
+            div_list_diff.classList.add("list");
+
+            div_list_diff.innerHTML = `
       <select name="prof">
          <option value="">--Liste des professeurs--</option>
          <option value="">M. Alasseur</option>
@@ -91,9 +85,9 @@ async function print_absence() {
       </select>
    `;
 
-         affichage_list_diff.appendChild(div_list_diff);
-      }
-   });
+            affichage_list_diff.appendChild(div_list_diff);
+        }
+    });
 }
 
 async function print_list_diff(){
