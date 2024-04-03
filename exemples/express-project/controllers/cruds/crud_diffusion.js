@@ -31,6 +31,34 @@ const getYourDiffusionsSQL = (teacherId, callback) => {
     });
 };
 
+
+
+/**
+ * Retrieves teacher ID by diffusions from the database.
+ *
+ * @param {number} AbsId - The ID of the absence to retrieve diffusions for.
+ * @param {function} callback - The callback function to handle the results.
+ * @return {void}
+ */
+const getDiffusionsAbsSQL = (AbsId, callback) => {
+    pool.getConnection((err, db) => {
+        if (err) callback(err, null);
+        db.query(
+            {
+                sql: SQL.select.diffusionByAbsence,
+                timeout: 10000,
+                values: [AbsId],
+            },
+            (err, rows, fields) => {
+                db.release();
+                callback(err, rows);
+            }
+        );
+    });
+};
+
+
+
 /**
  * Inserts diffusion SQL into the database.
  *
@@ -68,6 +96,24 @@ const getMyDiffusions = (req, res, callback) => {
     const teacherId = req.session.id_ens;
 
     getYourDiffusionsSQL(teacherId, (err, result) => {
+        callback(err, result);
+    });
+};
+
+
+/**
+ * Retrieves the diffusions associated with a specific absence.
+ *
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ * @param {Function} callback - The callback function.
+ * @param {Error} callback.err - The error, if any.
+ * @param {Array} callback.result - The result array of diffusions.
+ */
+const getDiffusionsProvisor = (req, res, callback) => {
+    const AbsId = req.body.id_abs;
+
+    getDiffusionsAbsSQL(AbsId, (err, result) => {
         callback(err, result);
     });
 };
@@ -119,4 +165,4 @@ const deleteOnDiffusion = (teacherId, absenceId, callback) => {
 // --- EXPORTS --------------------------------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------------------------------------------ //
 
-module.exports = { getMyDiffusions, insertDiffusions };
+module.exports = { getMyDiffusions, insertDiffusions,getDiffusionsProvisor };
