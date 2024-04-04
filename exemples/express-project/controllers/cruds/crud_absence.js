@@ -245,6 +245,7 @@ const spreadAbsence = (absence, callback) => {
         filterTeachersByDiscipline(db, absence.id_abs, (err, disciplineResult) => {
             filterTeachersByTimetable(db, absence.date, absence.start, absence.end, disciplineResult, (err, scheduleResult) => {
                 Diffusion.insertDiffusions(db, scheduleResult, absence.id_abs, (err, result) => {
+                    if(err) console.error(err)
                     db.release();
                     console.log(
                         "\u001b[" +
