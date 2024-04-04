@@ -77,7 +77,7 @@ function success(result) {
         })
         .then((response) => {
             get_timetable();
-            reader.classList.remove("hide");
+            loading.classList.add("hide");
         });
 }
 
