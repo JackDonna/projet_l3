@@ -38,7 +38,7 @@
       "teacherLink" :                           "select * from Links where teacher = ? ",
       "absence":                                "select * from Absence where start = ? and end = ? and date = ? and teacherID = ?",
       "yourReplace" :                           "select * from Remplacement inner join Enseignant on Enseignant.id_ens = Remplacement.enseignant where Enseignant.id_eta = ?",
-      "diffusionByAbsence" :                    "SELECT * FROM Enseignant INNER JOIN Diffusion ON Enseignant.id_ens = Diffusion.ens WHERE Diffusion.absence = ?"
+      "diffusionByAbsence" :                    "SELECT distinct Enseignant.* FROM Enseignant INNER JOIN Diffusion ON Enseignant.id_ens = Diffusion.ens WHERE Diffusion.absence = ?"
 
 
     },
