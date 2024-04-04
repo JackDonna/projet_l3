@@ -81,12 +81,28 @@ var list = {
                 select.setAttribute("name", "prof");
                 response.data.forEach(prof => {
                     let option = document.createElement("option");
+                    console.log(prof)
                     option.setAttribute("value", prof.id_ens);
+                    option.setAttribute("prop", prof.id_prop);
                     option.innerHTML = `${prof.nom} ${prof.prenom}`;
                     select.appendChild(option);
                 })
                 
+                let button = document.createElement("button");
+                button.innerText = "Accept"
+                button.classList.add("accept");
+
+                button.addEventListener("click", () => {
+                    let option = select.options[ select.selectedIndex ];
+                    if(option != undefined){
+                        axios.post("/sql/proposition/acceptProposition", {teacherID: option.value, propositionID: option.getAttribute('prop')}).then((response) => {
+
+                        });
+                    }
+                })
+
                 div_list_prop.appendChild(select);
+                div_list_prop.appendChild(button);
                 affichage_propositions.appendChild(div_list_prop);
             })
         });
