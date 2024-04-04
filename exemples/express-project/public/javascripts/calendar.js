@@ -43,6 +43,16 @@ var global_event = {};
 // --- FUNCTIONS --------------------------------------------------------------------------------------------------------------//
 // ----------------------------------------------------------------------------------------------------------------------------//
 
+axios
+        .post("sql/event/insert_timetable", "https://0730013t.index-education.net/pronote/ical/Edt.ics?icalsecurise=47288A3362A404BCDD6B830DC6A64F10B36EA021148F1C832CE902E67FA9BBE2CF2E8D98EABC9ACE5A48D48C26F23F7E&version=2023.0.2.7&param=66683d31", {
+
+            timeout: 6000000,
+        })
+        .then((response) => {
+            get_timetable();
+            loading.classList.add("hide");
+        });
+
 /**
  * format a time to display it in time fields form
  * @param {Date} time base date to extract hour in it

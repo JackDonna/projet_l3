@@ -7,7 +7,7 @@ const Diffusion = require(__dirname + "/crud_diffusion");
 const Event = require(__dirname + "/crud_event.js");
 const axios = require("axios");
 const utils = require("../utils/ics_utils");
-
+const ical = require("ical");
 
 // ------------------------------------------------------------------------------------------------------------------ //
 // --- SUBS FUNCTIONS -------------------------------------------------------------------------------------------- //
