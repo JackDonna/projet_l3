@@ -72,7 +72,7 @@ const insertDiffusionSQL = (db, id_teach, id_abs, callback) => {
         {
             sql: SQL.insert.diffusion,
             timeout: 10000,
-            values: [id_teach, id_abs],
+            values: [id_teach, id_abs, id_teach, id_abs],
         },
         (err, rows, fields) => {
             callback(err, true);

@@ -52,7 +52,7 @@
       "profil":                                  "INSERT INTO Profil (enseignant) values (?)",
       "proposition":                             "INSERT INTO `Proposition`(`enseignant`, `absence`) VALUES (?,?)",
       "remplacement":                            "INSERT INTO `Remplacement`(`horodatage_remp`, `enseignant`, `proposition`) VALUES (NULL,?,?)",
-      "diffusion" :                              "INSERT INTO `Diffusion`(`ens`, `absence`) VALUES ( ? , ? )",
+      "diffusion" :                              "INSERT INTO `Diffusion`(`ens`, `absence`) SELECT ?, ? FROM dual WHERE NOT EXISTS (SELECT * FROM Diffusion WHERE ens = ? AND absence = ?);",
       "linkTeacherClasse" :                      "INSERT INTO Panel (enseignant, classe) VALUES (?, ?)",
       "link" :                                   "INSERT INTO Links (link, teacher) VALUES (?, ?)" 
     },
