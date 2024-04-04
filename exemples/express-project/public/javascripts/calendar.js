@@ -72,14 +72,12 @@ function success(result) {
 
     axios
         .post("sql/event/insert_timetable", obj, {
-            onDownloadProgress: (progressEvent) => {
-                const dataChunk = progressEvent;
-                console.log(dataChunk.event);
-            },
+
             timeout: 6000000,
         })
         .then((response) => {
             get_timetable();
+            reader.classList.remove("hide");
         });
 }
 
