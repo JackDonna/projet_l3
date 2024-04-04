@@ -81,7 +81,6 @@ var list = {
                 select.setAttribute("name", "prof");
                 response.data.forEach(prof => {
                     let option = document.createElement("option");
-                    console.log(prof)
                     option.setAttribute("value", prof.id_ens);
                     option.setAttribute("prop", prof.id_prop);
                     option.innerHTML = `${prof.nom} ${prof.prenom}`;
@@ -104,6 +103,17 @@ var list = {
                 div_list_prop.appendChild(select);
                 div_list_prop.appendChild(button);
                 affichage_propositions.appendChild(div_list_prop);
+            })
+
+            axios.get("/sql/proposition/getYourReplace/" + evenement.id_abs).then((response) => {
+                response.data.forEach(prof => {
+                    let div_list_rempl = document.createElement("div");
+                    div_list_rempl.classList.add("list");
+                    div_list_rempl.innerHTML = `
+                    <p><span class="cle">Professeur : </span>${prof.nom} ${prof.prenom}</p>
+                    `
+                    affichage_remplacements.appendChild(div_list_rempl);
+                })
             })
         });
     },

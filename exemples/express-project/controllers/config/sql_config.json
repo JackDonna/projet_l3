@@ -37,7 +37,7 @@
       "allTeacherCompatibleWithDisc" :          "select c.enseignant as id from Correspondance as c inner join Absence as a inner join Ref_Matiere as rm inner join Ref_Discipline as rd ON a.matiere = rm.id_mat and rm.nomenclature = rd.nomenclature and c.discipline = rd.id_disc where a.id_abs = ?;",
       "teacherLink" :                           "select * from Links where teacher = ? ",
       "absence":                                "select * from Absence where start = ? and end = ? and date = ? and teacherID = ?",
-      "yourReplace" :                           "select * from Remplacement inner join Enseignant on Enseignant.id_ens = Remplacement.enseignant where Enseignant.id_eta = ?",
+      "yourReplace" :                           "select * from Remplacement inner join Enseignant on Enseignant.id_ens = Remplacement.enseignant inner join Proposition on Remplacement.proposition = Proposition.id_prop inner join Absence on Proposition.absence = Absence.id_abs where Absence.id_abs = ?",
       "diffusionByAbsence" :                    "SELECT distinct Enseignant.* FROM Enseignant INNER JOIN Diffusion ON Enseignant.id_ens = Diffusion.ens WHERE Diffusion.absence = ?"
 
 

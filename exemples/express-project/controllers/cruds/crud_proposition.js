@@ -146,9 +146,9 @@ const acceptProposition = (req, res, callback) => {
 };
 
 const getYourReplace = (req, res, callback) => {
-    const etablishementID = req.session.idEtablishement;
+    const absenceID = req.params.absenceID;
 
-    getYourReplaceSQL(etablishementID, (err, result) => {
+    getYourReplaceSQL(absenceID, (err, result) => {
         callback(err, result);
     });
 };

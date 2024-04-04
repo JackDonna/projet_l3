@@ -1,5 +1,5 @@
 const asyncHandler = require("express-async-handler");
-const { insertProposition, getProposedTeacher, acceptProposition } = require(__dirname + "/cruds/crud_proposition.js");
+const { insertProposition, getProposedTeacher, acceptProposition, getYourReplace } = require(__dirname + "/cruds/crud_proposition.js");
 const Session = require(__dirname + "/utils/session.js");
 
 // ----------------------------------- EXPORTS FUNCTIONS CRUDS RESULT -------------------------------- //
