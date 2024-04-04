@@ -5,6 +5,7 @@ const sql_conf_file = JSON.parse(fs.readFileSync("controllers/config/sql_config.
 const SQL = sql_conf_file.sql;
 const Diffusion = require(__dirname + "/crud_diffusion");
 const Event = require(__dirname + "/crud_event.js");
+const axios = require("axios");
 
 // ------------------------------------------------------------------------------------------------------------------ //
 // --- SUBS FUNCTIONS -------------------------------------------------------------------------------------------- //
