@@ -4,7 +4,6 @@ const fs = require("fs");
 const sql_conf_file = JSON.parse(fs.readFileSync("controllers/config/sql_config.json", "utf-8"));
 const SQL = sql_conf_file.sql;
 const Diffusion = require(__dirname + "/crud_diffusion");
-const Event = require(__dirname + "/crud_event.js");
 const axios = require("axios");
 const utils = require("../utils/ics_utils");
 const ical = require("ical");
@@ -23,6 +22,7 @@ const downloadTimetableFromURL = (link, callback) => {
             callback(null, data);
         });
 };
+
 const getTeacherLinkSQL = (db, teacherID, callback) => {
     db.query(
         {
