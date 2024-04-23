@@ -148,3 +148,57 @@ button {
 .fade-out {
   animation: fade-out 0.5s ease;
 }
+
+
+/* Menu déroulant pour les filtres */
+#filterContainer {
+  display: none;
+  margin: 20px;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 1rem;
+  background-color: rgba(0,0,0,0.2);
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.dropdown {
+  display: inline-block;
+  margin-bottom: 0.5em;
+  margin-right: 20px;
+}
+
+.dropdown select {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+select {
+  margin-bottom: 0.25em;
+}
+
+#selectedFilters {
+  margin : 0;
+  padding : 0;
+}
+
+/* Bouton du menu déroulant du filtre */
+/* Bouton pour montrer/cacher le conteneur des filtres */
+#toggleButton {
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 1em;
+}
+
+#toggleButton:hover {
+  background-color: #0056b3; 
+}
