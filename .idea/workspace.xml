@@ -5,13 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcd9f067-578b-4156-9def-dfda21dea99a" name="Changes" comment="return">
+      <change afterPath="$PROJECT_DIR$/exemples/express-project/public/assets/icons/logo_RDP_192x192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exemples/express-project/public/javascripts/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exemples/express-project/public/javascripts/service_worker.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exemples/express-project/public/javascripts/pwa.webmanifest" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/public/javascripts/pwa.webmanifest" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exemples/express-project/views/dashboard_admin.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/views/dashboard_admin.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exemples/express-project/views/sign_in.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/views/sign_in.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exemples/express-project/views/sign_up.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/views/sign_up.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -45,6 +58,18 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/exemples/express-project/public/assets/icons" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-2e7d6887c066-JavaScript-WS-241.15989.47" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -59,6 +84,7 @@
       <workItem from="1710964830138" duration="12868000" />
       <workItem from="1711003314855" duration="299000" />
       <workItem from="1712222992982" duration="929000" />
+      <workItem from="1713854589225" duration="2461000" />
     </task>
     <task id="LOCAL-00001" summary="return">
       <option name="closed" value="true" />

@@ -5,7 +5,7 @@
   "display": "standalone",
   "background_color": "#9fccce",
   "theme_color": "#9fccce",
-  //"orientation": "portrait-primary",
+  "orientation": "portrait-primary",
   "icons": [
     {
       "src": "../assets/icons/logo_RDP_512x512.png",
@@ -23,7 +23,6 @@
       "type": "image/png",
       "sizes": "192x192"
     }
-
   ],
   "prefer_related_applications": true,
   "related_applications": [

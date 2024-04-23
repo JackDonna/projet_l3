@@ -4,9 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="manifest" href="javascripts/pwa.webmanifest" />
+    <!--<link rel="manifest" href="javascripts/pwa.webmanifest" />-->
+    <link rel="manifest" href="javascripts/manifest.json" />
     <link rel="stylesheet" href="stylesheets/sign_in.css" />
     <title>connexion</title>
+    <script>
+      window.addEventListener('load', () => {
+        if("serviceWorker" in navigator){
+          navigator.serviceWorker.register('javascript/service_worker.js')
+        }
+      })
+    </script>
   </head>
 
   <body>
