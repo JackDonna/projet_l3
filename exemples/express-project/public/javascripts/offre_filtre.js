@@ -112,6 +112,59 @@ async function print_absence() {
         }
     });
 }
+// ----------------------------------------------------------------------------------------------------------------------------//
+// --- PROF FILTERS -----------------------------------------------------------------------------------------------------------//
+// ----------------------------------------------------------------------------------------------------------------------------//
+
+// Récupérer le conteneur des filtres et le bouton
+const filterContainer = document.getElementById("filterContainer");
+const toggleButton = document.getElementById("toggleButton");
+
+// Fonction pour basculer l'affichage du conteneur
+function toggleFilters() {
+    if (filterContainer.style.display === "none" || !filterContainer.style.display) {
+        filterContainer.style.display = "grid";
+        toggleButton.textContent = "Masquer les filtres";
+    } else {
+        filterContainer.style.display = "none";
+        toggleButton.textContent = "Afficher les filtres";
+    }
+}
+
+
+// Attacher l'événement click au bouton pour basculer l'affichage
+toggleButton.addEventListener("click", toggleFilters);
+
+const dateSelect = document.getElementById("dateSelect");
+const classSelect = document.getElementById("classSelect");
+const subjectSelect = document.getElementById("subjectSelect");
+const selectedFilters = document.getElementById("selectedFilters");
+
+function updateSelection() {
+    const date = dateSelect.value;
+    const classValue = classSelect.value;
+    const subjectValue = subjectSelect.value;
+
+    let resultText = "Sélection : ";
+    if (date) {
+        resultText += ` ${date}, `;
+    }
+
+    if (classValue) {
+        resultText += ` ${classValue}, `;
+    }
+
+    if (subjectValue) {
+        resultText += ` ${subjectValue}, `;
+    }
+
+    selectedFilters.textContent = resultText.slice(0, -2); // Remove trailing comma and space
+}
+
+// Event listeners to update selection when a filter is changed
+dateSelect.addEventListener("change", updateSelection);
+classSelect.addEventListener("change", updateSelection);
+subjectSelect.addEventListener("change", updateSelection);
 
 // ----------------------------------------------------------------------------------------------------------------------------//
 // --- EVENTES LISTENERS ------------------------------------------------------------------------------------------------------//

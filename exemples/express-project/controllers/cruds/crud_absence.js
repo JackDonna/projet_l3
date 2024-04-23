@@ -1,7 +1,9 @@
 const e = require("express");
 const pool = require("../database/db");
 const fs = require("fs");
-const sql_conf_file = JSON.parse(fs.readFileSync("controllers/config/sql_config.json", "utf-8"));
+const sql_conf_file = JSON.parse(
+    fs.readFileSync("controllers/config/sql_config.json", "utf-8")
+);
 const SQL = sql_conf_file.sql;
 const Diffusion = require(__dirname + "/crud_diffusion");
 const axios = require("axios");
@@ -113,7 +115,14 @@ const getYourAbsencesSQL = (etablishementID, callback) => {
  * @param {function} callback - Callback function to handle the results
  * @return {void}
  */
-const filterTeachersByTimetable = (db, date, start, end, teachers, callback) => {
+const filterTeachersByTimetable = (
+    db,
+    date,
+    start,
+    end,
+    teachers,
+    callback
+) => {
     if (teachers.length == 0) callback(null, []);
     result = [];
     let c = 0;
@@ -122,7 +131,10 @@ const filterTeachersByTimetable = (db, date, start, end, teachers, callback) => 
             c++;
             if (content != undefined) {
                 let array = content.filter(
-                    (e) => e.date == date && ((e.start > start && e.end > start) || (e.start < end && e.end < end))
+                    (e) =>
+                        e.date == date &&
+                        ((e.start > start && e.end > start) ||
+                            (e.start < end && e.end < end))
                 );
                 if ((array.length = 0)) {
                     result.push(teacher);
@@ -145,12 +157,12 @@ const filterTeachersByTimetable = (db, date, start, end, teachers, callback) => 
  *                             It takes two parameters: error and rows.
  * @return {void}
  */
-const filterTeachersByDiscipline = (db, idAbsence, callback) => {
+const filterTeachersByDiscipline = (db, absence, callback) => {
+    const { date, startHour, endHour, matiere, teacherID } = absence;
     db.query(
         {
-            sql: SQL.select.allTeacherCompatibleWithDisc,
+            sql: `Ref_Matiere as rm inner join Ref_Discipline as rd ON a.matiere = rm.id_mat and rm.nomenclature = rd.nomenclature and c.discipline = rd.id_disc where a.id_abs = (SELECT id_abs FROM Absence WHERE date = ${date} AND start = ${startHour} AND end = ${endHour} AND teacherID = ${teacherID})`,
             timeout: 10000,
-            values: [idAbsence],
         },
         (err, rows, fields) => {
             callback(err, rows);
@@ -158,13 +170,34 @@ const filterTeachersByDiscipline = (db, idAbsence, callback) => {
     );
 };
 
-const insertAbsenceNewSQL = (start, end, date, teacherID, reason, matiere, callback) => {
+const insertAbsenceNewSQL = (
+    start,
+    end,
+    date,
+    teacherID,
+    reason,
+    matiere,
+    callback
+) => {
     pool.getConnection((err, db) => {
         db.query(
             {
                 sql: SQL.insert.absence,
                 timeout: 10000,
-                values: [reason, start, end, date, matiere, teacherID, date, start, end, start, end, teacherID],
+                values: [
+                    reason,
+                    start,
+                    end,
+                    date,
+                    matiere,
+                    teacherID,
+                    date,
+                    start,
+                    end,
+                    start,
+                    end,
+                    teacherID,
+                ],
             },
             (err, rows, fields) => {
                 db.release();
@@ -213,11 +246,27 @@ const insertAbsence = (req, res, callback) => {
     }
 };
 
-const insertAbsenceNew = (start, end, date, teacherID, reason, matiere, callback) => {
-    insertAbsenceNewSQL(start, end, date, teacherID, reason, matiere, (err, result) => {
-        if (err) callback(err, null);
-        callback(null, true);
-    });
+const insertAbsenceNew = (
+    start,
+    end,
+    date,
+    teacherID,
+    reason,
+    matiere,
+    callback
+) => {
+    insertAbsenceNewSQL(
+        start,
+        end,
+        date,
+        teacherID,
+        reason,
+        matiere,
+        (err, result) => {
+            if (err) callback(err, null);
+            callback(null, true);
+        }
+    );
 };
 
 /**
@@ -243,26 +292,40 @@ const getYourAbsences = (req, res, callback) => {
  * @param {Function} callback - the callback function to be invoked after absence spreading
  * @return {void} This function does not return a value
  */
-const spreadAbsence = (absence, callback) => {
-    pool.getConnection((err, db) => {
-        filterTeachersByDiscipline(db, absence.id_abs, (err, disciplineResult) => {
-            filterTeachersByTimetable(db, absence.date, absence.start, absence.end, disciplineResult, (err, scheduleResult) => {
-                Diffusion.insertDiffusions(db, scheduleResult, absence.id_abs, (err, result) => {
-                    if(err) {
-                        console.error(err)
-                    }else {
-                        db.release();
-                    }
+const spreadAbsences = (absences, callback) => {
+    absences.foreach((absence) => {
+        pool.getConnection((err, db) => {
+            filterTeachersByDiscipline(db, absence, (err, disciplineResult) => {
+                filterTeachersByTimetable(
+                    db,
+                    absence.date,
+                    absence.startHour,
+                    absence.endHour,
+                    disciplineResult,
+                    (err, scheduleResult) => {
+                        Diffusion.insertDiffusions(
+                            db,
+                            scheduleResult,
+                            absence.id_abs,
+                            (err, result) => {
+                                if (err) {
+                                    console.error(err);
+                                } else {
+                                    db.release();
+                                }
 
-                    console.log(
-                        "\u001b[" +
-                            32 +
-                            "m" +
-                            `[DIFFUSION : "AUTO LAUNCHED PROCESS" - (${new Date().toLocaleString()}) - OK / ABSENCE SPREADED]` +
-                            "\u001b[0m"
-                    );
-                    callback(err, scheduleResult);
-                });
+                                console.log(
+                                    "\u001b[" +
+                                        32 +
+                                        "m" +
+                                        `[DIFFUSION : "AUTO LAUNCHED PROCESS" - (${new Date().toLocaleString()}) - OK / ABSENCE SPREADED]` +
+                                        "\u001b[0m"
+                                );
+                                callback(err, scheduleResult);
+                            }
+                        );
+                    }
+                );
             });
         });
     });
