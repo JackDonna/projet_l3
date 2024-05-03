@@ -1,6 +1,8 @@
 const pool = require("../database/db");
 const fs = require("fs");
-const sql_conf_file = JSON.parse(fs.readFileSync("controllers/config/sql_config.json", "utf-8"));
+const sql_conf_file = JSON.parse(
+    fs.readFileSync("controllers/config/sql_config.json", "utf-8")
+);
 const SQL = sql_conf_file.sql;
 
 // -------------------------------------------------- SUBS FUNCTIONS ------------------------------------------------- //
@@ -46,8 +48,8 @@ const getProposedTeacherSQL = (absenceId, callback) => {
                 values: [absenceId],
             },
             (err, rows, fields) => {
-                if (err) callback(err, null);
-                callback(null, rows);
+                db.release();
+                callback(err, null);
             }
         );
     });
@@ -154,4 +156,9 @@ const getYourReplace = (req, res, callback) => {
 };
 // -------------------------------------------------- EXPORTS -------------------------------------------------------- //
 
-module.exports = { insertProposition, getProposedTeacher, acceptProposition, getYourReplace };
+module.exports = {
+    insertProposition,
+    getProposedTeacher,
+    acceptProposition,
+    getYourReplace,
+};
