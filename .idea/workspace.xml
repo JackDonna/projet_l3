@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcd9f067-578b-4156-9def-dfda21dea99a" name="Changes" comment="return">
-      <change afterPath="$PROJECT_DIR$/exemples/express-project/public/assets/icons/logo_RDP_192x192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exemples/express-project/public/javascripts/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exemples/express-project/public/javascripts/service_worker.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exemples/express-project/public/javascripts/pwa.webmanifest" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/public/javascripts/pwa.webmanifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exemples/express-project/views/dashboard_admin.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/views/dashboard_admin.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exemples/express-project/views/sign_in.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/views/sign_in.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exemples/express-project/views/sign_up.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/views/sign_up.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exemples/express-project/public/javascripts/event.js" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/public/javascripts/event.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,21 +37,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/cyril/Documents/git/projet_l3&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Dev",
+    "last_opened_file_path": "/home/cyril/Documents/git/projet_l3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "ts.external.directory.path": "/Users/mathisfeltrin/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/exemples/express-project/public/assets/icons" />
