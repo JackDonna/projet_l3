@@ -1,10 +1,10 @@
 {
-  "host": "rdp.dptinfo-usmb.fr",
-  "port": 3306,
-  "user": "app",
-  "password": "POecfwI((xAEmA!T",
-  "database": "test_RPAZ",
-  "waitForConnection": true,
-  "connectionLimit": 1500000,
-  "queueLimit": 1500000
+    "host": "rdp.dptinfo-usmb.fr",
+    "port": 3306,
+    "user": "app",
+    "password": "POecfwI((xAEmA!T",
+    "database": "test_RPAZ",
+    "waitForConnection": true,
+    "connectionLimit": 15000,
+    "queueLimit": 10000
 }

@@ -3,303 +3,302 @@
 *,
 ::before,
 ::after {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 html,
 body {
-  overflow-x: hidden;
-  height: 100%;
+    overflow-x: hidden;
+    height: 100%;
 }
 body {
-  background: #fff;
-  padding: 0;
-  margin: 0;
-  font-family: "Varela Round", sans-serif;
+    background: #fff;
+    padding: 0;
+    margin: 0;
+    font-family: "Varela Round", sans-serif;
 }
 .header {
-  /* display: block; */
-  margin: 0 auto;
-  width: 100%;
-  max-width: 100%;
-  box-shadow: none;
-  background-color: #11b4bd;
-  position: fixed;
-  height: 60px !important;
-  overflow: hidden;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: end;
+    /* display: block; */
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    background-color: #11b4bd;
+    position: fixed;
+    height: 60px !important;
+    overflow: hidden;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: end;
 }
 .main {
-  margin: 0 auto;
-  display: block;
-  height: 100%;
-  margin-top: 60px;
+    margin: 0 auto;
+    display: block;
+    height: 100%;
+    margin-top: 60px;
 }
 .mainInner {
-  display: table;
-  height: 100%;
-  width: 100%;
-  text-align: center;
+    display: table;
+    height: 100%;
+    width: 100%;
+    text-align: center;
 }
 .mainInner div {
-  display: table-cell;
-  vertical-align: middle;
-  font-size: 3em;
-  font-weight: bold;
-  letter-spacing: 1.25px;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 1.25px;
 }
 #sidebarMenu {
-  height: 100%;
-  position: fixed;
-  left: 0;
-  width: 250px;
-  margin-top: 60px;
-  /*
+    height: 100%;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    margin-top: 60px;
+    /*
   transform: translateX(-250px);
   transition: transform 250ms ease-in-out;
 
    */
-  background: #11b4bd;
+    background: #11b4bd;
 }
 .sidebarMenuInner {
-  margin: 0;
-  padding: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 .sidebarMenuInner li {
-  list-style: none;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding: 20px;
-  cursor: pointer;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    list-style: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .sidebarMenuInner li span {
-  display: block;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.5);
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
 }
 .sidebarMenuInner li a {
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
 }
 input[type="checkbox"]:checked ~ #sidebarMenu {
-  transform: translateX(0);
+    transform: translateX(0);
 }
 
 input[type="checkbox"] {
-  transition: all 0.3s;
-  box-sizing: border-box;
-  display: none;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
 }
 .sidebarIconToggle {
-  display: none;
-  transition: all 0.3s;
-  box-sizing: border-box;
-  cursor: pointer;
-  position: absolute;
-  z-index: 99;
-  height: 100%;
-  width: 100%;
-  top: 22px;
-  left: 15px;
-  height: 22px;
-  width: 22px;
+    display: none;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 22px;
+    left: 15px;
+    height: 22px;
+    width: 22px;
 }
 .spinner {
-  transition: all 0.3s;
-  box-sizing: border-box;
-  position: absolute;
-  height: 3px;
-  width: 100%;
-  background-color: #fff;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
 }
 .horizontal {
-  transition: all 0.3s;
-  box-sizing: border-box;
-  position: relative;
-  float: left;
-  margin-top: 3px;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
 }
 .diagonal.part-1 {
-  position: relative;
-  transition: all 0.3s;
-  box-sizing: border-box;
-  float: left;
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
 }
 .diagonal.part-2 {
-  transition: all 0.3s;
-  box-sizing: border-box;
-  position: relative;
-  float: left;
-  margin-top: 3px;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
 }
 input[type="checkbox"]:checked ~ .sidebarIconToggle > .horizontal {
-  transition: all 0.3s;
-  box-sizing: border-box;
-  opacity: 0;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
 }
 input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
-  transition: all 0.3s;
-  box-sizing: border-box;
-  transform: rotate(135deg);
-  margin-top: 8px;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
 }
 input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
-  transition: all 0.3s;
-  box-sizing: border-box;
-  transform: rotate(-135deg);
-  margin-top: -9px;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
 }
 
 .container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 #container_absence {
-  /*
+    /*
   margin-top: 10% !important;
    */
-  height: auto;
-  width: 100%;
-  display: flex;
-  justify-content: start;
-  align-items: end;
-  padding-top: 100px;
-  padding-right: 40px;
-  flex-direction: column;
-  flex-wrap: wrap;
-  border-right: solid 3px #11b4bd;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    padding-top: 100px;
+    padding-right: 40px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-right: solid 3px #11b4bd;
 }
 
 .box_absence {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-direction: column;
-  height: 150px;
-  width: 360px;
-  background: whitesmoke;
-  margin-bottom: 30px;
-  padding: 0 15px;
-  border: solid 3px #11b4bd;
-  border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    height: 150px;
+    width: 360px;
+    background: whitesmoke;
+    margin-bottom: 30px;
+    padding: 0 15px;
+    box-shadow: 10 10 10px rgba(0, 0, 0);
 }
 
 .box_absence p {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
 }
 
 .cle {
-  color: #11b4bd;
+    color: #11b4bd;
 }
 
 #absence_logo {
-  display: flex;
-  justify-content: center;
-  align-items: start;
+    display: flex;
+    justify-content: center;
+    align-items: start;
 }
 
 #absence_logo img {
-  padding-top: 40%;
+    padding-top: 40%;
 }
 
 #container_list_diff {
-  display: none;
-  justify-content: start;
-  align-items: start;
-  padding-left: 60px;
-  flex-direction: column;
-  padding-top: 100px;
+    display: none;
+    justify-content: start;
+    align-items: start;
+    padding-left: 60px;
+    flex-direction: column;
+    padding-top: 100px;
 }
 
 #container_list_diff h1 {
-  display: none;
+    display: none;
 }
 
 .list {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-direction: column;
-  height: 150px;
-  width: 500px;
-  background: whitesmoke;
-  margin-bottom: 30px;
-  padding: 0 15px;
-  border: solid 3px #11b4bd;
-  border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    height: 150px;
+    width: 500px;
+    background: whitesmoke;
+    margin-bottom: 30px;
+    padding: 0 15px;
+    border: solid 3px #11b4bd;
+    border-radius: 15px;
 }
 
 #container_propositions {
-  display: none;
-  justify-content: start;
-  align-items: start;
-  padding-left: 60px;
-  flex-direction: column;
-  padding-top: 100px;
+    display: none;
+    justify-content: start;
+    align-items: start;
+    padding-left: 60px;
+    flex-direction: column;
+    padding-top: 100px;
 }
 
 #container_remplacements {
-  display: none;
-  justify-content: start;
-  align-items: start;
-  padding-left: 60px;
-  flex-direction: column;
-  padding-top: 100px;
+    display: none;
+    justify-content: start;
+    align-items: start;
+    padding-left: 60px;
+    flex-direction: column;
+    padding-top: 100px;
 }
 
 .logout {
-  margin-right: 20px;
+    margin-right: 20px;
 }
 .logout:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
-@media only screen and (max-width : 390px) {
-  .container {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-  }
+@media only screen and (max-width: 390px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
 
-  #sidebarMenu {
-    transform: translateX(-250px);
-    transition: transform 250ms ease-in-out;
-  }
+    #sidebarMenu {
+        transform: translateX(-250px);
+        transition: transform 250ms ease-in-out;
+    }
 
-  .sidebarIconToggle{
-    display: block;
-  }
+    .sidebarIconToggle {
+        display: block;
+    }
 
-  #container_absence{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 100px 0 0;
-    border: none;
-  }
+    #container_absence {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 100px 0 0;
+        border: none;
+    }
 
-  #container_list_diff {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-  }
+    #container_list_diff {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
 
-  .list {
-    width: 300px;
-  }
+    .list {
+        width: 300px;
+    }
 }

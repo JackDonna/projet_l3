@@ -1,7 +1,11 @@
-const pool = require("../database/db.js");
+const mysql = require("mysql");
+const fs = require("fs");
+const conf = JSON.parse(
+    fs.readFileSync("controllers/config/db_config.json", "utf-8")
+);
+const pool = mysql.createPool(conf);
 const axios = require("axios");
 const utils = require("../utils/ics_utils");
-const fs = require("fs");
 const ical = require("ical");
 const colorConfig = JSON.parse(
     fs.readFileSync("controllers/utils/color_config.json", "utf-8")
