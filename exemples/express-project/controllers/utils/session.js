@@ -1,6 +1,16 @@
 const logger = require(__dirname + "/logger.js");
 
-function createSession(req, name, firstname, mail, idEtablishement, idTeacher, isValidated, isAdministrator, callback) {
+function createSession(
+    req,
+    name,
+    firstname,
+    mail,
+    idEtablishement,
+    idTeacher,
+    isValidated,
+    isAdministrator,
+    callback
+) {
     req.session.regenerate((err) => {
         if (err) callback(err, null);
         req.session.nom = name;
@@ -35,7 +45,6 @@ function isValidated(req, res, next) {
     });
 }
 
-
 function isAdministrator(req, res, next) {
     isValidated(req, res, () => {
         if (!req.session.admin) {
@@ -48,10 +57,20 @@ function isAdministrator(req, res, next) {
 
 function pIsAuthenticated(req, res, next) {
     if (!req.session.signedIn) {
-        logger.log(logger.YELLOW, "SECURITY", req.ip, new Error(), "NOT AUTHENTICATED / REFUSED ACCESS");
+        logger.log(
+            logger.YELLOW,
+            "SECURITY",
+            req.ip,
+            "NOT AUTHENTICATED / REFUSED ACCESS"
+        );
         res.redirect("/sign_in");
     } else {
-        logger.log(logger.GREEN, "SECURITY", req.session.nom, new Error(), "AUTHENTICATED / ACCESS GRANTED");
+        logger.log(
+            logger.GREEN,
+            "SECURITY",
+            req.session.nom,
+            "AUTHENTICATED / ACCESS GRANTED"
+        );
         next();
     }
 }
@@ -59,10 +78,20 @@ function pIsAuthenticated(req, res, next) {
 function pIsValidated(req, res, next) {
     isAuthenticated(req, res, () => {
         if (!req.session.valide) {
-            logger.log(logger.YELLOW, "SECURITY", req.session.nom, new Error(), "NOT VALIDATED / REFUSED ACCESS");
+            logger.log(
+                logger.YELLOW,
+                "SECURITY",
+                req.session.nom,
+                "NOT VALIDATED / REFUSED ACCESS"
+            );
             res.redirect("/valide_account");
         } else {
-            logger.log(logger.GREEN, "SECURITY", req.session.nom, new Error(), "VALIDATED / ACCESS GRANTED");
+            logger.log(
+                logger.GREEN,
+                "SECURITY",
+                req.session.nom,
+                "VALIDATED / ACCESS GRANTED"
+            );
             next();
         }
     });
@@ -71,10 +100,20 @@ function pIsValidated(req, res, next) {
 function pIsAdministrator(req, res, next) {
     isValidated(req, res, () => {
         if (!req.session.admin) {
-            logger.log(logger.YELLOW, "SECURITY", req.session.nom, new Error(), "NOT EVEN VALIDATED / ACCESS REFUSED");
+            logger.log(
+                logger.YELLOW,
+                "SECURITY",
+                req.session.nom,
+                "NOT EVEN VALIDATED / ACCESS REFUSED"
+            );
             res.redirect("/forbidden");
         } else {
-            logger.log(logger.GREEN, "SECURITY", req.session.nom, new Error(), "ADMINISTRATOR / ACCESS GRANTED");
+            logger.log(
+                logger.GREEN,
+                "SECURITY",
+                req.session.nom,
+                "ADMINISTRATOR / ACCESS GRANTED"
+            );
             next();
         }
     });
@@ -88,4 +127,4 @@ module.exports = {
     pIsValidated,
     pIsAdministrator,
     createSession,
-}
+};
