@@ -188,7 +188,7 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   align-items: stretch;
   flex-direction: column;
   height: 150px;
-  width: 300px;
+  width: 350px;
   background: whitesmoke;
   margin-bottom: 30px;
   padding: 0 15px;

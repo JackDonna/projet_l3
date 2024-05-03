@@ -44,13 +44,15 @@ var list = {
             let div = document.createElement("div");
             div.classList.add("box_absence");
 
+            console.log(evenement)
+
             div.innerHTML = `
             <p><span class="cle">Motif : </span>${evenement.motif}</p>
             <p><span class="cle">Date : </span>${new Date(evenement.date).toLocaleDateString()}</p>
-            <p><span class="cle">Heure de début : </span>${evenement.start}</p>
-            <p><span class="cle">Heure de fin : </span>${evenement.end}</p>
+            <p><span class="cle">Heure de début : </span>${evenement.start.slice(0, -3).replace(":", "h")}</p>
+            <p><span class="cle">Heure de fin : </span>${evenement.end.slice(0, -3).replace(":", "h")}</p>
             <p><span class="cle">Professeur : </span>${evenement.nom} ${evenement.prenom}</p>
-            <p><span class="cle">Matière : </span>${evenement.matiere}</p>
+            <p><span class="cle">Matière : </span>${evenement.libelle_court}</p>
             <p><span class="cle">Classe : </span>${evenement.classe}</p>
          `;
 
