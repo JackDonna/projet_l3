@@ -56,7 +56,7 @@ var list = {
             <p><span class="cle">Classe : </span>${evenement.classe}</p>
          `;
 
-            affichage_absence.appendChild(div);
+            affichage_absence.appendChild(div); 
 
 
             axios.get("/sql/diffusion/diffusionsProvisor/" + evenement.id_abs).then((response) => {
