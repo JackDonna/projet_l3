@@ -46,10 +46,12 @@ var list = {
 
             div.innerHTML = `
             <p><span class="cle">Motif : </span>${evenement.motif}</p>
-            <p><span class="cle">Date : </span>${evenement.date.split('T', 1)}</p>
+            <p><span class="cle">Date : </span>${new Date(evenement.date).toLocaleDateString()}</p>
             <p><span class="cle">Heure de début : </span>${evenement.start}</p>
             <p><span class="cle">Heure de fin : </span>${evenement.end}</p>
             <p><span class="cle">Professeur : </span>${evenement.nom} ${evenement.prenom}</p>
+            <p><span class="cle">Matière : </span>${evenement.matiere}</p>
+            <p><span class="cle">Classe : </span>${evenement.classe}</p>
          `;
 
             affichage_absence.appendChild(div);
