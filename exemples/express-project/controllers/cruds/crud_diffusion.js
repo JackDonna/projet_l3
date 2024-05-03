@@ -1,6 +1,12 @@
-const pool = require("../database/db");
+const mysql = require("mysql");
 const fs = require("fs");
-const sql_conf_file = JSON.parse(fs.readFileSync("controllers/config/sql_config.json", "utf-8"));
+const conf = JSON.parse(
+    fs.readFileSync("controllers/config/db_config.json", "utf-8")
+);
+const pool = mysql.createPool(conf);
+const sql_conf_file = JSON.parse(
+    fs.readFileSync("controllers/config/sql_config.json", "utf-8")
+);
 const SQL = sql_conf_file.sql;
 
 // ------------------------------------------------------------------------------------------------------------------ //
@@ -31,8 +37,6 @@ const getYourDiffusionsSQL = (teacherId, callback) => {
     });
 };
 
-
-
 /**
  * Retrieves teacher ID by diffusions from the database.
  *
@@ -56,8 +60,6 @@ const getDiffusionsAbsSQL = (AbsId, callback) => {
         );
     });
 };
-
-
 
 /**
  * Inserts diffusion SQL into the database.
@@ -99,7 +101,6 @@ const getMyDiffusions = (req, res, callback) => {
         callback(err, result);
     });
 };
-
 
 /**
  * Retrieves the diffusions associated with a specific absence.

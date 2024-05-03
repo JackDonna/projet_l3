@@ -1,6 +1,8 @@
 const pool = require("../database/db");
 const fs = require("fs");
-const sql_config = JSON.parse(fs.readFileSync("controllers/config/sql_config.json", "utf-8"));
+const sql_config = JSON.parse(
+    fs.readFileSync("controllers/config/sql_config.json", "utf-8")
+);
 const SQL = sql_config.sql;
 
 // ------------------------------------------------------------------------------------------------------------------ //
@@ -45,7 +47,9 @@ const inertClassesFileSQL = (c, l, file) => {
 
     let lines = content.split("\n");
     let query = `INSERT INTO ter (enseignant, classe) VALUES`;
-    let subClasseQuery = `(SELECT id_class FROM Ref_Classe WHERE classe = '${file.split(".")[0]}')`;
+    let subClasseQuery = `(SELECT id_class FROM Ref_Classe WHERE classe = '${
+        file.split(".")[0]
+    }')`;
 
     lines.forEach((line) => {
         let teacherName = line.split(" ")[0];
@@ -65,6 +69,10 @@ const inertClassesFileSQL = (c, l, file) => {
             );
         }
     });
+};
+
+const filterBYClass = (teachers, classes, callback) => {
+    
 };
 
 /**

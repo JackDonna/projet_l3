@@ -1,5 +1,9 @@
-const pool = require("../database/db");
+const mysql = require("mysql");
 const fs = require("fs");
+const conf = JSON.parse(
+    fs.readFileSync("controllers/config/db_config.json", "utf-8")
+);
+const pool = mysql.createPool(conf);
 const axios = require("axios");
 const sql_config = JSON.parse(
     fs.readFileSync("controllers/config/sql_config.json", "utf-8")
