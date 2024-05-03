@@ -35,10 +35,9 @@ body {
     justify-content: end;
 }
 .main {
-    margin: 0 auto;
-    display: block;
-    height: 100%;
-    margin-top: 60px;
+  display: block;
+  height: 100%;
+  margin-top: 60px;
 }
 .mainInner {
     display: table;
@@ -102,18 +101,16 @@ input[type="checkbox"] {
     display: none;
 }
 .sidebarIconToggle {
-    display: none;
-    transition: all 0.3s;
-    box-sizing: border-box;
-    cursor: pointer;
-    position: absolute;
-    z-index: 99;
-    height: 100%;
-    width: 100%;
-    top: 22px;
-    left: 15px;
-    height: 22px;
-    width: 22px;
+  display: none;
+  transition: all 0.3s;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: absolute;
+  z-index: 99;
+  top: 22px;
+  left: 15px;
+  height: 22px;
+  width: 22px;
 }
 .spinner {
     transition: all 0.3s;
