@@ -3,7 +3,7 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: #11b4bd;
 }
 
 main {
@@ -22,13 +22,13 @@ main {
 }
 
 #html5-qrcode-button-camera-permission {
-  background-color: cornflowerblue;
+  background-color: #11b4bd;
   padding: 1em;
   border: none;
   border-radius: 10px;
 }
 #html5-qrcode-button-camera-start {
-  background-color: cornflowerblue;
+  background-color: #11b4bd;
   padding: 1em;
   border: none;
   border-radius: 10px;
@@ -45,7 +45,7 @@ main {
   bottom: 2%;
   right: 2%;
   padding: 1em 2em;
-  background-color: cornflowerblue;
+  background-color: #11b4bd;
   border: none;
   border-radius: 10px;
   cursor: pointer;

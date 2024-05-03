@@ -6,8 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="dcd9f067-578b-4156-9def-dfda21dea99a" name="Changes" comment="return">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exemples/express-project/public/javascripts/event.js" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/public/javascripts/event.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exemples/express-project/public/stylesheets/dashboard_admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/public/stylesheets/dashboard_admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exemples/express-project/public/javascripts/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/public/javascripts/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exemples/express-project/public/javascripts/pwa.webmanifest" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/public/javascripts/pwa.webmanifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exemples/express-project/public/stylesheets/calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/public/stylesheets/calendar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exemples/express-project/public/stylesheets/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/public/stylesheets/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exemples/express-project/public/stylesheets/sign_in.css" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/public/stylesheets/sign_in.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exemples/express-project/public/stylesheets/sign_up.css" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/public/stylesheets/sign_up.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exemples/express-project/public/stylesheets/valide.css" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/public/stylesheets/valide.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

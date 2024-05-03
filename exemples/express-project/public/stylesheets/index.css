@@ -28,7 +28,7 @@ hr {
   border: 0;
   height: 1px;
   /* opacity: 0.5; */
-  background: linear-gradient(to right, transparent, #9fccce, transparent);
+  background: linear-gradient(to right, transparent, #11b4bd, transparent);
 }
 
 .container {
@@ -53,7 +53,7 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: #9fccce;
+  background: #11b4bd;
   border-radius: 15px;
   padding: 10px;
   margin: 10px;
@@ -65,7 +65,7 @@ img {
 }
 
 #actualiser {
-  background-color: #9fccce;
+  background-color: #11b4bd;
   border: none;
   height: 2em;
   width: 10%;
@@ -84,8 +84,8 @@ img {
 
 #actualiser:active {
   background-color: #1e1e1e;
-  color: #9fccce;
-  box-shadow: 0 0 0.5rem #9fccce;
+  color: #11b4bd;
+  box-shadow: 0 0 0.5rem #11b4bd;
   transition: 0.2s;
 }
 
@@ -191,7 +191,7 @@ select {
 /* Bouton pour montrer/cacher le conteneur des filtres */
 #toggleButton {
   padding: 10px;
-  background-color: #007BFF;
+  background-color: #11b4bd;
   color: white;
   border: none;
   cursor: pointer;
@@ -200,7 +200,7 @@ select {
 }
 
 #toggleButton:hover {
-  background-color: #0056b3; 
+  background-color: #11b4bd;
 }
 
 @media only screen and (min-width : 391px) {
