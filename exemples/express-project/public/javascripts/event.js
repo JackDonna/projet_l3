@@ -33,6 +33,13 @@ let dejaAffiche = {};
  * function add absence in GUI by the APi RDP
  */
 
+function truncateString(str, num) {
+    if (str.length > num) {
+        return str.substring(0, num - 3) + '...';
+    } else {
+        return str;
+    }
+}
 
 var list = {
     data: [],
@@ -47,13 +54,13 @@ var list = {
             console.log(evenement)
 
             div.innerHTML = `
-            <p><span class="cle">Motif : </span>${evenement.motif}</p>
             <p><span class="cle">Date : </span>${new Date(evenement.date).toLocaleDateString()}</p>
             <p><span class="cle">Heure de début : </span>${evenement.start.slice(0, -3).replace(":", "h")}</p>
             <p><span class="cle">Heure de fin : </span>${evenement.end.slice(0, -3).replace(":", "h")}</p>
             <p><span class="cle">Professeur : </span>${evenement.nom} ${evenement.prenom}</p>
-            <p><span class="cle">Matière : </span>${evenement.libelle_court}</p>
+            <p><span class="cle">Matière : </span>${truncateString(evenement.libelle_court, 33)}</p>
             <p><span class="cle">Classe : </span>${evenement.classe}</p>
+            <p><span class="cle">Motif : </span>${evenement.motif}</p>
          `;
 
             affichage_absence.appendChild(div); 

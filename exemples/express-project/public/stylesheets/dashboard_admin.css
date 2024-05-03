@@ -25,7 +25,7 @@ body {
   width: 100%;
   max-width: 100%;
   box-shadow: none;
-  background-color: #9fccce;
+  background-color: #11b4bd;
   position: fixed;
   height: 60px !important;
   overflow: hidden;
@@ -64,7 +64,7 @@ body {
   transition: transform 250ms ease-in-out;
 
    */
-  background: #9fccce;
+  background: #11b4bd;
 }
 .sidebarMenuInner {
   margin: 0;
@@ -176,10 +176,10 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   justify-content: start;
   align-items: end;
   padding-top: 100px;
-  padding-right: 60px;
+  padding-right: 40px;
   flex-direction: column;
   flex-wrap: wrap;
-  border-right: solid 3px #9fccce;
+  border-right: solid 3px #11b4bd;
 }
 
 .box_absence {
@@ -188,11 +188,11 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   align-items: stretch;
   flex-direction: column;
   height: 150px;
-  width: 350px;
+  width: 360px;
   background: whitesmoke;
   margin-bottom: 30px;
   padding: 0 15px;
-  border: solid 3px #9fccce;
+  border: solid 3px #11b4bd;
   border-radius: 15px;
 }
 
@@ -200,10 +200,11 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 14px;
 }
 
 .cle {
-  color: #9fccce;
+  color: #11b4bd;
 }
 
 #absence_logo {
@@ -239,7 +240,7 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   background: whitesmoke;
   margin-bottom: 30px;
   padding: 0 15px;
-  border: solid 3px #9fccce;
+  border: solid 3px #11b4bd;
   border-radius: 15px;
 }
 
