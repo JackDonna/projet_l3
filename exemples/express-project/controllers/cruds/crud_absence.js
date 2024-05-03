@@ -340,7 +340,7 @@ module.exports = {
     getYourAbsences,
     filterTeachersByTimetable,
     filterTeachersByDiscipline,
-    spreadAbsence,
+    spreadAbsences,
     insertAbsenceNew,
     selectAbsenceSQL,
 };
