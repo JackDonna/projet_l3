@@ -1,5 +1,6 @@
 const asyncHandler = require("express-async-handler");
-const { getMyDiffusions,getDiffusionsProvisor } = require(__dirname + "/cruds/crud_diffusion.js");
+const { getMyDiffusions, getDiffusionsProvisor } = require(__dirname +
+    "/cruds/crud_diffusion.js");
 const Session = require(__dirname + "/utils/session.js");
 
 // ----------------------------------- EXPORTS FUNCTIONS CRUDS RESULT -------------------------------- //
@@ -41,9 +42,9 @@ exports.deleteTeacherOnDiffusion = asyncHandler((req, res) => {
     });
 });
 
-exports.diffusionsProvisor = asyncHandler((req,res) => {
-    console.log("proviseur")
-    getDiffusionsProvisor(req,res, (err,result) => {
+exports.diffusionsProvisorREQUEST = asyncHandler((req, res) => {
+    console.log("proviseur");
+    getDiffusionsProvisor(req, res, (err, result) => {
         if (err) {
             console.error(err);
             res.sendStatus(500);

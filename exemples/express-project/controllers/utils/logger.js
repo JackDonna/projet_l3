@@ -14,21 +14,25 @@ const REVERSE = "\u001b[7m";
 const HIDDEN = "\u001b[8m";
 const RESET = "\u001b[0m";
 
-const getStack = (e) => {
-    const regex = /\((.*):(\d+):(\d+)\)$/
-    const match = regex.exec(e.stack.split("\n")[2]);
-    return {
-      filepath: match[1],
-      line: match[2],
-      column: match[3]
-    };
-  }
+const log = (color, type, message, note = "no notes.") => {
+    console.log(`${color}[${type}]${RESET}- \t${message} - [${note}]${RESET}`);
+};
 
-const log = (color, type, message, e, note = "no notes.") => {
-    let stack = getStack(e);
-    console.log(
-        `${color}[${type}] - ${RESET}[ at: ${PURPLE}${stack.filepath}${RESET} - line: ${PURPLE}${stack.line}${RESET}]  \n - \t${message} - [${note}]`
-    )
-}
-
-module.exports = {log, GREEN, YELLOW, RED, CYAN, BLUE, PURPLE, WHITE, BOLD, DIM, UNDERLINE, INVERT, BLINK, REVERSE, HIDDEN, RESET}
+module.exports = {
+    log,
+    GREEN,
+    YELLOW,
+    RED,
+    CYAN,
+    BLUE,
+    PURPLE,
+    WHITE,
+    BOLD,
+    DIM,
+    UNDERLINE,
+    INVERT,
+    BLINK,
+    REVERSE,
+    HIDDEN,
+    RESET,
+};
