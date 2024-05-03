@@ -123,6 +123,10 @@ const filterTeachersByTimetable = (
     teachers,
     callback
 ) => {
+    if (teachers == undefined) {
+        callback(null, []);
+        return;
+    }
     if (teachers.length == 0) callback(null, []);
     result = [];
     let c = 0;
@@ -293,8 +297,8 @@ const getYourAbsences = (req, res, callback) => {
  * @return {void} This function does not return a value
  */
 const spreadAbsences = (absences, callback) => {
-    absences.foreach((absence) => {
-        pool.getConnection((err, db) => {
+    pool.getConnection((err, db) => {
+        absences.forEach((absence) => {
             filterTeachersByDiscipline(db, absence, (err, disciplineResult) => {
                 filterTeachersByTimetable(
                     db,
@@ -303,27 +307,27 @@ const spreadAbsences = (absences, callback) => {
                     absence.endHour,
                     disciplineResult,
                     (err, scheduleResult) => {
-                        Diffusion.insertDiffusions(
-                            db,
-                            scheduleResult,
-                            absence.id_abs,
-                            (err, result) => {
-                                if (err) {
-                                    console.error(err);
-                                } else {
-                                    db.release();
+                        pool.getConnection((err, db2) => {
+                            Diffusion.insertDiffusions(
+                                db2,
+                                scheduleResult,
+                                absence.id_abs,
+                                (err, result) => {
+                                    if (err) {
+                                        console.error(err);
+                                    }
+                                    db2.release();
+                                    console.log(
+                                        "\u001b[" +
+                                            32 +
+                                            "m" +
+                                            `[DIFFUSION : "AUTO LAUNCHED PROCESS" - (${new Date().toLocaleString()}) - OK / ABSENCE SPREADED]` +
+                                            "\u001b[0m"
+                                    );
+                                    callback(err, scheduleResult);
                                 }
-
-                                console.log(
-                                    "\u001b[" +
-                                        32 +
-                                        "m" +
-                                        `[DIFFUSION : "AUTO LAUNCHED PROCESS" - (${new Date().toLocaleString()}) - OK / ABSENCE SPREADED]` +
-                                        "\u001b[0m"
-                                );
-                                callback(err, scheduleResult);
-                            }
-                        );
+                            );
+                        });
                     }
                 );
             });

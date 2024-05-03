@@ -435,7 +435,7 @@ const getTeacherLinkSQL = (db, teacherID, callback) => {
  */
 const parseEvents = (events, teacherID) => {
     console.log("process to the events");
-    processEvents(events, 0, teacherID);
+    processEvents(events, teacherID);
 };
 
 /**
@@ -498,7 +498,7 @@ const processEvents = (events, teacherID) => {
         }
     });
     pool.getConnection((err, db) => {
-        if (err) callback(err, null);
+        if (err) console.error(err, null);
         db.query(
             {
                 sql: res.substring(0, res.length - 1),
@@ -506,7 +506,9 @@ const processEvents = (events, teacherID) => {
             },
             (err, rows, fields) => {
                 db.release();
-                Absence.spreadAbsences(absence);
+                Absence.spreadAbsences(absence, (err, result) => {
+                    if (err) console.error(err);
+                });
             }
         );
     });
