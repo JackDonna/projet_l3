@@ -12,6 +12,8 @@ const Diffusion = require(__dirname + "/crud_diffusion");
 const axios = require("axios");
 const utils = require("../utils/ics_utils");
 const ical = require("ical");
+const { DiffusionEngine } = require("../utils/diffusion_engine");
+const { classesFilter } = require(__dirname + "/crud_classes");
 
 // ------------------------------------------------------------------------------------------------------------------ //
 // --- SUBS FUNCTIONS -------------------------------------------------------------------------------------------- //
@@ -118,40 +120,29 @@ const getYourAbsencesSQL = (etablishementID, callback) => {
  * @param {function} callback - Callback function to handle the results
  * @return {void}
  */
-const filterTeachersByTimetable = (
-    db,
-    date,
-    start,
-    end,
-    teachers,
-    callback
-) => {
-    if (teachers == undefined) {
-        callback(null, []);
-        return;
-    }
-    if (teachers.length == 0) callback(null, []);
-    result = [];
-    let c = 0;
-    teachers.forEach((teacher) => {
-        getLinkContent(db, teacher.id, (err, content) => {
-            c++;
-            if (content != undefined) {
+const scheduleFilter = (absence, teachers, callback) => {
+    if (teachers == undefined || teachers.length == 0) return;
+    let result = [];
+    console.log(absence);
+    const { date, endHour, startHour } = absence;
+    pool.getConnection((err, db) => {
+        teachers.forEach((teacher) => {
+            console.log(teacher);
+            getLinkContent(db, teacher.enseignant, (err, content) => {
+                if (content == undefined || content.length == 0) return;
                 let array = content.filter(
                     (e) =>
                         e.date == date &&
-                        ((e.start > start && e.end > start) ||
-                            (e.start < end && e.end < end))
+                        ((e.start > startHour && e.end > startHour) ||
+                            (e.start < endHour && e.end < endHour))
                 );
-                if ((array.length = 0)) {
-                    result.push(teacher);
+                console.log("enfin la");
+                if (array.length == 0) result.push(teacher);
+                if (teacher == teachers[teachers.length - 1]) {
+                    db.release();
+                    callback(null, result);
                 }
-            } else {
-                result.push(teacher);
-            }
-            if (c == teachers.length) {
-                callback(null, result);
-            }
+            });
         });
     });
 };
@@ -164,17 +155,32 @@ const filterTeachersByTimetable = (
  *                             It takes two parameters: error and rows.
  * @return {void}
  */
-const filterTeachersByDiscipline = (db, absence, callback) => {
-    const { date, startHour, endHour, matiere, teacherID } = absence;
-    db.query(
-        {
-            sql: `Ref_Matiere as rm inner join Ref_Discipline as rd ON a.matiere = rm.id_mat and rm.nomenclature = rd.nomenclature and c.discipline = rd.id_disc where a.id_abs = (SELECT id_abs FROM Absence WHERE date = ${date} AND start = ${startHour} AND end = ${endHour} AND teacherID = ${teacherID})`,
-            timeout: 10000,
-        },
-        (err, rows, fields) => {
-            callback(err, rows);
-        }
+const matFilter = (pool, absence, callback) => {
+    const { date, startHour, endHour, teacherID } = absence;
+    console.log(
+        date,
+        startHour.split(" ")[1],
+        endHour.split(" ")[1],
+        teacherID
     );
+    pool.getConnection((err, db) => {
+        db.query(
+            {
+                sql: SQL.select.teachersByDiscipnline,
+                values: [
+                    date,
+                    startHour.split(" ")[1],
+                    endHour.split(" ")[1],
+                    teacherID,
+                ],
+                timeout: 10000,
+            },
+            (err, rows, fields) => {
+                db.release();
+                callback(err, rows);
+            }
+        );
+    });
 };
 
 const insertAbsenceNewSQL = (
@@ -207,6 +213,7 @@ const insertAbsenceNewSQL = (
                 ],
             },
             (err, rows, fields) => {
+                console.log("reussssssiiii");
                 db.release();
                 callback(err, rows);
             }
@@ -214,17 +221,17 @@ const insertAbsenceNewSQL = (
     });
 };
 
-const selectAbsenceSQL = (start, end, date, teacherID, callback) => {
+const selectAbsenceSQL = (date, start, end, teacherID, callback) => {
     pool.getConnection((err, db) => {
         db.query(
             {
                 sql: SQL.select.absence,
                 timeout: 10000,
-                values: [start, end, date, teacherID],
+                values: [date, start, end, teacherID],
             },
             (err, rows, fields) => {
                 db.release();
-                callback(err, rows[0]);
+                callback(err, rows);
             }
         );
     });
@@ -300,41 +307,23 @@ const getYourAbsences = (req, res, callback) => {
  * @return {void} This function does not return a value
  */
 const spreadAbsences = (absences, callback) => {
-    pool.getConnection((err, db) => {
-        absences.forEach((absence) => {
-            filterTeachersByDiscipline(db, absence, (err, disciplineResult) => {
-                filterTeachersByTimetable(
-                    db,
-                    absence.date,
-                    absence.startHour,
-                    absence.endHour,
-                    disciplineResult,
-                    (err, scheduleResult) => {
-                        pool.getConnection((err, db2) => {
-                            Diffusion.insertDiffusions(
-                                db2,
-                                scheduleResult,
-                                absence.id_abs,
-                                (err, result) => {
-                                    if (err) {
-                                        console.error(err);
-                                    }
-                                    db2.release();
-                                    console.log(
-                                        "\u001b[" +
-                                            32 +
-                                            "m" +
-                                            `[DIFFUSION : "AUTO LAUNCHED PROCESS" - (${new Date().toLocaleString()}) - OK / ABSENCE SPREADED]` +
-                                            "\u001b[0m"
-                                    );
-                                    callback(err, scheduleResult);
-                                }
-                            );
-                        });
-                    }
-                );
-            });
-        });
+    let diffusionEngine = new DiffusionEngine(
+        absences,
+        matFilter,
+        scheduleFilter,
+        classesFilter,
+        pool
+    );
+
+    diffusionEngine.diffuse((err, result) => {
+        callback(err, result);
+    });
+};
+
+const selectAbsence = (date, start, end, teacherID, callback) => {
+    selectAbsenceSQL(date, start, end, teacherID, (err, result) => {
+        if (err) callback(err, null);
+        callback(null, result);
     });
 };
 
@@ -345,9 +334,8 @@ const spreadAbsences = (absences, callback) => {
 module.exports = {
     insertAbsence,
     getYourAbsences,
-    filterTeachersByTimetable,
-    filterTeachersByDiscipline,
     spreadAbsences,
     insertAbsenceNew,
     selectAbsenceSQL,
+    selectAbsence,
 };

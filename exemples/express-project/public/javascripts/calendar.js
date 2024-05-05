@@ -125,7 +125,7 @@ function get_timetable() {
     axios.get("sql/event/get_timetable").then((response) => {
         for (let event of response.data) {
             event.start = new Date(event.start);
-            event.end = new Date(event.end);
+            event.end = new Date(event.end);  
             setTime(event.start);
             setTime(event.end);
             ec.addEvent(event)

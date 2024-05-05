@@ -2,8 +2,6 @@
 // --- DOM ELEMENTS -----------------------------------------------------------------------------------------------------------//
 // ----------------------------------------------------------------------------------------------------------------------------//
 
-
-
 const affichage_absence = document.getElementById("container_absence");
 
 const absence = document.getElementById("absence");
@@ -13,11 +11,24 @@ const absence_logo = document.getElementById("absence_logo");
 const affichage_list_diff = document.getElementById("container_list_diff");
 const list_diff = document.getElementById("list_diff");
 
-const affichage_propositions = document.getElementById("container_propositions");
+const affichage_propositions = document.getElementById(
+    "container_propositions"
+);
 const propositions = document.getElementById("propositions");
 
-const affichage_remplacements = document.getElementById("container_remplacements");
+const affichage_remplacements = document.getElementById(
+    "container_remplacements"
+);
 const remplacements = document.getElementById("remplacements");
+
+const popUPElement = document.querySelector(".popUP");
+const propositionList = popUPElement.querySelector(
+    ".propositionList .popUPList"
+);
+const remplacementList = popUPElement.querySelector(
+    ".remplacementList .popUPList"
+);
+const popUPCross = popUPElement.querySelector(".popUPCross");
 
 // ----------------------------------------------------------------------------------------------------------------------------//
 // ----GLOBALS VARIABLES ------------------------------------------------------------------------------------------------------//
@@ -35,97 +46,198 @@ let dejaAffiche = {};
 
 function truncateString(str, num) {
     if (str.length > num) {
-        return str.substring(0, num - 3) + '...';
+        return str.substring(0, num - 3) + "...";
     } else {
         return str;
     }
 }
 
+let popUP = {
+    parent: popUPElement,
+    propositionList: propositionList,
+    remplacementList: remplacementList,
+    clearProposition() {
+        while (this.propositionList.firstChild) {
+            this.propositionList.removeChild(this.propositionList.firstChild);
+        }
+    },
+    printProposition(link, id) {
+        this.clear();
+        axios.get(link + id).then((response) => {
+            console.log(link);
+            response.data.forEach((prof) => {
+                let infoContainer = document.createElement("div");
+                let infoBox = document.createElement("div");
+                let buttonProposition = document.createElement("button");
+
+                infoContainer.classList.add("infoContainerProposition");
+                infoBox.classList.add("infoBoxProposition");
+                buttonProposition.classList.add("buttonProposition");
+                buttonProposition.innerText = "Accepter";
+                console.log(prof);
+                buttonProposition.addEventListener("click", () => {
+                    axios
+                        .post("/sql/proposition/acceptProposition", {
+                            teacherID: prof.id_ens,
+                            propositionID: prof.id_prop,
+                        })
+                        .then((response) => {
+                            console.log(response.data);
+                            this.printRemplacement(
+                                "/sql/proposition/getYourReplace/",
+                                id
+                            );
+                        });
+                });
+
+                infoContainer.appendChild(infoBox);
+                infoContainer.appendChild(buttonProposition);
+
+                infoBox.innerHTML = `${prof.nom} ${prof.prenom}`;
+                this.propositionList.appendChild(infoContainer);
+            });
+
+            // let button = document.createElement("button");
+            // button.innerText = "Accept";
+            // button.classList.add("accept");
+
+            // button.addEventListener("click", () => {
+            //     let option = select.options[select.selectedIndex];
+            //     if (option != undefined) {
+            //         axios
+            //             .post("/sql/proposition/acceptProposition", {
+            //                 teacherID: option.value,
+            //                 propositionID: option.getAttribute("prop"),
+            //             })
+            //             .then((response) => {});
+            //     }
+            // });
+        });
+    },
+
+    printRemplacement(link, id) {
+        axios.get(link + id).then((response) => {
+            console.log(link);
+            response.data.forEach((prof) => {
+                let infoContainer = document.createElement("div");
+                let infoBox = document.createElement("div");
+
+                infoContainer.classList.add("infoContainerProposition");
+                infoBox.classList.add("infoBoxProposition");
+
+                infoContainer.appendChild(infoBox);
+
+                infoBox.innerHTML = `${prof.nom} ${prof.prenom}`;
+                this.remplacementList.appendChild(infoContainer);
+            });
+        });
+    },
+
+    display() {
+        this.parent.classList.remove("hide");
+    },
+    hide() {
+        console.log(this.parent);
+        this.parent.classList.add("hide");
+    },
+
+    clear() {
+        this.propositionList.innerHTML = "";
+        this.remplacementList.innerHTML = "";
+    },
+};
+
+popUPCross.addEventListener("click", () => {
+    console.log("ouidofz");
+    popUP.hide();
+});
+
 var list = {
     data: [],
     searched: [],
+    seen: [],
 
     drawList() {
         affichage_absence.innerHTML = "";
-        data.forEach(evenement => {
-            let div = document.createElement("div");
-            div.classList.add("box_absence");
+        data.forEach((evenement) => {
+            if (!this.seen.includes(evenement.id_abs)) {
+                this.seen.push(evenement.id_abs);
+                let div = document.createElement("div");
+                div.classList.add("box_absence");
 
-            console.log(evenement)
+                div.innerHTML = `
+                    <p><span class="cle">Date : </span>${new Date(
+                        evenement.date
+                    ).toLocaleDateString()}</p>
+                    <p><span class="cle">Heure de début : </span>${evenement.start
+                        .slice(0, -3)
+                        .replace(":", "h")}</p>
+                    <p><span class="cle">Heure de fin : </span>${evenement.end
+                        .slice(0, -3)
+                        .replace(":", "h")}</p>
+                    <p><span class="cle">Professeur : </span>${evenement.nom} ${
+                    evenement.prenom
+                }</p>
+                    <p><span class="cle">Matière : </span>${truncateString(
+                        evenement.libelle_court,
+                        33
+                    )}</p>
+                    <p class="classe_${evenement.id_abs}" ><span class="cle 
+                    }">Classe : </span>${evenement.classe}</p>
+                    <p><span class="cle">Motif : </span>${evenement.motif}</p>
+                `;
 
-            div.innerHTML = `
-            <p><span class="cle">Date : </span>${new Date(evenement.date).toLocaleDateString()}</p>
-            <p><span class="cle">Heure de début : </span>${evenement.start.slice(0, -3).replace(":", "h")}</p>
-            <p><span class="cle">Heure de fin : </span>${evenement.end.slice(0, -3).replace(":", "h")}</p>
-            <p><span class="cle">Professeur : </span>${evenement.nom} ${evenement.prenom}</p>
-            <p><span class="cle">Matière : </span>${truncateString(evenement.libelle_court, 33)}</p>
-            <p><span class="cle">Classe : </span>${evenement.classe}</p>
-            <p><span class="cle">Motif : </span>${evenement.motif}</p>
-         `;
+                div.addEventListener("click", () => {
+                    popUP.display();
+                    popUP.printProposition(
+                        "/sql/proposition/teacher_on_absence/",
+                        evenement.id_abs
+                    );
+                    popUP.printRemplacement(
+                        "/sql/proposition/getYourReplace/",
+                        evenement.id_abs
+                    );
+                });
 
-            affichage_absence.appendChild(div); 
+                affichage_absence.appendChild(div);
+            } else {
+                document.querySelector(
+                    `.classe_${evenement.id_abs}`
+                ).innerHTML += ", " + evenement.classe;
+            }
 
+            // "/sql/proposition/teacher_on_absence/" + evenement.id_abs
+            // axios
+            //     .get("/sql/diffusion/diffusionsProvisor/" + evenement.id_abs)
+            //     .then((response) => {
+            //         let div_list_diff = document.createElement("div");
+            //         div_list_diff.classList.add("list");
 
-            axios.get("/sql/diffusion/diffusionsProvisor/" + evenement.id_abs).then((response) => {
+            //         let select = document.createElement("select");
+            //         select.setAttribute("name", "prof");
+            //         response.data.forEach((prof) => {
+            //             let option = document.createElement("option");
+            //             option.setAttribute("value", prof.id_ens);
+            //             option.innerHTML = `${prof.nom} ${prof.prenom}`;
+            //             select.appendChild(option);
+            //         });
 
-                let div_list_diff = document.createElement("div");
-                div_list_diff.classList.add("list");
+            //         div_list_diff.appendChild(select);
+            //         affichage_list_diff.appendChild(div_list_diff);
+            //     });
 
-                let select = document.createElement("select");
-                select.setAttribute("name", "prof");
-                response.data.forEach(prof => {
-                    let option = document.createElement("option");
-                    option.setAttribute("value", prof.id_ens);
-                    option.innerHTML = `${prof.nom} ${prof.prenom}`;
-                    select.appendChild(option);
-                })
-                
-                div_list_diff.appendChild(select);
-                affichage_list_diff.appendChild(div_list_diff);
-            })
-
-            axios.get("/sql/proposition/teacher_on_absence/" + evenement.id_abs).then((response) => {
-                let div_list_prop = document.createElement("div");
-                div_list_prop.classList.add("list");
-
-                let select = document.createElement("select");
-                select.setAttribute("name", "prof");
-                response.data.forEach(prof => {
-                    let option = document.createElement("option");
-                    option.setAttribute("value", prof.id_ens);
-                    option.setAttribute("prop", prof.id_prop);
-                    option.innerHTML = `${prof.nom} ${prof.prenom}`;
-                    select.appendChild(option);
-                })
-                
-                let button = document.createElement("button");
-                button.innerText = "Accept"
-                button.classList.add("accept");
-
-                button.addEventListener("click", () => {
-                    let option = select.options[ select.selectedIndex ];
-                    if(option != undefined){
-                        axios.post("/sql/proposition/acceptProposition", {teacherID: option.value, propositionID: option.getAttribute('prop')}).then((response) => {
-
-                        });
-                    }
-                })
-
-                div_list_prop.appendChild(select);
-                div_list_prop.appendChild(button);
-                affichage_propositions.appendChild(div_list_prop);
-            })
-
-            axios.get("/sql/proposition/getYourReplace/" + evenement.id_abs).then((response) => {
-                response.data.forEach(prof => {
-                    let div_list_rempl = document.createElement("div");
-                    div_list_rempl.classList.add("list");
-                    div_list_rempl.innerHTML = `
-                    <p><span class="cle">Professeur : </span>${prof.nom} ${prof.prenom}</p>
-                    `
-                    affichage_remplacements.appendChild(div_list_rempl);
-                })
-            })
+            // axios
+            //     .get("/sql/proposition/getYourReplace/" + evenement.id_abs)
+            //     .then((response) => {
+            //         response.data.forEach((prof) => {
+            //             let div_list_rempl = document.createElement("div");
+            //             div_list_rempl.classList.add("list");
+            //             div_list_rempl.innerHTML = `
+            //         <p><span class="cle">Professeur : </span>${prof.nom} ${prof.prenom}</p>
+            //         `;
+            //             affichage_remplacements.appendChild(div_list_rempl);
+            //         });
+            //     });
         });
     },
     init() {
@@ -133,60 +245,61 @@ var list = {
             data = response.data;
             searched = response.data;
             this.drawList();
-        })
+        });
     },
-
-    
-}
+};
 
 var count = 0;
 
 async function print_absence() {
+    await axios
+        .get("/sql/teacher/getUnavailableTeachers")
+        .then(async (response) => {
+            // console.log(response)
+            let json = response.data;
+            // console.log(json)
+            for (let i = 0; i < json.length; i++) {
+                let evenement = json[i];
+                // Vérifier si l'événement a déjà été affiché
+                if (dejaAffiche[JSON.stringify(evenement)]) {
+                    continue; // Passer à la prochaine itération si l'événement existe déjà
+                } else {
+                    count++;
+                }
 
-    await axios.get("/sql/teacher/getUnavailableTeachers").then(async (response) => {
-        // console.log(response)
-        let json = response.data
-        console.log(json)
-        // console.log(json)
-        for (let i = 0; i < json.length; i++) {
-            let evenement = json[i];
-            console.log(evenement.id_abs)
-            // Vérifier si l'événement a déjà été affiché
-            if (dejaAffiche[JSON.stringify(evenement)]) {
-                continue; // Passer à la prochaine itération si l'événement existe déjà
-            } else {
-                count++;
-            }
+                // Créer un paragraphe pour chaque donnée
+                let div = document.createElement("div");
+                div.classList.add("box_absence");
 
-            // Créer un paragraphe pour chaque donnée
-            let div = document.createElement("div");
-            div.classList.add("box_absence");
-
-            // Affecter la valeur de chaque clé à chaque paragraphe
-            // console.log(evenement)
-            div.innerHTML = `
+                // Affecter la valeur de chaque clé à chaque paragraphe
+                // console.log(evenement)
+                div.innerHTML = `
             <p><span class="cle">Motif : </span>${evenement.motif}</p>
-            <p><span class="cle">Date : </span>${evenement.date.split('T', 1)}</p>
+            <p><span class="cle">Date : </span>${evenement.date.split(
+                "T",
+                1
+            )}</p>
             <p><span class="cle">Heure de début : </span>${evenement.start}</p>
             <p><span class="cle">Heure de fin : </span>${evenement.end}</p>
-            <p><span class="cle">Professeur : </span>${evenement.nom} ${evenement.prenom}</p>
+            <p><span class="cle">Professeur : </span>${evenement.nom} ${
+                    evenement.prenom
+                }</p>
          `;
 
-            // Ajouter le paragraphe à la boite
-            affichage_absence.appendChild(div);
+                // Ajouter le paragraphe à la boite
+                affichage_absence.appendChild(div);
 
-            // Marquer l'événement comme déjà affiché
-            dejaAffiche[JSON.stringify(evenement)] = true;
+                // Marquer l'événement comme déjà affiché
+                dejaAffiche[JSON.stringify(evenement)] = true;
 
-            
+                let paramValue = evenement.id_abs;
+                await axios
+                    .post(`/sql/diffusion/diffusionsProvisor`, {
+                        id_abs: evenement.id_abs,
+                    })
+                    .then((response) => {});
 
-            let paramValue = evenement.id_abs;
-            await axios.post(`/sql/diffusion/diffusionsProvisor`, {id_abs : evenement.id_abs}).then((response) => {
-                console.log("ici : ")
-                console.log(response.data)
-            })
-
-            div_list_diff.innerHTML = `
+                div_list_diff.innerHTML = `
       <select name="prof">
          <option value="">--Liste des professeurs--</option>
          <option value="">M. Alasseur</option>
@@ -198,20 +311,18 @@ async function print_absence() {
       </select>
    `;
 
-            affichage_list_diff.appendChild(div_list_diff);
-        }
-    });
+                affichage_list_diff.appendChild(div_list_diff);
+            }
+        });
 }
 
-async function print_list_diff(){
-   console.log("test");
-   affichage_list_diff.style.background = "crimson";
-   console.log("compteur : "+count);
+async function print_list_diff() {
+    affichage_list_diff.style.background = "crimson";
 
-   let div = document.createElement("div");
-   div.classList.add("list");
+    let div = document.createElement("div");
+    div.classList.add("list");
 
-   div.innerHTML = `
+    div.innerHTML = `
       <select name="prof">
          <option value="">--Liste des professeurs--</option>
          <option value="">M. Alasseur</option>
@@ -223,8 +334,7 @@ async function print_list_diff(){
       </select>
    `;
 
-   affichage_list_diff.appendChild(div);
-
+    affichage_list_diff.appendChild(div);
 }
 
 absence.addEventListener("click", () => {

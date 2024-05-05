@@ -19,6 +19,64 @@ body {
     margin: 0;
     font-family: "Varela Round", sans-serif;
 }
+
+.hide {
+    display: none !important;
+}
+.popUP {
+    position: fixed;
+    width: 1200px;
+    height: 700px;
+    top: 10%;
+    left: 20%;
+    background-color: #fff;
+    border: #11b4bd 1px solid;
+    display: flex;
+    flex-direction: column;
+}
+
+.popUP > .container {
+    margin-top: 10%;
+}
+
+.propositionList {
+    padding: 2%;
+    overflow: auto;
+    border-right: #11b4bd 1px solid;
+}
+
+.infoBoxProposition {
+    padding: 2%;
+}
+
+.infoContainerProposition {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0);
+}
+
+.popUpContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popUPCross {
+    padding: 1%;
+    cursor: pointer;
+}
+
+.remplacementList {
+    padding: 2%;
+}
+.remplacementTitle {
+    margin-bottom: 5%;
+    padding: 2%;
+}
+.propostitionTitle {
+    margin-bottom: 5%;
+    padding: 2%;
+}
 .header {
     /* display: block; */
     margin: 0 auto;
@@ -35,9 +93,9 @@ body {
     justify-content: end;
 }
 .main {
-  display: block;
-  height: 100%;
-  margin-top: 60px;
+    display: block;
+    height: 100%;
+    margin-top: 60px;
 }
 .mainInner {
     display: table;
@@ -101,16 +159,16 @@ input[type="checkbox"] {
     display: none;
 }
 .sidebarIconToggle {
-  display: none;
-  transition: all 0.3s;
-  box-sizing: border-box;
-  cursor: pointer;
-  position: absolute;
-  z-index: 99;
-  top: 22px;
-  left: 15px;
-  height: 22px;
-  width: 22px;
+    display: none;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    top: 22px;
+    left: 15px;
+    height: 22px;
+    width: 22px;
 }
 .spinner {
     transition: all 0.3s;
@@ -185,11 +243,18 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     align-items: stretch;
     flex-direction: column;
     height: 150px;
-    width: 360px;
+    width: 60%;
     background: whitesmoke;
     margin-bottom: 30px;
     padding: 0 15px;
     box-shadow: 10 10 10px rgba(0, 0, 0);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.box_absence:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 
 .box_absence p {

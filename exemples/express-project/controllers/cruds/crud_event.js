@@ -469,8 +469,9 @@ const isIgnored = (e, events) => {
  */
 const processEvents = (events, teacherID) => {
     var res =
-        "INSERT INTO `Absence`(`motif`, `start`, `end`, `date`, `matiere`, `teacherID`) VALUES";
+        "INSERT INTO `Absence`(`motif`, `start`, `end`, `date`, `matiere`, `teacherID`) VALUES ";
     var absence = [];
+    let c = 0;
     events.forEach((event) => {
         let startHour = new Date(event.start).toLocaleString("sv-SE", {
             timeZone: "Europe/Paris",
@@ -486,35 +487,58 @@ const processEvents = (events, teacherID) => {
             event.title.toLowerCase().includes("annulé") &&
             !isIgnored(event, events)
         ) {
-            let mat = event.title
-                .split(":")[1]
-                .substring(0, event.title.split(":")[1].length - 1)
-                .substring(1);
-            res += `('Annulation', '${startHour}', '${endHour}', '${date}', '${mat}', '${teacherID}'),`;
-            absence.push({
-                motif: "Annulation",
-                startHour: startHour,
-                endHour: endHour,
-                date: date,
-                matiere: mat,
-                teacherID: teacherID,
-            });
+            Absence.selectAbsence(
+                date,
+                startHour,
+                endHour,
+                teacherID,
+                (err, result) => {
+                    console.log(result);
+                    if (result.length == 0) {
+                        console.log("oui");
+                        let mat = event.title
+                            .split(":")[1]
+                            .substring(0, event.title.split(":")[1].length - 1)
+                            .substring(1);
+                        res += `('Annulation', '${startHour}', '${endHour}', '${date}', (select id_mat from Ref_Matiere where libelle_court = '${mat}'), '${teacherID}'),`;
+                        absence.push({
+                            motif: "Annulation",
+                            startHour: startHour,
+                            endHour: endHour,
+                            date: date,
+                            matiere: mat,
+                            teacherID: teacherID,
+                        });
+                        if (c == event.length - 1) {
+                            console.log("cest la fin du parsing");
+                            pool.getConnection((err, db) => {
+                                if (err) console.error(err, null);
+                                console.log(res.slice(0, -1));
+                                db.query(
+                                    {
+                                        sql: res.slice(0, -1),
+                                        timeout: 10000,
+                                    },
+                                    (err, rows, fields) => {
+                                        console.log("Absence inserer");
+                                        db.release();
+                                        Absence.spreadAbsences(
+                                            absence,
+                                            (err, result) => {
+                                                if (err) console.error(err);
+                                            }
+                                        );
+                                    }
+                                );
+                            });
+                        }
+                    } else {
+                        console.log("Absence deja ajouter");
+                    }
+                }
+            );
         }
-    });
-    pool.getConnection((err, db) => {
-        if (err) console.error(err, null);
-        db.query(
-            {
-                sql: res.substring(0, res.length - 1),
-                timeout: 10000,
-            },
-            (err, rows, fields) => {
-                db.release();
-                Absence.spreadAbsences(absence, (err, result) => {
-                    if (err) console.error(err);
-                });
-            }
-        );
+        c++;
     });
 };
 

@@ -61,7 +61,7 @@ router.post(
     proposition_controller.insertPropositionREQUEST
 );
 router.get(
-    "/proposition/teacher_on_absence/:abs",
+    "/proposition/teacher_on_absence/:absenceID",
     proposition_controller.getProposedTeacherREQUEST
 );
 router.post(

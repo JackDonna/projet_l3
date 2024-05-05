@@ -53,7 +53,7 @@ const getProposedTeacherSQL = (absenceId, callback) => {
             },
             (err, rows, fields) => {
                 db.release();
-                callback(err, null);
+                callback(err, rows);
             }
         );
     });
@@ -135,7 +135,8 @@ const insertProposition = (req, res, callback) => {
  * @return {void}
  */
 const getProposedTeacher = (req, res, callback) => {
-    const absenceID = req.params.abs;
+    const absenceID = req.params.absenceID;
+    console.log(absenceID);
 
     getProposedTeacherSQL(absenceID, (err, result) => {
         callback(err, result);

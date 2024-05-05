@@ -70,9 +70,33 @@ const inertClassesFileSQL = (c, l, file) => {
         }
     });
 };
-
-const filterBYClass = (teachers, classes, callback) => {
-    
+const getTeachersAndClassesSQL = (callback) => {
+    pool.getConnection((err, db) => {
+        if (err) callback(err, null);
+        db.query(
+            {
+                sql: SQL.select.teachersAndClasses,
+                timeout: 10000,
+            },
+            (err, rows, fields) => {
+                db.release();
+                callback(err, rows);
+            }
+        );
+    });
+};
+const filterBYClasses = (teachers, classes, callback) => {
+    let res = [];
+    getTeachersAndClassesSQL((err, teachersResult) => {
+        teachersResult.forEach((teacher) => {
+            if (teachers.includes(teacher)) {
+                if (classes.includes(teacher.classe)) {
+                    res.push(teacher);
+                }
+            }
+        });
+    });
+    return res;
 };
 
 /**
@@ -103,8 +127,14 @@ const insertClassesFiles = (callback) => {
     });
 };
 
+const classesFilter = (callback) => {
+    filterBYClasses((err, result) => {
+        callback(err, result);
+    });
+};
+
 // ------------------------------------------------------------------------------------------------------------------ //
 // --- EXPORTS --------------------------------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------------------------------------------ //
 
-module.exports = { linkClasses };
+module.exports = { linkClasses, classesFilter };

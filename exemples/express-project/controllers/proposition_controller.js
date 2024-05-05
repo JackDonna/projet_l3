@@ -1,5 +1,10 @@
 const asyncHandler = require("express-async-handler");
-const { insertProposition, getProposedTeacher, acceptProposition, getYourReplace } = require(__dirname + "/cruds/crud_proposition.js");
+const {
+    insertProposition,
+    getProposedTeacher,
+    acceptProposition,
+    getYourReplace,
+} = require(__dirname + "/cruds/crud_proposition.js");
 const Session = require(__dirname + "/utils/session.js");
 
 // ----------------------------------- EXPORTS FUNCTIONS CRUDS RESULT -------------------------------- //
@@ -55,7 +60,6 @@ exports.acceptPropositionREQUEST = asyncHandler((req, res) => {
     Session.pIsValidated(req, res, () => {
         acceptProposition(req, res, (err, result) => {
             if (err) {
-                console.error(err);
                 res.sendStatus(500);
             } else {
                 res.sendStatus(200);
