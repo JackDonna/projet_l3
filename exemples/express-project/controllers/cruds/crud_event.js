@@ -1,19 +1,13 @@
 const mysql = require("mysql");
 const fs = require("fs");
-const conf = JSON.parse(
-    fs.readFileSync("controllers/config/db_config.json", "utf-8")
-);
+const conf = JSON.parse(fs.readFileSync("controllers/config/db_config.json", "utf-8"));
 const pool = mysql.createPool(conf);
 const axios = require("axios");
 const utils = require("../utils/ics_utils");
 const ical = require("ical");
-const colorConfig = JSON.parse(
-    fs.readFileSync("controllers/utils/color_config.json", "utf-8")
-);
+const colorConfig = JSON.parse(fs.readFileSync("controllers/utils/color_config.json", "utf-8"));
 const colors = colorConfig.colors;
-const sql_config = JSON.parse(
-    fs.readFileSync("controllers/config/sql_config.json", "utf-8")
-);
+const sql_config = JSON.parse(fs.readFileSync("controllers/config/sql_config.json", "utf-8"));
 const SQL = sql_config.sql;
 const Teacher = require(__dirname + "/crud_teacher");
 const Session = require("../utils/session.js");
@@ -39,14 +33,8 @@ const Absence = require(__dirname + "/crud_absence");
  * @return {Object} The constructed event object
  */
 const buildEvent = (title, date, start, end, location, id, classe, salle) => {
-    start =
-        date.toLocaleDateString("se-SV", { timeZone: "Europe/Paris" }) +
-        " " +
-        start;
-    end =
-        date.toLocaleDateString("se-SV", { timeZone: "Europe/Paris" }) +
-        " " +
-        end;
+    start = date.toLocaleDateString("se-SV", { timeZone: "Europe/Paris" }) + " " + start;
+    end = date.toLocaleDateString("se-SV", { timeZone: "Europe/Paris" }) + " " + end;
     date = date.toLocaleDateString("se-SV", { timeZone: "Europe/Paris" });
     let event = {
         title: title,
@@ -61,10 +49,7 @@ const buildEvent = (title, date, start, end, location, id, classe, salle) => {
     event.backgroundColor = "#08CFFB";
     for (let color of colors) {
         let title = title.toLowerCase();
-        if (
-            title.toLowerCase().includes(color.name.toLowerCase()) ||
-            color.name.toLowerCase().includes(title.toLowerCase())
-        ) {
+        if (title.toLowerCase().includes(color.name.toLowerCase()) || color.name.toLowerCase().includes(title.toLowerCase())) {
             event.backgroundColor = color.color;
         }
         if (title.include("absence") || title.include("annulé")) {
@@ -154,16 +139,7 @@ const selectSubjectByIDSQL = (idSubject, callback) => {
  * @param {function} callback - the callback function
  * @return {boolean} true if successful, error object if an error occurred
  */
-const insertEventSQL = (
-    salle,
-    date,
-    start,
-    end,
-    classe,
-    course,
-    teacher,
-    callback
-) => {
+const insertEventSQL = (salle, date, start, end, classe, course, teacher, callback) => {
     pool.getConnection((err, db) => {
         db.query(
             {
@@ -288,9 +264,7 @@ const insertEventsSQL = (events, id, callback) => {
         }
         if (salle == undefined) salle = "none";
         let courseQuery = `SELECT id_mat FROM Ref_Matiere WHERE matiere = "${event.title} LIMIT 1"`;
-        array[
-            c % divider
-        ] += `("${salle}","${formatted_date}","${start_houre}","${end_houre}",${classe},(${courseQuery}),"${id}"),`;
+        array[c % divider] += `("${salle}","${formatted_date}","${start_houre}","${end_houre}",${classe},(${courseQuery}),"${id}"),`;
         c++;
     }
 
@@ -320,18 +294,7 @@ const getEventsByTeacherIDSQL = (id, callback) => {
                 db.release();
                 let obj = [];
                 for (let row of rows) {
-                    obj.push(
-                        buildEvent(
-                            row.libelle_court,
-                            new Date(row.date),
-                            row.heure_debut,
-                            row.heure_fin,
-                            row.salle,
-                            row.id_ev,
-                            row.classe,
-                            row.salle
-                        )
-                    );
+                    obj.push(buildEvent(row.libelle_court, new Date(row.date), row.heure_debut, row.heure_fin, row.salle, row.id_ev, row.classe, row.salle));
                 }
                 callback(null, obj);
             }
@@ -451,11 +414,7 @@ const parseEvents = (events, teacherID) => {
  */
 const isIgnored = (e, events) => {
     let currentDate = new Date();
-    let ignoreArray = events.filter(
-        (event) =>
-            event.title.toLowerCase().includes("vacance") &&
-            event.date == e.date
-    );
+    let ignoreArray = events.filter((event) => event.title.toLowerCase().includes("vacance") && event.date == e.date);
     return ignoreArray.length > 0 || e.date < currentDate;
 };
 
@@ -468,9 +427,8 @@ const isIgnored = (e, events) => {
  * @return {void}
  */
 const processEvents = (events, teacherID) => {
-    var res =
-        "INSERT INTO `Absence`(`motif`, `start`, `end`, `date`, `matiere`, `teacherID`) VALUES ";
-    var absence = [];
+    let res = "INSERT INTO `Absence`(`motif`, `start`, `end`, `date`, `matiere`, `teacherID`) VALUES ";
+    let absence = [];
     let c = 0;
     events.forEach((event) => {
         let startHour = new Date(event.start).toLocaleString("sv-SE", {
@@ -483,60 +441,48 @@ const processEvents = (events, teacherID) => {
             timeZone: "Europe/Paris",
         });
         //let salle = event.description.val.split("Salle : ")[1].split("\n")[0];
-        if (
-            event.title.toLowerCase().includes("annulé") &&
-            !isIgnored(event, events)
-        ) {
-            Absence.selectAbsence(
-                date,
-                startHour,
-                endHour,
-                teacherID,
-                (err, result) => {
-                    console.log(result);
-                    if (result.length == 0) {
-                        console.log("oui");
-                        let mat = event.title
-                            .split(":")[1]
-                            .substring(0, event.title.split(":")[1].length - 1)
-                            .substring(1);
-                        res += `('Annulation', '${startHour}', '${endHour}', '${date}', (select id_mat from Ref_Matiere where libelle_court = '${mat}'), '${teacherID}'),`;
-                        absence.push({
-                            motif: "Annulation",
-                            startHour: startHour,
-                            endHour: endHour,
-                            date: date,
-                            matiere: mat,
-                            teacherID: teacherID,
+        if (event.title.toLowerCase().includes("annulé") && !isIgnored(event, events)) {
+            Absence.selectAbsence(date, startHour, endHour, teacherID, (err, result) => {
+                console.log(result);
+                if (result.length == 0) {
+                    console.log("oui");
+                    let mat = event.title
+                        .split(":")[1]
+                        .substring(0, event.title.split(":")[1].length - 1)
+                        .substring(1);
+                    res += `('Annulation', '${startHour}', '${endHour}', '${date}', (select id_mat from Ref_Matiere where libelle_court = '${mat}'), '${teacherID}'),`;
+                    absence.push({
+                        motif: "Annulation",
+                        startHour: startHour,
+                        endHour: endHour,
+                        date: date,
+                        matiere: mat,
+                        teacherID: teacherID,
+                    });
+                    if (c == event.length - 1) {
+                        console.log("cest la fin du parsing");
+                        pool.getConnection((err, db) => {
+                            if (err) console.error(err, null);
+                            console.log(res.slice(0, -1));
+                            db.query(
+                                {
+                                    sql: res.slice(0, -1),
+                                    timeout: 10000,
+                                },
+                                (err, rows, fields) => {
+                                    console.log("Absence inserer");
+                                    db.release();
+                                    Absence.spreadAbsences(absence, (err, result) => {
+                                        if (err) console.error(err);
+                                    });
+                                }
+                            );
                         });
-                        if (c == event.length - 1) {
-                            console.log("cest la fin du parsing");
-                            pool.getConnection((err, db) => {
-                                if (err) console.error(err, null);
-                                console.log(res.slice(0, -1));
-                                db.query(
-                                    {
-                                        sql: res.slice(0, -1),
-                                        timeout: 10000,
-                                    },
-                                    (err, rows, fields) => {
-                                        console.log("Absence inserer");
-                                        db.release();
-                                        Absence.spreadAbsences(
-                                            absence,
-                                            (err, result) => {
-                                                if (err) console.error(err);
-                                            }
-                                        );
-                                    }
-                                );
-                            });
-                        }
-                    } else {
-                        console.log("Absence deja ajouter");
                     }
+                } else {
+                    console.log("Absence deja ajouter");
                 }
-            );
+            });
         }
         c++;
     });
@@ -560,14 +506,10 @@ const insertTimetableURL = (req, res, callback) => {
         downloadTimetableFromURL(req.body.url, (err, timetable) => {
             console.log("edt recuperer");
             parseEvents(timetable, req.session.id_ens);
-            insertLinkSQL(
-                req.session.id_ens,
-                req.body.url,
-                (err, insertResult) => {
-                    if (err) console.error(err);
-                    callback(err, timetable);
-                }
-            );
+            insertLinkSQL(req.session.id_ens, req.body.url, (err, insertResult) => {
+                if (err) console.error(err);
+                callback(err, timetable);
+            });
         });
     });
 };
@@ -583,13 +525,7 @@ const insertTimetablesFiles = (req, res, callback) => {
     const path = "controllers/misc/edt/";
     let files = fs.readdirSync(path);
     insertTimetableFileSQL(files, 0);
-    console.log(
-        "\u001b[" +
-            32 +
-            "m" +
-            `[EVENTS : "AUTO LAUNCHED PROCESS" - (${new Date().toLocaleString()}) - OK / EVENTS INSERTED]` +
-            "\u001b[0m"
-    );
+    console.log("\u001b[" + 32 + "m" + `[EVENTS : "AUTO LAUNCHED PROCESS" - (${new Date().toLocaleString()}) - OK / EVENTS INSERTED]` + "\u001b[0m");
 };
 
 /**
