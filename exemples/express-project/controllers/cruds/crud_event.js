@@ -440,7 +440,7 @@ const isIgnored = (e, events) => {
  * @return {void}
  */
 const processEvents = (events, teacherID) => {
-    let res = "INSERT INTO `Absence`(`motif`, `start`, `end`, `date`, `matiere`, `teacherID`) VALUES ";
+    let res = "INSERT INTO `Absence`(`motif`, `start`, `end`, `date`, `matiere`, `class`, `teacherID`) VALUES ";
     let absence = [];
     let c = 0;
     let u = 0;
@@ -463,9 +463,9 @@ const processEvents = (events, teacherID) => {
                         .split(":")[1]
                         .substring(0, event.title.split(":")[1].length - 1)
                         .substring(1);
-                    res += `('Annulation', '${startHour}', '${endHour}', '${date}', (select id_mat from Ref_Matiere where libelle_court = '${mat}'), '${teacherID}'),`;
 
                     let info = event.description.val;
+                    console.log(event.description.val);
                     if (info) {
                         if (info.includes("Groupe")) {
                             absence.push({
@@ -477,6 +477,7 @@ const processEvents = (events, teacherID) => {
                                 teacherID: teacherID,
                                 type: "MAT",
                             });
+                            res += `('Annulation', '${startHour}', '${endHour}', '${date}', (select id_mat from Ref_Matiere where libelle_court = '${mat}'), 'Groupe de classe', '${teacherID}'),`;
                         } else if (info.includes("Classe")) {
                             absence.push({
                                 motif: "Annulation",
@@ -488,6 +489,9 @@ const processEvents = (events, teacherID) => {
                                 type: "CLASSE",
                                 classe: info.split("Classe : ")[1].split("\n")[0],
                             });
+                            res += `('Annulation', '${startHour}', '${endHour}', '${date}', (select id_mat from Ref_Matiere where libelle_court = '${mat}'), ${
+                                info.split("Classe : ")[1].split("\n")[0]
+                            }, '${teacherID}'),`;
                         }
                     }
 
@@ -503,6 +507,7 @@ const processEvents = (events, teacherID) => {
                                     timeout: 10000,
                                 },
                                 (err, rows, fields) => {
+                                    if (err) console.log(err);
                                     console.log("Absence inserer");
                                     db.release();
                                     Absence.spreadAbsences(absence, (err, result) => {
