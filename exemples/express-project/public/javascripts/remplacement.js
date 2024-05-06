@@ -12,9 +12,7 @@ let remplacement = {
     data: [],
 
     printRemplacement() {
-        console.log("test")
         this.data.forEach((evenement) => {
-            console.log("evenement : ", evenement);
             let div1 = document.createElement("div");
             div1.classList.add("box_remplacement");
             div1.innerHTML = `test`;
@@ -37,7 +35,6 @@ let remplacement = {
     },
 
     init() {
-        console.log("init")
         axios.get("/sql/proposition/getTeacherReplace").then((response) => {
 
             this.data = response.data;
