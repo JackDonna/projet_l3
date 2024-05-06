@@ -11,7 +11,7 @@
     <script>
       window.addEventListener('load', () => {
         if("serviceWorker" in navigator){
-          navigator.serviceWorker.register('javascript/service_worker.js')
+          navigator.serviceWorker.register('/javascripts/service_worker.js')
         }
       })
     </script>
@@ -25,7 +25,8 @@
         <h1>Connexion</h1>
         <input type="email" placeholder="Email" id="form_mail" />
         <input type="password" placeholder="Mot de passe" id="form_password" />
-        <input type="checkbox" id="admin"> Je suis un membre de l'administration
+        <input type="checkbox" id="admin">
+        <p>Je suis un membre de l'administration</p>
         <input class="button" type="submit" value="Connexion" />
       </form>
       <div class="inscription">
