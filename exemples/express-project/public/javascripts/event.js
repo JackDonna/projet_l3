@@ -180,7 +180,7 @@ let list = {
 
                 let buttonDiffusion = document.createElement("button");
                 buttonDiffusion.classList.add("buttonDiffusion");
-                buttonDiffusion.innerText = "Voir la liste de diffusion";
+                buttonDiffusion.innerText = "Liste\nde\nDiffusion";
                 buttonDiffusion.addEventListener("click", () => {
                     popUPDiffusion.display();
                     popUPDiffusion.printDiffusion("/sql/diffusion/diffusionsProvisor/", evenement.id_abs);
