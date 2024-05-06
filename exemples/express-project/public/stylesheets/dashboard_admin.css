@@ -332,11 +332,7 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-<<<<<<< Updated upstream
-    font-size: 16px;
-=======
     font-size: 15px;
->>>>>>> Stashed changes
 }
 
 .cle {
