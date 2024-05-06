@@ -414,8 +414,21 @@ const parseEvents = (events, teacherID) => {
  */
 const isIgnored = (e, events) => {
     let currentDate = new Date();
-    let ignoreArray = events.filter((event) => event.title.toLowerCase().includes("vacance") && event.date == e.date);
-    return ignoreArray.length > 0 || e.date < currentDate;
+    let res = false;
+    let i = 0;
+    if (e.date < currentDate) {
+        res = true;
+    }
+    while (!res && i < events.length) {
+        if (events[i].title.toLowerCase().includes("vacance") || events[i].title.toLowerCase().includes("ferié")) {
+            if (e.date >= events[i].start && e.date <= events[i].end) {
+                res = true;
+            }
+        }
+
+        i++;
+    }
+    return res;
 };
 
 /**
@@ -430,6 +443,7 @@ const processEvents = (events, teacherID) => {
     let res = "INSERT INTO `Absence`(`motif`, `start`, `end`, `date`, `matiere`, `teacherID`) VALUES ";
     let absence = [];
     let c = 0;
+    let u = 0;
     events.forEach((event) => {
         let startHour = new Date(event.start).toLocaleString("sv-SE", {
             timeZone: "Europe/Paris",
@@ -443,9 +457,8 @@ const processEvents = (events, teacherID) => {
         //let salle = event.description.val.split("Salle : ")[1].split("\n")[0];
         if (event.title.toLowerCase().includes("annulé") && !isIgnored(event, events)) {
             Absence.selectAbsence(date, startHour, endHour, teacherID, (err, result) => {
-                console.log(result);
+                console.log("eveneùent detecter bip bip");
                 if (result.length == 0) {
-                    console.log("oui");
                     let mat = event.title
                         .split(":")[1]
                         .substring(0, event.title.split(":")[1].length - 1)
@@ -459,7 +472,8 @@ const processEvents = (events, teacherID) => {
                         matiere: mat,
                         teacherID: teacherID,
                     });
-                    if (c == event.length - 1) {
+                    console.log(c + u + " / " + events.length);
+                    if (c + u >= events.length - 1) {
                         console.log("cest la fin du parsing");
                         pool.getConnection((err, db) => {
                             if (err) console.error(err, null);
@@ -482,9 +496,11 @@ const processEvents = (events, teacherID) => {
                 } else {
                     console.log("Absence deja ajouter");
                 }
+                u++;
             });
+        } else {
+            c++;
         }
-        c++;
     });
 };
 
