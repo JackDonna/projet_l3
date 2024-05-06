@@ -6,7 +6,6 @@
   margin: 0;
 }
 
-
 html, body {
   /* background: #555; */
   background: #fff;
@@ -92,25 +91,26 @@ img {
 }
 
 #boite_event {
-   height: 100%;
-   width: 100%;
-   display: grid; /*  /!\ Pas de display Flex quand ça ne sert à rien /!\   */
-   justify-content: center;
-   align-items: center;
-   overflow: auto;
-   overflow-x: hidden;
-   margin-top: 1em;
+  height: 100%;
+  width: 100%;
+  display: grid; /*  /!\ Pas de display Flex quand ça ne sert à rien /!\   */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  overflow-x: hidden;
+  margin-top: 1em;
 }
 
 
-.box_absence {
 
+.box_absence {
   display: flex;
   justify-content: center;
   align-items: stretch;
   flex-direction: column;
   height: 100%;
-  width: 100%;
+  width: 75%;
   background: whitesmoke;
   margin-bottom: 30px;
   padding: 0 15px;
@@ -119,9 +119,33 @@ img {
   transition: 0.2s;
 }
 
+.box_absence p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+
+.cle {
+  color: #11b4bd;
+}
+
 button {
   border : none;
   background: none;
+}
+
+.divButtons {
+  display: flex;
+  justify-content: center;
+  /*align-items: center;*/
+  margin-top: 5%;
+  width: 100%;
+}
+
+.divButtons button {
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 /* Animation de montée */
