@@ -65,13 +65,13 @@ function drawBox(evenement){
     p.classList.add("box_absence");
     // Affecte la valeur de chaque clé à chaque paragraphe
     p.innerHTML = `
-        Date : ${evenement.date.split("T", 1)}<br>
-        Heure du début :${evenement.start}<br>
-        Heure de fin : ${evenement.end}<br>
-        Professeur : ${evenement.nom} ${evenement.prenom}<br>
-        Classe : ${evenement.class}<br>
-        Matière : ${evenement.matiere}<br>
-    `;
+        <p><span class="cle">Date : </span>${new Date(evenement.date.split("T", 1)).toLocaleDateString()}</p>
+        <p><span class="cle">Heure de début : </span>${evenement.start.slice(0, -3).replace(":", "h")}</p>
+        <p><span class="cle">Heure de fin : </span>${evenement.end.slice(0, -3).replace(":", "h")}</p>
+        <p><span class="cle">Professeur : </span>${evenement.nom} ${evenement.prenom}</p>
+        <p class="matiere_${evenement.id_mat}" ><span class="cle }">Matière : </span>${evenement.matiere}</p>
+        <p class="classe_${evenement.id_abs}" ><span class="cle }">Classe : </span>${evenement.classe}</p>
+     `;
     // Crée un bouton pour accepter l'offre
     let boutonV = document.createElement("button");
     boutonV.innerHTML = "✅​";
@@ -88,9 +88,13 @@ function drawBox(evenement){
         confirmerAvantSuppression(p); // Afficher la confirmation avant de supprimer
         axios.post("/sql/diffusion/deleteTeacher", {teacherID: evenement.id_ens, absenceID: evenement.id_abs});
     };
-    p.appendChild(boutonV);
-    p.appendChild(boutonX);
+    let divButtons = document.createElement("div");
+    divButtons.classList.add("divButtons");
+    divButtons.appendChild(boutonX);
+    divButtons.appendChild(boutonV);
+    
     // Ajoute le paragraphe à la boite
+    p.appendChild(divButtons);
     boite.appendChild(p);
     // Marque l'événement comme déjà affiché
     dejaAffiche[JSON.stringify(evenement)] = true;
