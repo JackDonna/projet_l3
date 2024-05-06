@@ -76,7 +76,6 @@ async function print_absence() {
             // Affecte la valeur de chaque clé à chaque paragraphe
             console.log(evenement);
             p.innerHTML = `
-            Motif : ${evenement.motif}<br>
             Date : ${evenement.date.split("T", 1)}<br>
             Heure du début :${evenement.start}<br>
             Heure de fin : ${evenement.end}<br>
