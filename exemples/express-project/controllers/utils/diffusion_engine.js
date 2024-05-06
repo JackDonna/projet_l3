@@ -93,7 +93,7 @@ class QueryBuilder {
     }
 
     buildQuery() {
-        let query = `insert into Diffusion (ens, absence) value `;
+        let query = `insert ignore into Diffusion (ens, absence) value `;
         this.teachers.forEach((teacher) => {
             console.log(teacher);
             console.log(this.absence);
