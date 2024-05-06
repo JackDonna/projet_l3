@@ -103,6 +103,22 @@ const getYourReplaceSQL = (etablishementID, callback) => {
     });
 };
 
+const getTeacherReplaceSQL = (teacherID, callback) => {
+    pool.getConnection((err, db) => {
+        db.query(
+            {
+                sql: SQL.select.teacherReplace,
+                timeout: 10000,
+                values: [teacherID],
+            },
+            (err, rows, fields) => {
+                db.release();
+                callback(err, rows);
+            }
+        );
+    });
+};
+
 // -------------------------------------------------- MAINS FUNCTIONS ------------------------------------------------ //
 
 /**
@@ -155,6 +171,13 @@ const getYourReplace = (req, res, callback) => {
         callback(err, result);
     });
 };
+
+const getTeacherReplace = (req, res, callback) => {
+    const teacherID = req.session.id_ens;
+    getTeacherReplaceSQL(teacherID, (err, result) => {
+        callback(err, result);
+    });
+};
 // -------------------------------------------------- EXPORTS -------------------------------------------------------- //
 
 module.exports = {
@@ -162,4 +185,5 @@ module.exports = {
     getProposedTeacher,
     acceptProposition,
     getYourReplace,
+    getTeacherReplace,
 };

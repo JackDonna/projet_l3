@@ -161,6 +161,7 @@ let list = {
     drawList() {
         this.seen = [];
         affichage_absence.innerHTML = "";
+        affichage_list_diff.innerHTML = "";
         this.searched.sort(compareDate);
         this.searched.forEach((evenement) => {
             if (!this.seen.includes(evenement.id_abs)) {
