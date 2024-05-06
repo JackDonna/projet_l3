@@ -105,20 +105,23 @@ img {
 
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 150px;
-  width: 300px;
+  align-items: stretch;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
   background: whitesmoke;
   margin-bottom: 30px;
-  padding: 15px;
-  border: solid 3px;
-  border-radius: 15px;
+  padding: 0 15px;
+  box-shadow: 10 10 10px rgba(0, 0, 0);
+  cursor: pointer;
+  transition: 0.2s;
 }
 
 button {
-  margin-left : 1em;
   border : none;
+  background: none;
 }
+
 /* Animation de montée */
 @keyframes slide-up {
   0% {

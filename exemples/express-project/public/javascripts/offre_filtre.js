@@ -80,7 +80,9 @@ async function print_absence() {
             Date : ${evenement.date.split("T", 1)}<br>
             Heure du début :${evenement.start}<br>
             Heure de fin : ${evenement.end}<br>
-            Professeur : ${evenement.nom} ${evenement.prenom}
+            Professeur : ${evenement.nom} ${evenement.prenom}<br>
+            Classe : ${evenement.classe}<br>
+            Matière : ${evenement.matiere}<br>
          `;
 
             // Crée un bouton pour accepter l'offre
