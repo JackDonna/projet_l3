@@ -1,12 +1,8 @@
 const mysql = require("mysql");
 const fs = require("fs");
-const conf = JSON.parse(
-    fs.readFileSync("controllers/config/db_config.json", "utf-8")
-);
+const conf = JSON.parse(fs.readFileSync("controllers/config/db_config.json", "utf-8"));
 const pool = mysql.createPool(conf);
-const sql_conf_file = JSON.parse(
-    fs.readFileSync("controllers/config/sql_config.json", "utf-8")
-);
+const sql_conf_file = JSON.parse(fs.readFileSync("controllers/config/sql_config.json", "utf-8"));
 const SQL = sql_conf_file.sql;
 
 // -------------------------------------------------- SUBS FUNCTIONS ------------------------------------------------- //
@@ -118,7 +114,7 @@ const getYourReplaceSQL = (etablishementID, callback) => {
  * @return {void}
  */
 const insertProposition = (req, res, callback) => {
-    const teacherID = req.body.teacherID;
+    const teacherID = req.session.id_ens;
     const absenceID = req.body.absenceID;
 
     insertPropositionSQL(teacherID, absenceID, (err, result) => {
