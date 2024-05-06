@@ -9,10 +9,12 @@
 
 html, body {
   /* background: #555; */
+  background: #fff;
   height : 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
   overflow-x: hidden;
+  font-family: "Varela Round", sans-serif;
 }
 
 header {
@@ -205,6 +207,38 @@ select {
 
 #toggleButton:hover {
   background-color: #11b4bd;
+}
+
+#container_remplacement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box_remplacement {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  height: 100%;
+  width: 75%;
+  background: whitesmoke;
+  margin-bottom: 30px;
+  padding: 0 15px;
+  box-shadow: 10 10 10px rgba(0, 0, 0);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.box_remplacement p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+
+.cle {
+  color: #11b4bd;
 }
 
 @media only screen and (min-width : 391px) {
