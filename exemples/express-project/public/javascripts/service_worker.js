@@ -1,6 +1,7 @@
-const PREFIX = 'V1';
+const PREFIX = 'V2';
 
 self.addEventListener('install', (event) => {
+    self.skipWaiting();
     console.log(`${PREFIX} install service worker`);
 })
 
@@ -8,7 +9,7 @@ self.addEventListener('activate', (event) => {
     console.log(`${PREFIX} Active service worker`);
 })
 
-self.addEventListener("fetch", (event) => {
+self.addEventListener('fetch', (event) => {
     console.log(`${PREFIX} Fetching : ${event.request.url}, Mode : ${event.request.mode}`);
     console.log("test")
     if(event.request.mode === 'navigate'){
