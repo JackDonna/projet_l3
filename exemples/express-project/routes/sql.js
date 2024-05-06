@@ -42,7 +42,7 @@ router.post("/proposition/new_proposition", proposition_controller.insertProposi
 router.get("/proposition/teacher_on_absence/:absenceID", proposition_controller.getProposedTeacherREQUEST);
 router.post("/proposition/acceptProposition", proposition_controller.acceptPropositionREQUEST);
 router.get("/proposition/getYourReplace/:absenceID", proposition_controller.getYourReplaceREQUEST);
-router.get("/proposition/getTeacherReplace/:teacherID", proposition_controller.getTeacherReplaceREQUEST);
+router.get("/proposition/getTeacherReplace", proposition_controller.getTeacherReplaceREQUEST);
 
 // ------------------------------------------ DIFFUSION CONTROLLERS ------------------------------------- //
 router.post("/diffusion/deleteTeacher", diffusion_controller.deleteTeacherOnDiffusion);
