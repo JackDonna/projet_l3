@@ -8,16 +8,9 @@ class DiffusionEngine {
     }
 
     diffuse(callback) {
-        this.absences.forEach((currentAbsence) => {
-            let typeDefiner = new TypeDefiner(currentAbsence);
-            let absence = typeDefiner.writetype();
-            let filter = new Filter(
-                absence,
-                this.matFilter,
-                this.scheduleFilter,
-                this.classesFilter,
-                this.pool
-            );
+        console.log(this.absences);
+        this.absences.forEach((absence) => {
+            let filter = new Filter(absence, this.matFilter, this.scheduleFilter, this.classesFilter, this.pool);
             filter.filter((err, filterResult) => {
                 console.log("fin des filtre");
                 let diffuser = new Diffuser(absence, filterResult, this.pool);
@@ -53,28 +46,16 @@ class Filter {
 
     filter(callback) {
         this.matFilter(this.pool, this.absence, (err, matResult) => {
-            if (this.absence.type === "CLASS") {
-                this.classesFilter(
-                    this.absence,
-                    matresult,
-                    (err, classesResult) => {
-                        this.scheduleFilter(
-                            this.absence,
-                            classesResult,
-                            (err, scheduleResult) => {
-                                callback(err, scheduleResult);
-                            }
-                        );
-                    }
-                );
-            } else {
-                this.scheduleFilter(
-                    this.absence,
-                    matResult,
-                    (err, scheduleResult) => {
+            if (this.absence.type === "CLASSE") {
+                this.classesFilter(this.absence, matresult, (err, classesResult) => {
+                    this.scheduleFilter(this.absence, classesResult, (err, scheduleResult) => {
                         callback(err, scheduleResult);
-                    }
-                );
+                    });
+                });
+            } else {
+                this.scheduleFilter(this.absence, matResult, (err, scheduleResult) => {
+                    callback(err, scheduleResult);
+                });
             }
         });
     }

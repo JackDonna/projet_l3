@@ -454,24 +454,43 @@ const processEvents = (events, teacherID) => {
         let date = new Date(event.start).toLocaleDateString("sv-SE", {
             timeZone: "Europe/Paris",
         });
+
         //let salle = event.description.val.split("Salle : ")[1].split("\n")[0];
         if (event.title.toLowerCase().includes("annulé") && !isIgnored(event, events)) {
             Absence.selectAbsence(date, startHour, endHour, teacherID, (err, result) => {
-                console.log("eveneùent detecter bip bip");
                 if (result.length == 0) {
                     let mat = event.title
                         .split(":")[1]
                         .substring(0, event.title.split(":")[1].length - 1)
                         .substring(1);
                     res += `('Annulation', '${startHour}', '${endHour}', '${date}', (select id_mat from Ref_Matiere where libelle_court = '${mat}'), '${teacherID}'),`;
-                    absence.push({
-                        motif: "Annulation",
-                        startHour: startHour,
-                        endHour: endHour,
-                        date: date,
-                        matiere: mat,
-                        teacherID: teacherID,
-                    });
+
+                    let info = event.description.val;
+                    if (info) {
+                        if (info.includes("Groupe")) {
+                            absence.push({
+                                motif: "Annulation",
+                                startHour: startHour,
+                                endHour: endHour,
+                                date: date,
+                                matiere: mat,
+                                teacherID: teacherID,
+                                type: "MAT",
+                            });
+                        } else if (info.includes("Classe")) {
+                            absence.push({
+                                motif: "Annulation",
+                                startHour: startHour,
+                                endHour: endHour,
+                                date: date,
+                                matiere: mat,
+                                teacherID: teacherID,
+                                type: "CLASSE",
+                                classe: info.split("Classe : ")[1].split("\n")[0],
+                            });
+                        }
+                    }
+
                     console.log(c + u + " / " + events.length);
                     if (c + u >= events.length - 1) {
                         console.log("cest la fin du parsing");

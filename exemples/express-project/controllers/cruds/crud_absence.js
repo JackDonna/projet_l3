@@ -1,12 +1,8 @@
 const mysql = require("mysql");
 const fs = require("fs");
-const conf = JSON.parse(
-    fs.readFileSync("controllers/config/db_config.json", "utf-8")
-);
+const conf = JSON.parse(fs.readFileSync("controllers/config/db_config.json", "utf-8"));
 const pool = mysql.createPool(conf);
-const sql_conf_file = JSON.parse(
-    fs.readFileSync("controllers/config/sql_config.json", "utf-8")
-);
+const sql_conf_file = JSON.parse(fs.readFileSync("controllers/config/sql_config.json", "utf-8"));
 const SQL = sql_conf_file.sql;
 const Diffusion = require(__dirname + "/crud_diffusion");
 const axios = require("axios");
@@ -123,26 +119,33 @@ const getYourAbsencesSQL = (etablishementID, callback) => {
 const scheduleFilter = (absence, teachers, callback) => {
     if (teachers == undefined || teachers.length == 0) return;
     let result = [];
+    let c = 0;
+    let u = 0;
     console.log(absence);
     const { date, endHour, startHour } = absence;
     pool.getConnection((err, db) => {
+        console.log(teachers);
         teachers.forEach((teacher) => {
-            console.log(teacher);
-            getLinkContent(db, teacher.enseignant, (err, content) => {
-                if (content == undefined || content.length == 0) return;
-                let array = content.filter(
-                    (e) =>
-                        e.date == date &&
-                        ((e.start > startHour && e.end > startHour) ||
-                            (e.start < endHour && e.end < endHour))
-                );
-                console.log("enfin la");
-                if (array.length == 0) result.push(teacher);
-                if (teacher == teachers[teachers.length - 1]) {
-                    db.release();
-                    callback(null, result);
-                }
-            });
+            if (teacher.enseignant == absence.teacherID) {
+                c++;
+            } else {
+                console.log(teacher);
+                getLinkContent(db, teacher.enseignant, (err, content) => {
+                    if (!(content == undefined || content.length == 0)) {
+                        let array = content.filter((e) => e.date == date && ((e.start > startHour && e.end > startHour) || (e.start < endHour && e.end < endHour)));
+                        if (array.length == 0) result.push(teacher);
+                        u++;
+                    } else {
+                        u++;
+                    }
+                    console.log(u + c);
+                    if (u + c >= teachers.length) {
+                        console.log(result);
+                        db.release();
+                        callback(null, result);
+                    }
+                });
+            }
         });
     });
 };
@@ -157,22 +160,12 @@ const scheduleFilter = (absence, teachers, callback) => {
  */
 const matFilter = (pool, absence, callback) => {
     const { date, startHour, endHour, teacherID } = absence;
-    console.log(
-        date,
-        startHour.split(" ")[1],
-        endHour.split(" ")[1],
-        teacherID
-    );
+    console.log(date, startHour.split(" ")[1], endHour.split(" ")[1], teacherID);
     pool.getConnection((err, db) => {
         db.query(
             {
                 sql: SQL.select.teachersByDiscipnline,
-                values: [
-                    date,
-                    startHour.split(" ")[1],
-                    endHour.split(" ")[1],
-                    teacherID,
-                ],
+                values: [date, startHour.split(" ")[1], endHour.split(" ")[1], teacherID],
                 timeout: 10000,
             },
             (err, rows, fields) => {
@@ -183,34 +176,13 @@ const matFilter = (pool, absence, callback) => {
     });
 };
 
-const insertAbsenceNewSQL = (
-    start,
-    end,
-    date,
-    teacherID,
-    reason,
-    matiere,
-    callback
-) => {
+const insertAbsenceNewSQL = (start, end, date, teacherID, reason, matiere, callback) => {
     pool.getConnection((err, db) => {
         db.query(
             {
                 sql: SQL.insert.absence,
                 timeout: 10000,
-                values: [
-                    reason,
-                    start,
-                    end,
-                    date,
-                    matiere,
-                    teacherID,
-                    date,
-                    start,
-                    end,
-                    start,
-                    end,
-                    teacherID,
-                ],
+                values: [reason, start, end, date, matiere, teacherID, date, start, end, start, end, teacherID],
             },
             (err, rows, fields) => {
                 console.log("reussssssiiii");
@@ -260,27 +232,11 @@ const insertAbsence = (req, res, callback) => {
     }
 };
 
-const insertAbsenceNew = (
-    start,
-    end,
-    date,
-    teacherID,
-    reason,
-    matiere,
-    callback
-) => {
-    insertAbsenceNewSQL(
-        start,
-        end,
-        date,
-        teacherID,
-        reason,
-        matiere,
-        (err, result) => {
-            if (err) callback(err, null);
-            callback(null, true);
-        }
-    );
+const insertAbsenceNew = (start, end, date, teacherID, reason, matiere, callback) => {
+    insertAbsenceNewSQL(start, end, date, teacherID, reason, matiere, (err, result) => {
+        if (err) callback(err, null);
+        callback(null, true);
+    });
 };
 
 /**
@@ -307,13 +263,7 @@ const getYourAbsences = (req, res, callback) => {
  * @return {void} This function does not return a value
  */
 const spreadAbsences = (absences, callback) => {
-    let diffusionEngine = new DiffusionEngine(
-        absences,
-        matFilter,
-        scheduleFilter,
-        classesFilter,
-        pool
-    );
+    let diffusionEngine = new DiffusionEngine(absences, matFilter, scheduleFilter, classesFilter, pool);
 
     diffusionEngine.diffuse((err, result) => {
         callback(err, result);
