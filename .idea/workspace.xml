@@ -6,14 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dcd9f067-578b-4156-9def-dfda21dea99a" name="Changes" comment="return">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exemples/express-project/views/calendar.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/views/calendar.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exemples/express-project/views/dashboard_admin.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/views/dashboard_admin.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exemples/express-project/views/forbidden.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/views/forbidden.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exemples/express-project/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/views/index.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exemples/express-project/views/root.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/views/root.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exemples/express-project/views/sign_in.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/views/sign_in.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exemples/express-project/views/sign_up.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/views/sign_up.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exemples/express-project/views/valide_account.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/views/valide_account.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exemples/express-project/public/stylesheets/calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/public/stylesheets/calendar.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +61,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-2e7d6887c066-JavaScript-WS-241.15989.47" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-WS-241.15989.105" />
       </set>
     </attachedChunks>
   </component>
@@ -87,6 +80,7 @@
       <workItem from="1711003314855" duration="299000" />
       <workItem from="1712222992982" duration="929000" />
       <workItem from="1713854589225" duration="2461000" />
+      <workItem from="1715002523435" duration="1867000" />
     </task>
     <task id="LOCAL-00001" summary="return">
       <option name="closed" value="true" />

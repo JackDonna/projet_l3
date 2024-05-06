@@ -42,7 +42,7 @@ main {
 #scan_qr_code {
   z-index: 1;
   position: fixed;
-  bottom: 2%;
+  bottom: 15%;
   right: 2%;
   padding: 1em 2em;
   background-color: #11b4bd;
