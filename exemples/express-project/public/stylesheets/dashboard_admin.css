@@ -261,9 +261,55 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     margin-left: 15%;
 }
 
+.buttonDiffusion {
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #11b4bd;
+    color: white;
+    cursor: pointer;
+    display: block;
+    height: 150px;
+    margin-bottom: 30px;
+}
+
 .box_absence:hover {
     transform: scale(1.1);
     transition: 0.3s;
+}
+
+.popUPDiffusion {
+    position: fixed;
+    width: 1200px;
+    height: 700px;
+    top: 10%;
+    left: 10%;
+    background-color: #fff;
+    border: #11b4bd 1px solid;
+    display: flex;
+    flex-direction: column;
+}
+
+.popUPDiffusionTitle {
+    padding: 2%;
+}
+
+.popUPDiffusionContainer {
+    cursor: pointer;
+}
+
+.popUPDiffusionContainer {
+    display: flex;
+    justify-content: space-between;
+}
+.popUPDiffusionCross {
+    padding: 2%;
+}
+.popUPDiffusionList {
+    padding: 2%;
+    max-height: 80%;
+    overflow: auto;
 }
 
 .box_absence p {
@@ -278,7 +324,7 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 }
 
 #absence_logo {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: start;
 }
@@ -288,16 +334,11 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 }
 
 #container_list_diff {
-    display: none;
     justify-content: start;
     align-items: start;
     padding-left: 60px;
     flex-direction: column;
     padding-top: 100px;
-}
-
-#container_list_diff h1 {
-    display: none;
 }
 
 .list {

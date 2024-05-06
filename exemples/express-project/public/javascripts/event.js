@@ -16,6 +16,9 @@ const propositionList = popUPElement.querySelector(".propositionList .popUPList"
 const remplacementList = popUPElement.querySelector(".remplacementList .popUPList");
 const popUPCross = popUPElement.querySelector(".popUPCross");
 const searchBar = document.querySelector(".searchBar");
+const popUPDiffusionElement = document.querySelector(".popUPDiffusion");
+const popUPDiffusionList = popUPDiffusionElement.querySelector(".popUPDiffusionList");
+const popUPDiffusionCross = document.querySelector(".popUPDiffusionCross");
 
 // ----------------------------------------------------------------------------------------------------------------------------//
 // ----GLOBALS VARIABLES ------------------------------------------------------------------------------------------------------//
@@ -109,6 +112,40 @@ let popUP = {
     },
 };
 
+let popUPDiffusion = {
+    parent: popUPDiffusionElement,
+    diffusionList: popUPDiffusionList,
+
+    printDiffusion(link, id) {
+        this.clear();
+        axios.get("/sql/diffusion/diffusionsProvisor/" + id).then((response) => {
+            response.data.forEach((diffusion) => {
+                let infoContainer = document.createElement("div");
+                let infoBox = document.createElement("div");
+
+                infoContainer.classList.add("infoContainerProposition");
+                infoBox.classList.add("infoBoxProposition");
+
+                infoBox.innerHTML = `${diffusion.nom} ${diffusion.prenom}`;
+
+                infoContainer.appendChild(infoBox);
+                this.diffusionList.appendChild(infoContainer);
+            });
+        });
+    },
+
+    display() {
+        this.parent.classList.remove("hide");
+    },
+    hide() {
+        this.parent.classList.add("hide");
+    },
+
+    clear() {
+        this.diffusionList.innerHTML = "";
+    },
+};
+
 let list = {
     data: [],
     searched: [],
@@ -141,6 +178,15 @@ let list = {
                     popUP.printRemplacement("/sql/proposition/getYourReplace/", evenement.id_abs);
                 });
 
+                let buttonDiffusion = document.createElement("button");
+                buttonDiffusion.classList.add("buttonDiffusion");
+                buttonDiffusion.innerText = "Voir la liste de diffusion";
+                buttonDiffusion.addEventListener("click", () => {
+                    popUPDiffusion.display();
+                    popUPDiffusion.printDiffusion("/sql/diffusion/diffusionsProvisor/", evenement.id_abs);
+                });
+
+                affichage_list_diff.appendChild(buttonDiffusion);
                 affichage_absence.appendChild(div);
             } else {
                 document.querySelector(`.classe_${evenement.id_abs}`).innerHTML += ", " + evenement.classe;
@@ -172,6 +218,10 @@ let list = {
 
 popUPCross.addEventListener("click", () => {
     popUP.hide();
+});
+
+popUPDiffusionCross.addEventListener("click", () => {
+    popUPDiffusion.hide();
 });
 
 searchBar.addEventListener("input", () => {
