@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcd9f067-578b-4156-9def-dfda21dea99a" name="Changes" comment="return">
-      <change afterPath="$PROJECT_DIR$/exemples/express-project/public/assets/icons/keep_FILL0_wght400_GRAD0_opsz24.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exemples/express-project/views/new_remplacement.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exemples/express-project/public/stylesheets/dashboard_admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/public/stylesheets/dashboard_admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exemples/express-project/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/routes/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exemples/express-project/views/footer.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/views/footer.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exemples/express-project/views/new_remplacement.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/views/remplacement.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

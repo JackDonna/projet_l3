@@ -24,6 +24,10 @@ router.get("/calendar", pIsValidated, (req, res) => {
     res.locals.nom = req.session.nom;
     res.render("calendar");
 });
+router.get("/remplacement", pIsValidated, (req, res) => {
+    res.locals.nom = req.session.nom;
+    res.render("remplacement");
+});
 router.get("/dashboard_admin", pIsAdministrator, (req, res) => {
     res.render("dashboard_admin");
 });
