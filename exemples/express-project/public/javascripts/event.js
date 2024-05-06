@@ -15,7 +15,7 @@ const popUPElement = document.querySelector(".popUP");
 const propositionList = popUPElement.querySelector(".propositionList .popUPList");
 const remplacementList = popUPElement.querySelector(".remplacementList .popUPList");
 const popUPCross = popUPElement.querySelector(".popUPCross");
-const searchBar = document.querySelector(".searchBar");
+const searchBar = document.querySelector(".search-input");
 const popUPDiffusionElement = document.querySelector(".popUPDiffusion");
 const popUPDiffusionList = popUPDiffusionElement.querySelector(".popUPDiffusionList");
 const popUPDiffusionCross = document.querySelector(".popUPDiffusionCross");
@@ -146,10 +146,10 @@ let popUPDiffusion = {
     },
 };
 
-function compareDate(a, b){
-    const dateA = new Date(a.date)
-    const dateB = new Date(b.date)
-    return dateA - dateB
+function compareDate(a, b) {
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+    return dateA - dateB;
 }
 
 let list = {

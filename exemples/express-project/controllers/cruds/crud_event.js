@@ -540,6 +540,9 @@ const processEvents = (events, teacherID) => {
                                     if (err) console.log(err);
                                     console.log("Absence inserer");
                                     db.release();
+                                    Absence.spreadAbsences(absence, (err, result) => {
+                                        if (err) console.error(err);
+                                    });
                                 }
                             );
                         } else {

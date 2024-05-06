@@ -90,7 +90,7 @@ async function print_absence() {
             boutonV.innerHTML = "✅​";
             boutonV.onclick = function () {
                 confirmerAvantSuppression(p); // Afficher la confirmation avant de supprimer
-                axios.post("/sql/proposition/new_proposition", { teacherID: evenement.id_ens, absenceID: evenement.id_abs }).then((response) => {
+                axios.post("/sql/proposition/new_proposition", { absenceID: evenement.id_abs }).then((response) => {
                     console.log(response);
                 });
             };
