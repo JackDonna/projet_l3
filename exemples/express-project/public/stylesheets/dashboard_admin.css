@@ -396,8 +396,12 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 
 @media only screen and (max-width: 390px) {
     .container {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        /*display: grid;
+        grid-template-columns: repeat(1, 1fr);*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 
     #sidebarMenu {
