@@ -441,6 +441,7 @@ const isIgnored = (e, events) => {
  */
 const processEvents = (events, teacherID) => {
     let res = "INSERT INTO `Absence`(`motif`, `start`, `end`, `date`, `matiere`, `class`, `teacherID`) VALUES ";
+    let tem = res.length;
     let absence = [];
     let c = 0;
     let u = 0;
@@ -458,12 +459,12 @@ const processEvents = (events, teacherID) => {
         //let salle = event.description.val.split("Salle : ")[1].split("\n")[0];
         if (event.title.toLowerCase().includes("annulé") && !isIgnored(event, events)) {
             Absence.selectAbsence(date, startHour, endHour, teacherID, (err, result) => {
-                if (result.length == 0) {
-                    let mat = event.title
-                        .split(":")[1]
-                        .substring(0, event.title.split(":")[1].length - 1)
-                        .substring(1);
+                let mat = event.title
+                    .split(":")[1]
+                    .substring(0, event.title.split(":")[1].length - 1)
+                    .substring(1);
 
+                if (result.length == 0) {
                     let info = event.description.val;
                     console.log(event.description.val);
                     if (info) {
@@ -496,10 +497,39 @@ const processEvents = (events, teacherID) => {
                     }
 
                     console.log(c + u + " / " + events.length);
-                    if (c + u >= events.length - 1) {
-                        console.log("cest la fin du parsing");
-                        pool.getConnection((err, db) => {
-                            if (err) console.error(err, null);
+                } else {
+                    let info = event.description.val;
+                    console.log(event.description.val);
+                    if (info) {
+                        if (info.includes("Groupe")) {
+                            absence.push({
+                                motif: "Annulation",
+                                startHour: startHour,
+                                endHour: endHour,
+                                date: date,
+                                matiere: mat,
+                                teacherID: teacherID,
+                                type: "MAT",
+                            });
+                        } else if (info.includes("Classe")) {
+                            absence.push({
+                                motif: "Annulation",
+                                startHour: startHour,
+                                endHour: endHour,
+                                date: date,
+                                matiere: mat,
+                                teacherID: teacherID,
+                                type: "CLASSE",
+                                classe: info.split("Classe : ")[1].split("\n")[0],
+                            });
+                        }
+                    }
+                }
+                if (c + u >= events.length - 1) {
+                    console.log("cest la fin du parsing");
+                    pool.getConnection((err, db) => {
+                        if (err) console.error(err, null);
+                        if (res.length > tem) {
                             console.log(res.slice(0, -1));
                             db.query(
                                 {
@@ -510,15 +540,14 @@ const processEvents = (events, teacherID) => {
                                     if (err) console.log(err);
                                     console.log("Absence inserer");
                                     db.release();
-                                    Absence.spreadAbsences(absence, (err, result) => {
-                                        if (err) console.error(err);
-                                    });
                                 }
                             );
-                        });
-                    }
-                } else {
-                    console.log("Absence deja ajouter");
+                        } else {
+                            Absence.spreadAbsences(absence, (err, result) => {
+                                if (err) console.error(err);
+                            });
+                        }
+                    });
                 }
                 u++;
             });

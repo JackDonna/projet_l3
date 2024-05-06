@@ -80,7 +80,9 @@ async function print_absence() {
             Date : ${evenement.date.split("T", 1)}<br>
             Heure du début :${evenement.start}<br>
             Heure de fin : ${evenement.end}<br>
-            Professeur : ${evenement.nom} ${evenement.prenom}
+            Professeur : ${evenement.nom} ${evenement.prenom}<br>
+            Classe : ${evenement.classe}<br>
+            Matière : ${evenement.matiere}<br>
          `;
 
             // Crée un bouton pour accepter l'offre
@@ -88,9 +90,9 @@ async function print_absence() {
             boutonV.innerHTML = "✅​";
             boutonV.onclick = function () {
                 confirmerAvantSuppression(p); // Afficher la confirmation avant de supprimer
-                axios.post("/sql//proposition/new_proposition", {teacherID: evenement.id_ens, absenceID: evenement.id_abs}).then((response) => {
-                    console.log(response)
-                })
+                axios.post("/sql/proposition/new_proposition", { teacherID: evenement.id_ens, absenceID: evenement.id_abs }).then((response) => {
+                    console.log(response);
+                });
             };
 
             // Crée un bouton pour supprimer l'offre
@@ -98,7 +100,7 @@ async function print_absence() {
             boutonX.innerHTML = "❌​";
             boutonX.onclick = function () {
                 confirmerAvantSuppression(p); // Afficher la confirmation avant de supprimer
-                axios.post("/sql/diffusion/deleteTeacher", {teacherID: evenement.id_ens, absenceID: evenement.id_abs});
+                axios.post("/sql/diffusion/deleteTeacher", { absenceID: evenement.id_abs });
             };
 
             p.appendChild(boutonV);
@@ -130,7 +132,6 @@ function toggleFilters() {
         toggleButton.textContent = "Afficher les filtres";
     }
 }
-
 
 // Attacher l'événement click au bouton pour basculer l'affichage
 toggleButton.addEventListener("click", toggleFilters);
