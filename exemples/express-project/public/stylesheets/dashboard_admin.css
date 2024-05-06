@@ -269,11 +269,11 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     padding: 14px;
     border-radius: 28px;
     background: #F6F6F6;
-    transition: box-shadow 0.25s;
+    transition: background 0.25s;
 }
 
 .search:focus-within {
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
+    background: #f1f1f1;
 }
 
 .search-input {
