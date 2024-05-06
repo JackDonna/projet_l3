@@ -28,6 +28,19 @@
     <link rel="stylesheet" href="stylesheets/index.css" />
   </head>
   <body>
+    <header>
+      <a href="#0"
+      ><img
+                  src="assets/icons/settings_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="settings"
+          /></a>
+      <a href="/logout"
+      ><img
+            src="assets/icons/logout_24dp_FILL0_wght400_GRAD0_opsz24.svg"
+            alt="logout"
+        /></a>
+  </header>
+  <hr>
     Bonjour M. <%= nom %>
     <main>
       <div id="scan_code" class="hide">
@@ -43,8 +56,6 @@
     <div id="calendar"></div>
     <button id="scan_qr_code"><p>+</p></button>
 
-    <a href="/logout">Se deconnecter</a>
-
     <div id="add_absence" class="hide">
       <p id="close_form">X</p>
       <input class="start_absence" type="time" />
@@ -54,7 +65,7 @@
     </div>
 
     <div class="loading hide">
-      <p>Chargement de votre emploie du temps <br> <i> Cela peut prendre environs 1 minute</i></p>
+      <p>Chargement de votre emploi du temps <br> <i> Cela peut prendre environs 1 minute</i></p>
     </div>
 
     <script src="javascripts/calendar.js" type="module"></script>

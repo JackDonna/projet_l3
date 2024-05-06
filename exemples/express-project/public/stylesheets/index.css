@@ -102,8 +102,6 @@ img {
   margin-top: 1em;
 }
 
-
-
 .box_absence {
   display: flex;
   justify-content: center;
@@ -139,7 +137,7 @@ button {
   display: flex;
   justify-content: center;
   /*align-items: center;*/
-  margin-top: 5%;
+  margin-top: 1%;
   width: 100%;
 }
 
