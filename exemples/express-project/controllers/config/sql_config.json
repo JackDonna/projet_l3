@@ -39,7 +39,7 @@
             "diffusionByAbsence": "SELECT distinct Enseignant.* FROM Enseignant INNER JOIN Diffusion ON Enseignant.id_ens = Diffusion.ens WHERE Diffusion.absence = ?",
             "teachersAndClasses": "select * from Enseignant inner join Panel inner join Ref_Classe on Enseignant.id_ens = Panel.enseignant and Panel.classe = Ref_Classe.id_class;",
             "absence": "select * from Absence where date = ? and start = ? and end = ? and teacherID = ?",
-            "teacherReplace": "select * from Remplacement inner join Enseignant inner join Proposition inner join Absence ON Absence.id_abs = Proposition.absence and Proposition.id_prop = Remplacement.proposition and Enseignant.id_ens = Remplacement.enseignant where Remplacement.enseignant = ?"
+            "teacherReplace": "select * from Remplacement inner join Enseignant inner join Proposition inner join Absence inner join Ref_Matiere ON Absence.id_abs = Proposition.absence and Proposition.id_prop = Remplacement.proposition and Enseignant.id_ens = Remplacement.enseignant and Ref_Matiere.id_mat = Absence.matiere where Remplacement.enseignant = ?"
         },
         "insert": {
             "event": "INSERT INTO Evenement (salle, date, heure_debut, heure_fin, classe, matiere, enseignant) VALUES (?,?,?,?,?,?,?)",
