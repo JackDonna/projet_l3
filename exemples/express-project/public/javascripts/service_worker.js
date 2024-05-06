@@ -2,10 +2,16 @@ const PREFIX = 'V2';
 
 self.addEventListener('install', (event) => {
     self.skipWaiting();
+    event.waitUntil(
+        (async () => {
+            const cache = await caches.open(PREFIX);
+        })()
+    );
     console.log(`${PREFIX} install service worker`);
 })
 
 self.addEventListener('activate', (event) => {
+    clients.claim();
     console.log(`${PREFIX} Active service worker`);
 })
 
