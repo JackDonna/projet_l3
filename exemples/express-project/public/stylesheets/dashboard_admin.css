@@ -224,6 +224,11 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     grid-template-columns: repeat(3, 1fr);
 }
 
+.container_popup {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
 #container_absence {
     /*
   margin-top: 10% !important;
@@ -277,6 +282,7 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     display: block;
     margin-top: 20px;
     margin-bottom: 60px;
+    font-size: 15px;
 }
 
 .box_absence:hover {
@@ -326,7 +332,11 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+<<<<<<< Updated upstream
     font-size: 16px;
+=======
+    font-size: 15px;
+>>>>>>> Stashed changes
 }
 
 .cle {
