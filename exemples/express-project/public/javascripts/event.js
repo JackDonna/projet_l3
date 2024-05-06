@@ -146,6 +146,12 @@ let popUPDiffusion = {
     },
 };
 
+function compareDate(a, b){
+    const dateA = new Date(a.date)
+    const dateB = new Date(b.date)
+    return dateA - dateB
+}
+
 let list = {
     data: [],
     searched: [],
@@ -155,6 +161,7 @@ let list = {
     drawList() {
         this.seen = [];
         affichage_absence.innerHTML = "";
+        this.searched.sort(compareDate);
         this.searched.forEach((evenement) => {
             if (!this.seen.includes(evenement.id_abs)) {
                 this.seen.push(evenement.id_abs);
