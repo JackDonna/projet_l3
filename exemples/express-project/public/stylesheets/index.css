@@ -99,7 +99,7 @@ img {
   align-items: center;
   overflow: auto;
   overflow-x: hidden;
-  margin-top: 1em;
+  /*margin-top: 1em;*/
 }
 
 .box_absence {
@@ -224,7 +224,8 @@ select {
   border: none;
   cursor: pointer;
   font-size: 16px;
-  margin-right: 1em;
+  /*margin-right: 1em;*/
+  margin-bottom: 5%;
 }
 
 #toggleButton:hover {
