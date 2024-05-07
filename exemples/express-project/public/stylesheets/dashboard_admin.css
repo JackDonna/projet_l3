@@ -264,6 +264,7 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 
 .search {
     width: max-content;
+    max-width: 50%;
     display: flex;
     align-items: center;
     margin-left: 15%;
