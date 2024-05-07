@@ -93,13 +93,22 @@ img {
 #boite_event {
   height: 100%;
   width: 100%;
-  display: grid; /*  /!\ Pas de display Flex quand ça ne sert à rien /!\   */
+  /*display: grid; /*  /!\ Pas de display Flex quand ça ne sert à rien /!\   */
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
-  overflow: auto;
-  overflow-x: hidden;
+  /*overflow: auto;
+  overflow-x: hidden;*/
+  overflow: scroll;
+  /*padding: 1em;*/
   /*margin-top: 1em;*/
+  /*margin-top: 10%;*/
+  padding-top: 200px;
+}
+
+.box_absence:first-child {
+  margin-top: 100px;
 }
 
 .box_absence {
@@ -110,8 +119,8 @@ img {
   height: 100%;
   width: 75%;
   background: whitesmoke;
-  margin-bottom: 30px;
-  padding: 0 15px;
+  margin-bottom: 10px;
+  padding: 1em;
   box-shadow: 10 10 10px rgba(0, 0, 0);
   cursor: pointer;
   transition: 0.2s;
@@ -120,7 +129,7 @@ img {
 .box_absence p {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   font-size: 15px;
 }
 
@@ -187,7 +196,7 @@ button {
   flex-direction: column;
   border: #11b4bd 1px solid;
   border-radius: 1rem;
-  background-color: rgba(0,0,0,0.1);
+  background-color: #F6F6F6;
   padding-top: 1em;
   padding-bottom: 1em;
   color : #11b4bd;
