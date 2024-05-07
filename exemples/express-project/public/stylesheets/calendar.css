@@ -1,15 +1,21 @@
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Varela Round", sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  color: #11b4bd;
 }
 
 main {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#nom_prof {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #result {
@@ -22,13 +28,13 @@ main {
 }
 
 #html5-qrcode-button-camera-permission {
-  background-color: cornflowerblue;
+  background-color: #11b4bd;
   padding: 1em;
   border: none;
   border-radius: 10px;
 }
 #html5-qrcode-button-camera-start {
-  background-color: cornflowerblue;
+  background-color: #11b4bd;
   padding: 1em;
   border: none;
   border-radius: 10px;
@@ -42,10 +48,10 @@ main {
 #scan_qr_code {
   z-index: 1;
   position: fixed;
-  bottom: 2%;
+  bottom: 15%;
   right: 2%;
   padding: 1em 2em;
-  background-color: cornflowerblue;
+  background-color: #11b4bd;
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -53,6 +59,9 @@ main {
   align-items: center;
   justify-content: center;
   transition: 0.2s;
+  /*
+  display: none;
+   */
 }
 
 #scan_qr_code:hover{

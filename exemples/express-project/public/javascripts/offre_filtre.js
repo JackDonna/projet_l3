@@ -9,6 +9,13 @@ const boite = document.getElementById("boite_event");
 // ----------------------------------------------------------------------------------------------------------------------------/
 
 let dejaAffiche = {};
+let dateFilter = null;
+let classeFilter = null;
+let matiereFilter = null;
+let Originaljson = [];
+let matieres = [];
+let classes = [];
+let filter = [];
 
 // ----------------------------------------------------------------------------------------------------------------------------//
 // --- FUNCTIONS --------------------------------------------------------------------------------------------------------------//
@@ -53,14 +60,58 @@ function confirmerAvantSuppression(p) {
     }
 }
 
+function drawBox(evenement) {
+    console.log(evenement);
+    // Crée un paragraphe pour chaque donnée
+    let p = document.createElement("p");
+    p.classList.add("box_absence");
+    // Affecte la valeur de chaque clé à chaque paragraphe
+    p.innerHTML = `
+        <p><span class="cle">Date : </span>${new Date(evenement.date.split("T", 1)).toLocaleDateString()}</p>
+        <p><span class="cle">Heure de début : </span>${evenement.start.slice(0, -3).replace(":", "h")}</p>
+        <p><span class="cle">Heure de fin : </span>${evenement.end.slice(0, -3).replace(":", "h")}</p>
+        <p><span class="cle">Professeur : </span>${evenement.nom} ${evenement.prenom}</p>
+        <p class="matiere_${evenement.id_mat}" ><span class="cle }">Matière : </span>${evenement.matiere}</p>
+        <p class="classe_${evenement.id_abs}" ><span class="cle }">Classe : </span>${evenement.class}</p>
+     `;
+    // Crée un bouton pour accepter l'offre
+    let boutonV = document.createElement("button");
+    boutonV.innerHTML = "✅​";
+    boutonV.onclick = function () {
+        confirmerAvantSuppression(p); // Afficher la confirmation avant de supprimer
+        axios.post("/sql//proposition/new_proposition", { teacherID: evenement.id_ens, absenceID: evenement.id_abs }).then((response) => {
+            console.log(response);
+        });
+    };
+    // Crée un bouton pour supprimer l'offre
+    let boutonX = document.createElement("button");
+    boutonX.innerHTML = "❌​";
+    boutonX.onclick = function () {
+        confirmerAvantSuppression(p); // Afficher la confirmation avant de supprimer
+        axios.post("/sql/diffusion/deleteTeacher", { teacherID: evenement.id_ens, absenceID: evenement.id_abs });
+    };
+    let divButtons = document.createElement("div");
+    divButtons.classList.add("divButtons");
+    divButtons.appendChild(boutonX);
+    divButtons.appendChild(boutonV);
+
+    // Ajoute le paragraphe à la boite
+    p.appendChild(divButtons);
+    boite.appendChild(p);
+    // Marque l'événement comme déjà affiché
+    dejaAffiche[JSON.stringify(evenement)] = true;
+}
+
 /**
  * function add absence in GUI by the APi RDP
  */
 async function print_absence() {
-    let json = await axios.get("/sql/absence/get_available_absence").then((response) => {
-        console.log(response.data);
-        let json = response.data;
-        console.log(json);
+    let json = await axios.get("/sql/diffusion/getMyDiffusion").then((response) => {
+        Originaljson = response.data;
+        let json = changeDataFilter(filter, Originaljson);
+        drawFilter();
+        boite.innerHTML = "";
+        dejaAffiche = {};
         for (let i = 0; i < json.length; i++) {
             let evenement = json[i];
 
@@ -68,45 +119,122 @@ async function print_absence() {
             if (dejaAffiche[JSON.stringify(evenement)]) {
                 continue; // Passer à la prochaine itération si l'événement existe déjà
             }
-
-            // Crée un paragraphe pour chaque donnée
-            let p = document.createElement("p");
-            p.classList.add("box_absence");
-
-            // Affecte la valeur de chaque clé à chaque paragraphe
-            console.log(evenement);
-            p.innerHTML = `
-            Motif : ${evenement.motif}<br>
-            Date : ${evenement.date.split("T", 1)}<br>
-            Heure du début :${evenement.heure_debut}<br>
-            Heure de fin : ${evenement.heure_fin}<br>
-            Professeur : ${evenement.nom} ${evenement.prenom}
-         `;
-
-            // Crée un bouton pour cacher la boîte
-            let boutonV = document.createElement("button");
-            boutonV.innerHTML = "✅​";
-            boutonV.onclick = function () {
-                confirmerAvantSuppression(p); // Afficher la confirmation avant de supprimer
-            };
-
-            // Crée un bouton pour cacher la boîte
-            let boutonX = document.createElement("button");
-            boutonX.innerHTML = "❌​";
-            boutonX.onclick = function () {
-                confirmerAvantSuppression(p); // Afficher la confirmation avant de supprimer
-            };
-
-            p.appendChild(boutonV);
-            p.appendChild(boutonX);
-
-            // Ajoute le paragraphe à la boite
-            boite.appendChild(p);
-
-            // Marque l'événement comme déjà affiché
-            dejaAffiche[JSON.stringify(evenement)] = true;
+            drawBox(evenement);
         }
     });
+}
+// ----------------------------------------------------------------------------------------------------------------------------//
+// --- PROF FILTERS -----------------------------------------------------------------------------------------------------------//
+// ----------------------------------------------------------------------------------------------------------------------------//
+
+// Récupérer le conteneur des filtres et le bouton
+const filterContainer = document.getElementById("filterContainer");
+const toggleButton = document.getElementById("toggleButton");
+
+// Fonction pour basculer l'affichage du conteneur
+function toggleFilters() {
+    if (filterContainer.style.display === "none" || !filterContainer.style.display) {
+        filterContainer.style.display = "flex";
+        toggleButton.textContent = "Masquer les filtres";
+    } else {
+        filterContainer.style.display = "none";
+        toggleButton.textContent = "Afficher les filtres";
+    }
+}
+
+// Attacher l'événement click au bouton pour basculer l'affichage
+toggleButton.addEventListener("click", toggleFilters);
+
+const dateSelect = document.getElementById("dateSelect");
+const classSelect = document.getElementById("classSelect");
+const subjectSelect = document.getElementById("subjectSelect");
+const selectedFilters = document.getElementById("selectedFilters");
+
+function updateSelection() {
+    const date = dateSelect.value;
+    const classValue = classSelect.value;
+    const subjectValue = subjectSelect.value;
+
+    let resultText = "Sélection : ";
+    if (date) {
+        resultText += ` ${date}, `;
+        filter = ["date", new Date(date)];
+    }
+
+    if (classValue) {
+        resultText += ` ${classValue}, `;
+        filter = ["classe", classValue];
+    }
+
+    if (subjectValue) {
+        resultText += ` ${subjectValue}, `;
+        filter = ["matière", subjectValue];
+    }
+
+    selectedFilters.textContent = resultText.slice(0, -2); // Remove trailing comma and space
+}
+
+// Event listeners to update selection when a filter is changed
+dateSelect.addEventListener("change", updateSelection);
+dateSelect.addEventListener("change", print_absence);
+classSelect.addEventListener("change", updateSelection);
+classSelect.addEventListener("change", print_absence);
+subjectSelect.addEventListener("change", updateSelection);
+subjectSelect.addEventListener("change", print_absence);
+
+// Fonction pour vérifier si un élément n est présent dans le JSON
+function elementPresentDansJSON(n, json) {
+    const valeurs = Object.values(json);
+    return valeurs.some((objet) => objet === n);
+}
+
+function changeDataFilter(filter, data) {
+    let res = data;
+    if (filter[0] == "classe") {
+        res = data.filter((e) => e.class == filter[1]);
+    }
+    if (filter[0] == "matière") {
+        res = res.filter((e) => e.matiere == filter[1]);
+    }
+    if (filter[0] == "date") {
+        console.log(filter[1].toLocaleDateString());
+        console.log("date");
+        res = res.filter((e) => new Date(e.date) == filter[1]);
+    }
+    return res;
+}
+
+function drawFilter() {
+    if (matieres.length == 0) {
+        for (let i = 0; i < Originaljson.length; i++) {
+            let evenement = Originaljson[i];
+            if (!matieres.includes(evenement.matiere)) {
+                matieres.push(evenement.matiere);
+            }
+        }
+        for (let i = 0; i < matieres.length; i++) {
+            let mat = matieres[i];
+            let op = document.createElement("option");
+            op.value = mat;
+            op.innerHTML = mat;
+            subjectSelect.add(op);
+        }
+    }
+    if (classes.length == 0) {
+        for (let i = 0; i < Originaljson.length; i++) {
+            let evenement = Originaljson[i];
+            if (!classes.includes(evenement.class)) {
+                classes.push(evenement.class);
+            }
+        }
+        for (let i = 0; i < classes.length; i++) {
+            let cl = classes[i];
+            let op = document.createElement("option");
+            op.value = cl;
+            op.innerHTML = cl;
+            classSelect.add(op);
+        }
+    }
 }
 
 // ----------------------------------------------------------------------------------------------------------------------------//

@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="manifest" href="javascripts/pwa.webmanifest" />
+    <meta name="theme-color" content="#11B4BD"/>
+    <!--<link rel="manifest" href="javascripts/pwa.webmanifest" />-->
+    <link rel="manifest" href="javascripts/manifest.json" />
     <link rel="apple-touch-icon" href="/assets/icons/icon-96x96.png" />
     <meta name="apple-mobile-web-app-status-bar" content="white" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -27,7 +28,21 @@
     <link rel="stylesheet" href="stylesheets/index.css" />
   </head>
   <body>
-    Bonjour M. <%= nom %>
+    <header>
+      <a href="#0"
+      ><img
+                  src="assets/icons/settings_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="settings"
+          /></a>
+      <a href="/logout"
+      ><img
+            src="assets/icons/logout_24dp_FILL0_wght400_GRAD0_opsz24.svg"
+            alt="logout"
+        /></a>
+  </header>
+  <hr>
+    <h3 id="nom_prof">Bonjour M. <%= nom %></h3>
+    
     <main>
       <div id="scan_code" class="hide">
         <span id="close_scanner">X</span>
@@ -42,8 +57,6 @@
     <div id="calendar"></div>
     <button id="scan_qr_code"><p>+</p></button>
 
-    <a href="/logout">Se deconnecter</a>
-
     <div id="add_absence" class="hide">
       <p id="close_form">X</p>
       <input class="start_absence" type="time" />
@@ -53,7 +66,7 @@
     </div>
 
     <div class="loading hide">
-      <p>Chargement de votre emploie du temps <br> <i> Cela peut prendre environs 1 minute</i></p>
+      <p>Chargement de votre emploi du temps <br> <i> Cela peut prendre environs 1 minute</i></p>
     </div>
 
     <script src="javascripts/calendar.js" type="module"></script>

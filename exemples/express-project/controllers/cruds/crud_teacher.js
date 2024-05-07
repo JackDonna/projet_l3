@@ -1,7 +1,13 @@
-const pool = require("../database/db");
+const mysql = require("mysql");
 const fs = require("fs");
+const conf = JSON.parse(
+    fs.readFileSync("controllers/config/db_config.json", "utf-8")
+);
+const pool = mysql.createPool(conf);
 const axios = require("axios");
-const sql_config = JSON.parse(fs.readFileSync("controllers/config/sql_config.json", "utf-8"));
+const sql_config = JSON.parse(
+    fs.readFileSync("controllers/config/sql_config.json", "utf-8")
+);
 const SQL = sql_config.sql;
 const Session = require("../utils/session");
 const { sendVerificationMailLocal } = require(__dirname + "/crud_mail");
@@ -269,7 +275,10 @@ const isAdministratorExistByMailPasswordSQL = (mail, password, callback) => {
  * @param {function} callback - The callback function to handle the result.
  * @return {void}
  */
-const getUnavailableTeachersByEtablishementSQL = (idEtablishement, callback) => {
+const getUnavailableTeachersByEtablishementSQL = (
+    idEtablishement,
+    callback
+) => {
     pool.getConnection((err, db) => {
         if (err) callback(err, null);
         db.query(
@@ -352,27 +361,35 @@ const signUP = (req, res, callback) => {
         isIdentificationExistSQL(teacher.id_ens, (err, identification) => {
             if (err) callback(err, null);
             if (teacher != undefined && identification == undefined) {
-                createIdentificationSQL(password, teacher.id_ens, (err, validationNumber) => {
-                    if (err) callback(err, null);
-                    sendVerificationMailLocal(mail, validationNumber, (err, res) => {
-                        if (err) {
-                            console.error(err);
-                        }
-                    });
-                    Session.createSession(
-                        req,
-                        teacher.nom,
-                        teacher.prenom,
-                        teacher.mail,
-                        teacher.id_eta,
-                        teacher.id_ens,
-                        false,
-                        false,
-                        (err, res) => {
-                            callback(null, true);
-                        }
-                    );
-                });
+                createIdentificationSQL(
+                    password,
+                    teacher.id_ens,
+                    (err, validationNumber) => {
+                        if (err) callback(err, null);
+                        sendVerificationMailLocal(
+                            mail,
+                            validationNumber,
+                            (err, res) => {
+                                if (err) {
+                                    console.error(err);
+                                }
+                            }
+                        );
+                        Session.createSession(
+                            req,
+                            teacher.nom,
+                            teacher.prenom,
+                            teacher.mail,
+                            teacher.id_eta,
+                            teacher.id_ens,
+                            false,
+                            false,
+                            (err, res) => {
+                                callback(null, true);
+                            }
+                        );
+                    }
+                );
             } else {
                 callback(null, false);
             }
@@ -394,24 +411,28 @@ const signIN = (req, res, callback) => {
 
     isTeacherExistsByMailSQL(mail, (err, teacher) => {
         if (teacher != undefined) {
-            isPasswordMatchidentificationSQL(teacher.id_ens, password, (err, identification) => {
-                if (err) callback(err, null);
-                if (identification != undefined) {
-                    Session.createSession(
-                        req,
-                        teacher.nom,
-                        teacher.prenom,
-                        teacher.mail,
-                        teacher.id_eta,
-                        teacher.id_ens,
-                        identification.valide,
-                        false,
-                        (err, res) => {
-                            callback(null, true);
-                        }
-                    );
+            isPasswordMatchidentificationSQL(
+                teacher.id_ens,
+                password,
+                (err, identification) => {
+                    if (err) callback(err, null);
+                    if (identification != undefined) {
+                        Session.createSession(
+                            req,
+                            teacher.nom,
+                            teacher.prenom,
+                            teacher.mail,
+                            teacher.id_eta,
+                            teacher.id_ens,
+                            identification.valide,
+                            false,
+                            (err, res) => {
+                                callback(null, true);
+                            }
+                        );
+                    }
                 }
-            });
+            );
         } else {
             callback(null, false);
         }
@@ -427,8 +448,8 @@ const signIN = (req, res, callback) => {
  * @return {void}
  */
 const signINAdministrator = (req, res, callback) => {
-    const mail = req.body.mail;
-    const password = req.body.password;
+    const mail = req.params.mail;
+    const password = req.params.password;
 
     isAdministratorExistByMailPasswordSQL(mail, password, (err, admin) => {
         if (err) callback(err, null);
@@ -480,10 +501,12 @@ const validateTeacher = (req, res, callback) => {
  */
 const getYourUnaivalableTeacher = (req, res, callback) => {
     const idEtablishement = req.session.idEtablishement;
-
-    getUnavailableTeachersByEtablishementSQL(idEtablishement, (err, teachers) => {
-        callback(err, teachers);
-    });
+    getUnavailableTeachersByEtablishementSQL(
+        idEtablishement,
+        (err, teachers) => {
+            callback(err, teachers);
+        }
+    );
 };
 
 /**

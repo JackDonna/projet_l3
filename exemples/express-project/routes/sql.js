@@ -7,6 +7,7 @@ const event_controller = require("../controllers/event_controller");
 const etab_controller = require("../controllers/etablishment_controller");
 const absence_controller = require("../controllers/absence_controller");
 const proposition_controller = require("../controllers/proposition_controller");
+const diffusion_controller = require("../controllers/diffusion_controller");
 
 // ------------------------------------------- TEACHER CONTROLLERS ---------------------------------------- //
 
@@ -33,13 +34,19 @@ router.delete("/event/delete/:id", event_controller.event_delete_get);
 // ------------------------------------------ ABSENCES CONTROLLERS --------------------------------------- //
 // router.get("/abs/list/:debut/:fin", absence_controller.list_absence);
 router.post("/absence/insert", absence_controller.insertAbsenceREQUEST);
-router.get("/absence/get_available_absence", absence_controller.getYourAbsenceREQUEST);
 router.post("/absence/filtre", absence_controller.spreadAbsenceREQUEST);
-
+router.get("/absence/getYourAbsences", absence_controller.getYourAbsencesREQUEST);
 // ------------------------------------------ PROPOSITION CONTROLLERS ------------------------------------ //
 // ---- NOT IMPLEMENT YET ------ //
 router.post("/proposition/new_proposition", proposition_controller.insertPropositionREQUEST);
-router.get("/proposition/teacher_on_absence/:abs", proposition_controller.getProposedTeacherREQUEST);
+router.get("/proposition/teacher_on_absence/:absenceID", proposition_controller.getProposedTeacherREQUEST);
 router.post("/proposition/acceptProposition", proposition_controller.acceptPropositionREQUEST);
+router.get("/proposition/getYourReplace/:absenceID", proposition_controller.getYourReplaceREQUEST);
+router.get("/proposition/getTeacherReplace", proposition_controller.getTeacherReplaceREQUEST);
+
+// ------------------------------------------ DIFFUSION CONTROLLERS ------------------------------------- //
+router.post("/diffusion/deleteTeacher", diffusion_controller.deleteTeacherOnDiffusion);
+router.get("/diffusion/diffusionsProvisor/:id_abs", diffusion_controller.diffusionsProvisorREQUEST);
+router.get("/diffusion/getMyDiffusion", diffusion_controller.getMyDiffusionsREQUEST);
 
 module.exports = router;

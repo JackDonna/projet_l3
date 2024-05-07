@@ -1,5 +1,6 @@
 const asyncHandler = require("express-async-handler");
-const { getMyDiffusions } = require(__dirname + "/cruds/crud_diffusion.js");
+const { getMyDiffusions, getDiffusionsProvisor } = require(__dirname +
+    "/cruds/crud_diffusion.js");
 const Session = require(__dirname + "/utils/session.js");
 
 // ----------------------------------- EXPORTS FUNCTIONS CRUDS RESULT -------------------------------- //
@@ -12,7 +13,7 @@ const Session = require(__dirname + "/utils/session.js");
  * @param {Object} req - The request object
  * @param {Object} res - The response object
  */
-exports.getMyDiffusion = asyncHandler((req, res) => {
+exports.getMyDiffusionsREQUEST = asyncHandler((req, res) => {
     Session.pIsValidated(req, res, () => {
         getMyDiffusions(req, res, (err, result) => {
             if (err) {
@@ -22,5 +23,32 @@ exports.getMyDiffusion = asyncHandler((req, res) => {
                 res.send(result);
             }
         });
+    });
+});
+
+/**
+ * Delete a teacher in the diffusion list on a absence.
+ * @param {Object} req - The request object
+ * @param {Object} res - The response object
+ */
+exports.deleteTeacherOnDiffusion = asyncHandler((req, res) => {
+    deleteOnDiffusion(req.body.teacherID, req.body.absenceID, (err, result) => {
+        if (err) {
+            console.error(err);
+            res.sendStatus(500);
+        } else {
+            console.info(result);
+        }
+    });
+});
+
+exports.diffusionsProvisorREQUEST = asyncHandler((req, res) => {
+    getDiffusionsProvisor(req, res, (err, result) => {
+        if (err) {
+            console.error(err);
+            res.sendStatus(500);
+        } else {
+            res.send(result);
+        }
     });
 });

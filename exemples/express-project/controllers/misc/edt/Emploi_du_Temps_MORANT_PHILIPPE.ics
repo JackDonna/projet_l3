@@ -1,0 +1,1891 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID;LANGUAGE=fr:Copyright Index-Education - Index-Education - EDT2024 20
+ 24
+METHOD:PUBLISH
+X-CALSTART:20230904T000000Z
+X-CALEND:20240705T000000Z
+X-WR-CALNAME;LANGUAGE=fr:Emploi du Temps - MORANT PHILIPPE - du 04 septembr
+ e 2023 au 05 juillet 2024
+X-WR-CALDESC;LANGUAGE=fr:Emploi du Temps MORANT PHILIPPE généré par le logi
+ ciel EDT (©INDEX ÉDUCATION) le 15 févr. 2024 - LYCEE VAUGELAS  - semaines 
+ 36 - 27
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-1-20240215T144722Z-Index-Education
+DTSTART:20230906T110000Z
+DTEND:20230906T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-1-20240215T144722Z-Index-Education
+DTSTART:20230904T060000Z
+DTEND:20230904T080000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-2-20240215T144722Z-Index-Education
+DTSTART:20230913T110000Z
+DTEND:20230913T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-2-20240215T144722Z-Index-Education
+DTSTART:20230911T060000Z
+DTEND:20230911T080000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-3-20240215T144722Z-Index-Education
+DTSTART:20230920T110000Z
+DTEND:20230920T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-3-20240215T144722Z-Index-Education
+DTSTART:20230918T060000Z
+DTEND:20230918T080000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-4-20240215T144722Z-Index-Education
+DTSTART:20230927T110000Z
+DTEND:20230927T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-4-20240215T144722Z-Index-Education
+DTSTART:20230925T060000Z
+DTEND:20230925T080000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-5-20240215T144722Z-Index-Education
+DTSTART:20231004T110000Z
+DTEND:20231004T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-5-20240215T144722Z-Index-Education
+DTSTART:20231002T060000Z
+DTEND:20231002T080000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-6-20240215T144722Z-Index-Education
+DTSTART:20231011T110000Z
+DTEND:20231011T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-6-20240215T144722Z-Index-Education
+DTSTART:20231009T060000Z
+DTEND:20231009T080000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20231004T135742Z
+UID:Cours-5453-6-20240215T144722Z-Index-Education
+DTSTART:20231009T120000Z
+DTEND:20231009T140000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - 1MUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : 1M
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : 1MUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-7-20240215T144722Z-Index-Education
+DTSTART:20231018T110000Z
+DTEND:20231018T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20231004T135742Z
+UID:Cours-5453-7-20240215T144722Z-Index-Education
+DTSTART:20231016T120000Z
+DTEND:20231016T140000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - 1MUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : 1M
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : 1MUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-10-20240215T144722Z-Index-Education
+DTSTART:20231108T120000Z
+DTEND:20231108T160000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-10-20240215T144722Z-Index-Education
+DTSTART:20231106T070000Z
+DTEND:20231106T090000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20231004T135742Z
+UID:Cours-5453-10-20240215T144722Z-Index-Education
+DTSTART:20231106T130000Z
+DTEND:20231106T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - 1MUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : 1M
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : 1MUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-11-20240215T144722Z-Index-Education
+DTSTART:20231115T120000Z
+DTEND:20231115T160000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-11-20240215T144722Z-Index-Education
+DTSTART:20231113T070000Z
+DTEND:20231113T090000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20231004T135742Z
+UID:Cours-5453-11-20240215T144722Z-Index-Education
+DTSTART:20231113T130000Z
+DTEND:20231113T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - 1MUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : 1M
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : 1MUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-12-20240215T144722Z-Index-Education
+DTSTART:20231122T120000Z
+DTEND:20231122T160000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-12-20240215T144722Z-Index-Education
+DTSTART:20231120T070000Z
+DTEND:20231120T090000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20231004T135742Z
+UID:Cours-5453-12-20240215T144722Z-Index-Education
+DTSTART:20231120T130000Z
+DTEND:20231120T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - 1MUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : 1M
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : 1MUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-13-20240215T144722Z-Index-Education
+DTSTART:20231129T120000Z
+DTEND:20231129T160000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-13-20240215T144722Z-Index-Education
+DTSTART:20231127T070000Z
+DTEND:20231127T090000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20231004T135742Z
+UID:Cours-5453-13-20240215T144722Z-Index-Education
+DTSTART:20231127T130000Z
+DTEND:20231127T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - 1MUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : 1M
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : 1MUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-14-20240215T144722Z-Index-Education
+DTSTART:20231206T120000Z
+DTEND:20231206T160000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-14-20240215T144722Z-Index-Education
+DTSTART:20231204T070000Z
+DTEND:20231204T090000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20231004T135742Z
+UID:Cours-5453-14-20240215T144722Z-Index-Education
+DTSTART:20231204T130000Z
+DTEND:20231204T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - 1MUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : 1M
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : 1MUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-15-20240215T144722Z-Index-Education
+DTSTART:20231213T120000Z
+DTEND:20231213T160000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-15-20240215T144722Z-Index-Education
+DTSTART:20231211T070000Z
+DTEND:20231211T090000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20231004T135742Z
+UID:Cours-5453-15-20240215T144722Z-Index-Education
+DTSTART:20231211T130000Z
+DTEND:20231211T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - 1MUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : 1M
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : 1MUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-16-20240215T144722Z-Index-Education
+DTSTART:20231220T120000Z
+DTEND:20231220T160000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-16-20240215T144722Z-Index-Education
+DTSTART:20231218T070000Z
+DTEND:20231218T090000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20231004T135742Z
+UID:Cours-5453-16-20240215T144722Z-Index-Education
+DTSTART:20231218T130000Z
+DTEND:20231218T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - 1MUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : 1M
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : 1MUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-19-20240215T144722Z-Index-Education
+DTSTART:20240110T120000Z
+DTEND:20240110T160000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-19-20240215T144722Z-Index-Education
+DTSTART:20240108T070000Z
+DTEND:20240108T090000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20231004T135742Z
+UID:Cours-5453-19-20240215T144722Z-Index-Education
+DTSTART:20240108T130000Z
+DTEND:20240108T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - 1MUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : 1M
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : 1MUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-20-20240215T144722Z-Index-Education
+DTSTART:20240117T120000Z
+DTEND:20240117T160000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-20-20240215T144722Z-Index-Education
+DTSTART:20240115T070000Z
+DTEND:20240115T090000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20231004T135742Z
+UID:Cours-5453-20-20240215T144722Z-Index-Education
+DTSTART:20240115T130000Z
+DTEND:20240115T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - 1MUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : 1M
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : 1MUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-21-20240215T144722Z-Index-Education
+DTSTART:20240124T120000Z
+DTEND:20240124T160000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-21-20240215T144722Z-Index-Education
+DTSTART:20240122T070000Z
+DTEND:20240122T090000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20231004T135742Z
+UID:Cours-5453-21-20240215T144722Z-Index-Education
+DTSTART:20240122T130000Z
+DTEND:20240122T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - 1MUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : 1M
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : 1MUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-22-20240215T144722Z-Index-Education
+DTSTART:20240129T070000Z
+DTEND:20240129T090000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20240123T110906Z
+UID:Cours-7893-22-20240215T144722Z-Index-Education
+DTSTART:20240131T120000Z
+DTEND:20240131T160000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>
+ \, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nParties de 
+ classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;
+ 1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\,
+  &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&g
+ t\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMU
+ SIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQ
+ UE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-23-20240215T144722Z-Index-Education
+DTSTART:20240207T120000Z
+DTEND:20240207T160000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-23-20240215T144722Z-Index-Education
+DTSTART:20240205T070000Z
+DTEND:20240205T090000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20231004T135742Z
+UID:Cours-5453-23-20240215T144722Z-Index-Education
+DTSTART:20240205T130000Z
+DTEND:20240205T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - 1MUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : 1M
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : 1MUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-24-20240215T144722Z-Index-Education
+DTSTART:20240214T120000Z
+DTEND:20240214T160000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-24-20240215T144722Z-Index-Education
+DTSTART:20240212T070000Z
+DTEND:20240212T090000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20231004T135742Z
+UID:Cours-5453-24-20240215T144722Z-Index-Education
+DTSTART:20240212T130000Z
+DTEND:20240212T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - 1MUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : 1M
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : 1MUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-27-20240215T144722Z-Index-Education
+DTSTART:20240306T120000Z
+DTEND:20240306T160000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-27-20240215T144722Z-Index-Education
+DTSTART:20240304T070000Z
+DTEND:20240304T090000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20231004T135742Z
+UID:Cours-5453-27-20240215T144722Z-Index-Education
+DTSTART:20240304T130000Z
+DTEND:20240304T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - 1MUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : 1M
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : 1MUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-28-20240215T144722Z-Index-Education
+DTSTART:20240313T120000Z
+DTEND:20240313T160000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-28-20240215T144722Z-Index-Education
+DTSTART:20240311T070000Z
+DTEND:20240311T090000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20231004T135742Z
+UID:Cours-5453-28-20240215T144722Z-Index-Education
+DTSTART:20240311T130000Z
+DTEND:20240311T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - 1MUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : 1M
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : 1MUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-29-20240215T144722Z-Index-Education
+DTSTART:20240320T120000Z
+DTEND:20240320T160000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-29-20240215T144722Z-Index-Education
+DTSTART:20240318T070000Z
+DTEND:20240318T090000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20231004T135742Z
+UID:Cours-5453-29-20240215T144722Z-Index-Education
+DTSTART:20240318T130000Z
+DTEND:20240318T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - 1MUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : 1M
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : 1MUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-30-20240215T144722Z-Index-Education
+DTSTART:20240327T120000Z
+DTEND:20240327T160000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-30-20240215T144722Z-Index-Education
+DTSTART:20240325T070000Z
+DTEND:20240325T090000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20231004T135742Z
+UID:Cours-5453-30-20240215T144722Z-Index-Education
+DTSTART:20240325T130000Z
+DTEND:20240325T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - 1MUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : 1M
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : 1MUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-31-20240215T144722Z-Index-Education
+DTSTART:20240403T110000Z
+DTEND:20240403T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-32-20240215T144722Z-Index-Education
+DTSTART:20240410T110000Z
+DTEND:20240410T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-32-20240215T144722Z-Index-Education
+DTSTART:20240408T060000Z
+DTEND:20240408T080000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20231004T135742Z
+UID:Cours-5453-32-20240215T144722Z-Index-Education
+DTSTART:20240408T120000Z
+DTEND:20240408T140000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - 1MUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : 1M
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : 1MUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-35-20240215T144722Z-Index-Education
+DTSTART:20240429T060000Z
+DTEND:20240429T080000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20231004T135742Z
+UID:Cours-5453-35-20240215T144722Z-Index-Education
+DTSTART:20240429T120000Z
+DTEND:20240429T140000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - 1MUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : 1M
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : 1MUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-36-20240215T144722Z-Index-Education
+DTSTART:20240506T060000Z
+DTEND:20240506T080000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20231004T135742Z
+UID:Cours-5453-36-20240215T144722Z-Index-Education
+DTSTART:20240506T120000Z
+DTEND:20240506T140000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - 1MUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : 1M
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : 1MUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-37-20240215T144722Z-Index-Education
+DTSTART:20240515T110000Z
+DTEND:20240515T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-37-20240215T144722Z-Index-Education
+DTSTART:20240513T060000Z
+DTEND:20240513T080000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20231004T135742Z
+UID:Cours-5453-37-20240215T144722Z-Index-Education
+DTSTART:20240513T120000Z
+DTEND:20240513T140000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - 1MUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : 1M
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : 1MUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-38-20240215T144722Z-Index-Education
+DTSTART:20240522T110000Z
+DTEND:20240522T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-39-20240215T144722Z-Index-Education
+DTSTART:20240529T110000Z
+DTEND:20240529T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-39-20240215T144722Z-Index-Education
+DTSTART:20240527T060000Z
+DTEND:20240527T080000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20231004T135742Z
+UID:Cours-5453-39-20240215T144722Z-Index-Education
+DTSTART:20240527T120000Z
+DTEND:20240527T140000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - 1MUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : 1M
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : 1MUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-40-20240215T144722Z-Index-Education
+DTSTART:20240605T110000Z
+DTEND:20240605T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-40-20240215T144722Z-Index-Education
+DTSTART:20240603T060000Z
+DTEND:20240603T080000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20231004T135742Z
+UID:Cours-5453-40-20240215T144722Z-Index-Education
+DTSTART:20240603T120000Z
+DTEND:20240603T140000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - 1MUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : 1M
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : 1MUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-41-20240215T144722Z-Index-Education
+DTSTART:20240612T110000Z
+DTEND:20240612T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-41-20240215T144722Z-Index-Education
+DTSTART:20240610T060000Z
+DTEND:20240610T080000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20231004T135742Z
+UID:Cours-5453-41-20240215T144722Z-Index-Education
+DTSTART:20240610T120000Z
+DTEND:20240610T140000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - 1MUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : 1M
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : 1MUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-42-20240215T144722Z-Index-Education
+DTSTART:20240619T110000Z
+DTEND:20240619T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-42-20240215T144722Z-Index-Education
+DTSTART:20240617T060000Z
+DTEND:20240617T080000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20231004T135742Z
+UID:Cours-5453-42-20240215T144722Z-Index-Education
+DTSTART:20240617T120000Z
+DTEND:20240617T140000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - 1MUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : 1M
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : 1MUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-43-20240215T144722Z-Index-Education
+DTSTART:20240626T110000Z
+DTEND:20240626T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-43-20240215T144722Z-Index-Education
+DTSTART:20240624T060000Z
+DTEND:20240624T080000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20231004T135742Z
+UID:Cours-5453-43-20240215T144722Z-Index-Education
+DTSTART:20240624T120000Z
+DTEND:20240624T140000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - 1MUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : 1M
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : 1MUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230903T174731Z
+UID:Cours-3473-44-20240215T144722Z-Index-Education
+DTSTART:20240703T110000Z
+DTEND:20240703T150000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - MMUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>\, <
+ TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : MM
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt
+ \;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : MMUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &
+ lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20230822T095532Z
+UID:Cours-3567-44-20240215T144722Z-Index-Education
+DTSTART:20240701T060000Z
+DTEND:20240701T080000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - TMUSIQ1 - <TMUSIQ1>\, <TMUSIQ1>\, <TMUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : TM
+ USIQ1\nParties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&gt\;\, &lt\;TM
+ USIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : TMUSIQ1<br/>Parties de classe : &lt\;TMUSIQ1&gt\;\, &lt\;TMUSIQ1&
+ gt\;\, &lt\;TMUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Emploi du Temps
+DTSTAMP:20240215T134722Z
+LAST-MODIFIED:20231004T135742Z
+UID:Cours-5453-44-20240215T144722Z-Index-Education
+DTSTART:20240701T120000Z
+DTEND:20240701T140000Z
+SUMMARY;LANGUAGE=fr:MUSIQUE - 1MUSIQ1 - <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\,
+  <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>\, <1MUSIQ1>
+LOCATION;LANGUAGE=fr:H003 - MUSIQUE
+DESCRIPTION;LANGUAGE=fr:Matière : MUSIQUE\nProfesseur : MORANT\nGroupe : 1M
+ USIQ1\nParties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &
+ lt\;1MUSIQ1&gt\;\nSalle : H003 - MUSIQUE\n
+X-ALT-DESC;FMTTYPE=text/html:Matière : MUSIQUE<br/>Professeur : MORANT<br/>
+ Groupe : 1MUSIQ1<br/>Parties de classe : &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&
+ gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1MUSIQ1&gt\;\, &lt\;1M
+ USIQ1&gt\;\, &lt\;1MUSIQ1&gt\;<br/>Salle : H003 - MUSIQUE<br/>
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:EdT
+DTSTAMP:20240215T134722Z
+UID:Ferie-1-20240215T144722Z-Index-Education
+DTSTART;VALUE=DATE:20231022
+DTEND;VALUE=DATE:20231106
+SUMMARY;LANGUAGE=fr:Vacances
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:EdT
+DTSTAMP:20240215T134722Z
+UID:Ferie-2-20240215T144722Z-Index-Education
+DTSTART;VALUE=DATE:20231111
+DTEND;VALUE=DATE:20231112
+SUMMARY;LANGUAGE=fr:Férié
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:EdT
+DTSTAMP:20240215T134722Z
+UID:Ferie-3-20240215T144722Z-Index-Education
+DTSTART;VALUE=DATE:20231224
+DTEND;VALUE=DATE:20240108
+SUMMARY;LANGUAGE=fr:Vacances
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:EdT
+DTSTAMP:20240215T134722Z
+UID:Ferie-4-20240215T144722Z-Index-Education
+DTSTART;VALUE=DATE:20240218
+DTEND;VALUE=DATE:20240304
+SUMMARY;LANGUAGE=fr:Vacances
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:EdT
+DTSTAMP:20240215T134722Z
+UID:Ferie-5-20240215T144722Z-Index-Education
+DTSTART;VALUE=DATE:20240331
+DTEND;VALUE=DATE:20240402
+SUMMARY;LANGUAGE=fr:Vacances
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:EdT
+DTSTAMP:20240215T134722Z
+UID:Ferie-6-20240215T144722Z-Index-Education
+DTSTART;VALUE=DATE:20240414
+DTEND;VALUE=DATE:20240429
+SUMMARY;LANGUAGE=fr:Vacances
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:EdT
+DTSTAMP:20240215T134722Z
+UID:Ferie-7-20240215T144722Z-Index-Education
+DTSTART;VALUE=DATE:20240501
+DTEND;VALUE=DATE:20240502
+SUMMARY;LANGUAGE=fr:Férié
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:EdT
+DTSTAMP:20240215T134722Z
+UID:Ferie-8-20240215T144722Z-Index-Education
+DTSTART;VALUE=DATE:20240508
+DTEND;VALUE=DATE:20240513
+SUMMARY;LANGUAGE=fr:Vacances
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:EdT
+DTSTAMP:20240215T134722Z
+UID:Ferie-9-20240215T144722Z-Index-Education
+DTSTART;VALUE=DATE:20240519
+DTEND;VALUE=DATE:20240521
+SUMMARY;LANGUAGE=fr:Vacances
+END:VEVENT
+END:VCALENDAR

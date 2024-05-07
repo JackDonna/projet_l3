@@ -4,9 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="manifest" href="javascripts/pwa.webmanifest" />
+    <meta name="theme-color" content="#11B4BD"/>
+    <!--<link rel="manifest" href="javascripts/pwa.webmanifest" />-->
+    <link rel="manifest" href="javascripts/manifest.json" />
     <link rel="stylesheet" href="stylesheets/sign_in.css" />
     <title>connexion</title>
+    <script>
+      window.addEventListener('load', () => {
+        if("serviceWorker" in navigator){
+          navigator.serviceWorker.register('javascripts/service_worker.js')
+        }
+      })
+    </script>
   </head>
 
   <body>
@@ -17,7 +26,8 @@
         <h1>Connexion</h1>
         <input type="email" placeholder="Email" id="form_mail" />
         <input type="password" placeholder="Mot de passe" id="form_password" />
-        <input type="checkbox" id="admin"> Je suis un membre de l'administration
+        <input type="checkbox" id="admin">
+        <p>Je suis un membre de l'administration</p>
         <input class="button" type="submit" value="Connexion" />
       </form>
       <div class="inscription">

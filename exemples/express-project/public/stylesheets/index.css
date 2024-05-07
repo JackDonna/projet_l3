@@ -6,13 +6,14 @@
   margin: 0;
 }
 
-
 html, body {
   /* background: #555; */
+  background: #fff;
   height : 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
   overflow-x: hidden;
+  font-family: "Varela Round", sans-serif;
 }
 
 header {
@@ -28,7 +29,7 @@ hr {
   border: 0;
   height: 1px;
   /* opacity: 0.5; */
-  background: linear-gradient(to right, transparent, #9fccce, transparent);
+  background: linear-gradient(to right, transparent, #11b4bd, transparent);
 }
 
 .container {
@@ -53,7 +54,7 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: #9fccce;
+  background: #11b4bd;
   border-radius: 15px;
   padding: 10px;
   margin: 10px;
@@ -65,7 +66,7 @@ img {
 }
 
 #actualiser {
-  background-color: #9fccce;
+  background-color: #11b4bd;
   border: none;
   height: 2em;
   width: 10%;
@@ -84,41 +85,76 @@ img {
 
 #actualiser:active {
   background-color: #1e1e1e;
-  color: #9fccce;
-  box-shadow: 0 0 0.5rem #9fccce;
+  color: #11b4bd;
+  box-shadow: 0 0 0.5rem #11b4bd;
   transition: 0.2s;
 }
 
 #boite_event {
-   height: 100%;
-   width: 100%;
-   display: grid; /*  /!\ Pas de display Flex quand ça ne sert à rien /!\   */
-   justify-content: center;
-   align-items: center;
-   overflow: auto;
-   overflow-x: hidden;
-   margin-top: 1em;
-}
-
-
-.box_absence {
-
+  height: 100%;
+  width: 100%;
+  /*display: grid; /*  /!\ Pas de display Flex quand ça ne sert à rien /!\   */
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 150px;
-  width: 300px;
+  /*overflow: auto;
+  overflow-x: hidden;*/
+  overflow: scroll;
+  /*padding: 1em;*/
+  /*margin-top: 1em;*/
+  /*margin-top: 10%;*/
+  padding-top: 200px;
+}
+
+.box_absence:first-child {
+  margin-top: 100px;
+}
+
+.box_absence {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  height: 100%;
+  width: 75%;
   background: whitesmoke;
-  margin-bottom: 30px;
-  padding: 15px;
-  border: solid 3px;
-  border-radius: 15px;
+  margin-bottom: 10px;
+  padding: 1em;
+  box-shadow: 10 10 10px rgba(0, 0, 0);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.box_absence p {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  font-size: 15px;
+}
+
+.cle {
+  color: #11b4bd;
 }
 
 button {
-  margin-left : 1em;
   border : none;
+  background: none;
 }
+
+.divButtons {
+  display: flex;
+  justify-content: center;
+  /*align-items: center;*/
+  margin-top: 1%;
+  width: 100%;
+}
+
+.divButtons button {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
 /* Animation de montée */
 @keyframes slide-up {
   0% {
@@ -147,4 +183,101 @@ button {
 /* Ajout de la classe pour l'animation de fondu */
 .fade-out {
   animation: fade-out 0.5s ease;
+}
+
+
+/* Menu déroulant pour les filtres */
+#filterContainer {
+  display: none;
+  margin: auto;
+  width: 96%;
+  justify-content: center;
+  align-items: self-start;
+  flex-direction: column;
+  border: #11b4bd 1px solid;
+  border-radius: 1rem;
+  background-color: #F6F6F6;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  color : #11b4bd;
+  position: fixed;
+  top: 15%;
+  left: 2%;
+}
+
+.dropdown,
+.result{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5em 1em;
+  width: 90%;
+}
+
+.dropdown select {
+  padding: 5px;
+  font-size: 16px;
+}
+
+select {
+  margin-bottom: 0.25em;
+}
+
+/* Bouton du menu déroulant du filtre */
+/* Bouton pour montrer/cacher le conteneur des filtres */
+#toggleButton {
+  padding: 10px;
+  background-color: #11b4bd;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  /*margin-right: 1em;*/
+  margin-bottom: 5%;
+  position: fixed;
+  top: 10%;
+  left: 2%;
+  width: 96%;
+}
+
+#toggleButton:hover {
+  background-color: #11b4bd;
+}
+
+#container_remplacement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box_remplacement {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  height: 100%;
+  width: 75%;
+  background: whitesmoke;
+  margin-bottom: 30px;
+  padding: 0 15px;
+  box-shadow: 10 10 10px rgba(0, 0, 0);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.box_remplacement p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+
+.cle {
+  color: #11b4bd;
+}
+
+@media only screen and (min-width : 431px) {
+  #filterContainer, #toggleButton {
+    width : 20%;
+  }
 }

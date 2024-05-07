@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="manifest" href="javascripts/pwa.webmanifest" />
+      <meta name="theme-color" content="#11B4BD"/>
+      <!--<link rel="manifest" href="javascripts/pwa.webmanifest" />-->
+      <link rel="manifest" href="javascripts/manifest.json" />
     <link rel="stylesheet" href="stylesheets/index.css" />
+    <link rel="icon" id="icon" href="assets/icons/logo_RDP_512x512.ico">
 
     <title>RDP</title>
   </head>
@@ -17,17 +20,59 @@
           src="assets/icons/settings_FILL0_wght400_GRAD0_opsz24.svg"
           alt="settings"
       /></a>
-      <a href="#1"
+      <a href="/logout"
         ><img
-          src="assets/icons/account_circle_FILL0_wght400_GRAD0_opsz24.svg"
-          alt="account"
+          src="assets/icons/logout_24dp_FILL0_wght400_GRAD0_opsz24.svg"
+          alt="logout"
       /></a>
+      <!--   
+        src="assets/icons/account_circle_FILL0_wght400_GRAD0_opsz24.svg"
+          alt="account"
+      -->
     </header>
     <hr />
-    <div id="boite_event"></div>
-    <div class="container"></div>
 
-    <a href="/logout">Se deconnecter</a>
+    <!--====================================-->
+    <!--      menu déroulant du filtre      -->
+    <!--====================================-->
+
+    <!-- Bouton pour basculer l'affichage des filtres -->
+    <button id="toggleButton">Afficher les filtres</button>
+
+    <div id ="filterContainer">
+      <div class="dropdown" id="dateDropdown">
+          <label for="dateSelect">Date:</label>
+          <input type="date" id="dateSelect">
+      </div>
+  
+      <div class="dropdown" id="classDropdown">
+          <label for="classSelect">Classe:</label>
+          <select id="classSelect">
+              <option value="">Sélectionnez une classe</option>
+          </select>
+      </div>
+  
+      <div class="dropdown" id="subjectDropdown">
+          <label for="subjectSelect">Matière:</label>
+          <select id="subjectSelect">
+              <option value="">Sélectionnez une matière</option>
+          </select>
+      </div>
+        
+      <div class="result" id="selectedFilters">
+      Sélection : 
+      </div>
+   </div>
+
+    
+
+    <div class="container"></div>
+    <div id="boite_event"></div>
+
+    <!--
+      <a href="/logout">Se deconnecter</a>
+    -->
+    
     <%- include('footer') %>
 
 

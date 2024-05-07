@@ -87,6 +87,8 @@ exports.signUPREQUEST = asyncHandler((req, res) => {
  * @param {Object} res - The response object.
  */
 exports.signINAdministratorREQUEST = asyncHandler((req, res) => {
+    console.log("oui");
+    console.log(req.body);
     signINAdministrator(req, res, (err, result) => {
         if (err) {
             console.error(err);

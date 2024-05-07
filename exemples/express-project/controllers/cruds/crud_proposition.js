@@ -1,5 +1,7 @@
-const pool = require("../database/db");
+const mysql = require("mysql");
 const fs = require("fs");
+const conf = JSON.parse(fs.readFileSync("controllers/config/db_config.json", "utf-8"));
+const pool = mysql.createPool(conf);
 const sql_conf_file = JSON.parse(fs.readFileSync("controllers/config/sql_config.json", "utf-8"));
 const SQL = sql_conf_file.sql;
 
@@ -46,8 +48,8 @@ const getProposedTeacherSQL = (absenceId, callback) => {
                 values: [absenceId],
             },
             (err, rows, fields) => {
-                if (err) callback(err, null);
-                callback(null, rows);
+                db.release();
+                callback(err, rows);
             }
         );
     });
@@ -77,6 +79,46 @@ const insertAcceptedPropositionSQL = (teacherID, propositionID, callback) => {
     });
 };
 
+/**
+ * Get the SQL for your replacement based on the establishment ID.
+ *
+ * @param {type} etablishementID - The ID of the establishment
+ * @param {type} callback - The callback function
+ * @return {type} description of return value
+ */
+const getYourReplaceSQL = (etablishementID, callback) => {
+    pool.getConnection((err, db) => {
+        if (err) callback(err, null);
+        db.query(
+            {
+                sql: SQL.select.yourReplace,
+                timeout: 10000,
+                values: [etablishementID],
+            },
+            (err, rows, fields) => {
+                db.release();
+                callback(err, rows);
+            }
+        );
+    });
+};
+
+const getTeacherReplaceSQL = (teacherID, callback) => {
+    pool.getConnection((err, db) => {
+        db.query(
+            {
+                sql: SQL.select.teacherReplace,
+                timeout: 10000,
+                values: [teacherID],
+            },
+            (err, rows, fields) => {
+                db.release();
+                callback(err, rows);
+            }
+        );
+    });
+};
+
 // -------------------------------------------------- MAINS FUNCTIONS ------------------------------------------------ //
 
 /**
@@ -88,7 +130,7 @@ const insertAcceptedPropositionSQL = (teacherID, propositionID, callback) => {
  * @return {void}
  */
 const insertProposition = (req, res, callback) => {
-    const teacherID = req.body.teacherId;
+    const teacherID = req.session.id_ens;
     const absenceID = req.body.absenceID;
 
     insertPropositionSQL(teacherID, absenceID, (err, result) => {
@@ -105,9 +147,10 @@ const insertProposition = (req, res, callback) => {
  * @return {void}
  */
 const getProposedTeacher = (req, res, callback) => {
-    const absenceID = req.params.abs;
+    const absenceID = req.params.absenceID;
+    console.log(absenceID);
 
-    PropositionOnAbsence(absenceID, (err, result) => {
+    getProposedTeacherSQL(absenceID, (err, result) => {
         callback(err, result);
     });
 };
@@ -121,6 +164,26 @@ const acceptProposition = (req, res, callback) => {
     });
 };
 
+const getYourReplace = (req, res, callback) => {
+    const absenceID = req.params.absenceID;
+
+    getYourReplaceSQL(absenceID, (err, result) => {
+        callback(err, result);
+    });
+};
+
+const getTeacherReplace = (req, res, callback) => {
+    const teacherID = req.session.id_ens;
+    getTeacherReplaceSQL(teacherID, (err, result) => {
+        callback(err, result);
+    });
+};
 // -------------------------------------------------- EXPORTS -------------------------------------------------------- //
 
-module.exports = { insertProposition, getProposedTeacher, acceptProposition };
+module.exports = {
+    insertProposition,
+    getProposedTeacher,
+    acceptProposition,
+    getYourReplace,
+    getTeacherReplace,
+};

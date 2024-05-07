@@ -1,271 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="manifest" href="javascripts/pwa.webmanifest" />
-    <link rel="stylesheet" href="stylesheets/dashboard_admin.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,200" />
-    <title>dashboard admin</title>
-  </head>
-  <body>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <div class="header">
-      <span class="material-symbols-outlined logout" onclick="logout()">logout</span>
-    </div>
-    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" />
-    <label for="openSidebarMenu" class="sidebarIconToggle">
-      <div class="spinner diagonal part-1"></div>
-      <div class="spinner horizontal"></div>
-      <div class="spinner diagonal part-2"></div>
-    </label>
-    <div id="sidebarMenu">
-      <ul class="sidebarMenuInner">
-        <li id="absence">
-          <p>Absences</p>
-        </li>
-        <li id="list_diff">
-          <p>Liste de diffusion</p>
-        </li>
-        <li id="propositions">
-          <p>Propositions</p>
-        </li>
-        <li id="remplacements">
-          <p>Remplacements</p>
-        </li>
-      </ul>
-    </div>
-    <div class="container">
-      <div id="container_absence"></div>
-      <div id="absence_logo">
-        <img src="/assets/icons/logo_vaugelas.png" alt="logo_vaugelas"/>
-      </div>
-      <div id="container_list_diff">
-        <h1>Liste de diffusion</h1>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#11B4BD"/>
+        <!--<link rel="manifest" href="javascripts/pwa.webmanifest" />-->
+        <link rel="manifest" href="javascripts/manifest.json" />
+        <link rel="stylesheet" href="stylesheets/dashboard_admin.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,200" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <title>dashboard admin</title>
+        <script>
+            window.addEventListener("load", () => {
+                if ("serviceWorker" in navigator) {
+                    navigator.serviceWorker.register("javascripts/service_worker.js");
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <div class="header">
+            <div class="search">
+                <span class="material-symbols-outlined">search</span>
+                <input class="search-input" type="search" placeholder="Rechercher un professeur ou une date...">
+            </div>
+            <!--<input class="searchBar" placeholder="Rechercher un professeur ou une date..."/>-->
+            <span class="material-symbols-outlined logout" onclick="logout()">logout</span>
+        </div>
+        <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" />
+        <label for="openSidebarMenu" class="sidebarIconToggle">
+            <div class="spinner diagonal part-1"></div>
+            <div class="spinner horizontal"></div>
+            <div class="spinner diagonal part-2"></div>
+        </label>
         <!--
-        <div class="list">
-          <select name="prof">
-            <option value="">--Liste des professeurs--</option>
-            <option value="">M. Alasseur</option>
-            <option value="">M. Perrod</option>
-            <option value="">M. Lebourgt</option>
-            <option value="">Mme. Anton</option>
-            <option value="">Mme. Guillet</option>
-            <option value="">Mme. Bonnard</option>
-          </select>
+        <div id="sidebarMenu">
+            <ul class="sidebarMenuInner">
+                <li id="absence">
+                    <p>Absences</p>
+                </li>
+                <li id="list_diff">
+                    <p>Liste de diffusion</p>
+                </li>
+                <li id="propositions">
+                    <p>Propositions</p>
+                </li>
+                <li id="remplacements">
+                    <p>Remplacements</p>
+                </li>
+            </ul>
         </div>
-        <div class="list">
-          <select name="prof">
-            <option value="">--Liste des professeurs--</option>
-            <option value="">M. Alasseur</option>
-            <option value="">M. Perrod</option>
-            <option value="">M. Lebourgt</option>
-            <option value="">Mme. Anton</option>
-            <option value="">Mme. Guillet</option>
-            <option value="">Mme. Bonnard</option>
-          </select>
-        </div>
-        <div class="list">
-          <select name="prof">
-            <option value="">--Liste des professeurs--</option>
-            <option value="">M. Alasseur</option>
-            <option value="">M. Perrod</option>
-            <option value="">M. Lebourgt</option>
-            <option value="">Mme. Anton</option>
-            <option value="">Mme. Guillet</option>
-            <option value="">Mme. Bonnard</option>
-          </select>
-        </div>
-        <div class="list">
-          <select name="prof">
-            <option value="">--Liste des professeurs--</option>
-            <option value="">M. Alasseur</option>
-            <option value="">M. Perrod</option>
-            <option value="">M. Lebourgt</option>
-            <option value="">Mme. Anton</option>
-            <option value="">Mme. Guillet</option>
-            <option value="">Mme. Bonnard</option>
-          </select>
-        </div>
-        <div class="list">
-          <select name="prof">
-            <option value="">--Liste des professeurs--</option>
-            <option value="">M. Alasseur</option>
-            <option value="">M. Perrod</option>
-            <option value="">M. Lebourgt</option>
-            <option value="">Mme. Anton</option>
-            <option value="">Mme. Guillet</option>
-            <option value="">Mme. Bonnard</option>
-          </select>
-        </div>
-        <div class="list">
-          <select name="prof">
-            <option value="">--Liste des professeurs--</option>
-            <option value="">M. Alasseur</option>
-            <option value="">M. Perrod</option>
-            <option value="">M. Lebourgt</option>
-            <option value="">Mme. Anton</option>
-            <option value="">Mme. Guillet</option>
-            <option value="">Mme. Bonnard</option>
-          </select>
-        </div>
-        <div class="list">
-          <select name="prof">
-            <option value="">--Liste des professeurs--</option>
-            <option value="">M. Alasseur</option>
-            <option value="">M. Perrod</option>
-            <option value="">M. Lebourgt</option>
-            <option value="">Mme. Anton</option>
-            <option value="">Mme. Guillet</option>
-            <option value="">Mme. Bonnard</option>
-          </select>
-        </div>
-        <div class="list">
-          <select name="prof">
-            <option value="">--Liste des professeurs--</option>
-            <option value="">M. Alasseur</option>
-            <option value="">M. Perrod</option>
-            <option value="">M. Lebourgt</option>
-            <option value="">Mme. Anton</option>
-            <option value="">Mme. Guillet</option>
-            <option value="">Mme. Bonnard</option>
-          </select>
-        </div>
-        <div class="list">
-          <select name="prof">
-            <option value="">--Liste des professeurs--</option>
-            <option value="">M. Alasseur</option>
-            <option value="">M. Perrod</option>
-            <option value="">M. Lebourgt</option>
-            <option value="">Mme. Anton</option>
-            <option value="">Mme. Guillet</option>
-            <option value="">Mme. Bonnard</option>
-          </select>
-        </div>
-        -->
-      </div>
-      <div id="container_propositions">
-        <h1>Propositions</h1>
-        <!--
-        <div class="list">
-          <select name="prof">
-            <option value="">--Liste des professeurs--</option>
-            <option value="">M. Alasseur</option>
-            <option value="">Mme. Anton</option>
-          </select>
-        </div>
-        <div class="list">
-          <select name="prof">
-            <option value="">--Liste des professeurs--</option>
-            <option value="">M. Alasseur</option>
-            <option value="">Mme. Anton</option>
-          </select>
-        </div>
-        <div class="list">
-          <select name="prof">
-            <option value="">--Liste des professeurs--</option>
-            <option value="">M. Alasseur</option>
-            <option value="">Mme. Anton</option>
-          </select>
-        </div>
-        <div class="list">
-          <select name="prof">
-            <option value="">--Liste des professeurs--</option>
-            <option value="">M. Alasseur</option>
-            <option value="">Mme. Anton</option>
-          </select>
-        </div>
-        <div class="list">
-          <select name="prof">
-            <option value="">--Liste des professeurs--</option>
-            <option value="">M. Alasseur</option>
-            <option value="">Mme. Anton</option>
-          </select>
-        </div>
-        <div class="list">
-          <select name="prof">
-            <option value="">--Liste des professeurs--</option>
-            <option value="">M. Alasseur</option>
-            <option value="">Mme. Anton</option>
-          </select>
-        </div>
-        <div class="list">
-          <select name="prof">
-            <option value="">--Liste des professeurs--</option>
-            <option value="">M. Alasseur</option>
-            <option value="">Mme. Anton</option>
-          </select>
-        </div>
-        <div class="list">
-          <select name="prof">
-            <option value="">--Liste des professeurs--</option>
-            <option value="">M. Alasseur</option>
-            <option value="">Mme. Anton</option>
-          </select>
-        </div>
-        <div class="list">
-          <select name="prof">
-            <option value="">--Liste des professeurs--</option>
-            <option value="">M. Alasseur</option>
-            <option value="">Mme. Anton</option>
-          </select>
-        </div>
-        -->
-      </div>
-      <div id="container_remplacements">
-        <h1>Remplacements</h1>
-        <!--
-        <div class="list">
-          <select name="prof">
-            <option value="">M. Alasseur</option>
-          </select>
-        </div>
-        <div class="list">
-          <select name="prof">
-            <option value="">M. Alasseur</option>
-          </select>
-        </div>
-        <div class="list">
-          <select name="prof">
-            <option value="">M. Alasseur</option>
-          </select>
-        </div>
-        <div class="list">
-          <select name="prof">
-            <option value="">M. Alasseur</option>
-          </select>
-        </div>
-        <div class="list">
-          <select name="prof">
-            <option value="">M. Alasseur</option>
-          </select>
-        </div>
-        <div class="list">
-          <select name="prof">
-            <option value="">M. Alasseur</option>
-          </select>
-        </div>
-        <div class="list">
-          <select name="prof">
-            <option value="">M. Alasseur</option>
-          </select>
-        </div>
-        <div class="list">
-          <select name="prof">
-            <option value="">M. Alasseur</option>
-          </select>
-        </div>
-        <div class="list">
-          <select name="prof">
-            <option value="">M. Alasseur</option>
-          </select>
-        </div>
-        -->
-      </div>
-    </div>
+      -->
 
-  </body>
-  <script src=""></script>
-  <script src="javascripts/event.js"></script>
+        <div class="container">
+            <div id="absence_logo">
+              <img src="/assets/icons/logo_vaugelas.png" alt="logo_vaugelas" />
+            </div>
+            <div id="container_absence"></div>
+
+            <div class="popUP hide">
+                <div class="popUpContainer">
+                    <h2 class="popUPTitle">Absence</h2>
+                    <p class="popUPCross">X</p>
+                </div>
+                <div class="container_popup">
+                    <div class="propositionList">
+                        <h2 class="propostitionTitle">Propositions :</h2>
+                        <div class="popUPList"></div>
+                    </div>
+                    <div class="remplacementList">
+                        <h2 class="remplacementTitle">Remplacement :</h2>
+                        <div class="popUPList"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popUPDiffusion hide">
+                <div class="popUPDiffusionContainer">
+                    <h2 class="popUPDiffusionTitle">Liste de Diffusion</h2>
+                    <p class="popUPDiffusionCross">X</p>
+                </div>
+
+                <div class="popUPDiffusionList"></div>
+            </div>
+            <div id="container_list_diff"></div>
+        </div>
+    </body>
+    <script src=""></script>
+    <script src="javascripts/event.js"></script>
 </html>
