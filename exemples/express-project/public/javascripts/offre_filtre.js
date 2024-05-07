@@ -15,6 +15,7 @@ let matiereFilter = null;
 let Originaljson = [];
 let matieres = [];
 let classes = [];
+let filter = [];
 
 // ----------------------------------------------------------------------------------------------------------------------------//
 // --- FUNCTIONS --------------------------------------------------------------------------------------------------------------//
@@ -107,7 +108,7 @@ function drawBox(evenement) {
 async function print_absence() {
     let json = await axios.get("/sql/diffusion/getMyDiffusion").then((response) => {
         Originaljson = response.data;
-        let json = changeDataFilter(Originaljson);
+        let json = changeDataFilter(filter, Originaljson);
         drawFilter();
         boite.innerHTML = "";
         dejaAffiche = {};
@@ -157,17 +158,17 @@ function updateSelection() {
     let resultText = "Sélection : ";
     if (date) {
         resultText += ` ${date}, `;
-        dateFilter = new Date(date).toDateString();
+        filter = ["date", new Date(date)];
     }
 
     if (classValue) {
         resultText += ` ${classValue}, `;
-        classeFilter = classValue;
+        filter = ["classe", classValue];
     }
 
     if (subjectValue) {
         resultText += ` ${subjectValue}, `;
-        matiereFilter = subjectSelect;
+        filter = ["matière", subjectValue];
     }
 
     selectedFilters.textContent = resultText.slice(0, -2); // Remove trailing comma and space
@@ -187,30 +188,20 @@ function elementPresentDansJSON(n, json) {
     return valeurs.some((objet) => objet === n);
 }
 
-function changeDataFilter(Jsonfilter) {
-    let resJson = [];
-    for (let i = 0; i < Jsonfilter.length; i++) {
-        let evenement = Jsonfilter[i];
-        if (!elementPresentDansJSON(evenement, resJson)) {
-            if (matiereFilter != null) {
-                if (evenement.matiere == matiereFilter) {
-                    resJson.push(evenement);
-                }
-            }
-            if (classeFilter != null) {
-                if (evenement.classe == classeFilter) {
-                    resJson.push(evenement);
-                }
-            }
-            if (new Date(evenement.date).toDateString() == dateFilter) {
-                resJson.push(evenement);
-            }
-            if (classeFilter == null && matiereFilter == null && dateFilter == null) {
-                resJson.push(evenement);
-            }
-        }
+function changeDataFilter(filter, data) {
+    let res = data;
+    if (filter[0] == "classe") {
+        res = data.filter((e) => e.class == filter[1]);
     }
-    return resJson;
+    if (filter[0] == "matière") {
+        res = res.filter((e) => e.matiere == filter[1]);
+    }
+    if (filter[0] == "date") {
+        console.log(filter[1].toLocaleDateString());
+        console.log("date");
+        res = res.filter((e) => new Date(e.date) == filter[1]);
+    }
+    return res;
 }
 
 function drawFilter() {
