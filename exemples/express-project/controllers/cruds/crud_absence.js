@@ -129,7 +129,7 @@ const scheduleFilter = (absence, teachers, callback) => {
             } else {
                 getLinkContent(db, teacher.enseignant, (err, content) => {
                     if (!(content == undefined || content.length == 0)) {
-                        let array = content.filter((e) => e.date == date && ((e.start > startHour && e.end > startHour) || (e.start < endHour && e.end < endHour)));
+                        let array = content.filter((e) => e.date == date && ((e.start >= startHour && e.end <= startHour) || (e.start <= endHour && e.end >= endHour)));
                         if (array.length == 0) result.push(teacher);
                         u++;
                     } else {

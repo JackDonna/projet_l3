@@ -64,7 +64,6 @@ function success(result) {
     };
     scanner.clear();
     reader.classList.add("hide");
-    loading.classList.remove("hide");
 
     axios
         .post("sql/event/insert_timetable", obj, {

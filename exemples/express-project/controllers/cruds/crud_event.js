@@ -539,8 +539,8 @@ const insertTimetableURL = (req, res, callback) => {
             parseEvents(timetable, req.session.id_ens);
             insertLinkSQL(req.session.id_ens, req.body.url, (err, insertResult) => {
                 if (err) console.error(err);
-                callback(err, timetable);
             });
+            callback(err, timetable);
         });
     });
 };
