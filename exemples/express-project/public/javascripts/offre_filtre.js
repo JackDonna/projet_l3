@@ -133,7 +133,7 @@ const toggleButton = document.getElementById("toggleButton");
 // Fonction pour basculer l'affichage du conteneur
 function toggleFilters() {
     if (filterContainer.style.display === "none" || !filterContainer.style.display) {
-        filterContainer.style.display = "grid";
+        filterContainer.style.display = "flex";
         toggleButton.textContent = "Masquer les filtres";
     } else {
         filterContainer.style.display = "none";

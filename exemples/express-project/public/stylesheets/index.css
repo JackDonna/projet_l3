@@ -180,20 +180,29 @@ button {
 /* Menu déroulant pour les filtres */
 #filterContainer {
   display: none;
-  margin: 20px;
+  margin: auto;
+  width: 96%;
   justify-content: center;
+  align-items: self-start;
+  flex-direction: column;
   border: #11b4bd 1px solid;
   border-radius: 1rem;
   background-color: rgba(0,0,0,0.1);
   padding-top: 1em;
   padding-bottom: 1em;
   color : #11b4bd;
+  position: fixed;
+  top: 15%;
+  left: 2%;
 }
 
-.dropdown {
-  display: inline-block;
-  margin-bottom: 0.5em;
-  margin-right: 20px;
+.dropdown,
+.result{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5em 1em;
+  width: 90%;
 }
 
 .dropdown select {
@@ -201,18 +210,8 @@ button {
   font-size: 16px;
 }
 
-.result {
-  margin-top: 20px;
-  font-size: 18px;
-}
-
 select {
   margin-bottom: 0.25em;
-}
-
-#selectedFilters {
-  margin : 0;
-  padding : 0;
 }
 
 /* Bouton du menu déroulant du filtre */
@@ -226,6 +225,10 @@ select {
   font-size: 16px;
   /*margin-right: 1em;*/
   margin-bottom: 5%;
+  position: fixed;
+  top: 10%;
+  left: 2%;
+  width: 96%;
 }
 
 #toggleButton:hover {
@@ -264,7 +267,7 @@ select {
   color: #11b4bd;
 }
 
-@media only screen and (min-width : 391px) {
+@media only screen and (min-width : 431px) {
   #filterContainer, #toggleButton {
     width : 20%;
   }
