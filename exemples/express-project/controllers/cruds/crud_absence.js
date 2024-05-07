@@ -121,15 +121,12 @@ const scheduleFilter = (absence, teachers, callback) => {
     let result = [];
     let c = 0;
     let u = 0;
-    console.log(absence);
     const { date, endHour, startHour } = absence;
     pool.getConnection((err, db) => {
-        console.log(teachers);
         teachers.forEach((teacher) => {
             if (teacher.enseignant == absence.teacherID) {
                 c++;
             } else {
-                console.log(teacher);
                 getLinkContent(db, teacher.enseignant, (err, content) => {
                     if (!(content == undefined || content.length == 0)) {
                         let array = content.filter((e) => e.date == date && ((e.start > startHour && e.end > startHour) || (e.start < endHour && e.end < endHour)));
@@ -138,9 +135,7 @@ const scheduleFilter = (absence, teachers, callback) => {
                     } else {
                         u++;
                     }
-                    console.log(u + c);
                     if (u + c >= teachers.length) {
-                        console.log(result);
                         db.release();
                         callback(null, result);
                     }
@@ -160,7 +155,6 @@ const scheduleFilter = (absence, teachers, callback) => {
  */
 const matFilter = (pool, absence, callback) => {
     const { date, startHour, endHour, teacherID } = absence;
-    console.log(date, startHour.split(" ")[1], endHour.split(" ")[1], teacherID);
     pool.getConnection((err, db) => {
         db.query(
             {

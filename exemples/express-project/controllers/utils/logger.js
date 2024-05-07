@@ -14,8 +14,8 @@ const REVERSE = "\u001b[7m";
 const HIDDEN = "\u001b[8m";
 const RESET = "\u001b[0m";
 
-const log = (color, type, message, note = "no notes.") => {
-    console.log(`${color}[${type}]${RESET}- \t${message} - [${note}]${RESET}`);
+const log = (color, type, message, note = "") => {
+    console.log(`${color}[${type}] - [${message}] ${note}${RESET}`);
 };
 
 module.exports = {
