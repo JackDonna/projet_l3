@@ -12,8 +12,8 @@ const SQL = sql_config.sql;
 const Teacher = require(__dirname + "/crud_teacher");
 const Session = require("../utils/session.js");
 const e = require("express");
-const { parse } = require("path");
 const Absence = require(__dirname + "/crud_absence");
+const logger = require("../utils/logger.js");
 
 // ------------------------------------------------------------------------------------------------------------------ //
 // --- SUBS FUNCTIONS -------------------------------------------------------------------------------------------- //
@@ -401,7 +401,6 @@ const getTeacherLinkSQL = (db, teacherID, callback) => {
  * @return {void}
  */
 const parseEvents = (events, teacherID) => {
-    console.log("process to the events");
     processEvents(events, teacherID);
 };
 
@@ -440,11 +439,12 @@ const isIgnored = (e, events) => {
  * @return {void}
  */
 const processEvents = (events, teacherID) => {
+    logger.log(logger.BLUE, "START", "Parsing events", `ID : ${teacherID}`);
     let res = "INSERT INTO `Absence`(`motif`, `start`, `end`, `date`, `matiere`, `class`, `teacherID`) VALUES ";
-    let tem = res.length;
     let absence = [];
     let c = 0;
-    let u = 0;
+    let newAbsenceCounter = 0;
+    let oldAbsenceCounter = 0;
     events.forEach((event) => {
         let startHour = new Date(event.start).toLocaleString("sv-SE", {
             timeZone: "Europe/Paris",
@@ -456,7 +456,6 @@ const processEvents = (events, teacherID) => {
             timeZone: "Europe/Paris",
         });
 
-        //let salle = event.description.val.split("Salle : ")[1].split("\n")[0];
         if (event.title.toLowerCase().includes("annulé") && !isIgnored(event, events)) {
             Absence.selectAbsence(date, startHour, endHour, teacherID, (err, result) => {
                 let mat = event.title
@@ -464,95 +463,56 @@ const processEvents = (events, teacherID) => {
                     .substring(0, event.title.split(":")[1].length - 1)
                     .substring(1);
 
-                if (result.length == 0) {
-                    let info = event.description.val;
-                    console.log(event.description.val);
-                    if (info) {
-                        if (info.includes("Groupe")) {
-                            absence.push({
-                                motif: "Annulation",
-                                startHour: startHour,
-                                endHour: endHour,
-                                date: date,
-                                matiere: mat,
-                                teacherID: teacherID,
-                                type: "MAT",
-                            });
+                let absenceObject = {
+                    motif: "Annulation Pronote",
+                    startHour: startHour,
+                    endHour: endHour,
+                    date: date,
+                    matiere: mat,
+                    teacherID: teacherID,
+                };
+
+                let info = event.description.val;
+                if (info) {
+                    if (info.includes("Groupe")) {
+                        if (result.length == 0) {
                             res += `('Annulation', '${startHour}', '${endHour}', '${date}', (select id_mat from Ref_Matiere where libelle_court = '${mat}'), 'Groupe de classe', '${teacherID}'),`;
-                        } else if (info.includes("Classe")) {
-                            absence.push({
-                                motif: "Annulation",
-                                startHour: startHour,
-                                endHour: endHour,
-                                date: date,
-                                matiere: mat,
-                                teacherID: teacherID,
-                                type: "CLASSE",
-                                classe: info.split("Classe : ")[1].split("\n")[0],
-                            });
+                            newAbsenceCounter++;
+                        } else {
+                            oldAbsenceCounter++;
+                        }
+                    } else if (info.includes("Classe")) {
+                        absenceObject.classe = info.split("Classe : ")[1].split("\n")[0];
+                        if (result.length == 0) {
                             res += `('Annulation', '${startHour}', '${endHour}', '${date}', (select id_mat from Ref_Matiere where libelle_court = '${mat}'), ${
                                 info.split("Classe : ")[1].split("\n")[0]
                             }, '${teacherID}'),`;
-                        }
-                    }
-
-                    console.log(c + u + " / " + events.length);
-                } else {
-                    let info = event.description.val;
-                    console.log(event.description.val);
-                    if (info) {
-                        if (info.includes("Groupe")) {
-                            absence.push({
-                                motif: "Annulation",
-                                startHour: startHour,
-                                endHour: endHour,
-                                date: date,
-                                matiere: mat,
-                                teacherID: teacherID,
-                                type: "MAT",
-                            });
-                        } else if (info.includes("Classe")) {
-                            absence.push({
-                                motif: "Annulation",
-                                startHour: startHour,
-                                endHour: endHour,
-                                date: date,
-                                matiere: mat,
-                                teacherID: teacherID,
-                                type: "CLASSE",
-                                classe: info.split("Classe : ")[1].split("\n")[0],
-                            });
+                            newAbsenceCounter++;
+                        } else {
+                            oldAbsenceCounter++;
                         }
                     }
                 }
-                if (c + u >= events.length - 1) {
-                    console.log("cest la fin du parsing");
+                absence.push(absenceObject);
+                if (c >= events.length - 1) {
+                    logger.log(logger.GREEN, "SUCCES", "Parsing events", `New absence : ${newAbsenceCounter} Old absence : ${oldAbsenceCounter}`);
                     pool.getConnection((err, db) => {
                         if (err) console.error(err, null);
-                        if (res.length > tem) {
-                            console.log(res.slice(0, -1));
-                            db.query(
-                                {
-                                    sql: res.slice(0, -1),
-                                    timeout: 10000,
-                                },
-                                (err, rows, fields) => {
-                                    if (err) console.log(err);
-                                    console.log("Absence inserer");
-                                    db.release();
-                                    Absence.spreadAbsences(absence, (err, result) => {
-                                        if (err) console.error(err);
-                                    });
-                                }
-                            );
-                        } else {
-                            Absence.spreadAbsences(absence, (err, result) => {
-                                if (err) console.error(err);
-                            });
-                        }
+                        db.query(
+                            {
+                                sql: res.slice(0, -1),
+                                timeout: 10000,
+                            },
+                            (err, rows, fields) => {
+                                db.release();
+                                Absence.spreadAbsences(absence, (err, result) => {
+                                    if (err) console.error(err);
+                                });
+                            }
+                        );
                     });
                 }
-                u++;
+                c++;
             });
         } else {
             c++;
@@ -633,7 +593,6 @@ const getEventByID = (idEvent, callback) => {
 
 const getLinkContent = (db, teacherID, callback) => {
     getTeacherLinkSQL(db, teacherID, (err, link) => {
-        console.log("LIEN RECUPERER " + link);
         if (link != undefined) {
             downloadTimetableFromURL(link.link, (err, timetable) => {
                 parseEvents(timetable, teacherID);

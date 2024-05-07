@@ -59,7 +59,8 @@ function confirmerAvantSuppression(p) {
     }
 }
 
-function drawBox(evenement){
+function drawBox(evenement) {
+    console.log(evenement);
     // Crée un paragraphe pour chaque donnée
     let p = document.createElement("p");
     p.classList.add("box_absence");
@@ -70,29 +71,29 @@ function drawBox(evenement){
         <p><span class="cle">Heure de fin : </span>${evenement.end.slice(0, -3).replace(":", "h")}</p>
         <p><span class="cle">Professeur : </span>${evenement.nom} ${evenement.prenom}</p>
         <p class="matiere_${evenement.id_mat}" ><span class="cle }">Matière : </span>${evenement.matiere}</p>
-        <p class="classe_${evenement.id_abs}" ><span class="cle }">Classe : </span>${evenement.classe}</p>
+        <p class="classe_${evenement.id_abs}" ><span class="cle }">Classe : </span>${evenement.class}</p>
      `;
     // Crée un bouton pour accepter l'offre
     let boutonV = document.createElement("button");
     boutonV.innerHTML = "✅​";
     boutonV.onclick = function () {
         confirmerAvantSuppression(p); // Afficher la confirmation avant de supprimer
-        axios.post("/sql//proposition/new_proposition", {teacherID: evenement.id_ens, absenceID: evenement.id_abs}).then((response) => {
-            console.log(response)
-        })
+        axios.post("/sql//proposition/new_proposition", { teacherID: evenement.id_ens, absenceID: evenement.id_abs }).then((response) => {
+            console.log(response);
+        });
     };
     // Crée un bouton pour supprimer l'offre
     let boutonX = document.createElement("button");
     boutonX.innerHTML = "❌​";
     boutonX.onclick = function () {
         confirmerAvantSuppression(p); // Afficher la confirmation avant de supprimer
-        axios.post("/sql/diffusion/deleteTeacher", {teacherID: evenement.id_ens, absenceID: evenement.id_abs});
+        axios.post("/sql/diffusion/deleteTeacher", { teacherID: evenement.id_ens, absenceID: evenement.id_abs });
     };
     let divButtons = document.createElement("div");
     divButtons.classList.add("divButtons");
     divButtons.appendChild(boutonX);
     divButtons.appendChild(boutonV);
-    
+
     // Ajoute le paragraphe à la boite
     p.appendChild(divButtons);
     boite.appendChild(p);
@@ -107,8 +108,8 @@ async function print_absence() {
     let json = await axios.get("/sql/diffusion/getMyDiffusion").then((response) => {
         Originaljson = response.data;
         let json = changeDataFilter(Originaljson);
-        drawFilter()
-        boite.innerHTML = '';
+        drawFilter();
+        boite.innerHTML = "";
         dejaAffiche = {};
         for (let i = 0; i < json.length; i++) {
             let evenement = json[i];
@@ -139,7 +140,6 @@ function toggleFilters() {
         toggleButton.textContent = "Afficher les filtres";
     }
 }
-
 
 // Attacher l'événement click au bouton pour basculer l'affichage
 toggleButton.addEventListener("click", toggleFilters);
@@ -184,28 +184,28 @@ subjectSelect.addEventListener("change", print_absence);
 // Fonction pour vérifier si un élément n est présent dans le JSON
 function elementPresentDansJSON(n, json) {
     const valeurs = Object.values(json);
-    return valeurs.some(objet => objet === n);
+    return valeurs.some((objet) => objet === n);
 }
 
-function changeDataFilter(Jsonfilter){
-    let resJson = []
+function changeDataFilter(Jsonfilter) {
+    let resJson = [];
     for (let i = 0; i < Jsonfilter.length; i++) {
         let evenement = Jsonfilter[i];
-        if(!elementPresentDansJSON(evenement, resJson)){
-            if(matiereFilter != null){
-                if(evenement.matiere == matiereFilter){
+        if (!elementPresentDansJSON(evenement, resJson)) {
+            if (matiereFilter != null) {
+                if (evenement.matiere == matiereFilter) {
                     resJson.push(evenement);
                 }
             }
-            if(classeFilter != null){
-                if(evenement.classe == classeFilter){
+            if (classeFilter != null) {
+                if (evenement.classe == classeFilter) {
                     resJson.push(evenement);
                 }
             }
-            if(new Date(evenement.date).toDateString() == dateFilter){
+            if (new Date(evenement.date).toDateString() == dateFilter) {
                 resJson.push(evenement);
             }
-            if(classeFilter == null && matiereFilter == null && dateFilter == null){
+            if (classeFilter == null && matiereFilter == null && dateFilter == null) {
                 resJson.push(evenement);
             }
         }
@@ -213,15 +213,15 @@ function changeDataFilter(Jsonfilter){
     return resJson;
 }
 
-function drawFilter(){
-    if(matieres.length == 0){
+function drawFilter() {
+    if (matieres.length == 0) {
         for (let i = 0; i < Originaljson.length; i++) {
             let evenement = Originaljson[i];
-            if(!matieres.includes(evenement.matiere)){
-                matieres.push(evenement.matiere)
+            if (!matieres.includes(evenement.matiere)) {
+                matieres.push(evenement.matiere);
             }
         }
-        for(let i = 0; i < matieres.length; i++){
+        for (let i = 0; i < matieres.length; i++) {
             let mat = matieres[i];
             let op = document.createElement("option");
             op.value = mat;
@@ -229,14 +229,14 @@ function drawFilter(){
             subjectSelect.add(op);
         }
     }
-    if(classes.length == 0){
+    if (classes.length == 0) {
         for (let i = 0; i < Originaljson.length; i++) {
             let evenement = Originaljson[i];
-            if(!classes.includes(evenement.class)){
-                classes.push(evenement.class)
+            if (!classes.includes(evenement.class)) {
+                classes.push(evenement.class);
             }
         }
-        for(let i = 0; i < classes.length; i++){
+        for (let i = 0; i < classes.length; i++) {
             let cl = classes[i];
             let op = document.createElement("option");
             op.value = cl;
@@ -249,8 +249,6 @@ function drawFilter(){
 // ----------------------------------------------------------------------------------------------------------------------------//
 // --- EVENTES LISTENERS ------------------------------------------------------------------------------------------------------//
 // ----------------------------------------------------------------------------------------------------------------------------//
-
-
 
 // ----------------------------------------------------------------------------------------------------------------------------//
 // --- FUNCTIONS CALLS --------------------------------------------------------------------------------------------------------//
