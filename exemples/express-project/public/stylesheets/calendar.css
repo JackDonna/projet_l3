@@ -1,5 +1,5 @@
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Varela Round", sans-serif;
 }
 
 a {
@@ -10,6 +10,12 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#nom_prof {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #result {
