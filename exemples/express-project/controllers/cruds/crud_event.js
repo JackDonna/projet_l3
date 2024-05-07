@@ -11,7 +11,6 @@ const sql_config = JSON.parse(fs.readFileSync("controllers/config/sql_config.jso
 const SQL = sql_config.sql;
 const Teacher = require(__dirname + "/crud_teacher");
 const Session = require("../utils/session.js");
-const e = require("express");
 const Absence = require(__dirname + "/crud_absence");
 const logger = require("../utils/logger.js");
 

@@ -20,8 +20,6 @@ const close_form = absence_form.querySelector("#close_form");
 // ----GLOBALS VARIABLES ------------------------------------------------------------------------------------------------------//
 // ----------------------------------------------------------------------------------------------------------------------------//
 
-
-
 const scanner = new Html5QrcodeScanner("reader", {
     qrbox: qrboxFunction,
     fps: 60,
@@ -34,7 +32,6 @@ const ec = new EventCalendar(calendar_element, {
     firstDay: 1,
     slotMinTime: "06:00:00",
     slotMaxTime: "21:00:00",
-
 });
 
 var global_event = {};
@@ -67,12 +64,10 @@ function success(result) {
     };
     scanner.clear();
     reader.classList.add("hide");
-    document.getElementById("reader").remove();
     loading.classList.remove("hide");
 
     axios
         .post("sql/event/insert_timetable", obj, {
-
             timeout: 6000000,
         })
         .then((response) => {
@@ -120,26 +115,16 @@ function qrboxFunction(viewfinderWidth, viewfinderHeight) {
  * get the timtable to RDP API
  */
 
-
 function get_timetable() {
     axios.get("sql/event/get_timetable").then((response) => {
         for (let event of response.data) {
             event.start = new Date(event.start);
-            event.end = new Date(event.end);  
-            setTime(event.start);
-            setTime(event.end);
-            ec.addEvent(event)
+            event.end = new Date(event.end);
+            ec.addEvent(event);
         }
     });
 }
 
-function setTime(time) {
-    if(time.getDay() != 1 && (time.getMonth() > 3 && time.getMonth() < 9)) {
-        time.setHours(time.getHours() + 0);
-    }else {
-        time.setHours(time.getHours() + 0);
-    }
-}
 /**
  * resize calendar with the current window size
  */
@@ -156,16 +141,17 @@ function resize_calendar() {
 // ----------------------------------------------------------------------------------------------------------------------------//
 
 get_timetable();
-scanner.render(success, error);
 
 // ----------------------------------------------------------------------------------------------------------------------------//
 // --- EVENTES LISTENERS ------------------------------------------------------------------------------------------------------//
 // ----------------------------------------------------------------------------------------------------------------------------//
 
 scan_button.addEventListener("click", () => {
+    scanner.render(success, error);
     reader.classList.remove("hide");
 });
 close_scanner.addEventListener("click", () => {
+    scanner.clear();
     reader.classList.add("hide");
 });
 
