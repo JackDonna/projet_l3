@@ -71,7 +71,7 @@ function drawBox(evenement) {
         <p><span class="cle">Heure de fin : </span>${evenement.end.slice(0, -3).replace(":", "h")}</p>
         <p><span class="cle">Professeur : </span>${evenement.nom} ${evenement.prenom}</p>
         <p class="matiere_${evenement.id_mat}" ><span class="cle }">Matière : </span>${evenement.matiere}</p>
-        <p class="classe_${evenement.id_abs}" ><span class="cle }">Classe : </span>${evenement.classe}</p>
+        <p class="classe_${evenement.id_abs}" ><span class="cle }">Classe : </span>${evenement.class}</p>
      `;
     // Crée un bouton pour accepter l'offre
     let boutonV = document.createElement("button");
