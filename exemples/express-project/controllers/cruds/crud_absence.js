@@ -2,7 +2,9 @@ const mysql = require("mysql");
 const fs = require("fs");
 const conf = JSON.parse(fs.readFileSync("controllers/config/db_config.json", "utf-8"));
 const pool = mysql.createPool(conf);
-const sql_conf_file = JSON.parse(fs.readFileSync("controllers/config/sql_config.json", "utf-8"));
+const sql_conf_file = JSON.parse(
+    fs.readFileSync("controllers/config/sql_config.json", "utf-8")
+);
 const SQL = sql_conf_file.sql;
 const Diffusion = require(__dirname + "/crud_diffusion");
 const axios = require("axios");
@@ -116,26 +118,40 @@ const getYourAbsencesSQL = (etablishementID, callback) => {
  * @param {function} callback - Callback function to handle the results
  * @return {void}
  */
+
+const normalizeSchedulesHour = (startHour, endHour) => {
+    return [new Date(startHour), new Date(endHour)];
+};
+const scheduleFilterCondition = (e, startHour, endHour) => {
+    return (
+        (new Date(e.start) <= startHour && new Date(e.end) >= startHour) ||
+        (new Date(e.start) <= endHour && new Date(e.end) >= endHour)
+    );
+};
+
+const runTeachersScheduleValidity = (content, teacher, startHour, endHour, outputArray) => {
+    if (!(content == undefined || content.length == 0)) {
+        let array = content.filter((e) => scheduleFilterCondition(e, startHour, endHour));  
+        if (array.length == 0) outputArray.push(teacher);
+    }
+};
+
 const scheduleFilter = (absence, teachers, callback) => {
     if (teachers == undefined || teachers.length == 0) return;
     let result = [];
-    let c = 0;
-    let u = 0;
-    const { date, endHour, startHour } = absence;
+    let teacherCounter = 0;
+    let { startHour, endHour } = absence;
+    [startHour, endHour] = normalizeSchedulesHour(startHour, endHour);
+    normalizeSchedulesHour(startHour, endHour);
     pool.getConnection((err, db) => {
         teachers.forEach((teacher) => {
             if (teacher.enseignant == absence.teacherID) {
-                c++;
+                teacherCounter++;
             } else {
                 getLinkContent(db, teacher.enseignant, (err, content) => {
-                    if (!(content == undefined || content.length == 0)) {
-                        let array = content.filter((e) => e.date == date && ((e.start >= startHour && e.end <= startHour) || (e.start <= endHour && e.end >= endHour)));
-                        if (array.length == 0) result.push(teacher);
-                        u++;
-                    } else {
-                        u++;
-                    }
-                    if (u + c >= teachers.length) {
+                    runTeachersScheduleValidity(content, teacher, startHour, endHour, result);
+                    teacherCounter++;
+                    if (teacherCounter >= teachers.length) {
                         db.release();
                         callback(null, result);
                     }
@@ -176,10 +192,22 @@ const insertAbsenceNewSQL = (start, end, date, teacherID, reason, matiere, callb
             {
                 sql: SQL.insert.absence,
                 timeout: 10000,
-                values: [reason, start, end, date, matiere, teacherID, date, start, end, start, end, teacherID],
+                values: [
+                    reason,
+                    start,
+                    end,
+                    date,
+                    matiere,
+                    teacherID,
+                    date,
+                    start,
+                    end,
+                    start,
+                    end,
+                    teacherID,
+                ],
             },
             (err, rows, fields) => {
-                console.log("reussssssiiii");
                 db.release();
                 callback(err, rows);
             }
@@ -257,7 +285,13 @@ const getYourAbsences = (req, res, callback) => {
  * @return {void} This function does not return a value
  */
 const spreadAbsences = (absences, callback) => {
-    let diffusionEngine = new DiffusionEngine(absences, matFilter, scheduleFilter, classesFilter, pool);
+    let diffusionEngine = new DiffusionEngine(
+        absences,
+        matFilter,
+        scheduleFilter,
+        classesFilter,
+        pool
+    );
 
     diffusionEngine.diffuse((err, result) => {
         callback(err, result);

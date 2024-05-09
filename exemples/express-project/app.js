@@ -18,6 +18,7 @@ const insertClasses = false;
 
 const EVENTS = require("./controllers/cruds/crud_event");
 const insertEvent = false;
+// Import the functions you need from the SDKs you need
 
 if (insertClasses) {
     CLASSES.insertClassesFiles();
