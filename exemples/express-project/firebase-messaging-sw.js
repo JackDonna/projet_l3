@@ -4,5 +4,5 @@ const notificationOptions = {
     icon: "/firebase-logo.png",
 };
 
-self.registration.showNotification(notificationTitle, notificationOptions);
+self.registration.sendNotification(notificationTitle, notificationOptions);
 console.log("send");

@@ -25,7 +25,7 @@ import {
     getMessaging,
     getToken,
 } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-messaging.js";
-import { onBackgroundMessage } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-messaging-sw.js";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -51,8 +51,6 @@ getToken(messaging, {
 })
     .then((currentToken) => {
         if (currentToken) {
-            // Send the token to your server and update the UI if necessary
-            // ...
         } else {
             // Show permission request UI
             console.log("No registration token available. Request permission to generate one.");
