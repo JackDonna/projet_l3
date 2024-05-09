@@ -10,12 +10,21 @@ class DiffusionEngine {
     }
 
     diffuse(callback) {
+        logger.log(logger.BLUE, "START", "Diffusion engine process");
         logger.log(logger.BLUE, "START", "Diffuse absences");
         this.absences.forEach((absence) => {
-            let filter = new Filter(absence, this.matFilter, this.scheduleFilter, this.classesFilter, this.pool);
+            let filter = new Filter(
+                absence,
+                this.matFilter,
+                this.scheduleFilter,
+                this.classesFilter,
+                this.pool
+            );
             filter.filter((err, filterResult) => {
                 let diffuser = new Diffuser(absence, filterResult, this.pool);
-                diffuser.diffuse(callback);
+                if (filterResult.length > 0) diffuser.diffuse(callback);
+                logger.log(logger.YELLOW, "END", "Diffuse absences", "no teachers found");
+                logger.log(logger.GREEN, "SUCCES", "Diffusion engine process");
             });
         });
     }
