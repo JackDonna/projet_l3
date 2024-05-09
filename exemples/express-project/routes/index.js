@@ -1,5 +1,4 @@
 let express = require("express");
-let path = require("path");
 let router = express.Router();
 const {
     is_valide_and_authenticated,
@@ -12,9 +11,6 @@ const {
 } = require("../controllers/utils/session");
 // ---------------------------------------------------------------
 
-router.get("/firebase-messaging-sw.js", function (req, res) {
-    res.sendFile(path.resolve(__dirname + "/../firebase-messaging-sw.js"));
-});
 router.get("/", pIsValidated, (req, res, next) => {
     res.render("index");
 });

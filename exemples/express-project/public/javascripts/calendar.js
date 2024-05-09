@@ -19,61 +19,6 @@ const close_form = absence_form.querySelector("#close_form");
 // ----------------------------------------------------------------------------------------------------------------------------//
 // ----GLOBALS VARIABLES ------------------------------------------------------------------------------------------------------//
 // ----------------------------------------------------------------------------------------------------------------------------//
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
-import {
-    getMessaging,
-    getToken,
-} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-messaging.js";
-import { onBackgroundMessage } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-messaging-sw.js";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-    apiKey: "AIzaSyCOzvsswCcrRK5NN23oxfgUleDMZWaNwfg",
-    authDomain: "rdp-app-3a69f.firebaseapp.com",
-    projectId: "rdp-app-3a69f",
-    storageBucket: "rdp-app-3a69f.appspot.com",
-    messagingSenderId: "217948061515",
-    appId: "1:217948061515:web:a8b171efeb3a0cd47bb2ce",
-    measurementId: "G-8XYWBLJYLH",
-};
-
-// Initialize Firebase
-const fapp = initializeApp(firebaseConfig);
-const analytics = getAnalytics(fapp);
-const messaging = getMessaging(fapp);
-getToken(messaging, {
-    vapidKey:
-        "BGR65wxzminlK4tibzjEUwMYpsr85LDWMv8mw7roN-rM0p_JtJNe_68LYoP6beYcJfcpwuBFENmjfPyvf2w_b5w",
-})
-    .then((currentToken) => {
-        if (currentToken) {
-            // Send the token to your server and update the UI if necessary
-            // ...
-        } else {
-            // Show permission request UI
-            console.log("No registration token available. Request permission to generate one.");
-            // ...
-        }
-    })
-    .catch((err) => {
-        console.log("An error occurred while retrieving token. ", err);
-        // ...
-    });
-
-function requestPermission() {
-    console.log("Requesting permission...");
-    Notification.requestPermission().then((permission) => {
-        if (permission === "granted") {
-            console.log("Notification permission granted.");
-        }
-    });
-}
-
-requestPermission();
 
 const scanner = new Html5QrcodeScanner("reader", {
     qrbox: qrboxFunction,
@@ -210,13 +155,11 @@ close_scanner.addEventListener("click", () => {
 });
 
 submit.addEventListener("click", function () {
-    axios
-        .post("sql/absence/insert/", { id_event: global_event.id, motif: reason.value })
-        .then((response) => {
-            axios.post("sql/absence/filtre/", { ev: global_event }).then((response) => {
-                console.log(response.data);
-            });
+    axios.post("sql/absence/insert/", { id_event: global_event.id, motif: reason.value }).then((response) => {
+        axios.post("sql/absence/filtre/", { ev: global_event }).then((response) => {
+            console.log(response.data);
         });
+    });
 });
 
 close_form.addEventListener("click", () => {
