@@ -69,7 +69,7 @@ let popUP = {
     propositionList: propositionList,
     remplacementList: remplacementList,
 
-    printProposition: (link, id)  => {
+    printProposition(link, id) {
         this.clear();
         axios.get(link + id).then((response) => {
             response.data.forEach((prof) => {
@@ -93,7 +93,7 @@ let popUP = {
         });
     },
 
-    printRemplacement: (link, id) => {
+    printRemplacement(link, id) {
         axios.get(link + id).then((response) => {
             response.data.forEach((prof) => {
                 let infoContainer = document.createElement("div");
@@ -110,14 +110,14 @@ let popUP = {
         });
     },
 
-    display: () => {
+    display() {
         this.parent.classList.remove("hide");
     },
-    hide: () => {
+    hide() {
         this.parent.classList.add("hide");
     },
 
-    clear: () => {
+    clear() {
         this.propositionList.innerHTML = "";
         this.remplacementList.innerHTML = "";
     },
@@ -127,7 +127,7 @@ let popUPDiffusion = {
     parent: popUPDiffusionElement,
     diffusionList: popUPDiffusionList,
 
-    printDiffusion: (link, id) => { 
+    printDiffusion(link, id) { 
         this.clear();
         axios.get("/sql/diffusion/diffusionsProvisor/" + id).then((response) => {
             response.data.forEach((diffusion) => {
@@ -145,14 +145,14 @@ let popUPDiffusion = {
         });
     },
 
-    display: () => {
+    display() {
         this.parent.classList.remove("hide");
     },
-    hide: () => {
+    hide() {
         this.parent.classList.add("hide");
     },
 
-    clear: () => {
+    clear() {
         this.diffusionList.innerHTML = "";
     },
 };
@@ -164,7 +164,7 @@ let list = {
     seen: [],
     searchBar: searchBar,
 
-    drawList: () => {
+    drawList() {
         this.seen = [];
         affichage_absence.innerHTML = "";
         affichage_list_diff.innerHTML = "";
@@ -182,7 +182,7 @@ let list = {
                     <p><span class="cle">Professeur : </span>${evenement.nom} ${evenement.prenom}</p>
                     <p><span class="cle">Matière : </span>${truncateString(evenement.libelle_court, 33)}</p>
                     <p class="classe_${evenement.id_abs}" ><span class="cle 
-                    }">Classe : </span>${evenement.classe}</p>
+                    }">Classe : </span>${evenement.class}</p>
                     <p><span class="cle">Motif : </span>${evenement.motif}</p>
                 `;
 
@@ -208,7 +208,7 @@ let list = {
         });
     },
 
-    search: (string) => {
+    search(string) {
         this.searched = this.data.filter(
             (absence) =>
                 new Date(absence.date).toLocaleDateString().includes(string.toLowerCase()) ||
@@ -217,7 +217,7 @@ let list = {
         );
         this.drawList();
     },
-    init: () => {
+    init() {
         axios.get("/sql/teacher/getUnavailableTeachers").then((response) => {
             this.data = response.data;
             this.searched = response.data;
