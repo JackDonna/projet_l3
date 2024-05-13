@@ -3,8 +3,8 @@
   "short_name": "RDP",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#11b4bd",
-  "theme_color": "#11b4bd",
+  "background_color": "#77CCD0",
+  "theme_color": "#77CCD0",
   //"orientation": "portrait-primary",
   "icons": [
     {

@@ -25,6 +25,7 @@ exports.getYourUnaivalableTeacherREQUEST = asyncHandler((req, res) => {
                 console.error(err);
                 res.sendStatus(500);
             } else {
+                console.log(teachers)
                 res.send(teachers);
             }
         });

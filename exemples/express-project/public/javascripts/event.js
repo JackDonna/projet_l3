@@ -24,8 +24,6 @@ const popUPDiffusionCross = document.querySelector(".popUPDiffusionCross");
 // ----GLOBALS VARIABLES ------------------------------------------------------------------------------------------------------//
 // ----------------------------------------------------------------------------------------------------------------------------/
 
-let dejaAffiche = {};
-
 // ----------------------------------------------------------------------------------------------------------------------------//
 // --- FUNCTIONS --------------------------------------------------------------------------------------------------------------//
 // ----------------------------------------------------------------------------------------------------------------------------//
@@ -42,6 +40,30 @@ const logout = () => {
     window.location.href = "/logout";
 };
 
+const compareDate = (a, b) => {
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+    return dateA - dateB;
+}
+
+const applyPropositionListener = (buttonElement) => {
+    buttonElement.addEventListener("click", () => {
+        axios
+            .post("/sql/proposition/acceptProposition", {
+                teacherID: prof.id_ens,
+                propositionID: prof.id_prop,
+            })
+            .then((response) => {
+                console.log(response.data);
+                this.printRemplacement("/sql/proposition/getYourReplace/", id);
+            });
+    });
+}
+
+// ----------------------------------------------------------------------------------------------------------------------------//
+// --- OBJECTS ----------------------------------------------------------------------------------------------------------------//
+// ----------------------------------------------------------------------------------------------------------------------------//
+
 let popUP = {
     parent: popUPElement,
     propositionList: propositionList,
@@ -50,7 +72,6 @@ let popUP = {
     printProposition(link, id) {
         this.clear();
         axios.get(link + id).then((response) => {
-            console.log(link);
             response.data.forEach((prof) => {
                 let infoContainer = document.createElement("div");
                 let infoBox = document.createElement("div");
@@ -59,22 +80,12 @@ let popUP = {
                 infoContainer.classList.add("infoContainerProposition");
                 infoBox.classList.add("infoBoxProposition");
                 buttonProposition.classList.add("buttonProposition");
+
                 buttonProposition.innerText = "Accepter";
-
                 infoBox.innerHTML = `${prof.nom} ${prof.prenom}`;
-
-                buttonProposition.addEventListener("click", () => {
-                    axios
-                        .post("/sql/proposition/acceptProposition", {
-                            teacherID: prof.id_ens,
-                            propositionID: prof.id_prop,
-                        })
-                        .then((response) => {
-                            console.log(response.data);
-                            this.printRemplacement("/sql/proposition/getYourReplace/", id);
-                        });
-                });
-
+                
+                applyPropositionListener(buttonProposition);
+                
                 infoContainer.appendChild(infoBox);
                 infoContainer.appendChild(buttonProposition);
                 this.propositionList.appendChild(infoContainer);
@@ -116,7 +127,7 @@ let popUPDiffusion = {
     parent: popUPDiffusionElement,
     diffusionList: popUPDiffusionList,
 
-    printDiffusion(link, id) {
+    printDiffusion(link, id) { 
         this.clear();
         axios.get("/sql/diffusion/diffusionsProvisor/" + id).then((response) => {
             response.data.forEach((diffusion) => {
@@ -146,11 +157,6 @@ let popUPDiffusion = {
     },
 };
 
-function compareDate(a, b) {
-    const dateA = new Date(a.date);
-    const dateB = new Date(b.date);
-    return dateA - dateB;
-}
 
 let list = {
     data: [],
@@ -176,7 +182,7 @@ let list = {
                     <p><span class="cle">Professeur : </span>${evenement.nom} ${evenement.prenom}</p>
                     <p><span class="cle">Matière : </span>${truncateString(evenement.libelle_court, 33)}</p>
                     <p class="classe_${evenement.id_abs}" ><span class="cle 
-                    }">Classe : </span>${evenement.classe}</p>
+                    }">Classe : </span>${evenement.class}</p>
                     <p><span class="cle">Motif : </span>${evenement.motif}</p>
                 `;
 

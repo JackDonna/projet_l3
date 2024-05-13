@@ -3,23 +3,23 @@
   "short_name": "RDP",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#11b4bd",
-  "theme_color": "#11b4bd",
+  "background_color": "#77CCD0",
+  "theme_color": "#77CCD0",
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "../assets/icons/logo_RDP_512x512.png",
+      "src": "../assets/icons/RDP_512x512.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "maskable"
     },
     {
-      "src": "../assets/icons/logo_RDP_144x144.png",
+      "src": "../assets/icons/RDP_144x144.png",
       "type": "image/png",
       "sizes": "144x144"
     },
     {
-      "src": "../assets/icons/logo_RDP_192x192.png",
+      "src": "../assets/icons/RDP_192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     }
