@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcd9f067-578b-4156-9def-dfda21dea99a" name="Changes" comment="return">
-      <change beforePath="$PROJECT_DIR$/exemples/express-project/public/stylesheets/dashboard_admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/public/stylesheets/dashboard_admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exemples/express-project/public/stylesheets/sign_in.css" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/public/stylesheets/sign_in.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exemples/express-project/views/sign_in.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/views/sign_in.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +83,7 @@
       <workItem from="1713854589225" duration="2461000" />
       <workItem from="1715002523435" duration="4199000" />
       <workItem from="1715062225118" duration="3931000" />
+      <workItem from="1715581894695" duration="2620000" />
     </task>
     <task id="LOCAL-00001" summary="return">
       <option name="closed" value="true" />
