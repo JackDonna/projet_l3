@@ -6,9 +6,13 @@
   padding: 0;
 }
 
+:root {
+  --background: #77CCD0;
+}
+
 body {
   height: 100vh;
-  background: #9fccce;
+  background: var(--background);
   display: flex;
   justify-content: center;
   align-items: center;

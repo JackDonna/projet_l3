@@ -8,6 +8,10 @@
     margin: 0;
 }
 
+:root {
+    --background: #77CCD0;
+}
+
 html,
 body {
     overflow-x: hidden;
@@ -31,7 +35,7 @@ body {
     width: 80%;
     height: 85%;
     background-color: #fff;
-    border: #11b4bd 1px solid;
+    border: var(--background) 1px solid;
     display: flex;
     flex-direction: column;
     z-index: 1000;
@@ -59,7 +63,7 @@ body {
 .propositionList {
     padding: 2%;
     overflow: auto;
-    border-right: #11b4bd 1px solid;
+    border-right: var(--background) 1px solid;
 }
 
 .infoBoxProposition {
@@ -90,7 +94,7 @@ body {
     width: 100%;
     max-width: 100%;
     box-shadow: none;
-    background-color: #11b4bd;
+    background-color: var(--background);
     position: fixed;
     height: 60px !important;
     overflow: hidden;
@@ -244,7 +248,7 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     padding-right: 0px;
     flex-direction: column;
     flex-wrap: wrap;
-    border-right: solid 3px #11b4bd;
+    border-right: solid 3px var(--background);
 }
 
 .box_absence {
@@ -308,7 +312,7 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     height: 100px;
     border-radius: 2px;
     border: none;
-    background-color: #11b4bd;
+    background-color: var(--background);
     color: white;
     cursor: pointer;
     display: block;
@@ -335,7 +339,7 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     width: 80%;
     height: 85%;
     background-color: #fff;
-    border: #11b4bd 1px solid;
+    border: var(--background) 1px solid;
     display: flex;
     flex-direction: column;
     z-index: 1000;
@@ -369,7 +373,7 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 }
 
 .cle {
-    color: #11b4bd;
+    color: var(--background);
 }
 
 #absence_logo {
@@ -404,7 +408,7 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     background: whitesmoke;
     margin-bottom: 30px;
     padding: 0 15px;
-    border: solid 3px #11b4bd;
+    border: solid 3px var(--background);
     border-radius: 15px;
 }
 /*

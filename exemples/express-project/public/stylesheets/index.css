@@ -6,6 +6,10 @@
   margin: 0;
 }
 
+:root {
+  --background: #77CCD0;
+}
+
 html, body {
   /* background: #555; */
   background: #fff;
@@ -29,7 +33,7 @@ hr {
   border: 0;
   height: 1px;
   /* opacity: 0.5; */
-  background: linear-gradient(to right, transparent, #11b4bd, transparent);
+  background: linear-gradient(to right, transparent, var(--background), transparent);
 }
 
 .container {
@@ -54,7 +58,7 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: #11b4bd;
+  background: var(--background);
   border-radius: 15px;
   padding: 10px;
   margin: 10px;
@@ -66,7 +70,7 @@ img {
 }
 
 #actualiser {
-  background-color: #11b4bd;
+  background-color: var(--background);
   border: none;
   height: 2em;
   width: 10%;
@@ -85,8 +89,8 @@ img {
 
 #actualiser:active {
   background-color: #1e1e1e;
-  color: #11b4bd;
-  box-shadow: 0 0 0.5rem #11b4bd;
+  color: var(--background);
+  box-shadow: 0 0 0.5rem var(--background);
   transition: 0.2s;
 }
 
@@ -134,7 +138,7 @@ img {
 }
 
 .cle {
-  color: #11b4bd;
+  color: var(--background);
 }
 
 button {
@@ -194,12 +198,12 @@ button {
   justify-content: center;
   align-items: self-start;
   flex-direction: column;
-  border: #11b4bd 1px solid;
+  border: var(--background) 1px solid;
   border-radius: 1rem;
   background-color: #F6F6F6;
   padding-top: 1em;
   padding-bottom: 1em;
-  color : #11b4bd;
+  color : var(--background);
   position: fixed;
   top: 15%;
   left: 2%;
@@ -227,7 +231,7 @@ select {
 /* Bouton pour montrer/cacher le conteneur des filtres */
 #toggleButton {
   padding: 10px;
-  background-color: #11b4bd;
+  background-color: var(--background);
   color: white;
   border: none;
   cursor: pointer;
@@ -241,7 +245,7 @@ select {
 }
 
 #toggleButton:hover {
-  background-color: #11b4bd;
+  background-color: var(--background);
 }
 
 #container_remplacement {
@@ -273,7 +277,7 @@ select {
 }
 
 .cle {
-  color: #11b4bd;
+  color: var(--background);
 }
 
 @media only screen and (min-width : 431px) {

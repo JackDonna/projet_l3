@@ -1,9 +1,13 @@
+:root {
+  --background: #77CCD0;
+}
+
 body {
   font: 14px "Varela Round", sans-serif;
 }
 
 a {
-  color: #11b4bd;
+  color: var(--background);
 }
 
 main {
@@ -28,13 +32,13 @@ main {
 }
 
 #html5-qrcode-button-camera-permission {
-  background-color: #11b4bd;
+  background-color: var(--background);
   padding: 1em;
   border: none;
   border-radius: 10px;
 }
 #html5-qrcode-button-camera-start {
-  background-color: #11b4bd;
+  background-color: var(--background);
   padding: 1em;
   border: none;
   border-radius: 10px;
@@ -51,7 +55,7 @@ main {
   bottom: 15%;
   right: 2%;
   padding: 1em 2em;
-  background-color: #11b4bd;
+  background-color: var(--background);
   border: none;
   border-radius: 10px;
   cursor: pointer;
