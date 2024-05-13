@@ -10,19 +10,14 @@
     <link rel="stylesheet" href="stylesheets/sign_in.css" />
     <title>connexion</title>
     <script>
-      window.addEventListener('load', () => {
-        if("serviceWorker" in navigator){
-          navigator.serviceWorker.register('javascripts/service_worker.js')
-        }
-      })
     </script>
   </head>
 
   <body>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-    <div class="container" id="form">
-      <form action="">
+    <div class="container" >
+      <form action="" id="form">  
         <h1>Connexion</h1>
         <input type="email" placeholder="Email" id="form_mail" />
         <input type="password" placeholder="Mot de passe" id="form_password" />
@@ -36,7 +31,7 @@
 
         <p>Je suis un membre de l'administration</p>
 
-        <input class="button" type="submit" value="Connexion" />
+        <input class="button" id="submitButton" type="submit" value="Connexion" />
       </form>
       <div class="inscription">
         <p>Vous n'avez pas de compte ?</p>

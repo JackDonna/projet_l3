@@ -92,7 +92,7 @@ main {
   height: 500px;
 }
 
-#close_scanner {
+#closeScanner  {
   cursor: pointer;
 }
 
