@@ -3,7 +3,9 @@
 :root {
   --form-control-color: #004160;
   --form-control-disabled: #959495;
+  --background: #77CCD0;
 }
+
 
 * {
   box-sizing: border-box;
@@ -13,7 +15,7 @@
 
 body {
   height: 100vh;
-  background: #9fccce;
+  background: var(--background);
   display: flex;
   justify-content: center;
   align-items: center;
