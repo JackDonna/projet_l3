@@ -24,8 +24,6 @@ const popUPDiffusionCross = document.querySelector(".popUPDiffusionCross");
 // ----GLOBALS VARIABLES ------------------------------------------------------------------------------------------------------//
 // ----------------------------------------------------------------------------------------------------------------------------/
 
-let dejaAffiche = {};
-
 // ----------------------------------------------------------------------------------------------------------------------------//
 // --- FUNCTIONS --------------------------------------------------------------------------------------------------------------//
 // ----------------------------------------------------------------------------------------------------------------------------//
@@ -42,15 +40,38 @@ const logout = () => {
     window.location.href = "/logout";
 };
 
+const compareDate = (a, b) => {
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+    return dateA - dateB;
+}
+
+const applyPropositionListener = (buttonElement) => {
+    buttonElement.addEventListener("click", () => {
+        axios
+            .post("/sql/proposition/acceptProposition", {
+                teacherID: prof.id_ens,
+                propositionID: prof.id_prop,
+            })
+            .then((response) => {
+                console.log(response.data);
+                this.printRemplacement("/sql/proposition/getYourReplace/", id);
+            });
+    });
+}
+
+// ----------------------------------------------------------------------------------------------------------------------------//
+// --- OBJECTS ----------------------------------------------------------------------------------------------------------------//
+// ----------------------------------------------------------------------------------------------------------------------------//
+
 let popUP = {
     parent: popUPElement,
     propositionList: propositionList,
     remplacementList: remplacementList,
 
-    printProposition(link, id) {
+    printProposition: (link, id)  => {
         this.clear();
         axios.get(link + id).then((response) => {
-            console.log(link);
             response.data.forEach((prof) => {
                 let infoContainer = document.createElement("div");
                 let infoBox = document.createElement("div");
@@ -59,22 +80,12 @@ let popUP = {
                 infoContainer.classList.add("infoContainerProposition");
                 infoBox.classList.add("infoBoxProposition");
                 buttonProposition.classList.add("buttonProposition");
+
                 buttonProposition.innerText = "Accepter";
-
                 infoBox.innerHTML = `${prof.nom} ${prof.prenom}`;
-
-                buttonProposition.addEventListener("click", () => {
-                    axios
-                        .post("/sql/proposition/acceptProposition", {
-                            teacherID: prof.id_ens,
-                            propositionID: prof.id_prop,
-                        })
-                        .then((response) => {
-                            console.log(response.data);
-                            this.printRemplacement("/sql/proposition/getYourReplace/", id);
-                        });
-                });
-
+                
+                applyPropositionListener(buttonProposition);
+                
                 infoContainer.appendChild(infoBox);
                 infoContainer.appendChild(buttonProposition);
                 this.propositionList.appendChild(infoContainer);
@@ -82,7 +93,7 @@ let popUP = {
         });
     },
 
-    printRemplacement(link, id) {
+    printRemplacement: (link, id) => {
         axios.get(link + id).then((response) => {
             response.data.forEach((prof) => {
                 let infoContainer = document.createElement("div");
@@ -99,14 +110,14 @@ let popUP = {
         });
     },
 
-    display() {
+    display: () => {
         this.parent.classList.remove("hide");
     },
-    hide() {
+    hide: () => {
         this.parent.classList.add("hide");
     },
 
-    clear() {
+    clear: () => {
         this.propositionList.innerHTML = "";
         this.remplacementList.innerHTML = "";
     },
@@ -116,7 +127,7 @@ let popUPDiffusion = {
     parent: popUPDiffusionElement,
     diffusionList: popUPDiffusionList,
 
-    printDiffusion(link, id) {
+    printDiffusion: (link, id) => { 
         this.clear();
         axios.get("/sql/diffusion/diffusionsProvisor/" + id).then((response) => {
             response.data.forEach((diffusion) => {
@@ -134,23 +145,18 @@ let popUPDiffusion = {
         });
     },
 
-    display() {
+    display: () => {
         this.parent.classList.remove("hide");
     },
-    hide() {
+    hide: () => {
         this.parent.classList.add("hide");
     },
 
-    clear() {
+    clear: () => {
         this.diffusionList.innerHTML = "";
     },
 };
 
-function compareDate(a, b) {
-    const dateA = new Date(a.date);
-    const dateB = new Date(b.date);
-    return dateA - dateB;
-}
 
 let list = {
     data: [],
@@ -158,7 +164,7 @@ let list = {
     seen: [],
     searchBar: searchBar,
 
-    drawList() {
+    drawList: () => {
         this.seen = [];
         affichage_absence.innerHTML = "";
         affichage_list_diff.innerHTML = "";
@@ -202,7 +208,7 @@ let list = {
         });
     },
 
-    search(string) {
+    search: (string) => {
         this.searched = this.data.filter(
             (absence) =>
                 new Date(absence.date).toLocaleDateString().includes(string.toLowerCase()) ||
@@ -211,7 +217,7 @@ let list = {
         );
         this.drawList();
     },
-    init() {
+    init: () => {
         axios.get("/sql/teacher/getUnavailableTeachers").then((response) => {
             this.data = response.data;
             this.searched = response.data;

@@ -40,24 +40,6 @@ app.use(
 );
 app.use(compression());
 
-var FCM = require('fcm-node');
-var serverKey = require(__dirname + '/rdp-app-3a69f-firebase-adminsdk-3lvvx-551e1594dd.json'); //put the generated private key path here
-var fcm = new FCM(serverKey);
-console.log(fcm);
-let message = {
-	to: 'cSm0N-1-IN4rd-paxf9lhf:APA91bFwT3Z6rXc8Uq7h86TEqkmmGdSKUxjDLxZkIXH7Luv5e81pb0xBMqeMeQZfn-6WHVc3wUKgYSdywuUnPuQoMQ1M31KpiXBWYtghdtkesIZ-n5xvNJ-oVuSnWtZVE_it7lOBqIG4',
-	notification: {
-		title: 'test',
-	},
-};
-
-fcm.send(message, function (err, response) {
-	if (err) {
-		console.error('Something has gone wrong!', err);
-	} else {
-		console.log('Successfully sent with response: ', response);
-	}
-});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

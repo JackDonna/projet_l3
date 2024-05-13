@@ -2,126 +2,44 @@
 // --- DOM ELEMENTS -----------------------------------------------------------------------------------------------------------//
 // ----------------------------------------------------------------------------------------------------------------------------//
 
-const result_element = document.querySelector("#result");
-const calendar_element = document.getElementById("calendar");
-const absence_form = document.getElementById("add_absence");
+const calendarElement = document.getElementById("calendar");
 const reader = document.getElementById("scan_code");
-const scan_button = document.getElementById("scan_qr_code");
-const close_scanner = document.getElementById("close_scanner");
-const render_region = document.getElementById("reader__scan_region");
-const loading = document.querySelector(".loading");
-const start_absence = absence_form.querySelector(".start_absence");
-const end_absence = absence_form.querySelector(".end_absence");
-const reason = absence_form.querySelector(".reason");
-const submit = absence_form.querySelector(".submit_form");
-const close_form = absence_form.querySelector("#close_form");
-
-// ----------------------------------------------------------------------------------------------------------------------------//
-// ----GLOBALS VARIABLES ------------------------------------------------------------------------------------------------------//
-// ----------------------------------------------------------------------------------------------------------------------------//
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
-import {
-    getMessaging,
-    getToken,
-} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-messaging.js";
-
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-    apiKey: "AIzaSyCOzvsswCcrRK5NN23oxfgUleDMZWaNwfg",
-    authDomain: "rdp-app-3a69f.firebaseapp.com",
-    projectId: "rdp-app-3a69f",
-    storageBucket: "rdp-app-3a69f.appspot.com",
-    messagingSenderId: "217948061515",
-    appId: "1:217948061515:web:a8b171efeb3a0cd47bb2ce",
-    measurementId: "G-8XYWBLJYLH",
-};
-
-// Initialize Firebase
-const fapp = initializeApp(firebaseConfig);
-const analytics = getAnalytics(fapp);
-const messaging = getMessaging(fapp);
-getToken(messaging, {
-    vapidKey:
-        "BGR65wxzminlK4tibzjEUwMYpsr85LDWMv8mw7roN-rM0p_JtJNe_68LYoP6beYcJfcpwuBFENmjfPyvf2w_b5w",
-})
-    .then((currentToken) => {
-        if (currentToken) {
-        } else {
-            // Show permission request UI
-            console.log("No registration token available. Request permission to generate one.");
-            // ...
-        }
-    })
-    .catch((err) => {
-        console.log("An error occurred while retrieving token. ", err);
-        // ...
-    });
-
-function requestPermission() {
-    console.log("Requesting permission...");
-    Notification.requestPermission().then((permission) => {
-        if (permission === "granted") {
-            console.log("Notification permission granted.");
-        }
-    });
-}
-
-requestPermission();
-
-const scanner = new Html5QrcodeScanner("reader", {
-    qrbox: qrboxFunction,
-    fps: 60,
-});
-
-const ec = new EventCalendar(calendar_element, {
-    view: "timeGridWeek",
-    events: [],
-    locale: "fr",
-    firstDay: 1,
-    slotMinTime: "06:00:00",
-    slotMaxTime: "21:00:00",
-});
-
-var global_event = {};
+const scanButton = document.getElementById("scan_qr_code");
+const closeScanner = document.getElementById("closeScanner");
 
 // ----------------------------------------------------------------------------------------------------------------------------//
 // --- FUNCTIONS --------------------------------------------------------------------------------------------------------------//
 // ----------------------------------------------------------------------------------------------------------------------------//
 
 /**
- * format a time to display it in time fields form
- * @param {Date} time base date to extract hour in it
- * @return {string} formatted date
+ * Formats the given time into a string in the format "HH:MM".
+ *
+ * @param {Date} time - The time to be formatted.
+ * @return {string} The formatted time string.
  */
-function format_time(time) {
+const formatTime = (time) =>  {
     let hour = time.getHours();
-    hour < 10 ? (hour = "0" + hour) : null;
-
-    let minute = time.getMinutes();
-    minute < 10 ? (minute = "0" + minute) : null;
+    let minute = time.getMinutes()
+    hour = hour < 10 ? "0" + hour : hour;
+    minute = minute < 10 ? "0" + minute : minute;
     return hour + ":" + minute;
 }
 
 /**
- * function handle sucess of qr code scanning
- * @param {string} result link of the qr code
+ * Handles the success of scanning a QR code.
+ *
+ * @param {string} QRCodeResult - The result of scanning the QR code.
+ * @return {void} This function does not return a value.
  */
-function success(result) {
-    let obj = {
-        url: result,
-    };
+const QRCodeScannerSucces = (QRCodeResult) => {
     scanner.clear();
     reader.classList.add("hide");
-
     axios
-        .post("sql/event/insert_timetable", obj, {
+        .post("sql/event/insert_timetable", {
+            url: QRCodeResult
+        }, {
             timeout: 6000000,
-        })
+    })
         .then((response) => {
             get_timetable();
             loading.classList.add("hide");
@@ -129,21 +47,24 @@ function success(result) {
 }
 
 /**
- * function hancle qr code scan error
- * @param {Error} err
+ * Handles the error that occurs during QR code scanning.
+ *
+ * @param {string} QRCodeError - The error message related to QR code scanning.
+ * @return {void}
  */
-function error(err) {
-    console.error(err);
+const QRCodeScannerError = (QRCodeError) => {
+    console.error(QRCodeError);
 }
 
 /**
- * function set the qr code GUI, need to call whene initialize the qrcode
- * @param {number} viewfinderWidth
- * @param {number} viewfinderHeight
- * @returns
+ * Resizes the QR box based on the viewfinder dimensions.
+ *
+ * @param {number} viewfinderWidth - The width of the viewfinder.
+ * @param {number} viewfinderHeight - The height of the viewfinder.
+ * @return {Object} An object containing the resized width and height of the QR box.
  */
-function qrboxFunction(viewfinderWidth, viewfinderHeight) {
-    let minEdgePercentage = 0.7; // 70%
+const QRBoxResize = (viewfinderWidth, viewfinderHeight) => {
+    let minEdgePercentage = 0.7;
     let minEdgeSize = Math.min(viewfinderWidth, viewfinderHeight);
     let qrboxSize = Math.floor(minEdgeSize * minEdgePercentage);
     return {
@@ -153,21 +74,11 @@ function qrboxFunction(viewfinderWidth, viewfinderHeight) {
 }
 
 /**
- * A JavaScript function that fetches timetable from the server and adds each returned event to the EventCalendar instance `ec`
+ * Retrieves the timetable from the server and adds the events to the calendar.
  *
- * This function makes a GET request to the "/sql/event/get_timetable" endpoint using axios.
- * Upon successful request, the function logs the data from the response and adds each event from the response data to the calendar.
- *
- * The function does not take any parameters and does not explicitly return anything.
- *
- * Note: This function uses the EventCalendar instance `ec` which should be defined before calling this function.
+ * @return {void} This function does not return a value.
  */
-
-/**
- * get the timtable to RDP API
- */
-
-function get_timetable() {
+const getTimeTable = () => {
     axios.get("sql/event/get_timetable").then((response) => {
         for (let event of response.data) {
             event.start = new Date(event.start);
@@ -176,11 +87,13 @@ function get_timetable() {
         }
     });
 }
-
+ 
 /**
- * resize calendar with the current window size
+ * Resizes the calendar based on the window's inner width.
+ *
+ * @return {void} This function does not return a value.
  */
-function resize_calendar() {
+const resizeCalendar = () => {
     if (window.innerWidth < 800) {
         ec.setOption("view", "timeGridDay");
     } else {
@@ -189,42 +102,45 @@ function resize_calendar() {
 }
 
 // ----------------------------------------------------------------------------------------------------------------------------//
+// ----CONSTANTS VARIABLES ----------------------------------------------------------------------------------------------------//
+// ----------------------------------------------------------------------------------------------------------------------------//
+
+const scanner = new Html5QrcodeScanner("reader", {
+    qrbox: QRBoxResize,
+    fps: 60,
+});
+
+const ec = new EventCalendar(calendarElement, {
+    view: "timeGridWeek",
+    events: [],
+    locale: "fr",
+    firstDay: 1,
+    slotMinTime: "06:00:00",
+    slotMaxTime: "21:00:00",
+});
+
+// ----------------------------------------------------------------------------------------------------------------------------//
 // --- FUNCTIONS CALLS --------------------------------------------------------------------------------------------------------//
 // ----------------------------------------------------------------------------------------------------------------------------//
 
-get_timetable();
+getTimeTable();
 
 // ----------------------------------------------------------------------------------------------------------------------------//
 // --- EVENTES LISTENERS ------------------------------------------------------------------------------------------------------//
 // ----------------------------------------------------------------------------------------------------------------------------//
 
-scan_button.addEventListener("click", () => {
-    scanner.render(success, error);
+scanButton.addEventListener("click", () => {
+    scanner.render(QRCodeScannerSucces, QRCodeScannerError);
     reader.classList.remove("hide");
 });
-close_scanner.addEventListener("click", () => {
+
+closeScanner.addEventListener("click", () => {
     scanner.clear();
     reader.classList.add("hide");
-});
-
-submit.addEventListener("click", function () {
-    axios
-        .post("sql/absence/insert/", { id_event: global_event.id, motif: reason.value })
-        .then((response) => {
-            axios.post("sql/absence/filtre/", { ev: global_event }).then((response) => {
-                console.log(response.data);
-            });
-        });
 });
 
 close_form.addEventListener("click", () => {
     absence_form.classList.add("hide");
 });
 
-window.onload((e) => {
-    resize_calendar();
-});
 
-window.onresize((e) => {
-    resize_calendar();
-});
