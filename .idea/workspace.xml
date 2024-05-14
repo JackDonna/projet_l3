@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcd9f067-578b-4156-9def-dfda21dea99a" name="Changes" comment="return">
-      <change beforePath="$PROJECT_DIR$/exemples/express-project/views/calendar.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/views/calendar.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exemples/express-project/views/forbidden.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/views/forbidden.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exemples/express-project/views/remplacement.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/views/remplacement.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exemples/express-project/public/stylesheets/sign_up.css" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/public/stylesheets/sign_up.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exemples/express-project/views/sign_up.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/views/sign_up.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +88,7 @@
       <workItem from="1715062225118" duration="3931000" />
       <workItem from="1715581894695" duration="3264000" />
       <workItem from="1715612108928" duration="558000" />
-      <workItem from="1715685419502" duration="1622000" />
+      <workItem from="1715685419502" duration="2484000" />
     </task>
     <task id="LOCAL-00001" summary="return">
       <option name="closed" value="true" />
