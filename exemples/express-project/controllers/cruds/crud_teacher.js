@@ -59,6 +59,7 @@ const isTeacherExistsByMailSQL = (mail, callback) => {
                 values: [mail],
             },
             (err, rows, fields) => {
+                console.log(rows)
                 db.release();
                 callback(err, rows[0]);
             }
@@ -358,6 +359,7 @@ const signUP = (req, res, callback) => {
 
     isTeacherExistsByMailSQL(mail, (err, teacher) => {
         if (err) callback(err, null);
+        if(teacher == undefined) return;
         isIdentificationExistSQL(teacher.id_ens, (err, identification) => {
             if (err) callback(err, null);
             if (teacher != undefined && identification == undefined) {
