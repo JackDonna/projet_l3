@@ -6,7 +6,6 @@ form.addEventListener("submit", (e) => {
     let mail = document.querySelector("#form_mail").value;
     let password = document.querySelector("#form_password").value;
 
-
     let obj = {
         mail: mail,
         password: password,
