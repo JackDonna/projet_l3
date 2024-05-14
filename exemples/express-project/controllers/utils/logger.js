@@ -1,3 +1,6 @@
+const path = require("path");
+const logsFolderPath = path.join(__dirname, "../../logs");
+
 const GREEN = "\u001b[32m";
 const YELLOW = "\u001b[33m";
 const RED = "\u001b[31m";

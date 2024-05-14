@@ -5,12 +5,11 @@ form.addEventListener("submit", (e) => {
     e.preventDefault();
     let mail = document.querySelector("#form_mail").value;
     let password = document.querySelector("#form_password").value;
-    let admin = document.querySelector("#admin").checked;
+
 
     let obj = {
         mail: mail,
         password: password,
-        admin: admin,
     };
     axios.post("/sql/teacher/sign_up", obj).then((response) => {
         console.log(response.status);
