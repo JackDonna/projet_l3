@@ -289,7 +289,7 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     outline: none;
     border: none;
     background: transparent;
-    width: 300px;
+    width: 100%;
 }
 
 .search-input::placeholder,
@@ -501,4 +501,6 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     .buttonDiffusion {
         margin-right: 15%;
     }
+
+
 }
