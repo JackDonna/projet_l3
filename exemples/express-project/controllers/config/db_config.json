@@ -3,7 +3,7 @@
     "port": 3306,
     "user": "app",
     "password": "POecfwI((xAEmA!T",
-    "database": "test_RPA",
+    "database": "RPA",
     "waitForConnection": true,
     "connectionLimit": 15000,
     "queueLimit": 10000
