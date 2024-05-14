@@ -4,13 +4,13 @@ const conf = JSON.parse(
     fs.readFileSync("controllers/config/db_config.json", "utf-8")
 );
 const pool = mysql.createPool(conf);
-const axios = require("axios");
 const sql_config = JSON.parse(
     fs.readFileSync("controllers/config/sql_config.json", "utf-8")
 );
 const SQL = sql_config.sql;
 const Session = require("../utils/session");
 const { sendVerificationMailLocal } = require(__dirname + "/crud_mail");
+const logger = require("../utils/logger.js");
 
 // ------------------------------------------------------------------------------------------------------------------ //
 // --- SUBS FUNCTIONS -------------------------------------------------------------------------------------------- //
@@ -341,8 +341,8 @@ const searchTeacherLikeSQL = (db, name, callback) => {
 };
 
 // ------------------------------------------------------------------------------------------------------------------ //
-// --- MAINS FUNCTIONS ------------------------------------------------------------------------------------------- //
-// ------------------------------------------------------------------------------------------------------------ //
+// --- MAINS FUNCTIONS ---------------------------------------------------------------------------------------------- //
+// ------------------------------------------------------------------------------------------------------------------ //
 
 /**
  * Sign up a teacher and send a verification email.
@@ -356,45 +356,56 @@ const signUP = (req, res, callback) => {
     const mail = req.body.mail;
     const password = req.body.password;
 
-    isTeacherExistsByMailSQL(mail, (err, teacher) => {
-        if (err) callback(err, null);
-        isIdentificationExistSQL(teacher.id_ens, (err, identification) => {
+    try {
+        isTeacherExistsByMailSQL(mail, (err, teacher) => {
             if (err) callback(err, null);
-            if (teacher != undefined && identification == undefined) {
-                createIdentificationSQL(
-                    password,
-                    teacher.id_ens,
-                    (err, validationNumber) => {
-                        if (err) callback(err, null);
-                        sendVerificationMailLocal(
-                            mail,
-                            validationNumber,
-                            (err, res) => {
-                                if (err) {
-                                    console.error(err);
-                                }
-                            }
-                        );
-                        Session.createSession(
-                            req,
-                            teacher.nom,
-                            teacher.prenom,
-                            teacher.mail,
-                            teacher.id_eta,
+            if(teacher != undefined) {
+                isIdentificationExistSQL(teacher.id_ens, (err, identification) => {
+                    if (err) callback(err, null);
+                    if (identification == undefined) {
+                        createIdentificationSQL(
+                            password,
                             teacher.id_ens,
-                            false,
-                            false,
-                            (err, res) => {
-                                callback(null, true);
+                            (err, validationNumber) => {
+                                if (err) callback(err, null);
+                                sendVerificationMailLocal(
+                                    mail,
+                                    validationNumber,
+                                    (err, res) => {
+                                        if (err) {
+                                            console.error(err);
+                                        }
+                                    }
+                                );
+                                Session.createSession(
+                                    req,
+                                    teacher.nom,
+                                    teacher.prenom,
+                                    teacher.mail,
+                                    teacher.id_eta,
+                                    teacher.id_ens,
+                                    false,
+                                    false,
+                                    (err, res) => {
+                                        logger.write("INFO", `Teacher signUP as ${mail}`, "SUCCESS");
+                                        callback(null, true);
+                                    }
+                                );
                             }
                         );
+                    } else {
+                        logger.write("INFO", `Teacher signUP as ${mail}`, "FAILURE : already exists an identification for this teacher");
+                        callback(null, false);
                     }
-                );
-            } else {
+                });
+            }else {
+                logger.write("INFO", `Teacher signUP as ${mail}`, "FAILURE : teacher doesn't exist");
                 callback(null, false);
             }
         });
-    });
+    }catch(err) {
+        logger.write("ERROR", `Teacher signUP as ${mail}`, err);
+    }
 };
 
 /**
@@ -408,35 +419,44 @@ const signUP = (req, res, callback) => {
 const signIN = (req, res, callback) => {
     const mail = req.params.mail;
     const password = req.params.password;
-
-    isTeacherExistsByMailSQL(mail, (err, teacher) => {
-        if (teacher != undefined) {
-            isPasswordMatchidentificationSQL(
-                teacher.id_ens,
-                password,
-                (err, identification) => {
-                    if (err) callback(err, null);
-                    if (identification != undefined) {
-                        Session.createSession(
-                            req,
-                            teacher.nom,
-                            teacher.prenom,
-                            teacher.mail,
-                            teacher.id_eta,
-                            teacher.id_ens,
-                            identification.valide,
-                            false,
-                            (err, res) => {
-                                callback(null, true);
-                            }
-                        );
+    try {
+        isTeacherExistsByMailSQL(mail, (err, teacher) => {
+            if (teacher != undefined) {
+                isPasswordMatchidentificationSQL(
+                    teacher.id_ens,
+                    password,
+                    (err, identification) => {
+                        if (err) callback(err, null);
+                        if (identification != undefined) {
+                            Session.createSession(
+                                req,
+                                teacher.nom,
+                                teacher.prenom,
+                                teacher.mail,
+                                teacher.id_eta,
+                                teacher.id_ens,
+                                identification.valide,
+                                false,
+                                (err, res) => {
+                                    logger.write("INFO", `Teacher signIN as ${mail}`, "SUCCESS");
+                                    callback(null, true);
+                                }
+                            );
+                        }else {
+                            logger.write("INFO", `Teacher signIN as ${mail}`, "FAILURE : Bad password");
+                            callback(null, false);
+                        }
                     }
-                }
-            );
-        } else {
-            callback(null, false);
-        }
-    });
+                );
+            } else {
+                logger.write("INFO", `Teacher signIN as ${mail}`, "FAILURE : Bad mail");
+                callback(null, false);
+            }
+        });
+    }catch(err) {
+        logger.write("ERROR", `Teacher signIN as ${mail}`, err);
+    }
+    
 };
 
 /**
