@@ -42,7 +42,6 @@ const QRCodeScannerSucces = (QRCodeResult) => {
     })
         .then((response) => {
             get_timetable();
-            loading.classList.add("hide");
         });
 }
 

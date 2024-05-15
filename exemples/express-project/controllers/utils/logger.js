@@ -1,5 +1,7 @@
 const path = require("path");
-const logsFolderPath = path.join(__dirname, "../../logs");
+const fs = require("fs");
+
+const logsFilePath = path.join(__dirname + "../../../logs/log.txt");
 
 const GREEN = "\u001b[32m";
 const YELLOW = "\u001b[33m";
@@ -21,8 +23,22 @@ const log = (color, type, message, note = "") => {
     console.log(`${color}[${type}] - [${message}] ${note}${RESET}`);
 };
 
+const write = (type, message, note = "") => {
+
+    let content =   new Date().toLocaleDateString() + " " +  
+                    new Date().toLocaleTimeString() + ` - [${type}] - [${message}] ${note}\n`;
+
+    fs.writeFile(logsFilePath, content, { flag: 'a+' }, (err) => {
+        if(err) {
+            console.log(err);
+        }
+    })
+}
+
+
 module.exports = {
     log,
+    write,
     GREEN,
     YELLOW,
     RED,
