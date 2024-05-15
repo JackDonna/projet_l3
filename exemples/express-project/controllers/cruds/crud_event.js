@@ -450,7 +450,7 @@ const getGroupQuery = (result, newAbsenceCounter, oldAbsenceCounter, misc) => {
     }
 }
 
-const getClasseQuery = (result, newAbsenceCounter, oldAbsenceCounter, absenceObject, misc) => {
+const getClasseQuery = (result, newAbsenceCounter, oldAbsenceCounter, absenceObject, misc, info) => {
     const {startHour, endHour, date, mat, teacherID} = misc;
     absenceObject.classe = info.split("Classe : ")[1].split("\n")[0];
             if (result.length == 0) {
@@ -469,7 +469,7 @@ const buildQuery = (info, newAbsenceCounter, oldAbsenceCounter, absenceObject, r
         if (info.includes("Groupe")) {
             return getGroupQuery(result, newAbsenceCounter, oldAbsenceCounter, misc);
         } else if (info.includes("Classe")) {
-            return getClasseQuery(result, newAbsenceCounter, oldAbsenceCounter, absenceObject, misc);
+            return getClasseQuery(result, newAbsenceCounter, oldAbsenceCounter, absenceObject, misc, info);
         }
         return ["", oldAbsenceCounter + 1];
     }

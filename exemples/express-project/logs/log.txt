@@ -1,3 +1,8 @@
 14/05/2024 16:09:21 - [info] - [zach.frechin@gmail.com - 1234] TRY TO CONNECT
 15/05/2024 12:59:35 - [INFO] - [Teacher signIN as zach.frechin@gmail.com] SUCCESS
 15/05/2024 13:01:42 - [INFO] - [Teacher signIN as zach.frechin@gmail.com] SUCCESS
+15/05/2024 13:49:28 - [INFO] - [Teacher signIN as zach.frechin@gmail.com] FAILURE : Bad mail
+15/05/2024 13:49:35 - [INFO] - [Teacher signIN as zach.frechin@gmail.com] FAILURE : Bad mail
+15/05/2024 13:49:52 - [INFO] - [Teacher signIN as prenom.nom@ac-grenoble.fr] SUCCESS
+15/05/2024 13:50:35 - [INFO] - [Teacher signIN as prenom.nom@ac-grenoble.fr] SUCCESS
+15/05/2024 13:50:38 - [INFO] - [Parsing absence of 10004] SUCCESS
