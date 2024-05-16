@@ -1,19 +1,19 @@
-const mysql = require("mysql");
-const fs = require("fs");
-const conf = JSON.parse(fs.readFileSync("controllers/config/db_config.json", "utf-8"));
+const mysql = require('mysql');
+const fs = require('fs');
+const conf = JSON.parse(fs.readFileSync('controllers/config/db_config.json', 'utf-8'));
 const pool = mysql.createPool(conf);
-const axios = require("axios");
-const utils = require("../utils/ics_utils");
-const ical = require("ical");
-const colorConfig = JSON.parse(fs.readFileSync("controllers/utils/color_config.json", "utf-8"));
+const axios = require('axios');
+const utils = require('../utils/ics_utils');
+const ical = require('ical');
+const colorConfig = JSON.parse(fs.readFileSync('controllers/utils/color_config.json', 'utf-8'));
 const colors = colorConfig.colors;
-const sql_config = JSON.parse(fs.readFileSync("controllers/config/sql_config.json", "utf-8"));
+const sql_config = JSON.parse(fs.readFileSync('controllers/config/sql_config.json', 'utf-8'));
 const SQL = sql_config.sql;
-const Teacher = require(__dirname + "/crud_teacher");
-const Session = require("../utils/session.js");
-const Absence = require(__dirname + "/crud_absence");
-const logger = require("../utils/logger.js");
-const { parse } = require("path");
+const Teacher = require(__dirname + '/crud_teacher');
+const Session = require('../utils/session.js');
+const Absence = require(__dirname + '/crud_absence');
+const logger = require('../utils/logger.js');
+const { parse } = require('path');
 
 // ------------------------------------------------------------------------------------------------------------------ //
 // --- SUBS FUNCTIONS -------------------------------------------------------------------------------------------- //
@@ -33,30 +33,33 @@ const { parse } = require("path");
  * @return {Object} The constructed event object
  */
 const buildEvent = (title, date, start, end, location, id, classe, salle) => {
-    start = date.toLocaleDateString("se-SV", { timeZone: "Europe/Paris" }) + " " + start;
-    end = date.toLocaleDateString("se-SV", { timeZone: "Europe/Paris" }) + " " + end;
-    date = date.toLocaleDateString("se-SV", { timeZone: "Europe/Paris" });
-    let event = {
-        title: title,
-        date: date,
-        start: start,
-        end: end,
-        location: location,
-        id: id,
-        classe: classe,
-        salle: salle,
-    };
-    event.backgroundColor = "#08CFFB";
-    for (let color of colors) {
-        let title = title.toLowerCase();
-        if (title.toLowerCase().includes(color.name.toLowerCase()) || color.name.toLowerCase().includes(title.toLowerCase())) {
-            event.backgroundColor = color.color;
-        }
-        if (title.include("absence") || title.include("annulé")) {
-            Absence.insertAbsenceNew("", start, end, date);
-        }
-    }
-    return event;
+	start = date.toLocaleDateString('se-SV', { timeZone: 'Europe/Paris' }) + ' ' + start;
+	end = date.toLocaleDateString('se-SV', { timeZone: 'Europe/Paris' }) + ' ' + end;
+	date = date.toLocaleDateString('se-SV', { timeZone: 'Europe/Paris' });
+	let event = {
+		title: title,
+		date: date,
+		start: start,
+		end: end,
+		location: location,
+		id: id,
+		classe: classe,
+		salle: salle,
+	};
+	event.backgroundColor = '#08CFFB';
+	for (let color of colors) {
+		let title = title.toLowerCase();
+		if (
+			title.toLowerCase().includes(color.name.toLowerCase()) ||
+			color.name.toLowerCase().includes(title.toLowerCase())
+		) {
+			event.backgroundColor = color.color;
+		}
+		if (title.include('absence') || title.include('annulé')) {
+			Absence.insertAbsenceNew('', start, end, date);
+		}
+	}
+	return event;
 };
 
 /**
@@ -67,17 +70,17 @@ const buildEvent = (title, date, start, end, location, id, classe, salle) => {
  * @param {function} callback - The callback function to handgetLinkContent
  * */
 const insertSubjectSQL = (db, subject, callback) => {
-    db.query(
-        {
-            sql: SQL.insert.discipline,
-            timeout: 10000,
-            values: [subject],
-        },
-        (err, rows, fields) => {
-            if (err) callback(err, null);
-            callback(null, true);
-        }
-    );
+	db.query(
+		{
+			sql: SQL.insert.discipline,
+			timeout: 10000,
+			values: [subject],
+		},
+		(err, rows, fields) => {
+			if (err) callback(err, null);
+			callback(null, true);
+		}
+	);
 };
 
 /**
@@ -89,17 +92,17 @@ const insertSubjectSQL = (db, subject, callback) => {
  * @return {void}
  */
 const selectSubjectByNameSQL = (db, discipline, callback) => {
-    db.query(
-        {
-            sql: SQL.select.discipline_by_name,
-            timeout: 10000,
-            values: [discipline],
-        },
-        (err, rows, fields) => {
-            if (err) callback(err, null);
-            callback(null, rows[0]);
-        }
-    );
+	db.query(
+		{
+			sql: SQL.select.discipline_by_name,
+			timeout: 10000,
+			values: [discipline],
+		},
+		(err, rows, fields) => {
+			if (err) callback(err, null);
+			callback(null, rows[0]);
+		}
+	);
 };
 
 /**
@@ -110,20 +113,20 @@ const selectSubjectByNameSQL = (db, discipline, callback) => {
  * @return {void}
  */
 const selectSubjectByIDSQL = (idSubject, callback) => {
-    pool.getConnection((err, db) => {
-        if (err) callback(err, null);
-        db.query(
-            {
-                sql: SQL.select.discipline_by_name,
-                timeout: 10000,
-                values: [idSubject],
-            },
-            (err, rows, fields) => {
-                if (err) callback(err, null);
-                callback(null, rows[0]);
-            }
-        );
-    });
+	pool.getConnection((err, db) => {
+		if (err) callback(err, null);
+		db.query(
+			{
+				sql: SQL.select.discipline_by_name,
+				timeout: 10000,
+				values: [idSubject],
+			},
+			(err, rows, fields) => {
+				if (err) callback(err, null);
+				callback(null, rows[0]);
+			}
+		);
+	});
 };
 
 /**
@@ -140,20 +143,20 @@ const selectSubjectByIDSQL = (idSubject, callback) => {
  * @return {boolean} true if successful, error object if an error occurred
  */
 const insertEventSQL = (salle, date, start, end, classe, course, teacher, callback) => {
-    pool.getConnection((err, db) => {
-        db.query(
-            {
-                sql: SQL.insert.event,
-                timeout: 10000,
-                values: [salle, date, start, end, classe, course, teacher],
-            },
-            (err, rows, fields) => {
-                db.release();
-                if (err) callback(err, null);
-                callback(null, true);
-            }
-        );
-    });
+	pool.getConnection((err, db) => {
+		db.query(
+			{
+				sql: SQL.insert.event,
+				timeout: 10000,
+				values: [salle, date, start, end, classe, course, teacher],
+			},
+			(err, rows, fields) => {
+				db.release();
+				if (err) callback(err, null);
+				callback(null, true);
+			}
+		);
+	});
 };
 
 /**
@@ -164,14 +167,14 @@ const insertEventSQL = (salle, date, start, end, classe, course, teacher, callba
  * @return {void} This function does not return anything.
  */
 const downloadTimetableFromURL = (link, callback) => {
-    axios
-        .get(link, {
-            responseType: "blob",
-        })
-        .then((response) => {
-            let data = utils.parseICSURL(response.data, ical);
-            callback(null, data);
-        });
+	axios
+		.get(link, {
+			responseType: 'blob',
+		})
+		.then((response) => {
+			let data = utils.parseICSURL(response.data, ical);
+			callback(null, data);
+		});
 };
 
 /**
@@ -183,20 +186,20 @@ const downloadTimetableFromURL = (link, callback) => {
  * @return {void}
  */
 const getCourse = (db, course, callback) => {
-    pool.getConnection((err, db) => {
-        db.query(
-            {
-                sql: SQL.select.course,
-                values: [course],
-                timeout: 10000,
-            },
-            (err, rows, fields) => {
-                db.release();
-                if (err) callback(err, null);
-                callback(null, rows[0]);
-            }
-        );
-    });
+	pool.getConnection((err, db) => {
+		db.query(
+			{
+				sql: SQL.select.course,
+				values: [course],
+				timeout: 10000,
+			},
+			(err, rows, fields) => {
+				db.release();
+				if (err) callback(err, null);
+				callback(null, rows[0]);
+			}
+		);
+	});
 };
 
 /**
@@ -208,26 +211,26 @@ const getCourse = (db, course, callback) => {
  * @return {void}
  */
 const insertEventsQuerysSQL = (querys, callback) => {
-    let l = 1;
-    pool.getConnection((err, db) => {
-        querys.forEach((query) => {
-            if (err) callback(err, null);
-            db.query(
-                {
-                    sql: query.substring(0, query.length - 1),
-                    timeout: 10000,
-                },
-                (err, rows, fields) => {
-                    l++;
-                    if (l === querys.length) {
-                        db.release();
-                        callback(null, true);
-                    }
-                    if (err) callback(err, null);
-                }
-            );
-        });
-    });
+	let l = 1;
+	pool.getConnection((err, db) => {
+		querys.forEach((query) => {
+			if (err) callback(err, null);
+			db.query(
+				{
+					sql: query.substring(0, query.length - 1),
+					timeout: 10000,
+				},
+				(err, rows, fields) => {
+					l++;
+					if (l === querys.length) {
+						db.release();
+						callback(null, true);
+					}
+					if (err) callback(err, null);
+				}
+			);
+		});
+	});
 };
 
 /**
@@ -239,38 +242,40 @@ const insertEventsQuerysSQL = (querys, callback) => {
  * @return {void}
  */
 const insertEventsSQL = (events, id, callback) => {
-    const divider = 4;
-    let query = `insert into Evenement (salle, date, heure_debut, heure_fin, classe, matiere, enseignant) values `;
-    let array = new Array(divider).fill(query);
-    let c = 0;
+	const divider = 4;
+	let query = `insert into Evenement (salle, date, heure_debut, heure_fin, classe, matiere, enseignant) values `;
+	let array = new Array(divider).fill(query);
+	let c = 0;
 
-    for (let event of events) {
-        let start_houre = new Date(event.start).toLocaleString("sv-SE", {
-            timeZone: "Europe/Paris",
-        });
-        let end_houre = new Date(event.end).toLocaleString("sv-SE", {
-            timeZone: "Europe/Paris",
-        });
-        let formatted_date = new Date(event.start).toLocaleDateString("sv-SE", {
-            timeZone: "Europe/Paris",
-        });
-        let salle = "none";
-        let classe = null;
-        try {
-            salle = event.description.val.split("Salle : ")[1];
-            salle = salle.split("\n")[0];
-        } catch {
-            null;
-        }
-        if (salle == undefined) salle = "none";
-        let courseQuery = `SELECT id_mat FROM Ref_Matiere WHERE matiere = "${event.title} LIMIT 1"`;
-        array[c % divider] += `("${salle}","${formatted_date}","${start_houre}","${end_houre}",${classe},(${courseQuery}),"${id}"),`;
-        c++;
-    }
+	for (let event of events) {
+		let start_houre = new Date(event.start).toLocaleString('sv-SE', {
+			timeZone: 'Europe/Paris',
+		});
+		let end_houre = new Date(event.end).toLocaleString('sv-SE', {
+			timeZone: 'Europe/Paris',
+		});
+		let formatted_date = new Date(event.start).toLocaleDateString('sv-SE', {
+			timeZone: 'Europe/Paris',
+		});
+		let salle = 'none';
+		let classe = null;
+		try {
+			salle = event.description.val.split('Salle : ')[1];
+			salle = salle.split('\n')[0];
+		} catch {
+			null;
+		}
+		if (salle == undefined) salle = 'none';
+		let courseQuery = `SELECT id_mat FROM Ref_Matiere WHERE matiere = "${event.title} LIMIT 1"`;
+		array[
+			c % divider
+		] += `("${salle}","${formatted_date}","${start_houre}","${end_houre}",${classe},(${courseQuery}),"${id}"),`;
+		c++;
+	}
 
-    insertEventsQuerysSQL(array, (err, result) => {
-        callback(err, true);
-    });
+	insertEventsQuerysSQL(array, (err, result) => {
+		callback(err, true);
+	});
 };
 
 /**
@@ -281,25 +286,36 @@ const insertEventsSQL = (events, id, callback) => {
  * @return {void}
  */
 const getEventsByTeacherIDSQL = (id, callback) => {
-    pool.getConnection((err, db) => {
-        if (err) callback(err, null);
-        db.query(
-            {
-                sql: SQL.select.event_by_teacher_id,
-                timeout: 30000,
-                values: [id],
-            },
-            (err, rows, fields) => {
-                if (err) throw err;
-                db.release();
-                let obj = [];
-                for (let row of rows) {
-                    obj.push(buildEvent(row.libelle_court, new Date(row.date), row.heure_debut, row.heure_fin, row.salle, row.id_ev, row.classe, row.salle));
-                }
-                callback(null, obj);
-            }
-        );
-    });
+	pool.getConnection((err, db) => {
+		if (err) callback(err, null);
+		db.query(
+			{
+				sql: SQL.select.event_by_teacher_id,
+				timeout: 30000,
+				values: [id],
+			},
+			(err, rows, fields) => {
+				if (err) throw err;
+				db.release();
+				let obj = [];
+				for (let row of rows) {
+					obj.push(
+						buildEvent(
+							row.libelle_court,
+							new Date(row.date),
+							row.heure_debut,
+							row.heure_fin,
+							row.salle,
+							row.id_ev,
+							row.classe,
+							row.salle
+						)
+					);
+				}
+				callback(null, obj);
+			}
+		);
+	});
 };
 
 /**
@@ -310,18 +326,18 @@ const getEventsByTeacherIDSQL = (id, callback) => {
  * @return {undefined} This function does not return a value.
  */
 const insertTimetableFileSQL = (files, c) => {
-    if (c >= files.length) return;
-    let file = files[c];
-    let obj = utils.parseICSFile("controllers/misc/edt/" + file);
-    let fullname = file.substring(16);
-    let name = fullname.split("_")[0];
-    console.log("start");
-    Teacher.getTeacher(name, (err, teacher) => {
-        if (teacher != undefined) {
-            parseEvents(obj, teacher.id_ens);
-        }
-        insertTimetableFileSQL(files, c + 1);
-    });
+	if (c >= files.length) return;
+	let file = files[c];
+	let obj = utils.parseICSFile('controllers/misc/edt/' + file);
+	let fullname = file.substring(16);
+	let name = fullname.split('_')[0];
+	console.log('start');
+	Teacher.getTeacher(name, (err, teacher) => {
+		if (teacher != undefined) {
+			parseEvents(obj, teacher.id_ens);
+		}
+		insertTimetableFileSQL(files, c + 1);
+	});
 };
 
 /**
@@ -332,20 +348,20 @@ const insertTimetableFileSQL = (files, c) => {
  * @return {void}
  */
 const getEventByIDSQL = (idEvent, callback) => {
-    pool.getConnection((err, db) => {
-        if (err) callback(err, null);
-        db.query(
-            {
-                sql: SQL.select.get_event,
-                values: [idEvent],
-                timeout: 10000,
-            },
-            (err, rows, fields) => {
-                db.release();
-                callback(err, rows);
-            }
-        );
-    });
+	pool.getConnection((err, db) => {
+		if (err) callback(err, null);
+		db.query(
+			{
+				sql: SQL.select.get_event,
+				values: [idEvent],
+				timeout: 10000,
+			},
+			(err, rows, fields) => {
+				db.release();
+				callback(err, rows);
+			}
+		);
+	});
 };
 
 /**
@@ -357,20 +373,20 @@ const getEventByIDSQL = (idEvent, callback) => {
  * @return {void}
  */
 const insertLinkSQL = (teacherID, URL, callback) => {
-    pool.getConnection((err, db) => {
-        if (err) callback(err, null);
-        db.query(
-            {
-                sql: SQL.insert.link,
-                values: [URL, teacherID],
-                timeout: 10000,
-            },
-            (err, rows, fields) => {
-                db.release();
-                callback(err, rows);
-            }
-        );
-    });
+	pool.getConnection((err, db) => {
+		if (err) callback(err, null);
+		db.query(
+			{
+				sql: SQL.insert.link,
+				values: [URL, teacherID],
+				timeout: 10000,
+			},
+			(err, rows, fields) => {
+				db.release();
+				callback(err, rows);
+			}
+		);
+	});
 };
 /**
  * Generates SQL query to retrieve teacher link by ID.
@@ -381,16 +397,16 @@ const insertLinkSQL = (teacherID, URL, callback) => {
  * @return {void} The callback function is called with the results
  */
 const getTeacherLinkSQL = (db, teacherID, callback) => {
-    db.query(
-        {
-            sql: SQL.select.teacherLink,
-            values: [teacherID],
-            timeout: 10000,
-        },
-        (err, rows, fields) => {
-            callback(err, rows[0]);
-        }
-    );
+	db.query(
+		{
+			sql: SQL.select.teacherLink,
+			values: [teacherID],
+			timeout: 10000,
+		},
+		(err, rows, fields) => {
+			callback(err, rows[0]);
+		}
+	);
 };
 
 /**
@@ -401,7 +417,7 @@ const getTeacherLinkSQL = (db, teacherID, callback) => {
  * @return {void}
  */
 const parseEvents = (events, teacherID) => {
-    processEvents(events, teacherID);
+	processEvents(events, teacherID);
 };
 
 /**
@@ -412,93 +428,129 @@ const parseEvents = (events, teacherID) => {
  * @return {boolean} true if the event should be ignored, false otherwise
  */
 const isIgnored = (e, events) => {
-    let currentDate = new Date();
-    let res = false;
-    let i = 0;
-    if (e.date < currentDate) {
-        res = true;
-    }
-    while (!res && i < events.length) {
-        if (events[i].title.toLowerCase().includes("vacance") || events[i].title.toLowerCase().includes("ferié")) {
-            if (e.date >= events[i].start && e.date <= events[i].end) {
-                res = true;
-            }
-        }
+	let currentDate = new Date();
+	let res = false;
+	let i = 0;
+	if (e.date < currentDate) {
+		res = true;
+	}
+	while (!res && i < events.length) {
+		if (
+			events[i].title.toLowerCase().includes('vacance') ||
+			events[i].title.toLowerCase().includes('ferié')
+		) {
+			if (e.date >= events[i].start && e.date <= events[i].end) {
+				res = true;
+			}
+		}
 
-        i++;
-    }
-    return res;
+		i++;
+	}
+	return res;
 };
 
 const parseEventString = (event) => {
-    return {
-        "matiere": event.title
-        .split(":")[1]
-        .substring(0, event.title.split(":")[1].length - 1)
-        .substring(1),
-    }
-}
+	return {
+		matiere: event.title
+			.split(':')[1]
+			.substring(0, event.title.split(':')[1].length - 1)
+			.substring(1),
+	};
+};
 
 const getGroupQuery = (result, newAbsenceCounter, oldAbsenceCounter, misc) => {
-    const {startHour, endHour, date, mat, teacherID} = misc;
-    if (result.length == 0) {
-        return [`('Annulation', '${startHour}', '${endHour}', '${date}', (select id_mat 
+	const { startHour, endHour, date, mat, teacherID } = misc;
+	if (result.length == 0) {
+		return [
+			`('Annulation', '${startHour}', '${endHour}', '${date}', (select id_mat 
             from Ref_Matiere where libelle_court = '${mat}'), 'Groupe de classe', '${teacherID}'),`,
-        newAbsenceCounter + 1];
-    } else {
-        return ["", oldAbsenceCounter + 1];
-    }
-}
+			newAbsenceCounter + 1,
+		];
+	} else {
+		return ['', oldAbsenceCounter + 1];
+	}
+};
 
-const getClasseQuery = (result, newAbsenceCounter, oldAbsenceCounter, absenceObject, misc, info) => {
-    const {startHour, endHour, date, mat, teacherID} = misc;
-    absenceObject.classe = info.split("Classe : ")[1].split("\n")[0];
-            if (result.length == 0) {
-                return [`('Annulation', '${startHour}', '${endHour}', '${date}', (select id_mat 
+const getClasseQuery = (
+	result,
+	newAbsenceCounter,
+	oldAbsenceCounter,
+	absenceObject,
+	misc,
+	info
+) => {
+	const { startHour, endHour, date, mat, teacherID } = misc;
+	absenceObject.classe = info.split('Classe : ')[1].split('\n')[0];
+	if (result.length == 0) {
+		return [
+			`('Annulation', '${startHour}', '${endHour}', '${date}', (select id_mat 
                     from Ref_Matiere where libelle_court = '${mat}'), ${
-                    info.split("Classe : ")[1].split("\n")[0]
-                }, '${teacherID}'),`,
-                newAbsenceCounter + 1];
-            }else{
-                return ["", oldAbsenceCounter + 1];
-            }
-}
+				info.split('Classe : ')[1].split('\n')[0]
+			}, '${teacherID}'),`,
+			newAbsenceCounter + 1,
+		];
+	} else {
+		return ['', oldAbsenceCounter + 1];
+	}
+};
 
-const buildQuery = (info, newAbsenceCounter, oldAbsenceCounter, absenceObject, result, misc) => {
-    if (info) {
-        if (info.includes("Groupe")) {
-            return getGroupQuery(result, newAbsenceCounter, oldAbsenceCounter, misc);
-        } else if (info.includes("Classe")) {
-            return getClasseQuery(result, newAbsenceCounter, oldAbsenceCounter, absenceObject, misc, info);
-        }
-        return ["", oldAbsenceCounter + 1];
-    }
-}
+const buildQuery = (
+	info,
+	newAbsenceCounter,
+	oldAbsenceCounter,
+	absenceObject,
+	result,
+	misc
+) => {
+	if (info) {
+		if (info.includes('Groupe')) {
+			return getGroupQuery(result, newAbsenceCounter, oldAbsenceCounter, misc);
+		} else if (info.includes('Classe')) {
+			return getClasseQuery(
+				result,
+				newAbsenceCounter,
+				oldAbsenceCounter,
+				absenceObject,
+				misc,
+				info
+			);
+		}
+		return ['', oldAbsenceCounter + 1];
+	}
+};
 
 const querySpreadEngine = (db, query, absences) => {
-    db.query(
-        {
-            sql: query.slice(0, -1),
-            timeout: 10000,
-        },
-        (err, rows, fields) => {
-            db.release();
-            Absence.spreadAbsences(absences, (err, result) => {
-                if (err) console.error(err);
-            });
-        }
-    );
-}
+	db.query(
+		{
+			sql: query.slice(0, -1),
+			timeout: 10000,
+		},
+		(err, rows, fields) => {
+			db.release();
+			Absence.spreadAbsences(absences, (err, result) => {
+				if (err) console.error(err);
+			});
+		}
+	);
+};
 
-const verifyEndOfEventProcess = (c, eventsLength, absence, query, newAbsenceCounter, oldAbsenceCounter, teacherID) => {
-    if (c >= eventsLength - 1) {
-        pool.getConnection((err, db) => {
-            if (err) console.error(err, null);
-            logger.write("INFO", `Parsing absence of ${teacherID}`, "SUCCESS");
-            querySpreadEngine(db, query, absence);
-        });
-    }
-}
+const verifyEndOfEventProcess = (
+	c,
+	eventsLength,
+	absence,
+	query,
+	newAbsenceCounter,
+	oldAbsenceCounter,
+	teacherID
+) => {
+	if (c >= eventsLength - 1) {
+		pool.getConnection((err, db) => {
+			if (err) console.error(err, null);
+			logger.write('INFO', `Parsing absence of ${teacherID}`, 'SUCCESS');
+			querySpreadEngine(db, query, absence);
+		});
+	}
+};
 
 /**
  * Process events and insert absences for cancelled events.
@@ -509,61 +561,80 @@ const verifyEndOfEventProcess = (c, eventsLength, absence, query, newAbsenceCoun
  * @return {void}
  */
 const processEvents = (events, teacherID) => {
-    logger.log(logger.BLUE, "START", "Parsing events", `ID : ${teacherID}`);
-    let res = "INSERT INTO `Absence`(`motif`, `start`, `end`, `date`, `matiere`, `class`, `teacherID`) VALUES ";
-    let absence = [];
-    let c = 0;
-    let newAbsenceCounter = 0;
-    let oldAbsenceCounter = 0;
-    events.forEach((event) => {
-        let startHour = new Date(event.start).toLocaleString("sv-SE", {
-            timeZone: "Europe/Paris",
-        });
-        let endHour = new Date(event.end).toLocaleString("sv-SE", {
-            timeZone: "Europe/Paris",
-        });
-        let date = new Date(event.start).toLocaleDateString("sv-SE", {
-            timeZone: "Europe/Paris",
-        });
+	logger.log(logger.BLUE, 'START', 'Parsing events', `ID : ${teacherID}`);
+	let res =
+		'INSERT INTO `Absence`(`motif`, `start`, `end`, `date`, `matiere`, `class`, `teacherID`) VALUES ';
+	let absence = [];
+	let c = 0;
+	let newAbsenceCounter = 0;
+	let oldAbsenceCounter = 0;
+	events.forEach((event) => {
+		let startHour = new Date(event.start).toLocaleString('sv-SE', {
+			timeZone: 'Europe/Paris',
+		});
+		let endHour = new Date(event.end).toLocaleString('sv-SE', {
+			timeZone: 'Europe/Paris',
+		});
+		let date = new Date(event.start).toLocaleDateString('sv-SE', {
+			timeZone: 'Europe/Paris',
+		});
 
-        if (event.title.toLowerCase().includes("annulé") && !isIgnored(event, events)) {
-            try {
+		if (
+			(event.title.toLowerCase().includes('annulé') ||
+				event.title.toLowerCase().includes('abs')) &&
+			!isIgnored(event, events)
+		) {
+			try {
+				Absence.selectAbsence(date, startHour, endHour, teacherID, (err, result) => {
+					let mat = parseEventString(event).matiere;
+					let absenceObject = {
+						motif: 'Annulation Pronote',
+						startHour: startHour,
+						endHour: endHour,
+						date: date,
+						matiere: mat,
+						teacherID: teacherID,
+					};
 
-                Absence.selectAbsence(date, startHour, endHour, teacherID, (err, result) => {
-                    let mat = parseEventString(event).matiere
-                    let absenceObject = {
-                        motif: "Annulation Pronote",
-                        startHour: startHour,
-                        endHour: endHour,
-                        date: date,
-                        matiere: mat,
-                        teacherID: teacherID,
-                    };
-    
-                    let misc = {
-                        startHour: startHour,
-                        endHour: endHour,
-                        date: date,
-                        mat: mat,
-                        teacherID
-                    }
-    
-                    let queryResult = buildQuery(event.description.val, newAbsenceCounter, oldAbsenceCounter, absenceObject, result, misc);   
-    
-                    newAbsenceCounter = queryResult[1];
-                    oldAbsenceCounter = queryResult[0];
-                    res = res + queryResult[0];
-                    absence.push(absenceObject);
-                    verifyEndOfEventProcess(c, events.length, absence, res, newAbsenceCounter, oldAbsenceCounter, teacherID);
-                    c++;
-                });
-            } catch(err) {
-                logger.write("ERROR", `Error while parsing absence of ${teacherID}`, "FAILURE");
-            }
-        } else {
-            c++;
-        }
-    });
+					let misc = {
+						startHour: startHour,
+						endHour: endHour,
+						date: date,
+						mat: mat,
+						teacherID,
+					};
+
+					let queryResult = buildQuery(
+						event.description.val,
+						newAbsenceCounter,
+						oldAbsenceCounter,
+						absenceObject,
+						result,
+						misc
+					);
+
+					newAbsenceCounter = queryResult[1];
+					oldAbsenceCounter = queryResult[0];
+					res = res + queryResult[0];
+					absence.push(absenceObject);
+					verifyEndOfEventProcess(
+						c,
+						events.length,
+						absence,
+						res,
+						newAbsenceCounter,
+						oldAbsenceCounter,
+						teacherID
+					);
+					c++;
+				});
+			} catch (err) {
+				logger.write('ERROR', `Error while parsing absence of ${teacherID}`, 'FAILURE');
+			}
+		} else {
+			c++;
+		}
+	});
 };
 
 // ------------------------------------------------------------------------------------------------------------------ //
@@ -579,17 +650,17 @@ const processEvents = (events, teacherID) => {
  * @return {void}
  */
 const insertTimetableURL = (req, res, callback) => {
-    // REQUIRE CONNECTION AND VALIDATION
-    Session.pIsValidated(req, res, () => {
-        downloadTimetableFromURL(req.body.url, (err, timetable) => {
-            console.log("edt recuperer");
-            parseEvents(timetable, req.session.id_ens);
-            insertLinkSQL(req.session.id_ens, req.body.url, (err, insertResult) => {
-                if (err) console.error(err);
-            });
-            callback(err, timetable);
-        });
-    });
+	// REQUIRE CONNECTION AND VALIDATION
+	Session.pIsValidated(req, res, () => {
+		downloadTimetableFromURL(req.body.url, (err, timetable) => {
+			console.log('edt recuperer');
+			parseEvents(timetable, req.session.id_ens);
+			insertLinkSQL(req.session.id_ens, req.body.url, (err, insertResult) => {
+				if (err) console.error(err);
+			});
+			callback(err, timetable);
+		});
+	});
 };
 
 /**
@@ -599,11 +670,17 @@ const insertTimetableURL = (req, res, callback) => {
  * @return {type} description of return value
  */
 const insertTimetablesFiles = (req, res, callback) => {
-    // REQUIRE CONNECTION AND VALIDATION AS ADMINISTRATOR
-    const path = "controllers/misc/edt/";
-    let files = fs.readdirSync(path);
-    insertTimetableFileSQL(files, 0);
-    console.log("\u001b[" + 32 + "m" + `[EVENTS : "AUTO LAUNCHED PROCESS" - (${new Date().toLocaleString()}) - OK / EVENTS INSERTED]` + "\u001b[0m");
+	// REQUIRE CONNECTION AND VALIDATION AS ADMINISTRATOR
+	const path = 'controllers/misc/edt/';
+	let files = fs.readdirSync(path);
+	insertTimetableFileSQL(files, 0);
+	console.log(
+		'\u001b[' +
+			32 +
+			'm' +
+			`[EVENTS : "AUTO LAUNCHED PROCESS" - (${new Date().toLocaleString()}) - OK / EVENTS INSERTED]` +
+			'\u001b[0m'
+	);
 };
 
 /**
@@ -615,12 +692,12 @@ const insertTimetablesFiles = (req, res, callback) => {
  * @return {void}
  */
 const getYourTimetable = (req, res, callback) => {
-    // REQUIRE CONNECTION AND VALIDATION
-    pool.getConnection((err, db) => {
-        getLinkContent(db, req.session.id_ens, (err, result) => {
-            callback(err, result);
-        });
-    });
+	// REQUIRE CONNECTION AND VALIDATION
+	pool.getConnection((err, db) => {
+		getLinkContent(db, req.session.id_ens, (err, result) => {
+			callback(err, result);
+		});
+	});
 };
 
 /**
@@ -631,23 +708,23 @@ const getYourTimetable = (req, res, callback) => {
  * @return {void}
  */
 const getEventByID = (idEvent, callback) => {
-    // REQUIRE NO CONNECTION
-    getEventByIDSQL(idEvent, (err, result) => {
-        callback(err, result);
-    });
+	// REQUIRE NO CONNECTION
+	getEventByIDSQL(idEvent, (err, result) => {
+		callback(err, result);
+	});
 };
 
 const getLinkContent = (db, teacherID, callback) => {
-    getTeacherLinkSQL(db, teacherID, (err, link) => {
-        if (link != undefined) {
-            downloadTimetableFromURL(link.link, (err, timetable) => {
-                parseEvents(timetable, teacherID);
-                callback(err, timetable);
-            });
-        } else {
-            callback(err, []);
-        }
-    });
+	getTeacherLinkSQL(db, teacherID, (err, link) => {
+		if (link != undefined) {
+			downloadTimetableFromURL(link.link, (err, timetable) => {
+				parseEvents(timetable, teacherID);
+				callback(err, timetable);
+			});
+		} else {
+			callback(err, []);
+		}
+	});
 };
 
 // ------------------------------------------------------------------------------------------------------------------ //
@@ -655,9 +732,9 @@ const getLinkContent = (db, teacherID, callback) => {
 // ------------------------------------------------------------------------------------------------------------ //
 
 module.exports = {
-    insertTimetableURL,
-    insertTimetablesFiles,
-    getYourTimetable,
-    getEventByID,
-    getLinkContent,
+	insertTimetableURL,
+	insertTimetablesFiles,
+	getYourTimetable,
+	getEventByID,
+	getLinkContent,
 };
