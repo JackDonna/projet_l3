@@ -125,7 +125,7 @@ img {
   background: whitesmoke;
   margin-bottom: 10px;
   padding: 1em;
-  box-shadow: 10 10 10px rgba(0, 0, 0);
+  /*box-shadow: 10 10 10px rgba(0, 0, 0);*/
   cursor: pointer;
   transition: 0.2s;
 }
@@ -264,7 +264,7 @@ select {
   background: whitesmoke;
   margin-bottom: 30px;
   padding: 0 15px;
-  box-shadow: 10 10 10px rgba(0, 0, 0);
+  /*box-shadow: 10 10 10px rgba(0, 0, 0);*/
   cursor: pointer;
   transition: 0.2s;
 }
