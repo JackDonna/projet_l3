@@ -4,3 +4,6 @@
 19/05/2024 23:40:32 - [INFO] - [Teacher signIN as mathisfeltrin@gmail.com] SUCCESS
 19/05/2024 23:40:47 - [INFO] - [Teacher signIN as ludovic.alasseur@ac-grenoble.fr] SUCCESS
 19/05/2024 23:42:25 - [INFO] - [Teacher signIN as prenom.nom@ac-grenoble.fr] SUCCESS
+19/05/2024 23:51:19 - [INFO] - [Parsing absence of 10004] SUCCESS
+19/05/2024 23:51:58 - [INFO] - [Parsing absence of 10004] SUCCESS
+19/05/2024 23:54:30 - [INFO] - [Teacher signIN as prenom.nom@ac-grenoble.fr] SUCCESS

@@ -108,7 +108,9 @@ img {
   /*padding: 1em;*/
   /*margin-top: 1em;*/
   /*margin-top: 10%;*/
-  padding-top: 200px;
+  margin-top: 75px;
+  padding: 200px 0 100px;
+
 }
 
 .box_absence:first-child {
