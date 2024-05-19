@@ -2,23 +2,23 @@
 // --- DOM ELEMENTS -----------------------------------------------------------------------------------------------------------//
 // ----------------------------------------------------------------------------------------------------------------------------//
 
-const affichage_absence = document.getElementById("container_absence");
-const absence = document.getElementById("absence");
-const absence_logo = document.getElementById("absence_logo");
-const affichage_list_diff = document.getElementById("container_list_diff");
-const list_diff = document.getElementById("list_diff");
-const affichage_propositions = document.getElementById("container_propositions");
-const propositions = document.getElementById("propositions");
-const affichage_remplacements = document.getElementById("container_remplacements");
-const remplacements = document.getElementById("remplacements");
-const popUPElement = document.querySelector(".popUP");
-const propositionList = popUPElement.querySelector(".propositionList .popUPList");
-const remplacementList = popUPElement.querySelector(".remplacementList .popUPList");
-const popUPCross = popUPElement.querySelector(".popUPCross");
-const searchBar = document.querySelector(".search-input");
-const popUPDiffusionElement = document.querySelector(".popUPDiffusion");
-const popUPDiffusionList = popUPDiffusionElement.querySelector(".popUPDiffusionList");
-const popUPDiffusionCross = document.querySelector(".popUPDiffusionCross");
+const affichage_absence = document.getElementById('container_absence');
+const absence = document.getElementById('absence');
+const absence_logo = document.getElementById('absence_logo');
+const affichage_list_diff = document.getElementById('container_list_diff');
+const list_diff = document.getElementById('list_diff');
+const affichage_propositions = document.getElementById('container_propositions');
+const propositions = document.getElementById('propositions');
+const affichage_remplacements = document.getElementById('container_remplacements');
+const remplacements = document.getElementById('remplacements');
+const popUPElement = document.querySelector('.popUP');
+const propositionList = popUPElement.querySelector('.propositionList .popUPList');
+const remplacementList = popUPElement.querySelector('.remplacementList .popUPList');
+const popUPCross = popUPElement.querySelector('.popUPCross');
+const searchBar = document.querySelector('.search-input');
+const popUPDiffusionElement = document.querySelector('.popUPDiffusion');
+const popUPDiffusionList = popUPDiffusionElement.querySelector('.popUPDiffusionList');
+const popUPDiffusionCross = document.querySelector('.popUPDiffusionCross');
 
 // ----------------------------------------------------------------------------------------------------------------------------//
 // ----GLOBALS VARIABLES ------------------------------------------------------------------------------------------------------//
@@ -29,217 +29,237 @@ const popUPDiffusionCross = document.querySelector(".popUPDiffusionCross");
 // ----------------------------------------------------------------------------------------------------------------------------//
 
 const truncateString = (str, num) => {
-    if (str.length > num) {
-        return str.substring(0, num - 3) + "...";
-    } else {
-        return str;
-    }
+	if (str.length > num) {
+		return str.substring(0, num - 3) + '...';
+	} else {
+		return str;
+	}
 };
 
 const logout = () => {
-    window.location.href = "/logout";
+	window.location.href = '/logout';
 };
 
 const compareDate = (a, b) => {
-    const dateA = new Date(a.date);
-    const dateB = new Date(b.date);
-    return dateA - dateB;
-}
+	const dateA = new Date(a.date);
+	const dateB = new Date(b.date);
+	return dateA - dateB;
+};
 
-const applyPropositionListener = (buttonElement) => {
-    buttonElement.addEventListener("click", () => {
-        axios
-            .post("/sql/proposition/acceptProposition", {
-                teacherID: prof.id_ens,
-                propositionID: prof.id_prop,
-            })
-            .then((response) => {
-                console.log(response.data);
-                this.printRemplacement("/sql/proposition/getYourReplace/", id);
-            });
-    });
-}
+const applyPropositionListener = (buttonElement, prof) => {
+	buttonElement.addEventListener('click', () => {
+		axios
+			.post('/sql/proposition/acceptProposition', {
+				teacherID: prof.id_ens,
+				propositionID: prof.id_prop,
+			})
+			.then((response) => {
+				console.log(response.data);
+				this.printRemplacement('/sql/proposition/getYourReplace/', id);
+			});
+	});
+};
 
 // ----------------------------------------------------------------------------------------------------------------------------//
 // --- OBJECTS ----------------------------------------------------------------------------------------------------------------//
 // ----------------------------------------------------------------------------------------------------------------------------//
 
 let popUP = {
-    parent: popUPElement,
-    propositionList: propositionList,
-    remplacementList: remplacementList,
+	parent: popUPElement,
+	propositionList: propositionList,
+	remplacementList: remplacementList,
 
-    printProposition(link, id) {
-        this.clear();
-        axios.get(link + id).then((response) => {
-            response.data.forEach((prof) => {
-                let infoContainer = document.createElement("div");
-                let infoBox = document.createElement("div");
-                let buttonProposition = document.createElement("button");
+	printProposition(link, id) {
+		this.clear();
+		axios.get(link + id).then((response) => {
+			response.data.forEach((prof) => {
+				let infoContainer = document.createElement('div');
+				let infoBox = document.createElement('div');
+				let buttonProposition = document.createElement('button');
 
-                infoContainer.classList.add("infoContainerProposition");
-                infoBox.classList.add("infoBoxProposition");
-                buttonProposition.classList.add("buttonProposition");
+				infoContainer.classList.add('infoContainerProposition');
+				infoBox.classList.add('infoBoxProposition');
+				buttonProposition.classList.add('buttonProposition');
 
-                buttonProposition.innerText = "Accepter";
-                infoBox.innerHTML = `${prof.nom} ${prof.prenom}`;
-                
-                applyPropositionListener(buttonProposition);
-                
-                infoContainer.appendChild(infoBox);
-                infoContainer.appendChild(buttonProposition);
-                this.propositionList.appendChild(infoContainer);
-            });
-        });
-    },
+				buttonProposition.innerText = 'Accepter';
+				infoBox.innerHTML = `${prof.nom} ${prof.prenom}`;
 
-    printRemplacement(link, id) {
-        axios.get(link + id).then((response) => {
-            response.data.forEach((prof) => {
-                let infoContainer = document.createElement("div");
-                let infoBox = document.createElement("div");
+				applyPropositionListener(buttonProposition, prof);
 
-                infoContainer.classList.add("infoContainerProposition");
-                infoBox.classList.add("infoBoxProposition");
+				infoContainer.appendChild(infoBox);
+				infoContainer.appendChild(buttonProposition);
+				this.propositionList.appendChild(infoContainer);
+			});
+		});
+	},
 
-                infoBox.innerHTML = `${prof.nom} ${prof.prenom}`;
+	printRemplacement(link, id) {
+		axios.get(link + id).then((response) => {
+			response.data.forEach((prof) => {
+				let infoContainer = document.createElement('div');
+				let infoBox = document.createElement('div');
 
-                infoContainer.appendChild(infoBox);
-                this.remplacementList.appendChild(infoContainer);
-            });
-        });
-    },
+				infoContainer.classList.add('infoContainerProposition');
+				infoBox.classList.add('infoBoxProposition');
 
-    display() {
-        this.parent.classList.remove("hide");
-    },
-    hide() {
-        this.parent.classList.add("hide");
-    },
+				infoBox.innerHTML = `${prof.nom} ${prof.prenom}`;
 
-    clear() {
-        this.propositionList.innerHTML = "";
-        this.remplacementList.innerHTML = "";
-    },
+				infoContainer.appendChild(infoBox);
+				this.remplacementList.appendChild(infoContainer);
+			});
+		});
+	},
+
+	display() {
+		this.parent.classList.remove('hide');
+	},
+	hide() {
+		this.parent.classList.add('hide');
+	},
+
+	clear() {
+		this.propositionList.innerHTML = '';
+		this.remplacementList.innerHTML = '';
+	},
 };
 
 let popUPDiffusion = {
-    parent: popUPDiffusionElement,
-    diffusionList: popUPDiffusionList,
+	parent: popUPDiffusionElement,
+	diffusionList: popUPDiffusionList,
 
-    printDiffusion(link, id) { 
-        this.clear();
-        axios.get("/sql/diffusion/diffusionsProvisor/" + id).then((response) => {
-            response.data.forEach((diffusion) => {
-                let infoContainer = document.createElement("div");
-                let infoBox = document.createElement("div");
+	printDiffusion(link, id) {
+		this.clear();
+		axios.get('/sql/diffusion/diffusionsProvisor/' + id).then((response) => {
+			response.data.forEach((diffusion) => {
+				let infoContainer = document.createElement('div');
+				let infoBox = document.createElement('div');
 
-                infoContainer.classList.add("infoContainerProposition");
-                infoBox.classList.add("infoBoxProposition");
+				infoContainer.classList.add('infoContainerProposition');
+				infoBox.classList.add('infoBoxProposition');
 
-                infoBox.innerHTML = `${diffusion.nom} ${diffusion.prenom}`;
+				infoBox.innerHTML = `${diffusion.nom} ${diffusion.prenom}`;
 
-                infoContainer.appendChild(infoBox);
-                this.diffusionList.appendChild(infoContainer);
-            });
-        });
-    },
+				infoContainer.appendChild(infoBox);
+				this.diffusionList.appendChild(infoContainer);
+			});
+		});
+	},
 
-    display() {
-        this.parent.classList.remove("hide");
-    },
-    hide() {
-        this.parent.classList.add("hide");
-    },
+	display() {
+		this.parent.classList.remove('hide');
+	},
+	hide() {
+		this.parent.classList.add('hide');
+	},
 
-    clear() {
-        this.diffusionList.innerHTML = "";
-    },
+	clear() {
+		this.diffusionList.innerHTML = '';
+	},
 };
 
-
 let list = {
-    data: [],
-    searched: [],
-    seen: [],
-    searchBar: searchBar,
+	data: [],
+	searched: [],
+	seen: [],
+	searchBar: searchBar,
 
-    drawList() {
-        this.seen = [];
-        affichage_absence.innerHTML = "";
-        affichage_list_diff.innerHTML = "";
-        this.searched.sort(compareDate);
-        this.searched.forEach((evenement) => {
-            if (!this.seen.includes(evenement.id_abs)) {
-                this.seen.push(evenement.id_abs);
-                let div = document.createElement("div");
-                div.classList.add("box_absence");
+	drawList() {
+		this.seen = [];
+		affichage_absence.innerHTML = '';
+		affichage_list_diff.innerHTML = '';
+		this.searched.sort(compareDate);
+		this.searched.forEach((evenement) => {
+			if (!this.seen.includes(evenement.id_abs)) {
+				this.seen.push(evenement.id_abs);
+				let div = document.createElement('div');
+				div.classList.add('box_absence');
 
-                div.innerHTML = `
-                    <p><span class="cle">Date : </span>${new Date(evenement.date).toLocaleDateString()}</p>
-                    <p><span class="cle">Heure de début : </span>${evenement.start.slice(0, -3).replace(":", "h")}</p>
-                    <p><span class="cle">Heure de fin : </span>${evenement.end.slice(0, -3).replace(":", "h")}</p>
-                    <p><span class="cle">Professeur : </span>${evenement.nom} ${evenement.prenom}</p>
-                    <p><span class="cle">Matière : </span>${truncateString(evenement.libelle_court, 33)}</p>
+				div.innerHTML = `
+                    <p><span class="cle">Date : </span>${new Date(
+						evenement.date
+					).toLocaleDateString()}</p>
+                    <p><span class="cle">Heure de début : </span>${evenement.start
+						.slice(0, -3)
+						.replace(':', 'h')}</p>
+                    <p><span class="cle">Heure de fin : </span>${evenement.end
+						.slice(0, -3)
+						.replace(':', 'h')}</p>
+                    <p><span class="cle">Professeur : </span>${evenement.nom} ${
+					evenement.prenom
+				}</p>
+                    <p><span class="cle">Matière : </span>${truncateString(
+						evenement.libelle_court,
+						33
+					)}</p>
                     <p class="classe_${evenement.id_abs}" ><span class="cle 
                     }">Classe : </span>${evenement.class}</p>
                     <p><span class="cle">Motif : </span>${evenement.motif}</p>
                 `;
 
-                div.addEventListener("click", () => {
-                    popUP.display();
-                    popUP.printProposition("/sql/proposition/teacher_on_absence/", evenement.id_abs);
-                    popUP.printRemplacement("/sql/proposition/getYourReplace/", evenement.id_abs);
-                });
+				div.addEventListener('click', () => {
+					popUP.display();
+					popUP.printProposition(
+						'/sql/proposition/teacher_on_absence/',
+						evenement.id_abs
+					);
+					popUP.printRemplacement(
+						'/sql/proposition/getYourReplace/',
+						evenement.id_abs
+					);
+				});
 
-                let buttonDiffusion = document.createElement("button");
-                buttonDiffusion.classList.add("buttonDiffusion");
-                buttonDiffusion.innerText = "Liste\nde\nDiffusion";
-                buttonDiffusion.addEventListener("click", () => {
-                    popUPDiffusion.display();
-                    popUPDiffusion.printDiffusion("/sql/diffusion/diffusionsProvisor/", evenement.id_abs);
-                });
+				let buttonDiffusion = document.createElement('button');
+				buttonDiffusion.classList.add('buttonDiffusion');
+				buttonDiffusion.innerText = 'Liste\nde\nDiffusion';
+				buttonDiffusion.addEventListener('click', () => {
+					popUPDiffusion.display();
+					popUPDiffusion.printDiffusion(
+						'/sql/diffusion/diffusionsProvisor/',
+						evenement.id_abs
+					);
+				});
 
-                affichage_list_diff.appendChild(buttonDiffusion);
-                affichage_absence.appendChild(div);
-            } else {
-                document.querySelector(`.classe_${evenement.id_abs}`).innerHTML += ", " + evenement.classe;
-            }
-        });
-    },
+				affichage_list_diff.appendChild(buttonDiffusion);
+				affichage_absence.appendChild(div);
+			} else {
+				document.querySelector(`.classe_${evenement.id_abs}`).innerHTML +=
+					', ' + evenement.classe;
+			}
+		});
+	},
 
-    search(string) {
-        this.searched = this.data.filter(
-            (absence) =>
-                new Date(absence.date).toLocaleDateString().includes(string.toLowerCase()) ||
-                absence.nom.toLowerCase().includes(string.toLowerCase()) ||
-                absence.prenom.toLowerCase().includes(string.toLowerCase())
-        );
-        this.drawList();
-    },
-    init() {
-        axios.get("/sql/teacher/getUnavailableTeachers").then((response) => {
-            this.data = response.data;
-            this.searched = response.data;
-            this.drawList();
-        });
-    },
+	search(string) {
+		this.searched = this.data.filter(
+			(absence) =>
+				new Date(absence.date).toLocaleDateString().includes(string.toLowerCase()) ||
+				absence.nom.toLowerCase().includes(string.toLowerCase()) ||
+				absence.prenom.toLowerCase().includes(string.toLowerCase())
+		);
+		this.drawList();
+	},
+	init() {
+		axios.get('/sql/teacher/getUnavailableTeachers').then((response) => {
+			this.data = response.data;
+			this.searched = response.data;
+			this.drawList();
+		});
+	},
 };
 
 // ----------------------------------------------------------------------------------------------------------------------------//
 // --- EVENTS LISTENERS ------------------------------------------------------------------------------------------------------//
 // ----------------------------------------------------------------------------------------------------------------------------//
 
-popUPCross.addEventListener("click", () => {
-    popUP.hide();
+popUPCross.addEventListener('click', () => {
+	popUP.hide();
 });
 
-popUPDiffusionCross.addEventListener("click", () => {
-    popUPDiffusion.hide();
+popUPDiffusionCross.addEventListener('click', () => {
+	popUPDiffusion.hide();
 });
 
-searchBar.addEventListener("input", () => {
-    list.search(searchBar.value);
+searchBar.addEventListener('input', () => {
+	list.search(searchBar.value);
 });
 
 // ----------------------------------------------------------------------------------------------------------------------------//
