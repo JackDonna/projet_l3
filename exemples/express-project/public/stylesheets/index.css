@@ -38,6 +38,7 @@ hr {
 
 .container {
   height: 100%;
+  overflow: auto;
 }
 
 h1 {
@@ -94,28 +95,45 @@ img {
   transition: 0.2s;
 }
 
+.container_diff {
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  margin-top: 75px;
+  padding-bottom: 500px;
+}
+
 #boite_event {
+
   height: 100%;
   width: 100%;
+
   /*display: grid; /*  /!\ Pas de display Flex quand ça ne sert à rien /!\   */
   display: flex;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
+
   /*overflow: auto;
   overflow-x: hidden;*/
-  overflow: scroll;
   /*padding: 1em;*/
   /*margin-top: 1em;*/
   /*margin-top: 10%;*/
+  /*
   margin-top: 75px;
-  padding: 200px 0 100px;
+   */
+  /*padding: 200px 0 100px;*/
 
 }
 
+/*
 .box_absence:first-child {
-  margin-top: 100px;
+  margin-top: 500px;
 }
+*/
 
 .box_absence {
   display: flex;
@@ -125,11 +143,18 @@ img {
   height: 100%;
   width: 75%;
   background: whitesmoke;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   padding: 1em;
   /*box-shadow: 10 10 10px rgba(0, 0, 0);*/
   cursor: pointer;
   transition: 0.2s;
+}
+
+.box_absence:last-child {
+  /*
+  margin-bottom: 1000px;
+   */
+
 }
 
 .box_absence p {
