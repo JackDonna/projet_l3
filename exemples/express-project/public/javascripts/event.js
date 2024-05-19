@@ -46,7 +46,7 @@ const compareDate = (a, b) => {
 	return dateA - dateB;
 };
 
-const applyPropositionListener = (buttonElement, prof) => {
+const applyPropositionListener = (buttonElement, prof, id) => {
 	buttonElement.addEventListener('click', () => {
 		axios
 			.post('/sql/proposition/acceptProposition', {
@@ -55,7 +55,7 @@ const applyPropositionListener = (buttonElement, prof) => {
 			})
 			.then((response) => {
 				console.log(response.data);
-				this.printRemplacement('/sql/proposition/getYourReplace/', id);
+				popUP.printRemplacement('/sql/proposition/getYourReplace/', id);
 			});
 	});
 };
@@ -84,7 +84,7 @@ let popUP = {
 				buttonProposition.innerText = 'Accepter';
 				infoBox.innerHTML = `${prof.nom} ${prof.prenom}`;
 
-				applyPropositionListener(buttonProposition, prof);
+				applyPropositionListener(buttonProposition, prof, id);
 
 				infoContainer.appendChild(infoBox);
 				infoContainer.appendChild(buttonProposition);
