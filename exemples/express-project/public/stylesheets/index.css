@@ -315,7 +315,7 @@ select {
    */
   height: 100%;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   /*
@@ -336,13 +336,13 @@ select {
   width: 75%;
   background: whitesmoke;
   margin-bottom: 15px;
-  padding: 15px;
+  padding: 1em;
   /*box-shadow: 10 10 10px rgba(0, 0, 0);*/
   cursor: pointer;
   transition: 0.2s;
 }
 
-.box_remplacement:first-child{
+.box_remplacement:last-child{
   margin-bottom: 110px;
 }
 
