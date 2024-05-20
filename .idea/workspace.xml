@@ -7,7 +7,9 @@
     <list default="true" id="dcd9f067-578b-4156-9def-dfda21dea99a" name="Changes" comment="return">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exemples/express-project/logs/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/logs/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exemples/express-project/public/stylesheets/calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/public/stylesheets/calendar.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exemples/express-project/public/stylesheets/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/public/stylesheets/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exemples/express-project/views/calendar.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/views/calendar.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +95,7 @@
       <workItem from="1715770765711" duration="59000" />
       <workItem from="1715935697725" duration="3067000" />
       <workItem from="1716154732709" duration="7806000" />
-      <workItem from="1716194464850" duration="3567000" />
+      <workItem from="1716194464850" duration="4695000" />
     </task>
     <task id="LOCAL-00001" summary="return">
       <option name="closed" value="true" />
