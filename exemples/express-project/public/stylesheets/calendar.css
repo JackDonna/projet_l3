@@ -28,7 +28,10 @@ main {
 }
 
 #calendar {
+  height: 100%;
   overflow: scroll;
+  padding-top: 15px;
+  padding-bottom: 110px;
 }
 
 #html5-qrcode-button-camera-permission {
@@ -123,6 +126,10 @@ main {
   align-items: center;
   justify-content: center;
   color: white;
+}
+
+h3 {
+  margin-top: 80px;
 }
 
 @media screen and (max-width: 700px) {
