@@ -8,7 +8,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exemples/express-project/logs/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/logs/log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exemples/express-project/public/stylesheets/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/public/stylesheets/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exemples/express-project/views/footer.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/views/footer.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exemples/express-project/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/views/index.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exemples/express-project/views/remplacement.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/exemples/express-project/views/remplacement.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +95,8 @@
       <workItem from="1715769833423" duration="248000" />
       <workItem from="1715770765711" duration="59000" />
       <workItem from="1715935697725" duration="3067000" />
-      <workItem from="1716154732709" duration="7641000" />
+      <workItem from="1716154732709" duration="7806000" />
+      <workItem from="1716194464850" duration="2055000" />
     </task>
     <task id="LOCAL-00001" summary="return">
       <option name="closed" value="true" />
