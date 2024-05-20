@@ -20,25 +20,22 @@ html, body {
 }
 
 header {
+  height: 80px;
   width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
-  height: 80px;
-  /*
-  padding: 0 20px;
-   */
   position: fixed;
   background: white;
 }
 
 .container_header {
+  height: 75px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  height: 75px;
+  justify-content: space-between;
   padding: 0 20px;
 }
 
@@ -46,7 +43,6 @@ hr {
   border: 0;
   width: 100%;
   height: 1px;
-  /* opacity: 0.5; */
   background: linear-gradient(to right, transparent, var(--background), transparent);
 }
 
@@ -63,28 +59,28 @@ h1 {
 footer {
   width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
-  position: fixed;
   background: white;
+  position: fixed;
   bottom: 0;
   left: 0;
 }
 
 .container_footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100px;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav {
   width: 100%;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
   background: var(--background);
   border-radius: 15px;
   padding: 10px;
@@ -124,46 +120,25 @@ img {
 .container_diff {
   height: 100%;
   display: flex;
-  flex-direction: column-reverse;
   align-items: center;
   justify-content: center;
-  /*
-  overflow: scroll;
-   */
+  flex-direction: column-reverse;
   margin-top: 75px;
-  /*
-  padding-bottom: 500px;
-   */
 }
 
 #boite_event {
-
   height: 100%;
   width: 100%;
-
-  /*display: grid; /*  /!\ Pas de display Flex quand ça ne sert à rien /!\   */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
-  /*overflow: auto;
-  overflow-x: hidden;*/
-  /*padding: 1em;*/
-  /*margin-top: 1em;*/
-  /*margin-top: 10%;*/
-  /*
-  margin-top: 75px;
-   */
-  /*padding: 200px 0 100px;*/
   overflow: scroll;
 }
-
 
 .box_absence:first-child {
   margin-top: 60px;
 }
-
 
 .box_absence {
   display: flex;
@@ -175,16 +150,12 @@ img {
   background: whitesmoke;
   margin-bottom: 15px;
   padding: 1em;
-  /*box-shadow: 10 10 10px rgba(0, 0, 0);*/
   cursor: pointer;
   transition: 0.2s;
 }
 
 .box_absence:last-child {
-
   margin-bottom: 110px;
-
-
 }
 
 .box_absence p {
@@ -206,7 +177,6 @@ button {
 .divButtons {
   display: flex;
   justify-content: center;
-  /*align-items: center;*/
   margin-top: 1%;
   width: 100%;
 }
@@ -246,20 +216,18 @@ button {
   animation: fade-out 0.5s ease;
 }
 
-
 /* Menu déroulant pour les filtres */
 #filterContainer {
-  display: none;
-  margin: auto;
   width: 96%;
-  justify-content: center;
+  margin: auto;
+  display: none;
   align-items: self-start;
+  justify-content: center;
   flex-direction: column;
   border: var(--background) 1px solid;
   border-radius: 1rem;
   background-color: #F6F6F6;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding: 1em 0;
   color : var(--background);
   position: fixed;
   top: 15%;
@@ -268,11 +236,11 @@ button {
 
 .dropdown,
 .result{
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0.5em 1em;
-  width: 90%;
 }
 
 .dropdown select {
@@ -287,18 +255,17 @@ select {
 /* Bouton du menu déroulant du filtre */
 /* Bouton pour montrer/cacher le conteneur des filtres */
 #toggleButton {
-  padding: 10px;
+  width: 96%;
   background-color: var(--background);
   color: white;
   border: none;
   cursor: pointer;
   font-size: 16px;
-  /*margin-right: 1em;*/
   margin-bottom: 5%;
+  padding: 10px;
   position: fixed;
   top: 10%;
   left: 2%;
-  width: 96%;
 }
 
 #toggleButton:hover {
@@ -306,38 +273,24 @@ select {
 }
 
 #container_remplacement {
-  /*
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
-   */
   height: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
-  /*
-  overflow: scroll;
-   */
   margin-top: 100px;
-  /*
-  padding-bottom: 500px;
-   */
 }
 
 .box_remplacement {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-direction: column;
   height: 100%;
   width: 75%;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-direction: column;
   background: whitesmoke;
   margin-bottom: 15px;
   padding: 1em;
-  /*box-shadow: 10 10 10px rgba(0, 0, 0);*/
   cursor: pointer;
   transition: 0.2s;
 }
@@ -348,8 +301,8 @@ select {
 
 .box_remplacement p {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   font-size: 15px;
 }
 

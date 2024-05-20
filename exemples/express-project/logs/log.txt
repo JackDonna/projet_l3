@@ -28,3 +28,5 @@
 20/05/2024 11:13:48 - [INFO] - [Teacher signIN as prenom.nom@ac-grenoble.fr] SUCCESS
 20/05/2024 11:23:53 - [INFO] - [Teacher signIN as prenom.nom@ac-grenoble.fr] SUCCESS
 20/05/2024 11:30:27 - [INFO] - [Teacher signIN as prenom.nom@ac-grenoble.fr] SUCCESS
+20/05/2024 11:38:47 - [INFO] - [Teacher signIN as prenom.nom@ac-grenoble.fr] SUCCESS
+20/05/2024 11:40:54 - [INFO] - [Parsing absence of 10004] SUCCESS
